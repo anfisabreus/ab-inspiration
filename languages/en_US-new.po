@@ -1,0 +1,3486 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-08-18 16:31+0800\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: 404.php:15
+msgid "Страница не найдена"
+msgstr "Page is not found"
+
+#: 404.php:19
+msgid "Это могло произойти по следующим причинам:"
+msgstr "This could of occurred because of the following reasons:"
+
+#: 404.php:20
+msgid "страница была удалена или переименована,"
+msgstr "page was deleted or renamed,"
+
+#: 404.php:21
+msgid "страница никогда не существовала,"
+msgstr "page never existed,"
+
+#: 404.php:22
+msgid "у Вас была неправильная ссылка."
+msgstr "You had the wrong link."
+
+#: 404.php:24
+msgid "Что делать в этом случае?"
+msgstr "What to do in this case?"
+
+#: 404.php:25
+msgid "перейдите на"
+msgstr "Redirect to"
+
+#: 404.php:25
+msgid "Главную страницу"
+msgstr "Main page"
+
+#: 404.php:26
+msgid "воспользуйтесь Поиском,"
+msgstr "use Search,"
+
+#: 404.php:27
+msgid "сообщите мне о битой ссылке. "
+msgstr "notify me of broken link. "
+
+#: 404.php:30
+msgid "Успехов Вам!"
+msgstr "Good luck to you!"
+
+#: EDD_INSPIRATION_Theme_Updater.php:54
+msgid ""
+"Если вы делали изменения в коде шаблона, при обновлении они будут потеряны. "
+"'Отмена' чтобы остановить обновление, 'OK' обновить."
+msgstr ""
+
+#: admin/options-framework.php:173 admin/options-framework.php:491
+msgid "Настройки шаблона"
+msgstr "Theme settings"
+
+#: admin/options-framework.php:221
+msgid "Очистить"
+msgstr "Clear"
+
+#: admin/options-framework.php:222
+msgid "По-умолчанию"
+msgstr "By default"
+
+#: admin/options-framework.php:223
+msgid "Выбрать цвет"
+msgstr ""
+
+#: admin/options-framework.php:264
+msgid "Шаблон:"
+msgstr ""
+
+#: admin/options-framework.php:267
+msgid "Видео-уроки по настройке шаблона"
+msgstr "Video - Lessons for configuring theme"
+
+#: admin/options-framework.php:277
+msgid "Предпросмотр шрифтов:"
+msgstr "Preview fonts"
+
+#: admin/options-framework.php:349
+msgid "Сохранить изменения"
+msgstr "Save changes"
+
+#: admin/options-framework.php:350
+msgid "Сбросить настройки"
+msgstr "Clear settings"
+
+#: admin/options-framework.php:350
+msgid ""
+"Кликните OK, чтобы сбросить настройки и вернуться к настройкам по умолчанию. "
+"Все настройки, которые вы делали до этого, будут удалены!"
+msgstr ""
+"Click OK, to get back to default settings. All previous settings will be "
+"deleted!"
+
+#: admin/options-framework.php:387
+msgid "Настройки по умолчанию установлены."
+msgstr ""
+
+#: admin/options-framework.php:441
+msgid "Настройки сохранены."
+msgstr ""
+
+#: admin/options-media-uploader.php:51
+msgid "Файл не выбран"
+msgstr ""
+
+#: admin/options-media-uploader.php:54 admin/options-media-uploader.php:111
+msgid "Загрузить"
+msgstr ""
+
+#: admin/options-media-uploader.php:56 admin/options-media-uploader.php:69
+#: admin/options-media-uploader.php:112
+msgid "Удалить"
+msgstr ""
+
+#: admin/options-media-uploader.php:59
+msgid "Загрузите версию WordPress для полной поддержки медиа."
+msgstr ""
+
+#: admin/options-media-uploader.php:83
+msgid "Посмотреть файл"
+msgstr ""
+
+#: admin/options-sanitize.php:424
+msgid "Не повторять"
+msgstr ""
+
+#: admin/options-sanitize.php:425
+msgid "Повторять по горизонтали"
+msgstr ""
+
+#: admin/options-sanitize.php:426
+msgid "Повторять по вертикали"
+msgstr ""
+
+#: admin/options-sanitize.php:427
+msgid "Повторять все"
+msgstr ""
+
+#: admin/options-sanitize.php:440 options.php:124
+msgid "Сверху Слева"
+msgstr ""
+
+#: admin/options-sanitize.php:441 options.php:124
+msgid "Сверху По Центру"
+msgstr ""
+
+#: admin/options-sanitize.php:442 options.php:124
+msgid "Сверху Справа"
+msgstr ""
+
+#: admin/options-sanitize.php:443 options.php:124
+msgid "Посередине Слева"
+msgstr ""
+
+#: admin/options-sanitize.php:444 options.php:124
+msgid "Посередине По Центру"
+msgstr ""
+
+#: admin/options-sanitize.php:445 options.php:124
+msgid "Посередине Справа"
+msgstr ""
+
+#: admin/options-sanitize.php:446 options.php:124
+msgid "Внизу Слева"
+msgstr ""
+
+#: admin/options-sanitize.php:447 options.php:124
+msgid "Внизу По Центру"
+msgstr ""
+
+#: admin/options-sanitize.php:448 options.php:124
+msgid "Внизу Справа"
+msgstr ""
+
+#: admin/options-sanitize.php:461
+msgid "Прокручивается"
+msgstr ""
+
+#: admin/options-sanitize.php:462
+msgid "Фиксирован"
+msgstr ""
+
+#: admin/options-sanitize.php:557 options.php:1470
+msgid "Обычный"
+msgstr ""
+
+#: admin/options-sanitize.php:558
+msgid "Наклонный"
+msgstr ""
+
+#: admin/options-sanitize.php:559
+msgid "Жирный"
+msgstr ""
+
+#: admin/options-sanitize.php:560
+msgid "Жирный Наклонный"
+msgstr ""
+
+#: archive-testimonial.php:33 attachment.php:52 attachment.php:101
+#: landing.php:87 loop.php:39 onecolumn-page.php:44 page.php:44
+#: single-catalog.php:304 single-testimonial.php:40 testimonials-page.php:42
+msgid "Изменить"
+msgstr "Change"
+
+#: archive-testimonial.php:45 single-testimonial.php:55
+msgid "Оставьте свой отзыв"
+msgstr "Leave your review"
+
+#: archive.php:19
+#, php-format
+msgid "Архив: <span>%s</span>"
+msgstr "Archive: <span>%s</span>"
+
+#: archive.php:21
+#, php-format
+msgid "Архив месяца: <span>%s</span>"
+msgstr "Month Archive: <span>%s</span>"
+
+#: archive.php:23
+#, php-format
+msgid "Архив года: <span>%s</span>"
+msgstr "Year Archive: <span>%s</span>"
+
+#: archive.php:29
+msgid "Архив блога"
+msgstr "Blog Archive"
+
+#: attachment.php:13
+#, php-format
+msgid "Вернуться к %s"
+msgstr "Return to %s"
+
+#: attachment.php:15
+#, php-format
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr ""
+
+#: attachment.php:21
+#, php-format
+msgid "<span class=\"%1$s\">Автор</span> %2$s"
+msgstr "<span class=\"%1$s\">Author</span> %2$s"
+
+#: attachment.php:25
+#, php-format
+msgid "Посмотреть все записи автора %s"
+msgstr "View all authors notes %s"
+
+#: attachment.php:32
+#, php-format
+msgid "<span class=\"%1$s\">Опубликованные</span> %2$s"
+msgstr "<span class=\"%1$s\">Published</span> %2$s"
+
+#: attachment.php:42
+#, php-format
+msgid "Полный размер %s пикселей"
+msgstr "Full size %s pixels"
+
+#: attachment.php:45
+msgid "Ссылка на полное изображение"
+msgstr "Link to full image"
+
+#: attachment.php:93
+msgid "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Read more <span class=\"meta-nav\">&rarr;</span>"
+
+#: attachment.php:95 landing.php:78 loop.php:71 onecolumn-page.php:34
+#: page.php:42 single.php:31
+msgid "Страницы:"
+msgstr "Pages:"
+
+#: author.php:27
+#, php-format
+msgid "Архив автора: %s"
+msgstr "Author Archive: %s"
+
+#: category.php:13
+#, php-format
+msgid "Архив рубрики: %s"
+msgstr "Category Archive: %s"
+
+#: comments.php:12
+msgid ""
+"Этот пост защищен паролем. Чтобы посмотреть комментарии, введите пароль ниже"
+msgstr ""
+"This post is protected by password. If you would like to view the comment, "
+"enter password"
+
+#: comments.php:25
+msgid "Комментарии на блоге"
+msgstr "Comments on a blog"
+
+#: comments.php:29
+msgid "Комментарии на Блог"
+msgstr "Blog comments"
+
+#: comments.php:32 theme-functions.php:75
+msgid "Комментариев нет"
+msgstr "No comments"
+
+#: comments.php:32 loop.php:38
+msgid "1 комментарий"
+msgstr "1 comment"
+
+#: comments.php:32 loop.php:38 theme-functions.php:83
+msgid "% комментариев"
+msgstr "% comments"
+
+#: comments.php:41
+msgid "Ответить"
+msgstr "Answer"
+
+#: comments.php:69
+msgid "Оставьте ваш комментарий или вопрос"
+msgstr "Leave your comment or question"
+
+#: comments.php:69
+#, php-format
+msgid "Оставьте ваш комментарий к %s"
+msgstr "Leave your comments for %s"
+
+#: comments.php:76
+msgid "Вы должны"
+msgstr "You need"
+
+#: comments.php:76
+msgid "войти,"
+msgstr "enter,"
+
+#: comments.php:76
+msgid "чтобы оставлять комментарии."
+msgstr "in order to leave comments. "
+
+#: comments.php:83
+msgid "Вы вошли как"
+msgstr "Logged in as"
+
+#: comments.php:83
+msgid "Выйти из аккаунта"
+msgstr "Exit account"
+
+#: comments.php:83
+msgid "Выйти"
+msgstr "Exit"
+
+#: comments.php:88 contact.php:187
+msgid "Имя"
+msgstr "Name"
+
+#: comments.php:88 comments.php:91
+msgid "(обязательно)"
+msgstr "(required)"
+
+#: comments.php:91
+msgid "Email (не будет опубликован)"
+msgstr "Email (will not be published)"
+
+#: comments.php:94
+msgid "Вебсайт"
+msgstr "Website"
+
+#: comments.php:105
+msgid "Отправить комментарий"
+msgstr "Send comment"
+
+#: contact.php:27
+msgid "Вы забыли указать свой email."
+msgstr "You forgot to mention your email."
+
+#: contact.php:30
+msgid "Вы указали неверный email адрес."
+msgstr "You have mentioned wrong email address."
+
+#: contact.php:38
+msgid "Вы забыли написать сообщение."
+msgstr "You forgot to write a message"
+
+#: contact.php:50
+msgid "Вы забыли Отметить галочкой \"Я не работ\""
+msgstr "You forgot to check “I’m not robot”"
+
+#: contact.php:60
+msgid "Сообщение с блога от "
+msgstr "Message on a blog from"
+
+#: contact.php:62
+msgid "Имя: "
+msgstr "Name:"
+
+#: contact.php:62 theme-widgets.php:519
+msgid "Email: "
+msgstr ""
+
+#: contact.php:62
+msgid "Сообщение: "
+msgstr "Message:"
+
+#: contact.php:88
+msgid "Пожалуйста, отметьте галочкой \"Я не робот\"."
+msgstr "Please, highlight “I am not robot”."
+
+#: contact.php:107
+msgid "Вы забыли указать свое "
+msgstr "You forgot to mention yours"
+
+#: contact.php:113
+msgid "Вы забыли указать свой "
+msgstr "You forgot to mention your"
+
+#: contact.php:132
+msgid "<strong>Спасибо!</strong> Ваш email успешно отправлен."
+msgstr "<strong>Thank you!</strong> Your message was sent successfully."
+
+#: contact.php:170
+msgid "Ваше сообщение успешно отправлено."
+msgstr "Your message was sent successfully."
+
+#: contact.php:176
+msgid "Произошла ошибка во время отправки сообщения."
+msgstr "Error occurred while posting your message. "
+
+#: contact.php:180
+msgid ""
+"Email не установлен. <br>Пожалуйста добавьте контактный email адрес в "
+"настройках шаблона в разделе Вставки!"
+msgstr ""
+"Email is not specified. <br>Please, add contact email address in Template "
+"Settings page Insert tab. "
+
+#: contact.php:194
+msgid "Email"
+msgstr "Email"
+
+#: contact.php:201
+msgid "Сообщение"
+msgstr "Message"
+
+#: contact.php:220
+msgid "Отправить сообщение"
+msgstr "Send message"
+
+#: enterpage.php:8
+msgid "Входная страница"
+msgstr "Home Page"
+
+#: footer.php:13
+msgid "Вверх"
+msgstr "Up"
+
+#: footer.php:16
+msgid "Y"
+msgstr ""
+
+#: footer.php:16
+msgid "Все права защищены"
+msgstr "All Rights Reserved"
+
+#: footer.php:17
+msgid "Создан на шаблоне-конструкторе "
+msgstr "Created on theme - builder"
+
+#: footer.php:17
+msgid "AB-Inspiration "
+msgstr ""
+
+#: functions.php:64
+msgid "Основное меню"
+msgstr "Main menu"
+
+#: functions.php:65
+msgid "Меню в шапке"
+msgstr "Header menu"
+
+#: functions.php:66
+msgid "Плавающее меню"
+msgstr "Floating menu"
+
+#: functions.php:67
+msgid "Меню в footer"
+msgstr "Footer menu"
+
+#: functions.php:68
+msgid "Меню на \"Целевой Странице\""
+msgstr "Menu in “Featured Page”"
+
+#: functions.php:69
+msgid "Меню в мобильной версии"
+msgstr "Menu for mobile version "
+
+#: functions.php:173
+#, php-format
+msgid "Результат поиска по запросу - %s"
+msgstr "Requested search results - %s"
+
+#: functions.php:179 functions.php:211
+#, php-format
+msgid "Страница %s"
+msgstr "Page %s"
+
+#: functions.php:279
+#, php-format
+msgid "%s "
+msgstr ""
+
+#: functions.php:285
+msgid "Ваш комментарий ожидает проверки."
+msgstr "Your comment is awaiting moderation."
+
+#: functions.php:293
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: functions.php:293 functions.php:320
+msgid "(Изменить)"
+msgstr "(Edit)"
+
+#: functions.php:320
+msgid "Пинбэк:"
+msgstr "Pinback:"
+
+#: functions.php:338
+msgid "Боковая колонка"
+msgstr "Sidebar"
+
+#: functions.php:340
+msgid "Боковая колонка блога"
+msgstr "Blog Sidebar"
+
+#: functions.php:349
+msgid "Виджет в шапке"
+msgstr "Header widget"
+
+#: functions.php:351
+msgid ""
+"Этот блок ТОЛЬКО для виджета 0 - AB - Виджет в шапке!!! Перетащите в этот "
+"блок виджет 0 - AB - Виджет в шапке."
+msgstr ""
+"This widget is ONLY for widget 0 - AB - Widget in header!!! Drake this block "
+"widget 0 - AB - Widget in header. "
+
+#: functions.php:356
+msgid "Боковая колонка в магазине"
+msgstr "Shop Sidebar"
+
+#: functions.php:358
+msgid "Этот блок ТОЛЬКО магазина WooCommerce."
+msgstr "This widget ONLY in WooCommece shop."
+
+#: functions.php:369
+msgid "Виджет в футер"
+msgstr "Footer widget "
+
+#: functions.php:371
+msgid "Перетащите в этот блок виджеты для нижней части блога"
+msgstr "Drag widgets into this widget for the button part of the blog"
+
+#: functions.php:398
+msgid "Автор:"
+msgstr "Author:"
+
+#: functions.php:527
+msgid "Исключение дополнительных блоков в статье"
+msgstr "Exclude additional widgets in articles "
+
+#: functions.php:544
+msgid "Кнопки \"Поделиться\" в начале статьи"
+msgstr "“Share” button at the beginning of article"
+
+#: functions.php:546 options.php:2271
+msgid "Кнопки \"Поделиться\" в конце статьи"
+msgstr "“Share” button at the end of article"
+
+#: functions.php:548 options.php:2438
+msgid "Форма подписки в конце статьи"
+msgstr "Subscription box at the end of the article"
+
+#: functions.php:550
+msgid "Блок \"Похожие записи\""
+msgstr "\"Related Posts\" Widget"
+
+#: functions.php:594
+msgid "Исключение дополнительных блоков на странице"
+msgstr "Exclude additional widgets on a page"
+
+#: functions.php:608
+msgid "Кнопки \"Поделиться\" в начале страницы"
+msgstr "“Share” button at the beginning of page"
+
+#: functions.php:610
+msgid "Кнопки \"Поделиться\" в конце страницы"
+msgstr "“Share” button at the end of page"
+
+#: functions.php:645
+msgid "Исключить из карты сайта "
+msgstr "Exclude from site map"
+
+#: functions.php:661
+msgid "Исключить страницу из карты сайта"
+msgstr "Exclude page from site map"
+
+#: functions.php:724 functions.php:740
+msgid "Ключ Автоматического Обновления"
+msgstr "Automatic Update Key"
+
+#: functions.php:724
+msgid "Ключ обновления"
+msgstr "Update Key"
+
+#: functions.php:739
+msgid "Ключ автоматического обновления шаблона AB-Inspiration"
+msgstr "Automatic update key for AB-Inspiration Theme"
+
+#: functions.php:740
+msgid "Купить "
+msgstr "Buy"
+
+#: functions.php:749
+msgid "Введите Ваш ключ обновления"
+msgstr "Enter your activation key"
+
+#: functions.php:759 functions.php:768
+msgid "Активировать ключ"
+msgstr "Key Activation"
+
+#: functions.php:763
+msgid "ключ активирован"
+msgstr "Activation key"
+
+#: functions.php:1075
+msgid "Фото для галереи"
+msgstr "Photo for the gallery "
+
+#: functions.php:1116
+msgid "Сообщение с контактной формы"
+msgstr "Message with contact form"
+
+#: header.php:107 searchform.php:10
+msgid "Поиск по блогу &hellip;"
+msgstr "Search on a blog &hellip;"
+
+#: header.php:109 searchform.php:12
+msgid "Поиск"
+msgstr "Search"
+
+#: landing.php:8
+msgid "Целевая страница"
+msgstr "Target page"
+
+#: loop.php:4 search.php:21 theme-widgets.php:3617
+msgid "Ничего не найдено"
+msgstr "Nothing was found"
+
+#: loop.php:7
+msgid ""
+"Извините, но по Вашему запросу ничего не найдено. Воспользуйтесь формой "
+"поиска, чтобы найти то, что Вы ищите."
+msgstr ""
+"Sorry, your request was not found. Use search box to look up what you need. "
+
+#: loop.php:15 loop.php:36
+msgid "gallery"
+msgstr ""
+
+#: loop.php:18 loop.php:32
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: loop.php:32
+#, php-format
+msgid "Эта галерея содержит <a %1$s>%2$s фотографии</a>."
+msgstr "This gallery includes <a %1$s>%2$s photos</a>."
+
+#: loop.php:36
+msgid "Посмотреть записи в категории Галерея"
+msgstr "View notes in Gallery catagory"
+
+#: loop.php:36
+msgid "Еще галереи"
+msgstr "More galleries "
+
+#: loop.php:38
+msgid "Оставить комментарий"
+msgstr "Leave comment"
+
+#: loop.php:46
+#, php-format
+msgid " %s"
+msgstr ""
+
+#: loop.php:58 loop.php:69
+msgid "Читать далее &#187;"
+msgstr "Read more &#187;"
+
+#: onecolumn-page.php:9
+msgid "На всю ширину"
+msgstr "Full width"
+
+#: options.php:48 options.php:58 options.php:160 theme-widgets.php:722
+#: theme-widgets.php:1577 theme-widgets.php:1596 theme-widgets.php:2414
+msgid "Да"
+msgstr "Yes"
+
+#: options.php:48 options.php:51 options.php:53 options.php:58 options.php:99
+#: options.php:122 options.php:160 theme-widgets.php:721 theme-widgets.php:746
+#: theme-widgets.php:1578 theme-widgets.php:1597 theme-widgets.php:2415
+msgid "Нет"
+msgstr "No"
+
+#: options.php:51
+msgid "С Большой Буквы"
+msgstr ""
+
+#: options.php:51
+msgid "маленькие"
+msgstr ""
+
+#: options.php:51
+msgid "ЗАГЛАВНЫЕ"
+msgstr ""
+
+#: options.php:53
+msgid "Подчеркивать"
+msgstr ""
+
+#: options.php:55 options.php:61 options.php:105 options.php:120
+#: options.php:126 theme-widgets.php:675
+msgid "Слева"
+msgstr "On a left"
+
+#: options.php:55 options.php:118
+msgid "По-середине"
+msgstr ""
+
+#: options.php:55 options.php:61 options.php:105 options.php:120
+#: options.php:126 theme-widgets.php:676
+msgid "Справа"
+msgstr "On the right"
+
+#: options.php:57
+msgid "Наверху"
+msgstr ""
+
+#: options.php:57 options.php:61 options.php:105 options.php:120
+#: options.php:126
+msgid "По-центру"
+msgstr ""
+
+#: options.php:57 options.php:118
+msgid "Внизу"
+msgstr ""
+
+#: options.php:59
+msgid "Над шапкой блога"
+msgstr ""
+
+#: options.php:59
+msgid "Под шапкой блога"
+msgstr ""
+
+#: options.php:60
+msgid "На всю ширину экрана - 100%"
+msgstr ""
+
+#: options.php:60
+msgid "Ширина - 1140px"
+msgstr ""
+
+#: options.php:60 options.php:66
+msgid "Ширина - 1100px"
+msgstr ""
+
+#: options.php:62
+msgid "Без затемнения"
+msgstr ""
+
+#: options.php:62
+msgid "Очень сильное затемнение"
+msgstr ""
+
+#: options.php:62
+msgid "Сильное затемнение"
+msgstr ""
+
+#: options.php:62
+msgid "Среднее затемнение"
+msgstr ""
+
+#: options.php:62
+msgid "Легкое затемнение"
+msgstr ""
+
+#: options.php:62
+msgid "Очень легкое затемнение"
+msgstr ""
+
+#: options.php:63 options.php:64 options.php:65 options.php:66
+msgid "Ширина до границ статей и виджетов - 1060px"
+msgstr ""
+
+#: options.php:63 options.php:64 options.php:65
+msgid "Ширина до границы контента - 1100px"
+msgstr ""
+
+#: options.php:63 options.php:64 options.php:65 options.php:66
+msgid "Ширина до границ блога - 100%"
+msgstr ""
+
+#: options.php:99
+msgid "сверху вниз"
+msgstr ""
+
+#: options.php:99
+msgid "снизу вверх"
+msgstr ""
+
+#: options.php:101
+msgid "Просто кнопка"
+msgstr ""
+
+#: options.php:103
+msgid "Маленькая (150/150)"
+msgstr ""
+
+#: options.php:103
+msgid "Средняя (300)"
+msgstr ""
+
+#: options.php:103
+msgid "Большая (640)"
+msgstr ""
+
+#: options.php:108
+msgid "Сплошная"
+msgstr ""
+
+#: options.php:108
+msgid "Черточки"
+msgstr ""
+
+#: options.php:108
+msgid "Точки"
+msgstr ""
+
+#: options.php:110 options.php:111 options.php:112 theme-functions.php:834
+#: theme-functions.php:839 theme-functions.php:844
+msgid "на Блоге"
+msgstr "On Blog"
+
+#: options.php:110 options.php:111 options.php:112 theme-functions.php:835
+#: theme-functions.php:840 theme-functions.php:845
+msgid "в Вконтакте"
+msgstr "in Vkontakte"
+
+#: options.php:110 options.php:111 options.php:112 theme-functions.php:836
+#: theme-functions.php:841 theme-functions.php:846
+msgid "в Фейсбук"
+msgstr "in Facebook"
+
+#: options.php:114
+msgid "Комментарии 3 в 1 Вкладки"
+msgstr ""
+
+#: options.php:114
+msgid "Комментарии 3 в 1 Подряд"
+msgstr ""
+
+#: options.php:114
+msgid "Только комментарии на блоге"
+msgstr ""
+
+#: options.php:116
+msgid "Фон покрывает все поле"
+msgstr ""
+
+#: options.php:116
+msgid "Фон покрывает поле сохраняя пропорции изображения"
+msgstr ""
+
+#: options.php:116
+msgid "Исходный размер изображения"
+msgstr ""
+
+#: options.php:118
+msgid "Сверху"
+msgstr ""
+
+#: options.php:122
+msgid "20% прозрачности"
+msgstr ""
+
+#: options.php:122
+msgid "40% прозрачности"
+msgstr ""
+
+#: options.php:122
+msgid "60% прозрачности"
+msgstr ""
+
+#: options.php:122
+msgid "80% прозрачности"
+msgstr ""
+
+#: options.php:129
+msgid "Классический"
+msgstr ""
+
+#: options.php:129
+msgid "Плоский"
+msgstr ""
+
+#: options.php:129
+msgid "Бирман"
+msgstr ""
+
+#: options.php:131 options.php:2244 options.php:2356
+msgid "Показывать счетчик"
+msgstr ""
+
+#: options.php:131
+msgid "С нулем"
+msgstr ""
+
+#: options.php:137 options.php:2183 options.php:2294
+msgid "Facebook"
+msgstr ""
+
+#: options.php:137 options.php:2190 options.php:2302
+msgid "Twitter"
+msgstr ""
+
+#: options.php:137
+msgid "Google"
+msgstr ""
+
+#: options.php:137 options.php:2203 options.php:2315
+msgid "Vkontakte"
+msgstr ""
+
+#: options.php:137 options.php:2208 options.php:2320
+msgid "Odnoklassniki"
+msgstr ""
+
+#: options.php:137 options.php:2213 options.php:2325
+msgid "Mailru"
+msgstr ""
+
+#: options.php:137 options.php:2219 options.php:2331
+msgid "Pinterest"
+msgstr ""
+
+#: options.php:137
+msgid "LinkedIn"
+msgstr ""
+
+#: options.php:150
+msgid "Блог/Главная"
+msgstr ""
+
+#: options.php:150 options.php:155
+msgid "Статьи"
+msgstr ""
+
+#: options.php:150 options.php:155 sitemap.php:49
+msgid "Страницы"
+msgstr "Pages"
+
+#: options.php:150
+msgid "Архивы/Рубрики"
+msgstr ""
+
+#: options.php:162
+msgid "Без закругления"
+msgstr ""
+
+#: options.php:162
+msgid "С загруглением"
+msgstr ""
+
+#: options.php:164 options.php:418 options.php:581 options.php:744
+#: options.php:942 options.php:1067 options.php:1190 options.php:1257
+#: options.php:1529 options.php:1586 options.php:1648 options.php:2506
+msgid "Фон"
+msgstr ""
+
+#: options.php:164 options.php:348 options.php:450 options.php:587
+#: options.php:974 options.php:1269 options.php:1538 options.php:1600
+#: options.php:2391 options.php:2520
+msgid "Граница"
+msgstr ""
+
+#: options.php:225
+msgid "Стиль блога"
+msgstr ""
+
+#: options.php:228 options.php:387 options.php:713 options.php:898
+#: options.php:1056 options.php:1637
+msgid "Размер"
+msgstr ""
+
+#: options.php:233
+msgid "Ширина блога"
+msgstr ""
+
+#: options.php:241 options.php:407
+msgid "Отступ"
+msgstr ""
+
+#: options.php:246 options.php:412
+msgid ""
+"По умолчанию отступ сверху до шапки <strong>10px</strong>. Если Вы хотите "
+"чтобы шапка была без пробела, поставьте <strong>0</strong>"
+msgstr ""
+
+#: options.php:255
+msgid "Фон для главной"
+msgstr ""
+
+#: options.php:261
+msgid "Фон для главной вокруг блога"
+msgstr ""
+
+#: options.php:267
+msgid "Размер фона на главной"
+msgstr ""
+
+#: options.php:274
+msgid "Видеофон для главной страницы"
+msgstr ""
+
+#: options.php:281
+msgid "Видеофон на главной mp4"
+msgstr ""
+
+#: options.php:282
+msgid "Если вы отметили опцию \"mp4\", загрузите здесь видео в формате mp4"
+msgstr ""
+
+#: options.php:287
+msgid "Видеофон на главной webm"
+msgstr ""
+
+#: options.php:288
+msgid "Если вы отметили опцию \"mp4\", загрузите видео в формате webm"
+msgstr ""
+
+#: options.php:294
+msgid "Если вы отметили опцию \"Youtube\", вставьте здесь ID видео с Youtube"
+msgstr ""
+
+#: options.php:301
+msgid "Затемнение фона"
+msgstr ""
+
+#: options.php:308
+msgid "Цветовой фильтр для затемнения фона"
+msgstr ""
+
+#: options.php:314
+msgid "Фон вокруг блога"
+msgstr ""
+
+#: options.php:318
+msgid ""
+"Фон вокруг блога. Фон может быть либо картинкой либо просто цветом, либо то "
+"и другой"
+msgstr ""
+
+#: options.php:323
+msgid "Размер фона вокруг блога"
+msgstr ""
+
+#: options.php:330 options.php:334
+msgid "Фон внутри блога"
+msgstr ""
+
+#: options.php:335 options.php:1263
+msgid "Здесь можно изменить фон внутри статей."
+msgstr ""
+
+#: options.php:340
+msgid "Размер фона внутри блога"
+msgstr ""
+
+#: options.php:352
+msgid "Отображать границу блога?"
+msgstr ""
+
+#: options.php:359
+msgid "Цвет границы блога"
+msgstr ""
+
+#: options.php:364
+msgid "Закругления углов границы блога"
+msgstr ""
+
+#: options.php:372
+msgid "Тень вокруг блога"
+msgstr ""
+
+#: options.php:384
+msgid "Стиль шапки"
+msgstr ""
+
+#: options.php:392
+msgid "Высота шапки (header)"
+msgstr ""
+
+#: options.php:393
+msgid ""
+"Высота шапки. Здесь Вы можете указать высоту шапки в пикселях. По умолчанию "
+"высота 120px"
+msgstr ""
+
+#: options.php:400
+msgid "Ширина шапки (внешней шапки)"
+msgstr ""
+
+#: options.php:411
+msgid "От границы блога до фона шапки"
+msgstr ""
+
+#: options.php:423
+msgid ""
+"Фон снаружи (фон будет отображаться до границ блога/или на всю ширина (если "
+"вы выбрали блог на всю ширину))"
+msgstr ""
+
+#: options.php:429 options.php:442
+msgid "Размер фона (картинки) в шапке"
+msgstr ""
+
+#: options.php:436
+msgid ""
+"Фон внутри шапки (этот фон будет отображаться на 1060px до границ статей и "
+"виджетов)"
+msgstr ""
+
+#: options.php:455
+msgid "Закругления границы шапки"
+msgstr ""
+
+#: options.php:456 options.php:2046
+msgid "Закругления формы подписки в px."
+msgstr ""
+
+#: options.php:464 options.php:614 options.php:2556
+msgid "Изображение"
+msgstr ""
+
+#: options.php:468 options.php:618
+msgid "Настройка логотипа (название и описание блога) в виде изображения"
+msgstr ""
+
+#: options.php:474 options.php:624
+msgid "Отметьте галочкой если хотите загрузить логотип в виде изображения."
+msgstr ""
+
+#: options.php:479 options.php:629
+msgid "Загрузите заранее созданное изображение логотипа"
+msgstr ""
+
+#: options.php:485 options.php:525 options.php:562 options.php:731
+#: options.php:928 options.php:1176
+msgid "Отступ сверху"
+msgstr ""
+
+#: options.php:491 options.php:531 options.php:568
+msgid "Отступ cлева"
+msgstr ""
+
+#: options.php:498 options.php:635 options.php:847 options.php:1014
+#: options.php:1112 options.php:1239 options.php:1318 options.php:1658
+#: options.php:2413 options.php:2542
+msgid "Текст"
+msgstr ""
+
+#: options.php:501
+msgid "Настройка заголовка блога в виде текста"
+msgstr ""
+
+#: options.php:506 options.php:639
+msgid "Стиль шрифта заголовка блога"
+msgstr ""
+
+#: options.php:512 options.php:756 options.php:859 options.php:1035
+#: options.php:1079 options.php:1342 options.php:1426
+msgid "При наведении мышки"
+msgstr ""
+
+#: options.php:518 options.php:548 options.php:646 options.php:666
+#: options.php:1028 options.php:1571 options.php:1621 options.php:1952
+msgid "Трансформация букв"
+msgstr ""
+
+#: options.php:538
+msgid "Настройка описания блога в виде текста"
+msgstr ""
+
+#: options.php:542 options.php:660
+msgid "Стиль шрифта описания блога"
+msgstr ""
+
+#: options.php:555
+msgid "Расстояние между буквами"
+msgstr ""
+
+#: options.php:574
+msgid "Стиль шапки в мобильной версии"
+msgstr ""
+
+#: options.php:577
+msgid "Настройка шапки в мобильной версии"
+msgstr ""
+
+#: options.php:592
+msgid "Отображать границу под шапкой"
+msgstr ""
+
+#: options.php:598 options.php:2121 options.php:2400 options.php:2529
+msgid "Цвет границы"
+msgstr ""
+
+#: options.php:603 options.php:1004 options.php:1099
+msgid "Тень"
+msgstr ""
+
+#: options.php:608
+msgid "Отображать тень в нижней границе шапки"
+msgstr ""
+
+#: options.php:655
+msgid "Отображать описание в шапке"
+msgstr ""
+
+#: options.php:674
+msgid "Отключить нестандартные шрифты в мобильной версии сайта"
+msgstr ""
+
+#: options.php:680
+msgid "Стиль меню в шапке"
+msgstr ""
+
+#: options.php:684
+msgid "Отображать меню в шапке?"
+msgstr ""
+
+#: options.php:690
+msgid ""
+"Здесь Вы можете включить отображение меню в шапке и настроить внешний вид. "
+"Чтобы создать пункты меню в шапке перейдите в раздел \"Дизайн\" - \"Меню\" - "
+"создайте меню"
+msgstr ""
+
+#: options.php:694 options.php:887 options.php:1514
+msgid "Расположение"
+msgstr ""
+
+#: options.php:699
+msgid "Расположение меню по вертикали"
+msgstr ""
+
+#: options.php:706
+msgid "Расположение пунктов меню по горизонтали"
+msgstr ""
+
+#: options.php:718 options.php:903 options.php:1061
+msgid "Высота меню"
+msgstr ""
+
+#: options.php:725
+msgid "Отступы пунктов меню"
+msgstr ""
+
+#: options.php:737 options.php:935 options.php:1183
+msgid "Отступ снизу"
+msgstr ""
+
+#: options.php:749 options.php:1072
+msgid "Основной фон"
+msgstr ""
+
+#: options.php:762 options.php:1085
+msgid "Выпадающее"
+msgstr ""
+
+#: options.php:767
+msgid "Закругления углов меню при наведении мышкой и активное меню"
+msgstr ""
+
+#: options.php:775
+msgid "При наведении мышки отображать фон или нижнюю границу?"
+msgstr ""
+
+#: options.php:783 options.php:1092
+msgid "Прозрачность фона"
+msgstr ""
+
+#: options.php:791 options.php:797
+msgid "Граница сверху"
+msgstr ""
+
+#: options.php:798 options.php:825
+msgid ""
+"Укажите толщину границы (1,2,3 итд). Если 0, граница отображаться не будет"
+msgstr ""
+
+#: options.php:804 options.php:831
+msgid "Цвет границы сверху"
+msgstr ""
+
+#: options.php:811
+msgid "Стиль границы сверху"
+msgstr ""
+
+#: options.php:818 options.php:824
+msgid "Граница снизу"
+msgstr ""
+
+#: options.php:838
+msgid "Стиль границы снизу"
+msgstr ""
+
+#: options.php:851 options.php:1116 options.php:2162
+msgid "Стиль"
+msgstr ""
+
+#: options.php:865
+msgid "Выпадающее меню"
+msgstr ""
+
+#: options.php:871 options.php:1130
+msgid "Трансформация"
+msgstr ""
+
+#: options.php:878
+msgid "Стиль основного меню"
+msgstr ""
+
+#: options.php:882
+msgid "Отображать основное меню?"
+msgstr ""
+
+#: options.php:891
+msgid "Расположение меню (под шапкой/над шапкой)"
+msgstr ""
+
+#: options.php:910
+msgid "Высота выпадающего меню"
+msgstr ""
+
+#: options.php:917
+msgid "Ширина меню"
+msgstr ""
+
+#: options.php:924 options.php:1172
+msgid "Отступы"
+msgstr ""
+
+#: options.php:946
+msgid "Фон меню"
+msgstr ""
+
+#: options.php:953
+msgid "Фон выпадающего меню"
+msgstr ""
+
+#: options.php:960
+msgid "Фон при наведении мышки"
+msgstr ""
+
+#: options.php:961
+msgid "Укажите желаемый фоновый цвет меню и цвет при наведении мышки на меню"
+msgstr ""
+
+#: options.php:967
+msgid "Градиент фона меню - легкий переход от темного к светлому"
+msgstr ""
+
+#: options.php:979
+msgid "Отображать границу вокруг меню"
+msgstr ""
+
+#: options.php:986
+msgid "Отображать разделитель"
+msgstr ""
+
+#: options.php:991
+msgid "Цвет разделителя и границы"
+msgstr ""
+
+#: options.php:996
+msgid "Закругления углов меню"
+msgstr ""
+
+#: options.php:1009
+msgid "Отображать тень от меню"
+msgstr ""
+
+#: options.php:1019
+msgid "Стиль шрифта меню"
+msgstr ""
+
+#: options.php:1020
+msgid "Укажите желаемый стиль шрифта текста в меню"
+msgstr ""
+
+#: options.php:1036
+msgid "Укажите, как цвет текста в меню будет меняться при наведении мышки"
+msgstr ""
+
+#: options.php:1043
+msgid "Стиль плавающего меню"
+msgstr ""
+
+#: options.php:1047
+msgid "Отображать плавающее меню?"
+msgstr ""
+
+#: options.php:1053
+msgid ""
+"Здесь Вы можете включить отображение плавающего меню и настроить внешний "
+"вид. Чтобы создать пункты плавающего меню перейдите в раздел \"Дизайн\" - "
+"\"Меню\" - создайте меню"
+msgstr ""
+
+#: options.php:1105
+msgid "Отображать тень под меню"
+msgstr ""
+
+#: options.php:1124
+msgid "Цвет при нведении мышки"
+msgstr ""
+
+#: options.php:1138
+msgid "Лого или баннер"
+msgstr ""
+
+#: options.php:1142
+msgid "Загрузите логотип или баннер"
+msgstr ""
+
+#: options.php:1143
+msgid "Баннер или лого будет отображаться слева на плавающем меню"
+msgstr ""
+
+#: options.php:1148
+msgid "Ссылка лого или баннера"
+msgstr ""
+
+#: options.php:1154
+msgid "Стиль контента"
+msgstr ""
+
+#: options.php:1158
+msgid "Здесь Вы можете задать стиль вокруг статей и виджетов"
+msgstr ""
+
+#: options.php:1161
+msgid "Ширина"
+msgstr ""
+
+#: options.php:1165
+msgid "Ширина общего поля вокруг статей и виджетов"
+msgstr ""
+
+#: options.php:1177
+msgid "Отступ основной области сверху. По умолчанию 0px"
+msgstr ""
+
+#: options.php:1184
+msgid "Отступ основной области снизу. По умолчанию 0px"
+msgstr ""
+
+#: options.php:1194
+msgid "Фон вокруг статей и виджетов"
+msgstr ""
+
+#: options.php:1199
+msgid "Граница вокруг статей и виджетов"
+msgstr ""
+
+#: options.php:1203
+msgid "Отображать границу вокруг статей и виджетов?"
+msgstr ""
+
+#: options.php:1210
+msgid "Цвет границы статей и виджетов"
+msgstr ""
+
+#: options.php:1216
+msgid "Закругления углов статей и виджетов"
+msgstr ""
+
+#: options.php:1223
+msgid "Горизонтальный разделитель между статьями"
+msgstr ""
+
+#: options.php:1229
+msgid "Отображать разделитель между статьями на главной странице и в архивах?"
+msgstr ""
+
+#: options.php:1234
+msgid "Цвет разделителя между статьями"
+msgstr ""
+
+#: options.php:1243
+msgid "Шрифт текста на всем блоге"
+msgstr ""
+
+#: options.php:1244
+msgid ""
+"Кроме: Заголовок блога, описание блога, меню, заголовки статей, заголовки "
+"виджетов, заголовоки формы подписки в виджете и под статьей, текст в блоке "
+"\"поделиться в конце статьи\""
+msgstr ""
+
+#: options.php:1253
+msgid "Стиль статьи"
+msgstr ""
+
+#: options.php:1262
+msgid "Фон внутри статей"
+msgstr ""
+
+#: options.php:1273
+msgid "Отображать границу вокруг статей?"
+msgstr ""
+
+#: options.php:1280
+msgid "Цвет границы статей"
+msgstr ""
+
+#: options.php:1286
+msgid "Закругления углов статей"
+msgstr ""
+
+#: options.php:1293
+msgid "Дата, Автор, Комментарии"
+msgstr ""
+
+#: options.php:1298
+msgid "Отображать информацию под заголовком статьи (дата, автор, комментарии)?"
+msgstr ""
+
+#: options.php:1305
+msgid "Метки в конце статьи"
+msgstr ""
+
+#: options.php:1310
+msgid "Отображать метки в конце статьи?"
+msgstr ""
+
+#: options.php:1323
+msgid "Размер шрифта текста в статьях и на страницах"
+msgstr ""
+
+#: options.php:1331
+msgid "Заголовки статей и страниц"
+msgstr ""
+
+#: options.php:1335
+msgid "Стиль заголовков статей"
+msgstr ""
+
+#: options.php:1348
+msgid "Цвет заголовка на внутренней странице"
+msgstr ""
+
+#: options.php:1353
+msgid "Шрифт и размер заголовков в тексте статей"
+msgstr ""
+
+#: options.php:1358
+msgid "Шрифт заголовков в тексте статей"
+msgstr ""
+
+#: options.php:1369
+msgid "Размер заголовков в тексте статей"
+msgstr ""
+
+#: options.php:1410
+msgid "Цвет заголовков в статьях"
+msgstr ""
+
+#: options.php:1416
+msgid "Ссылки"
+msgstr ""
+
+#: options.php:1420
+msgid "Цвет ссылок"
+msgstr ""
+
+#: options.php:1432
+msgid "Посещенная ссылка"
+msgstr ""
+
+#: options.php:1437
+msgid "Кнопки"
+msgstr ""
+
+#: options.php:1442
+msgid "Цвет кнопок"
+msgstr ""
+
+#: options.php:1448
+msgid "Цвет при наведении мышки"
+msgstr ""
+
+#: options.php:1453
+msgid "Цвет текста на кнопках"
+msgstr ""
+
+#: options.php:1458
+msgid "Форма кнопок"
+msgstr ""
+
+#: options.php:1466
+msgid "Списки"
+msgstr ""
+
+#: options.php:1476
+msgid "Положительный"
+msgstr ""
+
+#: options.php:1482
+msgid "Отрицательный"
+msgstr ""
+
+#: options.php:1488
+msgid "Нейтральный"
+msgstr ""
+
+#: options.php:1494
+msgid "Комментарии"
+msgstr ""
+
+#: options.php:1498
+msgid "Фон комментариев"
+msgstr ""
+
+#: options.php:1505
+msgid "Фон комментариев автора"
+msgstr ""
+
+#: options.php:1511
+msgid "Стиль виджетов"
+msgstr ""
+
+#: options.php:1518
+msgid "Расположение боковой колонки (слева или справа)"
+msgstr ""
+
+#: options.php:1533 options.php:1595
+msgid "Фон внутри виджета"
+msgstr ""
+
+#: options.php:1542
+msgid "Отображать границу вокруг виджетов?"
+msgstr ""
+
+#: options.php:1549
+msgid "Цвет границы виджетов"
+msgstr ""
+
+#: options.php:1554 options.php:1604
+msgid "Закругления углов виджетов"
+msgstr ""
+
+#: options.php:1561 options.php:1611
+msgid "Заголовки"
+msgstr ""
+
+#: options.php:1565 options.php:1615
+msgid "Стиль заголовков виджетов"
+msgstr ""
+
+#: options.php:1578 options.php:1628
+msgid "Цвет фона заголовка виджетов"
+msgstr ""
+
+#: options.php:1583
+msgid "Стиль виджетов в футер"
+msgstr ""
+
+#: options.php:1590
+msgid "Фон вокруг виджетов в футер"
+msgstr ""
+
+#: options.php:1634
+msgid "Стиль футер"
+msgstr ""
+
+#: options.php:1641
+msgid "Ширина нижней части"
+msgstr ""
+
+#: options.php:1653
+msgid "Фон нижней части блога footer"
+msgstr ""
+
+#: options.php:1663
+msgid "Цвет текста в footer"
+msgstr ""
+
+#: options.php:1668
+msgid "Произвольный текст в нижней части блога"
+msgstr ""
+
+#: options.php:1669
+msgid ""
+"Здесь Вы можете написать свой текст. Он отобразиться в самом низу блога "
+"слева. В поле Вы можете использовать HTML теги"
+msgstr ""
+
+#: options.php:1674
+msgid "Настройки статей"
+msgstr ""
+
+#: options.php:1677
+msgid "Настройка миниатюры"
+msgstr ""
+
+#: options.php:1681
+msgid "Отображать миниатюра в записях?"
+msgstr ""
+
+#: options.php:1682
+msgid ""
+"Поставьте галочку, если хотите, чтобы в статьях отображалась миниатюра "
+"записи."
+msgstr ""
+
+#: options.php:1688
+msgid "Размер миниатюры"
+msgstr ""
+
+#: options.php:1689
+msgid ""
+"Зайдите в раздел \"Настройка\" = \"Медиафайлы\" = укажите размеры в полях: "
+"\"Размер миниатюры\" = 150 на 150, \"Средний размер\" - 300 на 300"
+msgstr ""
+
+#: options.php:1698
+msgid "Настройка стиля изображений"
+msgstr ""
+
+#: options.php:1702
+msgid "Выберите из предложенных вариантов стиль изображений на блоге"
+msgstr ""
+
+#: options.php:1713
+msgid "Настройка отображения статей на главной странице"
+msgstr ""
+
+#: options.php:1717
+msgid "Полный текст статей на главной странице"
+msgstr ""
+
+#: options.php:1718
+msgid ""
+"Поставьте галочку, если хотите, чтобы на главной странице отображался весь "
+"текст статей вместо анонса"
+msgstr ""
+
+#: options.php:1723
+msgid "Кол-во знаков в анонсе статьи"
+msgstr ""
+
+#: options.php:1724
+msgid ""
+"Если Вы хотите, чтобы отображался анонс статьи, здесь Вы можете указать "
+"количество знаков в анонсе. По умолчанию 500 знаков."
+msgstr ""
+
+#: options.php:1730
+msgid "Комментарии соц сетей (3 в одном)"
+msgstr ""
+
+#: options.php:1734
+msgid "Выберите, как будут отображаться комментарии 3 в одном"
+msgstr ""
+
+#: options.php:1741
+msgid "Первая вкладка комментариев"
+msgstr ""
+
+#: options.php:1748
+msgid "Вторая вкладка комментариев"
+msgstr ""
+
+#: options.php:1755
+msgid "Третья вкладка комментариев"
+msgstr ""
+
+#: options.php:1762
+msgid "Смайлы в комментариях"
+msgstr ""
+
+#: options.php:1767
+msgid ""
+"Поставьте галочку, если хотите, чтобы в комментариях отображалась смайлики."
+msgstr ""
+
+#: options.php:1772
+msgid "Вставки"
+msgstr ""
+
+#: options.php:1776
+msgid "Фавикон"
+msgstr ""
+
+#: options.php:1777
+msgid ""
+"Фавикон - картинка, которая отображается браузером в адресной строке перед "
+"URL страницы, а также в качестве картинки рядом с закладкой, во вкладках и в "
+"других элементах интерфейса. <strong>Размер картинки 16х16 пикселей. В "
+"формате ico или gif</strong>. Создать фавикон можно здесь <a href=\"http://"
+"www.favicon.by/\" target=\"_blank\">http://www.favicon.by/</a>"
+msgstr ""
+
+#: options.php:1782
+msgid "Изображение в соц. сети по умолчанию"
+msgstr ""
+
+#: options.php:1783
+msgid ""
+"Загрузите изображение, которое будет уходить в фейсбук и другие социальные "
+"сети, если не указана миниатюра записи"
+msgstr ""
+
+#: options.php:1788
+msgid "Ключевая фраза блога"
+msgstr ""
+
+#: options.php:1789
+msgid ""
+"Эта фраза необходима для мета тега заголовок на главной странице. На "
+"внутренних страницах будет использоваться заголовок статьи"
+msgstr ""
+
+#: options.php:1794
+msgid "Социальные сети"
+msgstr ""
+
+#: options.php:1798
+msgid "ID Twitter"
+msgstr ""
+
+#: options.php:1799
+msgid ""
+"Если у Вас еще нет Твиттер аккаунта, зарегистрировать можно здесь: <a href="
+"\"http://twitter.com\" target=\"_blank\">http://twitter.com</a>"
+msgstr ""
+
+#: options.php:1805
+msgid "ID Профиля Facebook"
+msgstr ""
+
+#: options.php:1806
+msgid ""
+"Если у Вас еще нет Facebook аккаунта, зарегистрировать можно здесь: <a href="
+"\"http://facebook.com\" target=\"_blank\">http://facebook.com</a>"
+msgstr ""
+
+#: options.php:1812
+msgid "APP ID (ID приложения Facebook)."
+msgstr ""
+
+#: options.php:1813
+msgid ""
+"Зарегистрировать приложение Facebook: <a href=\"http://developers.facebook."
+"com\" target=\"_blank\">http://developers.facebook.com</a>"
+msgstr ""
+
+#: options.php:1819
+msgid "APP ID Vkontakte"
+msgstr ""
+
+#: options.php:1820
+msgid ""
+"Зарегистрировать сайт Vkontakte, и получить ID приложения Vkontakte можно "
+"здесь: <a href=\"http://vk.com/developers.php?oid=-1&p=Like\" target=\"_blank"
+"\">http://vk.com/developers.php?oid=-1&p=Like</a>"
+msgstr ""
+
+#: options.php:1827
+msgid "ID Группы в Одноклассниках"
+msgstr ""
+
+#: options.php:1828
+msgid ""
+"Создать группу в Одноклассниках, и получить ID Группы в Одноклассниках можно "
+"здесь: <a href=\"http://odnoklassniki.ru/\" target=\"_blank\">http://"
+"odnoklassniki.ru/</a>"
+msgstr ""
+
+#: options.php:1834
+msgid "ID Google+"
+msgstr ""
+
+#: options.php:1835
+msgid ""
+"Создать профиль в Google+, и получить ID Google+ можно здесь: <a href="
+"\"http://plus.google.com\" target=\"_blank\">http://plus.google.com</a>"
+msgstr ""
+
+#: options.php:1842
+msgid "ID Feedburner."
+msgstr ""
+
+#: options.php:1843
+msgid ""
+"Регистрация Feedburner: <a href=\"http://feedburner.google.com\" target="
+"\"_blank\">http://feedburner.google.com</a>"
+msgstr ""
+
+#: options.php:1849
+msgid "Вставки в Head (вебмастер)"
+msgstr ""
+
+#: options.php:1854
+msgid "Вставка мета тегов и других скриптов в head"
+msgstr ""
+
+#: options.php:1855
+msgid ""
+"Зарегистрироваться в сервисе Webmaster Tools: <a href=\"http://www.google."
+"com/webmasters\" target=\"_blank\">http://www.google.com/webmasters</"
+"a><br>Зарегистрироваться в сервисе Яндекс Вебмастер: <a href=\"http://"
+"webmaster.yandex.ru/\" target=\"_blank\">http://webmaster.yandex.ru/</a>"
+msgstr ""
+
+#: options.php:1860
+msgid "Счетчики Google и Yandex"
+msgstr ""
+
+#: options.php:1864
+msgid "ID кода статистики посещаемости Google Analytics"
+msgstr ""
+
+#: options.php:1865
+msgid ""
+"Зарегистрироваться в сервисе Google Analytics: <a href=\"http://analytics."
+"google.com\" target=\"_blank\">http://analytics.google.com</a>"
+msgstr ""
+
+#: options.php:1872
+msgid "ID кода статистики посещаемости в Yandex Метрика"
+msgstr ""
+
+#: options.php:1873
+msgid ""
+"Зарегистрироваться в сервисе Yandex Метрика: <a href=\"http://metrika.yandex."
+"ru\" target=\"_blank\">http://metrika.yandex.ru</a>"
+msgstr ""
+
+#: options.php:1879
+msgid "Партнерка"
+msgstr ""
+
+#: options.php:1883
+msgid "Партнерка МЛМ-блог за час"
+msgstr ""
+
+#: options.php:1884
+msgid ""
+"В самом низу блога указана ссылка на разработчика шаблона. Вы можете "
+"использовать эту ссылку для заработка. <a href=\"http://wpblog.club"
+"\">Зарегистрируйте в партнерской программе</a> и вствьте в поле Вашу "
+"партнерскую ссылку. При клике по ссылке и последующей покупке, Вы будете "
+"получать комиссонные до 40%"
+msgstr ""
+
+#: options.php:1891
+msgid "Форма обратной связи"
+msgstr ""
+
+#: options.php:1895
+msgid "Email для формы обратной связи."
+msgstr ""
+
+#: options.php:1896
+msgid ""
+"Зарегистрировать email: <a href=\"http://google.com\" target=\"_blank"
+"\">http://google.com</a>"
+msgstr ""
+
+#: options.php:1903
+msgid ""
+"Использовать капчу? (поставьте галочку, если хотите, чтобы под формой была "
+"капча. Эта капча также будет использовала в форме отзывов)"
+msgstr ""
+
+#: options.php:1908
+msgid "Ключ для капчи"
+msgstr ""
+
+#: options.php:1909
+msgid ""
+"Зарегистрировать домен и получить ключ в сервисе Google Recaptcha: <a href="
+"\"https://www.google.com/recaptcha\" target=\"_blank\">https://www.google."
+"com/recaptcha</a>"
+msgstr ""
+
+#: options.php:1916
+msgid "Форма в виджете"
+msgstr ""
+
+#: options.php:1919 options.php:2487
+msgid "Настройка полей формы"
+msgstr ""
+
+#: options.php:1923 options.php:2491
+msgid "Отображать поле Имя?"
+msgstr ""
+
+#: options.php:1928 options.php:2496
+msgid "Текст в поле имени"
+msgstr ""
+
+#: options.php:1930 options.php:2498
+msgid "Ваше имя..."
+msgstr ""
+
+#: options.php:1933 options.php:2501
+msgid "Текст в поле email"
+msgstr ""
+
+#: options.php:1938
+msgid "Настройка стиля заголовка в форме подписки в боковой колонке"
+msgstr ""
+
+#: options.php:1942 options.php:2546
+msgid "Воспользуйтесь редактором для создания заголовка"
+msgstr ""
+
+#: options.php:1944 options.php:2548
+msgid "Текст заголовка для формы подписки"
+msgstr ""
+
+#: options.php:1947 options.php:2551
+msgid "Общий стиль шрифта заголовка"
+msgstr ""
+
+#: options.php:1959
+msgid "Настройка текста гарантии в форме подписки в боковой колонке"
+msgstr ""
+
+#: options.php:1963
+msgid "Текст гарантии"
+msgstr ""
+
+#: options.php:1964
+msgid "Гарантия конфиденциальности"
+msgstr ""
+
+#: options.php:1966
+msgid "100% гарантия, что Ваши данные останутся конфиденциальными!"
+msgstr ""
+
+#: options.php:1969
+msgid "Цвет шрифта текста гарантии"
+msgstr ""
+
+#: options.php:1970
+msgid "Цвет шрифта текста гарантии."
+msgstr ""
+
+#: options.php:1975
+msgid "Изображение для формы"
+msgstr ""
+
+#: options.php:1979 options.php:2560
+msgid "Здесь можно загрузить картинку для формы подписки."
+msgstr ""
+
+#: options.php:1984
+msgid "Настройка фона формы подписки"
+msgstr ""
+
+#: options.php:1988
+msgid "Отсуп формы от заголовка и картинки"
+msgstr ""
+
+#: options.php:1996
+msgid "Цвет фона формы подписки вверху"
+msgstr ""
+
+#: options.php:1997 options.php:2003 options.php:2033
+msgid "Цвет фона формы подписки."
+msgstr ""
+
+#: options.php:2002
+msgid "Цвет фона формы подписки внизу"
+msgstr ""
+
+#: options.php:2008
+msgid ""
+"Фон в виде изображения (максимальная ширина: 320px). Если вы используете "
+"изображение как фон, \"Цвет фона формы подписки внизу\" отображаться не будет"
+msgstr ""
+
+#: options.php:2013
+msgid "Расположение фона"
+msgstr ""
+
+#: options.php:2022
+msgid "Настройка границы формы подписки"
+msgstr ""
+
+#: options.php:2027
+msgid "Отображать границу вокруг формы"
+msgstr ""
+
+#: options.php:2032
+msgid "Цвет границы формы подписки"
+msgstr ""
+
+#: options.php:2038
+msgid "Отображать тень вокруг формы?"
+msgstr ""
+
+#: options.php:2045
+msgid "Закругления формы подписки"
+msgstr ""
+
+#: options.php:2053
+msgid "Настройка кнопки формы подписки"
+msgstr ""
+
+#: options.php:2057
+msgid "Выбор кнопки подписки."
+msgstr ""
+
+#: options.php:2074
+msgid "Создать свой стиль кнопки"
+msgstr ""
+
+#: options.php:2079
+msgid "Поставьте галочку, если хотите создать свою кнопку"
+msgstr ""
+
+#: options.php:2084
+msgid "Цвет кнопки"
+msgstr ""
+
+#: options.php:2090 options.php:2127
+msgid "При наведении мышкой"
+msgstr ""
+
+#: options.php:2096 options.php:2603
+msgid "Закругления углов кнопки"
+msgstr ""
+
+#: options.php:2103
+msgid "Тень внутри/вокруг кнопки?"
+msgstr ""
+
+#: options.php:2104
+msgid "Отображать тень внутри кнопки?"
+msgstr ""
+
+#: options.php:2110
+msgid "Отображать тень вокруг кнопки?"
+msgstr ""
+
+#: options.php:2115
+msgid "Граница вокруг кнопки?"
+msgstr ""
+
+#: options.php:2116
+msgid "Отображать границу?"
+msgstr ""
+
+#: options.php:2132
+msgid "Высота кнопки"
+msgstr ""
+
+#: options.php:2138 options.php:2142 options.php:2143 options.php:2577
+#: options.php:2578
+msgid "Текст на кнопке"
+msgstr ""
+
+#: options.php:2145
+msgid "ПОЛУЧИТЬ ДОСТУП!"
+msgstr ""
+
+#: options.php:2148 options.php:2583
+msgid "Стиль текста на кнопке"
+msgstr ""
+
+#: options.php:2154
+msgid "Кнопки \"Поделиться\" в начале текста"
+msgstr ""
+
+#: options.php:2158 options.php:2276
+msgid "Внешний вид кнопок"
+msgstr ""
+
+#: options.php:2171 options.php:2282
+msgid "Отметьте, какие кнопки отображать"
+msgstr ""
+
+#: options.php:2179 options.php:2290
+msgid "Текст на кнопоках"
+msgstr ""
+
+#: options.php:2196 options.php:2308
+msgid "Google+"
+msgstr ""
+
+#: options.php:2225 options.php:2337
+msgid "Linkedin"
+msgstr ""
+
+#: options.php:2231 options.php:2343
+msgid "Размер текста на кнопках"
+msgstr ""
+
+#: options.php:2232 options.php:2344
+msgid "Только для плоских кнопок"
+msgstr ""
+
+#: options.php:2239 options.php:2351
+msgid "Счетчик"
+msgstr ""
+
+#: options.php:2250 options.php:2362
+msgid "С нулевым счетчиком"
+msgstr ""
+
+#: options.php:2256 options.php:2368
+msgid "Где отображать кнопки?"
+msgstr ""
+
+#: options.php:2382
+msgid "Стиль блока"
+msgstr ""
+
+#: options.php:2386
+msgid "Фон блока"
+msgstr ""
+
+#: options.php:2395
+msgid "Отображать границу вокруг блока \"Поделиться\"?"
+msgstr ""
+
+#: options.php:2406 options.php:2535
+msgid "Закругления углов"
+msgstr ""
+
+#: options.php:2416
+msgid "Текст заголовка для кнопок \"ПОДЕЛИТЬСЯ\" в конце статьи"
+msgstr ""
+
+#: options.php:2417
+msgid "Здесь Вы можете указать свой заголовок"
+msgstr ""
+
+#: options.php:2419
+msgid "Интересная статья? Поделитесь ею пожалуйста с другими:"
+msgstr ""
+
+#: options.php:2422 options.php:2423
+msgid "Стиль шрифта заголовка для кнопок \"ПОДЕЛИТЬСЯ\""
+msgstr ""
+
+#: options.php:2428
+msgid "Расположение заголовка"
+msgstr ""
+
+#: options.php:2435
+msgid "Форма в конце статьи"
+msgstr ""
+
+#: options.php:2443
+msgid ""
+"Поставьте галочку, если хотите, чтобы форма подписки отображалась в конце "
+"каждой статьи"
+msgstr ""
+
+#: options.php:2448
+msgid "Рассыльщик писем"
+msgstr ""
+
+#: options.php:2452
+msgid "Выберите сервис рассыльщика писем, которым Вы пользуетесь"
+msgstr ""
+
+#: options.php:2503
+msgid "Ваш email..."
+msgstr ""
+
+#: options.php:2510
+msgid "Цвет фона блоке \"Форма подписки\""
+msgstr ""
+
+#: options.php:2515
+msgid "Фон в виде картинки (ширина: 587px, высота: 210px)"
+msgstr ""
+
+#: options.php:2524
+msgid "Отображать границу вокруг блока \"Форма подписки?\""
+msgstr ""
+
+#: options.php:2566
+msgid "Где располагается форма если нет картинки?"
+msgstr ""
+
+#: options.php:2573
+msgid "Кнопка"
+msgstr ""
+
+#: options.php:2580
+msgid "Получить доступ!"
+msgstr ""
+
+#: options.php:2590
+msgid "Цвет фона кнопки"
+msgstr ""
+
+#: options.php:2597
+msgid "Цвет фона кнопки по наведении мышки"
+msgstr ""
+
+#: options.php:2610
+msgid "Баннеры"
+msgstr ""
+
+#: options.php:2613
+msgid "Заголовок виджета с Баннерами"
+msgstr ""
+
+#: options.php:2618
+msgid "По умолчанию заголовок - Рекомендую"
+msgstr ""
+
+#: options.php:2623
+msgid "Менять местами баннеры?"
+msgstr ""
+
+#: options.php:2628
+msgid "Отметьте галочкой если хотите чтобы баннеры менялись местами."
+msgstr ""
+
+#: options.php:2633
+msgid "Баннер №1"
+msgstr ""
+
+#: options.php:2637
+msgid "Ссылка на изображение для Баннера #1"
+msgstr ""
+
+#: options.php:2638
+msgid ""
+"По умолчанию здесь установлен баннер <strong>\"МЛМ-Блог за час\"</strong> - "
+"Вы можете указать ссылку на другой баннер."
+msgstr ""
+
+#: options.php:2642
+msgid "Партнерская ссылка для Баннера #1"
+msgstr ""
+
+#: options.php:2647
+msgid "Баннер №2"
+msgstr ""
+
+#: options.php:2651
+msgid "Ссылка на изображение Баннер #2"
+msgstr ""
+
+#: options.php:2652 options.php:2666 options.php:2680
+msgid ""
+"Здесь укажите ссылку на баннер (картинку). Баннер должет быть размером "
+"125px*125px."
+msgstr ""
+
+#: options.php:2656
+msgid "Партнерская ссылка для Баннера #2"
+msgstr ""
+
+#: options.php:2661
+msgid "Баннер №3"
+msgstr ""
+
+#: options.php:2665
+msgid "Ссылка на изображение для Баннера #3"
+msgstr ""
+
+#: options.php:2670
+msgid "Партнерская ссылка для Баннера #3"
+msgstr ""
+
+#: options.php:2675
+msgid "Баннер №4"
+msgstr ""
+
+#: options.php:2679
+msgid "Ссылка на изображение для Баннера #4"
+msgstr ""
+
+#: options.php:2685
+msgid "Партнерская ссылка для Баннера #4"
+msgstr ""
+
+#: options.php:2690
+msgid "Попап"
+msgstr ""
+
+#: options.php:2695
+msgid "Фоновый цвет попап окна"
+msgstr ""
+
+#: options.php:2701
+msgid "Красный"
+msgstr ""
+
+#: options.php:2702
+msgid "Синий"
+msgstr ""
+
+#: options.php:2703
+msgid "Зеленый"
+msgstr ""
+
+#: options.php:2704
+msgid "Серый"
+msgstr ""
+
+#: options.php:2705
+msgid "Розовый"
+msgstr ""
+
+#: options.php:2706
+msgid "Бирюзовый"
+msgstr ""
+
+#: options.php:2707
+msgid "Фиолетовый"
+msgstr ""
+
+#: options.php:2711
+msgid "Кнопка подписки"
+msgstr ""
+
+#: options.php:2717
+msgid "Темно-синяя"
+msgstr ""
+
+#: options.php:2718
+msgid "Синяя"
+msgstr ""
+
+#: options.php:2719
+msgid "Темно-зеленая"
+msgstr ""
+
+#: options.php:2720
+msgid "Зеленая"
+msgstr ""
+
+#: options.php:2721
+msgid "Темно-оранжевая"
+msgstr ""
+
+#: options.php:2722
+msgid "Оранжевая"
+msgstr ""
+
+#: options.php:2723
+msgid "Темно-красная"
+msgstr ""
+
+#: options.php:2724
+msgid "Красная"
+msgstr ""
+
+#: redirect.php:5
+msgid "Перенаправление"
+msgstr "Forwarding:"
+
+#: search.php:15
+#, php-format
+msgid "Результат поиска: %s"
+msgstr "Search results: %s"
+
+#: search.php:23
+msgid ""
+"Извините, по Вашему запросу на блоге ничего не найдено. Попробуйте "
+"использовать другие ключевые слова."
+msgstr "Sorry, Nothing was found. Try to use other key words. "
+
+#: sidebar.php:26
+msgid "Архивы"
+msgstr "Archives"
+
+#: sidebar.php:33
+msgid "Мета"
+msgstr "Meta"
+
+#: single-catalog.php:14
+msgid "Назад"
+msgstr "Back"
+
+#: single.php:12
+msgid "Главная"
+msgstr "Main"
+
+#: sitemap.php:22
+msgid "Записи"
+msgstr "Notes"
+
+#: sitemap.php:43 theme-widgets.php:4207
+msgid "Рубрики"
+msgstr "Catagories"
+
+#: tag.php:16
+#, php-format
+msgid "Архив метки: %s"
+msgstr "Tag Archive: %s"
+
+#: template-catalogv.php:6
+msgid "Каталог"
+msgstr "Catalog "
+
+#: template-catalogv.php:15
+msgid "Все"
+msgstr "All"
+
+#: template-catalogv.php:122
+msgid "Извините, ничего не найдено по вашему запросу."
+msgstr "Sorry, your request was not found. "
+
+#: testimonials-page.php:8
+msgid "Отзывы"
+msgstr "Review"
+
+#: theme-functions.php:77
+msgid "Один комментарий"
+msgstr ""
+
+#: theme-functions.php:79
+msgid "% комментарий"
+msgstr ""
+
+#: theme-functions.php:81
+msgid "% комментария"
+msgstr ""
+
+#: theme-functions.php:285
+msgid "Следующая &raquo;"
+msgstr "Follow &raquo;"
+
+#: theme-functions.php:286
+msgid "&laquo; Предыдущая"
+msgstr "&laquo; Previous"
+
+#: theme-functions.php:568
+msgid "Еще смайлы"
+msgstr ""
+
+#: theme-functions.php:646 theme-functions.php:678
+msgid "Поделиться в Facebook"
+msgstr "Share on Facebook "
+
+#: theme-functions.php:647 theme-functions.php:679
+msgid "Поделиться в Twitter"
+msgstr "Share on Twitter"
+
+#: theme-functions.php:648 theme-functions.php:680
+msgid "Поделиться в Google+"
+msgstr "Share on Google+"
+
+#: theme-functions.php:649 theme-functions.php:682
+msgid "Поделиться в Vkontakte"
+msgstr "Share on Vkontakte"
+
+#: theme-functions.php:650 theme-functions.php:683
+msgid "Поделиться в Odnoklassniki"
+msgstr "Share on Odnoklassniki"
+
+#: theme-functions.php:651 theme-functions.php:684
+msgid "Поделиться в MailRu"
+msgstr "Share on MailRu"
+
+#: theme-functions.php:652 theme-functions.php:685
+msgid "Поделиться в Pinterest"
+msgstr "Share on Pinterest"
+
+#: theme-functions.php:653 theme-functions.php:686
+msgid "Поделиться в Linkedin"
+msgstr "Share on Linkedin"
+
+#: theme-functions.php:831
+msgid "Оставьте свой комментарий:"
+msgstr "Leave your comment:"
+
+#: theme-functions.php:856 theme-functions.php:861 theme-functions.php:866
+msgid "Комментарии в Вконтакте"
+msgstr "Vkontakte comments"
+
+#: theme-functions.php:857 theme-functions.php:862 theme-functions.php:867
+msgid "Комментарии в Фейсбук"
+msgstr "Facebook comments"
+
+#: theme-widgets.php:16
+msgid "0 - AB - Виджет в шапке"
+msgstr "0 - AB - Header widget"
+
+#: theme-widgets.php:17
+msgid "На выбор 3 блока: Информация об авторе, Баннер, Социальные кнопки"
+msgstr ""
+"Choose from 3 widgets Information about author, Banner, Social Network widget"
+
+#: theme-widgets.php:63 theme-widgets.php:76
+msgid "Позвонить:"
+msgstr "Call:"
+
+#: theme-widgets.php:91 theme-widgets.php:1288
+msgid "Следить на Facebook"
+msgstr "Follow on Facebook"
+
+#: theme-widgets.php:95 theme-widgets.php:1292
+msgid "Следить на Twitter"
+msgstr "Follow on Twitter"
+
+#: theme-widgets.php:98
+msgid "Следить в Vkontakte"
+msgstr "Follow on Vkontakte"
+
+#: theme-widgets.php:101 theme-widgets.php:1298
+msgid "Следить на Одноклассниках"
+msgstr "Follow on Odnoklassniki"
+
+#: theme-widgets.php:104 theme-widgets.php:1301
+msgid "Подписаться на Youtube"
+msgstr "Share on Youtube"
+
+#: theme-widgets.php:107 theme-widgets.php:1304
+msgid "Следить в Google+"
+msgstr "Follow on Google+"
+
+#: theme-widgets.php:110 theme-widgets.php:1307
+msgid "Следить в Instagram"
+msgstr "Follow on Instagram "
+
+#: theme-widgets.php:113 theme-widgets.php:1310
+msgid "Подписаться на RSS"
+msgstr "Share on RSS"
+
+#: theme-widgets.php:116 theme-widgets.php:1312
+msgid "Подписаться на Linkedin"
+msgstr "Share on Linkedin"
+
+#: theme-widgets.php:213
+msgid "Выберите виджет:"
+msgstr "Select widget:"
+
+#: theme-widgets.php:215
+msgid "Профиль автора"
+msgstr "Author profile"
+
+#: theme-widgets.php:216 theme-widgets.php:4125
+msgid "Баннер"
+msgstr "Ads"
+
+#: theme-widgets.php:217
+msgid "Социальные кнопки"
+msgstr "Social Network buttons"
+
+#: theme-widgets.php:223
+msgid "Имя Фамилия:"
+msgstr "Last Name:"
+
+#: theme-widgets.php:227
+msgid "Email для связи:"
+msgstr "Contact Email:"
+
+#: theme-widgets.php:231 theme-widgets.php:803
+msgid "Телефон:"
+msgstr "Telephone:"
+
+#: theme-widgets.php:235 theme-widgets.php:522 theme-widgets.php:798
+msgid "Skype:"
+msgstr ""
+
+#: theme-widgets.php:239
+msgid "Email Граватара:"
+msgstr "Gravatar Email:"
+
+#: theme-widgets.php:243
+msgid "Размер граватара:"
+msgstr "Gravatar size:"
+
+#: theme-widgets.php:254
+msgid "Цвет:"
+msgstr "Color:"
+
+#: theme-widgets.php:260
+msgid "Размер баннера:"
+msgstr "Banner size:"
+
+#: theme-widgets.php:262
+msgid "Баннер на 468/60"
+msgstr "Ad 468/60"
+
+#: theme-widgets.php:263
+msgid "Баннер на 720/90"
+msgstr "Ad 720/90"
+
+#: theme-widgets.php:267
+msgid "Ссылка на баннер:"
+msgstr "Link to banner:"
+
+#: theme-widgets.php:272
+msgid "Партнерская ссылка:"
+msgstr "Partner link:"
+
+#: theme-widgets.php:284 theme-widgets.php:1376
+msgid "Ссылка на Твиттер аккаунт:"
+msgstr "Link to Twitter account:"
+
+#: theme-widgets.php:289 theme-widgets.php:1381
+msgid "Ссылка на Facebook аккаунт:"
+msgstr "Link to Facebook account:"
+
+#: theme-widgets.php:294 theme-widgets.php:1386
+msgid "Ссылка на аккаунт Vkontakte:"
+msgstr "Link to Vkontakte account:"
+
+#: theme-widgets.php:299 theme-widgets.php:1391
+msgid "Ссылка на аккаунт Odnoklassniki:"
+msgstr "Link to Odnoklassniki account:"
+
+#: theme-widgets.php:304 theme-widgets.php:1396
+msgid "Ссылка на канал Youtube:"
+msgstr "Link to Youtube channel:"
+
+#: theme-widgets.php:309 theme-widgets.php:1401
+msgid "Ссылка на аккаунт Google plus:"
+msgstr "Link to Goole Plus account:"
+
+#: theme-widgets.php:314 theme-widgets.php:1406
+msgid "Ссылка на аккаунт Instagram:"
+msgstr "Link to Instagram account:"
+
+#: theme-widgets.php:319 theme-widgets.php:1411
+msgid "Ссылка на ленту RSS FeedBurner:"
+msgstr "Link to RSS FeedBurner:"
+
+#: theme-widgets.php:324 theme-widgets.php:1416
+msgid "Ссылка на ленту Linkedin:"
+msgstr "Link to Linkedin timeline:"
+
+#: theme-widgets.php:332 theme-widgets.php:1426 theme-widgets.php:2430
+msgid "Размер кнопок:"
+msgstr "Button size:"
+
+#: theme-widgets.php:344 theme-widgets.php:1438
+msgid "Форма кнопок:"
+msgstr "Button Form:"
+
+#: theme-widgets.php:346 theme-widgets.php:1440
+msgid "Квадратные"
+msgstr "Square"
+
+#: theme-widgets.php:347 theme-widgets.php:1441
+msgid "С загруглениями"
+msgstr "Rounded"
+
+#: theme-widgets.php:348 theme-widgets.php:1442
+msgid "Круглые"
+msgstr "Round"
+
+#: theme-widgets.php:356 theme-widgets.php:1450
+msgid "Использовать один цвет для иконок?"
+msgstr "Do you want to use only one color for icons?"
+
+#: theme-widgets.php:367 theme-widgets.php:1461 theme-widgets.php:1745
+msgid "Цвет кнопок:"
+msgstr "Color of baton:"
+
+#: theme-widgets.php:377 theme-widgets.php:1471
+msgid "Цвет кнопок при наведении мышки:"
+msgstr "Color of button when hovering over with a courser:"
+
+#: theme-widgets.php:389
+msgid "Отступ сверху:"
+msgstr "Space from the top:"
+
+#: theme-widgets.php:417
+msgid "Виджет приветствие автора блога"
+msgstr "Widget for Author Greeting"
+
+#: theme-widgets.php:419
+msgid "1 - AB - Приветствие автора"
+msgstr "1 - AB - Author greeting"
+
+#: theme-widgets.php:526
+msgid "Тел:"
+msgstr "Cell:"
+
+#: theme-widgets.php:606
+msgid "Добро пожаловать!"
+msgstr "Welcome!"
+
+#: theme-widgets.php:611
+msgid "Узнать больше"
+msgstr "Learn more"
+
+#: theme-widgets.php:641 theme-widgets.php:1372 theme-widgets.php:1566
+#: theme-widgets.php:1703 theme-widgets.php:1822 theme-widgets.php:1896
+#: theme-widgets.php:1960 theme-widgets.php:2035 theme-widgets.php:2169
+#: theme-widgets.php:2382 theme-widgets.php:2563 theme-widgets.php:2770
+#: theme-widgets.php:2937 theme-widgets.php:4130 theme-widgets.php:4221
+msgid "Заголовок:"
+msgstr "Title:"
+
+#: theme-widgets.php:650
+msgid "Настройки изображение и текста"
+msgstr "Settings for image in a text"
+
+#: theme-widgets.php:657
+msgid "Текст приветствие:"
+msgstr "Greeting text:"
+
+#: theme-widgets.php:663
+msgid "<a href=\"//ru.gravatar.com/\">Граватар</a> email:"
+msgstr "<a href=\"//ru.gravatar.com/\">Gravatar</a> email:"
+
+#: theme-widgets.php:668
+msgid "Размер фото:"
+msgstr "Photo size:"
+
+#: theme-widgets.php:673
+msgid "Расположение фото:"
+msgstr "Photo position:"
+
+#: theme-widgets.php:683
+msgid "Читать далее (по желанию):"
+msgstr "Read more (optional)"
+
+#: theme-widgets.php:688
+msgid "Ссылка на страницу об авторе (по желанию):"
+msgstr "Link to about author page (optional)"
+
+#: theme-widgets.php:699
+msgid "Настройки аудио приветствия"
+msgstr "Settings for audio greeting "
+
+#: theme-widgets.php:704
+msgid "Ссылка на аудиофайл:"
+msgstr "Link to audio file:"
+
+#: theme-widgets.php:718
+msgid "Авто проигрывание:"
+msgstr "Autoplay:"
+
+#: theme-widgets.php:737
+msgid "Настройки видео приветствия"
+msgstr "Settings for video greeting"
+
+#: theme-widgets.php:743
+msgid "Ресурс, где размещено видео:"
+msgstr "Source, where video is located"
+
+#: theme-widgets.php:749
+msgid "FLV"
+msgstr ""
+
+#: theme-widgets.php:750
+msgid "YouTube"
+msgstr ""
+
+#: theme-widgets.php:761
+msgid "ID видео:"
+msgstr "Video ID:"
+
+#: theme-widgets.php:763
+msgid "полный путь к файлу flv или mp4"
+msgstr "Full distention to file flv or mp4"
+
+#: theme-widgets.php:764
+msgid "ID видео размещенного на Youtube"
+msgstr "Youtube Video ID"
+
+#: theme-widgets.php:764
+msgid "Например"
+msgstr "Example"
+
+#: theme-widgets.php:772
+msgid "Ссылка на изображение для видео FLV:"
+msgstr "Link to an image for video FLV:"
+
+#: theme-widgets.php:787
+msgid "Настройки контактов"
+msgstr "Contact settings"
+
+#: theme-widgets.php:792
+msgid " Email: "
+msgstr ""
+
+#: theme-widgets.php:814 theme-widgets.php:1227
+msgid "На каких страницах показывать:"
+msgstr "View on what pages:"
+
+#: theme-widgets.php:816 theme-widgets.php:1229
+msgid "На всех"
+msgstr "All"
+
+#: theme-widgets.php:817 theme-widgets.php:1230
+msgid "Только на главной"
+msgstr "Just on a main page"
+
+#: theme-widgets.php:818 theme-widgets.php:1231
+msgid "Только в статьях"
+msgstr "Lust in articles"
+
+#: theme-widgets.php:850
+msgid "2 - AB - Форма подписки"
+msgstr "2 - AB - Subscription Form"
+
+#: theme-widgets.php:851
+msgid "Виджет формы подписки. Стиль оформляется в настройках шаблона"
+msgstr "Widget for Subscription box. Style is configured in theme setings. "
+
+#: theme-widgets.php:1107
+msgid "Выберите сервис:"
+msgstr "Select sercvice:"
+
+#: theme-widgets.php:1109
+msgid "Smartresponder"
+msgstr ""
+
+#: theme-widgets.php:1110
+msgid "Justcklick"
+msgstr ""
+
+#: theme-widgets.php:1111
+msgid "Getresponse"
+msgstr ""
+
+#: theme-widgets.php:1112
+msgid "MailChimp"
+msgstr ""
+
+#: theme-widgets.php:1115
+msgid "Одна кнопка"
+msgstr "One button"
+
+#: theme-widgets.php:1129
+msgid "TID - ID канала подписки"
+msgstr "TID - Subscription Canal ID"
+
+#: theme-widgets.php:1135
+msgid "UID - ID пользователя"
+msgstr "UID - User ID"
+
+#: theme-widgets.php:1140
+msgid "DID - ID рассылки"
+msgstr "DID - Newsletters ID"
+
+#: theme-widgets.php:1149
+msgid "Поставьте галочку, если вы используете Новую форму?"
+msgstr "Please check, if you are using New form?"
+
+#: theme-widgets.php:1152
+msgid "ID Формы (если форма старая), Токен кампании (если форма новая) "
+msgstr "Form ID (if old form), Campaign Token (If new form) "
+
+#: theme-widgets.php:1159
+msgid "Ссылка на страницу Спасибо (по-желанию)"
+msgstr "Link to Thank You page (optional)"
+
+#: theme-widgets.php:1167
+msgid "Логин JustClick"
+msgstr "Login Justclick"
+
+#: theme-widgets.php:1172
+msgid "Маркер JustClick"
+msgstr "JustClick Marker"
+
+#: theme-widgets.php:1177
+msgid "Группа JustCLick"
+msgstr "JustClick group"
+
+#: theme-widgets.php:1182
+msgid "URL ПОСЛЕ ПОДПИСКИ:"
+msgstr "URL After Subscription:"
+
+#: theme-widgets.php:1187
+msgid "URL ПОСЛЕ АКТИВАЦИИ:"
+msgstr "URL After Activation:"
+
+#: theme-widgets.php:1196
+msgid "Логин MailChimp"
+msgstr "Login MailChimp"
+
+#: theme-widgets.php:1201
+msgid "Id профиля в MailChimp"
+msgstr "MailChimp Profile Id"
+
+#: theme-widgets.php:1206
+msgid "ID Списка"
+msgstr "List ID"
+
+#: theme-widgets.php:1221
+msgid "Ссылка"
+msgstr "Link"
+
+#: theme-widgets.php:1254
+msgid "3 - AB - Следуй за мной"
+msgstr "3 - AB - Follow me"
+
+#: theme-widgets.php:1255
+msgid "Кнопки социальных сетей"
+msgstr "Social Network button"
+
+#: theme-widgets.php:1295
+msgid "Следить на Vkontakte"
+msgstr "Follow on Vkontakte"
+
+#: theme-widgets.php:1348
+msgid "Следуй за мной"
+msgstr "Follow me"
+
+#: theme-widgets.php:1428
+msgid "30"
+msgstr ""
+
+#: theme-widgets.php:1429
+msgid "36"
+msgstr ""
+
+#: theme-widgets.php:1430
+msgid "42"
+msgstr ""
+
+#: theme-widgets.php:1431
+msgid "52"
+msgstr ""
+
+#: theme-widgets.php:1432
+msgid "64"
+msgstr ""
+
+#: theme-widgets.php:1499
+msgid "4 - AB - Facebook Like Box"
+msgstr "4 - AB - Facebook Like Box"
+
+#: theme-widgets.php:1500
+msgid "Блок Фейсбук Фан старницы"
+msgstr "Facebook FanPage Widget"
+
+#: theme-widgets.php:1553
+msgid "Присоединяйтесь!"
+msgstr "Join!"
+
+#: theme-widgets.php:1571
+msgid "Ссылка на фан страницу Facebook:"
+msgstr "Link to Facebook fan page:"
+
+#: theme-widgets.php:1575
+msgid "Лица поклонников:"
+msgstr "Followers avatars"
+
+#: theme-widgets.php:1583
+msgid "Показывать ленту или вкладки:"
+msgstr "Show timeline or inserts:"
+
+#: theme-widgets.php:1585
+msgid "Только ленту"
+msgstr "Just timeline"
+
+#: theme-widgets.php:1586
+msgid "Вкладки"
+msgstr "Inserts"
+
+#: theme-widgets.php:1594
+msgid "Скрыть фон в шапке:"
+msgstr "Hide background in header:"
+
+#: theme-widgets.php:1608
+msgid "Высота блока (укажите минимум 300):"
+msgstr "Widget Hight (Minimum size 300):"
+
+#: theme-widgets.php:1630
+msgid "5 - AB - Группа В Контакте"
+msgstr "5 - AB - Vkontakte Group"
+
+#: theme-widgets.php:1631
+msgid "Блок Группы в Вконтакте"
+msgstr "Vkontakte Group Widget"
+
+#: theme-widgets.php:1686
+msgid "Группа Вконтакте"
+msgstr ""
+
+#: theme-widgets.php:1708
+msgid "ID Группы В Контакте:"
+msgstr "Vkontakte Group ID:"
+
+#: theme-widgets.php:1713
+msgid "Высота блока ВКонтакте:"
+msgstr ""
+
+#: theme-widgets.php:1725
+msgid "Цвет фона:"
+msgstr "Color of background:"
+
+#: theme-widgets.php:1735
+msgid "Цвет текста:"
+msgstr "Color of text:"
+
+#: theme-widgets.php:1751
+msgid "Вид:"
+msgstr "View:"
+
+#: theme-widgets.php:1753
+msgid "Участники"
+msgstr "Participants "
+
+#: theme-widgets.php:1754
+msgid "Новости"
+msgstr "News"
+
+#: theme-widgets.php:1755
+msgid "Только название"
+msgstr "Just titel"
+
+#: theme-widgets.php:1778
+msgid "6 - AB - Группа в Одноклассниках"
+msgstr "6 - AB - Odnoklassniki Group"
+
+#: theme-widgets.php:1779
+msgid "Блок Группы в Одноклассниках"
+msgstr "Odnoklassniki Group Widget"
+
+#: theme-widgets.php:1814
+msgid "Группа в Одноклассниках"
+msgstr "Odnoklassniki group"
+
+#: theme-widgets.php:1825
+msgid ""
+"Для отображения блока \"Группа в Одноклассниках\" необходимо вставить \"ID "
+"Группы в Одноклассниках\" в Настройках Шаблона в разделе \"Вставки\""
+msgstr ""
+"To view widget “Odnoklassniki Group”  you need to insert “ID of "
+"Odnoklassniki Group” in Theme Setting Tab, “Inserts” settings. "
+
+#: theme-widgets.php:1846
+msgid "7 - AB - Профиль в Google+"
+msgstr "7 - AB - Google+ Profile"
+
+#: theme-widgets.php:1847
+msgid "Блок профиля Google+"
+msgstr "Google+ Profile Widget"
+
+#: theme-widgets.php:1888
+msgid "Профиль в Google+"
+msgstr "Google+ profile"
+
+#: theme-widgets.php:1901
+msgid "ID профиля в Google+:"
+msgstr "Google+ Profile ID:"
+
+#: theme-widgets.php:1926
+msgid "Виджет для вставки кода Twitter ленты"
+msgstr "Widget for Timeline"
+
+#: theme-widgets.php:1928
+msgid "8 - AB - Twitter Лента"
+msgstr "8 - AB - Twitter Timeline"
+
+#: theme-widgets.php:1955
+msgid "Лента Твитер"
+msgstr "Twitter timeline"
+
+#: theme-widgets.php:1985
+msgid "9 - AB - Подписка на канал YouTube"
+msgstr "9 - AB - YouTube channel subscription"
+
+#: theme-widgets.php:1986
+msgid "Блок Подписка на Youtube"
+msgstr "Youtube Subscription Widget"
+
+#: theme-widgets.php:2027
+msgid "Подписка на YouTube"
+msgstr "Subscribe on YouTube"
+
+#: theme-widgets.php:2040
+msgid "ID Youtube:"
+msgstr ""
+
+#: theme-widgets.php:2064
+msgid "11 - AB - Свежие записи с миниатюрами"
+msgstr "11 - AB - Recent posts with thumbs"
+
+#: theme-widgets.php:2065
+msgid "Свежие записи с миниатюрами"
+msgstr "New posts with thumbnail "
+
+#: theme-widgets.php:2145
+msgid "Свежие записи"
+msgstr "New posts "
+
+#: theme-widgets.php:2177
+msgid "Показывать заголовок статьи?"
+msgstr "Display article tittle?"
+
+#: theme-widgets.php:2181
+msgid "Показывать анонс статьи?"
+msgstr "Show the short description  of the article? "
+
+#: theme-widgets.php:2184
+msgid "Ссылка: Читать далее"
+msgstr "Link: Read more"
+
+#: theme-widgets.php:2186
+msgid "Текст ссылки: Читать далее:"
+msgstr "Link text: Read more:"
+
+#: theme-widgets.php:2193
+msgid "ID Рубрик, разделенные запятой"
+msgstr "Categories ID, comma separated"
+
+#: theme-widgets.php:2197
+msgid "Количество записей:"
+msgstr "Number of posts:"
+
+#: theme-widgets.php:2201
+msgid "Смещение (количество постов пропустить):"
+msgstr "Mixing (number of posts skipped):"
+
+#: theme-widgets.php:2206
+msgid "Показывать миниатюру записи?"
+msgstr "Show the post thumbnail?"
+
+#: theme-widgets.php:2209
+msgid "Размер миниатюры, например <em>60</em> = 60px x 60px"
+msgstr "Thumbnail size, for example <em>60</em> = 60px x 60px"
+
+#: theme-widgets.php:2227
+msgid "12 - AB - Топ комментаторы"
+msgstr "12 - AB - Top commentators"
+
+#: theme-widgets.php:2228
+msgid "Вывод самых активных читателей"
+msgstr "Most active readers"
+
+#: theme-widgets.php:2363
+msgid "Топ комментаторы"
+msgstr "Top comments"
+
+#: theme-widgets.php:2390
+msgid "Количество знаков в имени:"
+msgstr "Number of signs in an name:"
+
+#: theme-widgets.php:2396
+msgid "За какой период:"
+msgstr "What period: "
+
+#: theme-widgets.php:2398
+msgid "Час"
+msgstr "Hour"
+
+#: theme-widgets.php:2399
+msgid "День"
+msgstr "Day"
+
+#: theme-widgets.php:2400
+msgid "Неделя"
+msgstr "Week"
+
+#: theme-widgets.php:2401
+msgid "Месяц"
+msgstr "Month"
+
+#: theme-widgets.php:2402
+msgid "Год"
+msgstr "Year"
+
+#: theme-widgets.php:2403
+msgid "Показывать всех"
+msgstr "Display all"
+
+#: theme-widgets.php:2405
+msgid "Или укажите количество дней или период от и до:"
+msgstr "Or post amount of days or period from and to:"
+
+#: theme-widgets.php:2408
+msgid "Пример:"
+msgstr "Example:"
+
+#: theme-widgets.php:2408
+msgid "количество дней или"
+msgstr "Number of days or"
+
+#: theme-widgets.php:2408
+msgid "за диапазон времени"
+msgstr "for duration of time"
+
+#: theme-widgets.php:2412
+msgid "Показывать количество комментариев?"
+msgstr "Display number of comments?"
+
+#: theme-widgets.php:2421
+msgid "Количество комментаторов:"
+msgstr "Number of commentators:"
+
+#: theme-widgets.php:2432
+msgid "Cписок"
+msgstr "List"
+
+#: theme-widgets.php:2434
+msgid "Колонки"
+msgstr "Columns"
+
+#: theme-widgets.php:2447
+msgid "Исключить комментаторов по емаил:"
+msgstr "Exclude comments using email"
+
+#: theme-widgets.php:2449
+msgid ""
+"Укажите через запятую (,) email пользователей, которые не должны "
+"отображаться в Топ комментаторы, например Ваш email"
+msgstr ""
+"Please wright down separated by (,) user emails, which you don’t want to be "
+"viewed in Top commentaries section, for example your email"
+
+#: theme-widgets.php:2475
+msgid "13 - AB - Свежие коммментарии"
+msgstr "13 - AB - Recent comments"
+
+#: theme-widgets.php:2476
+msgid "Вывод свежих комментариев с аватарами комментаторов"
+msgstr "Newest comments with commentators avatar"
+
+#: theme-widgets.php:2556
+msgid "Свежие комментарии"
+msgstr "New comments"
+
+#: theme-widgets.php:2569
+msgid "Количество комментариев:"
+msgstr "Number of comments:"
+
+#: theme-widgets.php:2642
+msgid "14 - AB - Рекомендую"
+msgstr "14 - AB - Ads (4 ads)"
+
+#: theme-widgets.php:2643
+msgid "Виджет для добавления баннеров 125x125."
+msgstr "Widget for the banner 125x125."
+
+#: theme-widgets.php:2672
+msgid "Рекомендую"
+msgstr "Recommend"
+
+#: theme-widgets.php:2693
+msgid "Количество баннеров (1-4):"
+msgstr "Number of banners (1-4):"
+
+#: theme-widgets.php:2714
+msgid "16 - AB - Управление"
+msgstr "16 - AB - Login widget"
+
+#: theme-widgets.php:2715
+msgid "Виджет со ссылкой на вход в админку"
+msgstr "Widget for Admin Login"
+
+#: theme-widgets.php:2760
+msgid "Управление"
+msgstr "Control widget"
+
+#: theme-widgets.php:2804
+msgid "10 - AB - Фото Инстаграм"
+msgstr "10 - AB - Instagram photos"
+
+#: theme-widgets.php:2806
+msgid "Блок с фотографиями из Инстаграм"
+msgstr "Instagram Photos Widget"
+
+#: theme-widgets.php:2907
+msgid "Фото Инстаграм"
+msgstr "Instagram photo"
+
+#: theme-widgets.php:2941
+msgid "Логин профиля в Instagram:"
+msgstr "Instagram profile login:"
+
+#: theme-widgets.php:3004
+msgid "Количество изображений:"
+msgstr "Number of images:"
+
+#: theme-widgets.php:3006
+msgid "максимум 10"
+msgstr "Maximum 10"
+
+#: theme-widgets.php:3046
+msgid "Количество в ряд:"
+msgstr "Number in a row:"
+
+#: theme-widgets.php:3305 theme-widgets.php:3346
+msgid "Изображений не найдено! <br> Попробуйте другой хэштег или логин!"
+msgstr "Image not found! <br> Try a different hashtag or a log in!"
+
+#: theme-widgets.php:3431
+msgid "ПОДПИСАТЬСЯ НА INSTAGRAM"
+msgstr "SUBSCRIBE TO INSTAGRAM"
+
+#: theme-widgets.php:3687
+msgid "Изображений не найдено"
+msgstr "Image not found"
+
+#: theme-widgets.php:4096
+msgid "Здесь вы можете вставить код баннера на всю ширину виджета"
+msgstr "Here you can enter banner code for a full size widget"
+
+#: theme-widgets.php:4098
+msgid "15 - AB - Баннер на всю ширину"
+msgstr "15 - AB - Full width Ad"
+
+#: theme-widgets.php:4134
+msgid "Максимальная ширина баннера 300px"
+msgstr "Maximum banner width is 300px"
+
+#: theme-widgets.php:4153
+msgid "18 - AB - Рубрики"
+msgstr "18 - AB - Categories"
+
+#: theme-widgets.php:4154
+msgid "Список рубрик"
+msgstr "List of catagories"
+
+#: theme-widgets.php:4227
+msgid "Показывать количество статей в рубрике?"
+msgstr "Display number of articles and categories? "
+
+#: theme-widgets.php:4232
+msgid "Соблюдать иерархию рубрик?"
+msgstr "Follow hierarchy of categories?"
+
+#: theme-widgets.php:4238
+msgid "Цвет рубрик:"
+msgstr "Color of catagory:"
+
+#: theme-widgets.php:4240
+msgid "Черный, при наведении как ссылки"
+msgstr "Black, when hovering over link"
+
+#: theme-widgets.php:4241
+msgid "Под цвет ссылок"
+msgstr "For link color "
+
+#~ msgid "(Редактировать)"
+#~ msgstr "(Edit)"
+
+#~ msgid "Выберать цвет"
+#~ msgstr "Select color"
+
+#~ msgid "Высота блока В Контакте:"
+#~ msgstr "Vkontakte widget Hight"
+
+#~ msgid "Группа в контакте"
+#~ msgstr "Vkontakte group"
+
+#~ msgid "Ключ автоматического обновления"
+#~ msgstr "Automatic Update Key"
+
+#~ msgid "Редактировать"
+#~ msgstr "Edit"
