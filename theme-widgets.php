@@ -230,7 +230,7 @@ $icon_color_hover_text = $instance['icon_color_hover_text'];
 						'header_email' => $current_user->user_email,
 						'header_gravatar' => $current_user->user_email,
 						'header_gravatar_width' => 75,
-						'header_color' => '#ffffff',
+						'header_color' => '#000000',
 						'header_padding' => '20',
 						'widget_header' => 'authorprofile',
 						'banner_image' => '',
@@ -1260,12 +1260,12 @@ if ($chooseform == 'sendpulse')  { ?>
 <div class="sp-message"> <div></div> </div> 
 
 <form novalidate="" class="sp-element-container ui-sortable ui-droppable ">
-<div style="padding-bottom: 5px;"><input type="text" sp-type="input" name="sform[<?php echo $idnamefield;?>]"   size="27" class="sp-form-control input1" style="width: 275px;  font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px; <?php if (of_get_option('name_field') == '0') {echo 'display:none';} else {'';} ?>" value=""  placeholder="<?php echo of_get_option('name_field_text', '') ; ?>"> </div>
+<div style="padding-bottom: 5px;"><input type="text" sp-type="input" name="sform[<?php echo $idnamefield;?>]"   size="27" class="sp-form-control input1" style="width: 275px;  font-family: arial; font-size: 14px; color: #424242; height: 40px !important; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px; <?php if (of_get_option('name_field') == '0') {echo 'display:none';} else {'';} ?>" value=""  placeholder="<?php echo of_get_option('name_field_text', '') ; ?>"> </div>
 
 
-<div style="padding-bottom: 5px;"> <input type="email" sp-type="email" name="sform[email]"  required="required" size="27" class="sp-form-control input1" style="width: 275px; font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px;" value=""  placeholder="<?php echo of_get_option('email_field_text', '') ; ?>"> </div>
+<div style="padding-bottom: 5px;"> <input type="email" sp-type="email" name="sform[email]"  required="required" size="27" class="sp-form-control input1" style="width: 275px; font-family: arial; font-size: 14px; color: #424242; height: 40px !important; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px;" value=""  placeholder="<?php echo of_get_option('email_field_text', '') ; ?>"> </div>
  
-  <button class="sp-button form-button" <?php if (of_get_option('custom_button') == '0') { ?> style="background-color:transparent; text-shadow: 1px 1px 0px #000;width:234px; height:45px;border:none;"<?php } else {}?>  onmouseover="this.className='form-button btnhov'" onmouseout="this.className='form-button'" > <?php echo of_get_option('button_text', ''); ?> </button></form></div>  
+  <button class="sp-button form-button" <?php if (of_get_option('custom_button') == '0') { ?> style="background-color:transparent; text-shadow: 1px 1px 0px #000;width:234px; height:45px  !important;border:none;"<?php } else {}?>  onmouseover="this.className='form-button btnhov'" onmouseout="this.className='form-button'" > <?php echo of_get_option('button_text', ''); ?> </button></form></div>  
 
 <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
 <div class="garantiya"><a class="fancybox" href="#inline" title="Согласие на обработку персональных данных"><?php echo of_get_option('form_garant', '') ; ?></a></div>

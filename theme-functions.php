@@ -684,8 +684,8 @@ foreach ( array( 'term_description' ) as $filter ) {
 	{ 
 	    
 	    $counter = ( of_get_option('share_counters') == '1')   ? 'yes' : 'no';
-	    
-	    
+
+	 
 
         ?>
         
@@ -702,7 +702,7 @@ if ( of_get_option('show_share_buttons') ['vk'] == '1' ) { echo '<div data-servi
 
 if ( of_get_option('show_share_buttons') ['ok'] == '1' ) { echo '<div data-service="odnoklassniki" title="'. __( 'Поделиться в Odnoklassniki', 'inspiration' ) .'">'. of_get_option('text_odnoklassniki') .'</div>'; }
 
-if ( of_get_option('show_share_buttons') ['pinterest'] == '1' ) { echo '<div data-service="pinterest" title="'. __( 'Поделиться в Pinterest', 'inspiration' ) .'">'. of_get_option('text_pinterest') .'</div>'; }
+if ( of_get_option('show_share_buttons') ['pinterest'] == '1' ) { echo '<div data-service="pinterest" data-media="' . get_the_post_thumbnail_url( $post->ID, 'thumbnail' ) . '" title="'. __( 'Поделиться в Pinterest', 'inspiration' ) .'">'. of_get_option('text_pinterest') .'</div>'; }
 if ( of_get_option('show_share_buttons') ['linkedin'] == '1' ) { echo '<div data-service="linkedin" title="'. __( 'Поделиться в Linkedin', 'inspiration' ) .'">'. of_get_option('text_linkedin') .'</div>'; }
 
 

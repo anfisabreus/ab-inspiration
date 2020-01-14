@@ -106,7 +106,7 @@ if (screen && screen.width > 514) {
 </script><?php } ?>
 <div id="wrapper" class="hfeed">
 <?php if (of_get_option('menu_position') == '1' && of_get_option('menu_show') == '1') { ?>
-<div id="access" style="vertical-align:bottom"> <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?> </div> <?php ;}?>
+<div id="access" style="vertical-align:bottom"> <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?> </div> <?php ;} ?>
 <div id="header" itemscope="" itemtype="http://schema.org/WPHeader">
 
 <?php if (of_get_option('headermenu') == '1' && of_get_option('headermenu') == '1') {?>
