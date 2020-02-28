@@ -129,10 +129,10 @@ if (screen && screen.width > 514) {
 
 	
 	
-	<div style="width:69%; text-align: center;">
+	<div class="mobile-logo">
 		
   <!-- Brand -->
-  <?php if (of_get_option('logo_yes_mobile') == '1') { echo '<a href="'. home_url( '/' ).'" style="width:70%"><img src="'. of_get_option('logo_image_mobile', 'no entry' ).' "  style="max-width:70%;z-index:4;" alt=""></a>';} else { ?> 
+  <?php if (of_get_option('logo_yes_mobile') == '1') { echo '<a href="'. home_url( '/' ).'" class="mobile-image-link"><img src="'. of_get_option('logo_image_mobile', 'no entry' ).' "  class="mobile-image-logo" alt=""></a>';} else { ?> 
 <h2 id="site-title" style="width:70%;    margin: 0 auto; position:relative; z-index:4;"><a href="<?php echo home_url( '/' ); ?>"><?php bloginfo( 'name' ); ?></a></h2>
 <?php if (of_get_option('header_mobile_desc') == '1') { ?>
 <div id="site-description" style="margin-top:0px;margin-left:4px; position:relative;z-index:4;width:70%;margin: 0 auto; text-align:center"> <?php bloginfo( 'description' ); ?></div><?php } ?><?php } ?> 

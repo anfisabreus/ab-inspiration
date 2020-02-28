@@ -21,8 +21,17 @@ if ($sub_form_footer['ab_show_widget'] == '0' ) { ?>
 <div style="text-align:right;margin-right:10px;vertical-align:top;"><a href="#" class="scrollupinsight"></a></div>
 <div id="footermenu">
 <?php if ( has_nav_menu( 'footer' ) ) { wp_nav_menu( array( 'container_class' => 'menu-footer', 'theme_location' => 'footer') ); } ?></div>
-<div class="copyright"><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &copy; <?php echo date_i18n('Y', time()); ?> &nbsp;·&nbsp; <?php _e( 'Все права защищены', 'inspiration' ); ?> &nbsp;·&nbsp;
-<span style="padding-top:10px;font-size:14px;"><?php _e( 'Создан на ', 'inspiration' ); ?> <a href="<?php echo of_get_option('promotion', ''); ?>" target="_blank" rel="nofollow"><?php _e( 'AB-Inspiration ', 'inspiration' ); ?></a></span>
+
+
+<div class="copyright">
+	
+	<?php if ( !of_get_option('footer_text_copyright') ||  of_get_option('footer_text_copyright') == '') { ?> <a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> &copy; <?php echo date_i18n('Y', time()); ?> &nbsp;·&nbsp; <?php _e( 'Все права защищены', 'inspiration' ); ?> &nbsp;·&nbsp; <span class="themepowered" style="padding-top:10px;font-size:14px;"><?php _e( 'Создан на ', 'inspiration' ); ?> <a href="<?php echo of_get_option('promotion', ''); ?>" target="_blank" rel="nofollow"><?php _e( 'AB-Inspiration ', 'inspiration' ); ?></a></span><?php } else { echo of_get_option('footer_text_copyright'); }   ?>
+
+
+
+
+
+
 </div>
 </div>
 <div class="custom-footer-text"><?php echo of_get_option('footer_text'); ?></div>

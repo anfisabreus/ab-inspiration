@@ -472,7 +472,7 @@ font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face
 h1.entry-title-single { '; if ( of_get_option('title_single') !== '') { $css .= 'color:'. of_get_option('title_single').';';} else { $css .= 'color:#000;';} $css .= '}
 .entry-title6 {margin-bottom:0px !important}
 
-.post a:link, a:link, a:visited, .woocommerce div.product .stock,.widget-area a:link, .widget-area a:visited {'; if ( of_get_option('linkslink_colorpicker') !== '') { $css .= 'color:'. of_get_option('linkslink_colorpicker').';';} else { $css .= 'color:#000;';} $css .= '}
+.entry-content a:link, .entry-content a:visited, .commentlist a:link, .commentlist a:visited,.woocommerce div.product .stock,.widget-area a:link, .widget-area a:visited {'; if ( of_get_option('linkslink_colorpicker') !== '') { $css .= 'color:'. of_get_option('linkslink_colorpicker').';';} else { $css .= 'color:#000;';} $css .= '}
 
 .post a:hover, .post a:visited:hover, .comment-meta a:active, .comment-meta a:hover,.reply a:hover, a.comment-edit-link:hover,a:active, a:hover,.navigation a:active, .navigation a:hover,#tabs.homepageitemstabs ul.homepageitemstabsul li.homepageitemstabsli a:hover, #tabs.homepageitemstabs ul.homepageitemstabsul li.homepageitemstabsli a:after,#tabs.homepageitemstabs ul.homepageitemstabsul li.homepageitemstabsli.ui-tabs-active a,.widget-area a:active, .widget-area a:hover, li.widget_ab_categories ul li a:hover, #primary li.widget_product_categories ul.product-categories li a:hover {
 '; if ( of_get_option('linkshover_colorpicker') !== '') { $css .= 'color:'. of_get_option('linkshover_colorpicker').';';} else { $css .= 'color:#000;';} $css .= '}

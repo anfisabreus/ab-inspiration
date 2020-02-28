@@ -132,7 +132,10 @@ $value = $array[$key];
 
 	 <?php
 
-	if ( $course->can_user_access( get_current_user_id() ) ) { ?>
+	if ( $course->can_user_access( get_current_user_id() ) ) { 
+	
+		
+	?>
 
 	<div class="progress_under_course">
 		<?php
@@ -142,6 +145,7 @@ $value = $array[$key];
 
 
 	?>
+	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 20px;float: right; margin-bottom: 20px;padding: 5px 10px;">Открыть курс</a>
 
 </div>
 	<?php } ?>

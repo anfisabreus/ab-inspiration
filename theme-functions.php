@@ -1337,7 +1337,7 @@ add_action( 'ab_title_action_category', 'ab_after_content_category', 70 );
 function kama_breadcrumbs() {
 
 	/* === ОПЦИИ === */
-	$text['home']     = 'Главная'; // текст ссылки "Главная"
+	$text['home']     = __('Главная', 'inspiration'); // текст ссылки "Главная"
 	$text['category'] = '%s'; // текст для страницы рубрики
 	$text['search']   = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
 	$text['tag']      = 'Записи с тегом "%s"'; // текст для страницы тега
