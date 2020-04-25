@@ -3170,17 +3170,11 @@ body #footer-widget-area ul li.widget{margin-left:8px !important;}
 .buy50{float:left; width:50%;display:table; height:280px;     background: #F7F6F7; padding: 20px 30px;margin-bottom: 30px;}
 .buy50 .woocommerce-Price-amount.amount {padding-right:10px}
 .buy50image{display:table-cell; vertical-align:middle}
-.fe_btn.fe_btn_navigation.fe_btn_navigation_next  {-webkit-transition: all 0.5s;transition: all 0.5s;padding: 20px !important;float: right;}
-.fe_btn.fe_btn_navigation.fe_btn_navigation_prev{-webkit-transition: all 0.5s;transition: all 0.5s;padding: 20px !important;float: left;}
-.wpcw_fe_navigation_box  a.fe_btn_navigation_next, .wpcw_fe_navigation_box  a.fe_btn_navigation_prev {text-indent: -9999px;
-  line-height: 0; }
-
+a.fe_btn.fe_btn_navigation.fe_btn_navigation_next  {-webkit-transition: all 0.5s;transition: all 0.5s;padding: 20px !important;float: right; background:none; border:none; color:#333 !important}
+a.fe_btn.fe_btn_navigation.fe_btn_navigation_prev{-webkit-transition: all 0.5s;transition: all 0.5s;padding: 20px !important;float: left; background:none; border:none; color:#333 !important}
 .fe_btn.fe_btn_navigation.fe_btn_navigation_next, .fe_btn.fe_btn_navigation.fe_btn_navigation_prev{ padding: 0px!important; }
- #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_next, #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_prev {background-color:transparent !important; border:none; padding:10px 20px !important}
-.wpcw_fe_navigation_box  a.fe_btn_navigation_next:before {text-decoration: underline;text-indent: 0;display: block;line-height: initial;font-family: arial, "FontAwesome"; content: "Следующее \f101"; float:right; font-size:18px;  font-weight:normal; padding: 0 !important;color: #000 !important;}
-.wpcw_fe_navigation_box {padding:0px}
-.wpcw_fe_navigation_box  a.fe_btn_navigation_prev:before {text-decoration: underline;text-indent: 0;display: block;line-height: initial;font-family: arial, "FontAwesome"; content: "\f100  Предыдущее"; float:right; font-size:18px;  font-weight:normal; padding:0 !important;color: #000 !important; float:left}
-@media only screen and (max-width: 690px) {
+ .wpcw_fe_navigation_box {padding:0px}
+ @media only screen and (max-width: 690px) {
 .account50
 {width:100%;}
 .buy50
