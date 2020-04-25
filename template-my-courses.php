@@ -129,7 +129,7 @@ if ( $course->can_user_access( get_current_user_id() ) ) { ?>
 </div>
 
 
-<?php } else { echo "Чтобы увидеть свои курсы, вы должны войти" } ?>
+<?php } else { echo "Чтобы увидеть свои курсы, вы должны войти"; } ?>
 
 
 

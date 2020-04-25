@@ -163,7 +163,7 @@ class Excerpt {
 
     public static function continue_reading_link() {
 
-        return '<p class="readmore"><a href="'.get_permalink().'">Читать далее</a></p>';
+        return '<p class="readmore"><a href="'.get_permalink().'">'. __( 'Читать далее', 'inspiration' ) .' </a></p>';
     }
 
     public static function auto_excerpt_more( ) {
@@ -1083,7 +1083,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.56',
+			'version' => '8.57',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',

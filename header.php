@@ -55,9 +55,11 @@
 
 
 
-<?php if (of_get_option('vk_app') !== '' && !is_page_template('enterpage.php')  ) {?>
+<?php if (of_get_option('vk_app') !== '' && !is_page_template('enterpage.php')  ) { ?>
 <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script><?php } ?>
-<script defer="defer" src='https://www.google.com/recaptcha/api.js'></script>
+
+<?php if (is_page_template('testimonials-page.php'))  { ?>
+<script defer="defer" src='https://www.google.com/recaptcha/api.js'></script><?php } ?>
 
 <?php if (of_get_option('fbpixel') !== '') { ?>
 <script>

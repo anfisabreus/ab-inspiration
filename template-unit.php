@@ -73,11 +73,11 @@ $value = $array[$key2];
 
 
 
-echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #eaeaea; clear:both; background:#FFFACD;">'. do_shortcode('[add_to_cart id="'.$value.'"]') .'<div style="clear: right; padding-top: 10px;padding-left: 20px;display: table;"> или <a href="'. get_permalink( wc_get_page_id( 'myaccount' ) ) .'">Войти в личный кабинет</a></div></div>';
+echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #eaeaea; clear:both; background:#FFFACD;">'. do_shortcode('[add_to_cart id="'.$value.'"]') .'<div style="clear: right; padding-top: 10px;padding-left: 20px;display: table;"> '. __( 'или', 'inspiration' ) .' <a href="'. get_permalink( wc_get_page_id( 'myaccount' ) ) .'">'. __( 'Войти в личный кабинет', 'inspiration' ) .'</a></div></div>';
 
 }  
 	
-	else { echo  '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #eaeaea; clear:both; background:#FFFACD;"><p class="button-on-unit">'. do_shortcode('[wpcourse_enroll courses="'. $key .'"]') .'</p><div style="clear: right; padding-top: 10px;padding-left: 20px;display: table;"> или <a href="'. get_permalink( wpcw_get_page_id( 'account' ) ) .'">Войти в личный кабинет</a></div></div>'; }
+	else { echo  '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #eaeaea; clear:both; background:#FFFACD;"><p class="button-on-unit">'. do_shortcode('[wpcourse_enroll courses="'. $key .'"]') .'</p><div style="clear: right; padding-top: 10px;padding-left: 20px;display: table;"> '. __( 'или', 'inspiration' ) .' <a href="'. get_permalink( wpcw_get_page_id( 'account' ) ) .'">'. __( 'Войти в личный кабинет', 'inspiration' ) .'</a></div></div>'; }
 }     ?>
 
 

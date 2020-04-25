@@ -18,7 +18,7 @@ get_header();
 						<?php $dbt_youtibelink = get_post_meta(get_the_ID(), 'dbt_youtibelink', true);?>
 
 <div></div>
-<?php if ($dbt_galerywidth == '960px') { ?> <h1 class="entry-title katalog-title" style="padding-bottom:20px; <?php if ('5' == get_post_meta(get_the_ID(), 'dbt_slides', true)) { ?>display:none <?php } ?>"><?php echo the_title();?></h1> <?php } ?>
+<?php if ($dbt_galerywidth == '100%') { ?> <h1 class="entry-title katalog-title" style="padding-bottom:20px; <?php if ('5' == get_post_meta(get_the_ID(), 'dbt_slides', true)) { ?>display:none <?php } ?>"><?php echo the_title();?></h1> <?php } ?>
 	
 	<?php $gallery = get_post_gallery( get_the_ID(), false );
 	 if ('1' == get_post_meta(get_the_ID(), 'dbt_slides', true))  { ?>

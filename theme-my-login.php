@@ -2,13 +2,13 @@
 
   __( 'На всю ширину', 'inspiration' );
 get_header(); ?>
-<style>#content .entry-box {border:none !important}.leavecomment {margin-top:20px}.post-content, #content .entry-content, #content .tabberlive {width:430px; margin:0 auto;}#content .entry-box .image-bg {width: 100%; padding-top:50%;
+<style>.post-content, #content .entry-content, #content .tabberlive {width:430px; margin:0 auto;}#content .entry-box .image-bg {width: 100%; padding-top:50%;
     background-size: cover; margin-bottom:30px !important; background-repeat:no-repeat;}   .leavecomment {margin-top:20px}.post-content, #content .entry-content, #content .tabberlive {width:430px; margin:0 auto;}.cat-meta, .entry-title.entry-title-single {text-align:center}.date-comments{    margin: 0 auto; display:table}.entry-title.entry-title-single {font-size:38px !important; margin-bottom: 20px !important;} div.date-comments, #content .post div.meta-comment a:link, #content div.entry-box .post .entry-utility a, .entry-utility, .meta-comment {color:#999 !important; font-size:16px !important;} .post-font {font-size:20px !important; padding-top:20px;}.social-buttons-no-widget {display:table; margin:0 auto;} @media only screen and (max-width: 690px) { .author-info .author-description {width:100%; float:none !important; text-align:center;} .author-info .author-avatar {text-align:center; float:none !important; margin-right: 0px !important; } #container, #container.single-no-sidebar, #container.single-no-sidebar #content {width:100%}.post-content, #content .entry-content, #content .tabberlive {width:90%}.entry-box .image-bg {width:100%} .entry-title.entry-title-single {font-size:30px !important; margin-bottom: 20px !important;} div.date-comments, .social-buttons-no-widget {display:none} .cat-meta {margin-top: 20px;}}</style>
-<div id="container" class="single-no-sidebar">
+<div id="container" class="one-column">
 <div id="content" role="main" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 <?php wpb_set_post_views(get_the_ID()); ?>
-<div class="entry-box" itemscope itemtype="//schema.org/BlogPosting" <?php if ( !has_post_thumbnail() ) { ?>style=" padding:40px 0 !important"<?php } else { ?> style=" padding:0px 0 40px 0!important"<?php }   ?>>
+<div class="entry-box" itemscope itemtype="//schema.org/BlogPosting">
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	

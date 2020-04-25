@@ -2,7 +2,7 @@
 Theme Name: AB-Inspiration
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.56
+Version: 8.57
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -3176,7 +3176,7 @@ body #footer-widget-area ul li.widget{margin-left:8px !important;}
   line-height: 0; }
 
 .fe_btn.fe_btn_navigation.fe_btn_navigation_next, .fe_btn.fe_btn_navigation.fe_btn_navigation_prev{ padding: 0px!important; }
- #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_next, #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_prev {background-color:transparent !important; border:none; width:50%}
+ #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_next, #content a.fe_btn.fe_btn_navigation.fe_btn_navigation_prev {background-color:transparent !important; border:none; padding:10px 20px !important}
 .wpcw_fe_navigation_box  a.fe_btn_navigation_next:before {text-decoration: underline;text-indent: 0;display: block;line-height: initial;font-family: arial, "FontAwesome"; content: "Следующее \f101"; float:right; font-size:18px;  font-weight:normal; padding: 0 !important;color: #000 !important;}
 .wpcw_fe_navigation_box {padding:0px}
 .wpcw_fe_navigation_box  a.fe_btn_navigation_prev:before {text-decoration: underline;text-indent: 0;display: block;line-height: initial;font-family: arial, "FontAwesome"; content: "\f100  Предыдущее"; float:right; font-size:18px;  font-weight:normal; padding:0 !important;color: #000 !important; float:left}
@@ -3331,4 +3331,7 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
  .fa, .page-template-elementor_header_footer  .fas {
 	font-family: "FontAwesome" !important; font-weight:300 !important}
 	
-.tml.tml-register {font-size:0.7em}
+.tml.tml-register,.tml.tml-login {font-size:16px}
+
+.tml-action-register .entry-box {padding:20px !important;}
+.tml-action-register  #content-main { margin:0px}

@@ -76,7 +76,7 @@
 <p><?php _e( 'Вы должны', 'inspiration' ); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>"><?php _e( 'войти,', 'inspiration' ); ?>  </a> <?php _e( 'чтобы оставлять комментарии.', 'inspiration' ); ?></p>
 <?php else : ?>
 
-<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform" class="comment-form">
 
 <?php if ( $user_ID ) : ?>
 

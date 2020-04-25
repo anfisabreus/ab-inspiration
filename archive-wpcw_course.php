@@ -136,7 +136,8 @@ $value = $array[$key];
 	
 	
 	?>
-	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 20px;float: right; margin-bottom: 20px;padding: 5px 10px;">Открыть курс</a>
+	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 20px;float: right; margin-bottom: 20px;padding: 5px 10px;"><?php _e( 'Открыть курс', 'inspiration' ); ?>
+	</a>
 </div>
 	<?php } ?>
 	
