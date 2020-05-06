@@ -757,7 +757,7 @@ if ( of_get_option('show_share_buttons_bottom') ['linkedin'] == '1' ) { echo '<d
 	{ ?>
 	
 <div id="inline" style="display:none; overflow: auto;" class="obrabotka">
-<div style="font-size:26px; text-align:center; padding-top:10px;"> Согласие на обработку персональных данных </div> <br>
+<div style="font-size:26px; text-align:center; padding-top:10px;"> <?php _e('Согласие на обработку персональных данных', 'inspiration'); ?> </div> <br>
 <div style="padding:0px 30px; font-size:15px;">
 <?php echo of_get_option('obrabotka_dannyh_text', '') ; ?><br>
 </div></div>

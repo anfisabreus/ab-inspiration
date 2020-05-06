@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: AB-Inspiration\n"
-"POT-Creation-Date: 2020-04-10 20:56+0300\n"
-"PO-Revision-Date: 2020-04-10 20:56+0300\n"
+"POT-Creation-Date: 2020-05-06 15:35+0300\n"
+"PO-Revision-Date: 2020-05-06 15:35+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -381,6 +381,12 @@ msgstr ""
 
 #: comments.php:105
 msgid "Отправить комментарий"
+msgstr ""
+
+#: comments.php:113
+msgid ""
+"Нажимая на кнопку \"Отправить комментарий\", я соглашаюсь с политикой "
+"обработки персональных данных"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -2752,6 +2758,10 @@ msgstr ""
 msgid "Поделиться в Linkedin"
 msgstr ""
 
+#: theme-functions.php:760
+msgid "Согласие на обработку персональных данных"
+msgstr ""
+
 #: theme-functions.php:1141
 msgid "Оставьте свой комментарий:"
 msgstr ""
@@ -4058,70 +4068,70 @@ msgid "Ключ обновления"
 msgstr ""
 
 #: updater/theme-updater.php:31
-msgid "Enter your theme license key."
+msgid "Введите ваш ключ."
 msgstr ""
 
 #: updater/theme-updater.php:32
-msgid "License Key"
+msgid "Лицензионный ключ"
 msgstr ""
 
 #: updater/theme-updater.php:33
-msgid "License Action"
+msgid "Действия с лицензией"
 msgstr ""
 
 #: updater/theme-updater.php:34
-msgid "Deactivate License"
+msgid "Деактивировать лицензию"
 msgstr ""
 
 #: updater/theme-updater.php:35
-msgid "Activate License"
+msgid "Активировать лицензию"
 msgstr ""
 
 #: updater/theme-updater.php:36 updater/theme-updater.php:49
-msgid "License status is unknown."
+msgid "Статус лицензии неизвестен."
 msgstr ""
 
 #: updater/theme-updater.php:37
-msgid "Renew?"
+msgid "Обновить?"
 msgstr ""
 
 #: updater/theme-updater.php:38
-msgid "unlimited"
+msgid "неограничено"
 msgstr ""
 
 #: updater/theme-updater.php:39
-msgid "License key is active."
+msgid "Ключ лицензии активный."
 msgstr ""
 
 #: updater/theme-updater.php:40
 #, php-format
-msgid "Expires %s."
+msgid "Истекает %s."
 msgstr ""
 
 #: updater/theme-updater.php:41
-msgid "Lifetime License."
+msgid "Пожизненная лицензия."
 msgstr ""
 
 #: updater/theme-updater.php:42
 #, php-format
-msgid "You have %1$s / %2$s sites activated."
+msgid "У вас %1$s / %2$s сайтов активированы."
 msgstr ""
 
 #: updater/theme-updater.php:43
 #, php-format
-msgid "License key expired %s."
+msgid "Ключ лицензии истекает %s."
 msgstr ""
 
 #: updater/theme-updater.php:44
-msgid "License key has expired."
+msgid "Ключ лицензии истек."
 msgstr ""
 
 #: updater/theme-updater.php:45
-msgid "License keys do not match."
+msgid "Ключ лицензии не подходит."
 msgstr ""
 
 #: updater/theme-updater.php:46
-msgid "License is inactive."
+msgid "Лицензия неактивна."
 msgstr ""
 
 #: updater/theme-updater.php:47
@@ -4129,26 +4139,40 @@ msgid "License key is disabled."
 msgstr ""
 
 #: updater/theme-updater.php:48
-msgid "Site is inactive."
+msgid "Сайт неактивен."
 msgstr ""
 
 #: updater/theme-updater.php:50
 msgid ""
-"Updating this theme will lose any customizations you have made. 'Cancel' to "
-"stop, 'OK' to update."
+"Обновление этого шаблона приведет к потере изменений, которые вы сделали в "
+"коде. 'Отменить' чтобы остановить, 'OK' чтобы обновить."
 msgstr ""
 
 #: updater/theme-updater.php:51
 #, php-format
 msgid ""
-"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" class=\"thickbox\" "
-"title=\"%4s\">Check out what's new</a> or <a href=\"%5$s\"%6$s>update now</"
-"a>."
+"<strong>%1$s %2$s</strong> доступен. <a href=\"%3$s\" class=\"thickbox\" "
+"title=\"%4s\">узнайте что нового</a> или <a href=\"%5$s\"%6$s>обновите "
+"сейчас</a>."
 msgstr ""
 
 #: woocommerce/global/quantity-input1.php:27
 msgctxt "Product quantity input tooltip"
 msgid "Qty"
+msgstr ""
+
+#. translators: 1: user display name 2: logout url
+#: woocommerce/myaccount/dashboard.php:29
+#, php-format
+msgid "Hello %1$s"
+msgstr ""
+
+#: woocommerce/myaccount/dashboard.php:39
+#, php-format
+msgid ""
+"From your account dashboard you can view your <a href=\"%1$s\">recent "
+"orders</a>, manage your <a href=\"%2$s\">shipping and billing addresses</a>, "
+"and <a href=\"%3$s\">edit your password and account details</a>."
 msgstr ""
 
 #: woocommerce/single-product/add-to-cart/variable1.php:32

@@ -388,9 +388,9 @@ $css .= '}';
 
 
 if (of_get_option('post_width') == '2') 
-{ $css .= '#main {max-width:1200px !important;} #primary {width:32% !important}#form-background{width:100% !important; margin-bottom:30px !important; }.entry-box {padding:30px;}li.widget-container, div.widget-container {margin-bottom:30px; padding:30px; } .one-column #content {width:1200px;} #container {width:66.4% !important;} #content {width:100%;}.pagenavi {padding-bottom:40px}';} 
+{ $css .= '#main {max-width:1200px !important;} #primary {width:32% !important}#form-background{width:100% !important; margin-bottom:30px !important; }.entry-box {padding:30px;}li.widget-container, div.widget-container {margin-bottom:30px; padding:30px; } .one-column #content {width:1200px;} #container {width:66.4% !important;} #container.one-column {width:100% !important;} #content {width:100%;}.pagenavi {padding-bottom:40px}';} 
 
-else { $css .= '#main {max-width:1200px; padding:20px !important}.one-column #content {width:100%;}#container {width:66.4% !important;} #content {width:100%;}.shop-widget {width:32% !important !important;}#container.single-no-sidebar,#container.single-no-sidebar #content {width:100%}';}
+else { $css .= '#main {max-width:1200px; padding:20px !important}.one-column #content {width:100%;}#container {width:66.4% !important;} #container.one-column {width:100% !important;} #content {width:100%;}.shop-widget {width:32% !important !important;}#container.single-no-sidebar,#container.single-no-sidebar #content {width:100%}';}
 
 
 
