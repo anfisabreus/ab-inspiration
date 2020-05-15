@@ -1671,6 +1671,9 @@ table.shop_table tr.cart_item td, #add_payment_method .cart-collaterals .cart_to
 
 	.firstpost .homepage-image5 {width:100% !important}
 	.secondpost .homepage-image5 {width:100% !important}
+	.pagenavi {float:none; text-align:center}
+	 .pagenavi a, .pagenavi a:link, .pagenavi a:visited, .pagenavi .current, .pagenavi .on, .pagenavi span.pages, .insta-button, .pagenavi span.current
+{font-size: 14px;}
 	
 	
 	
@@ -2144,7 +2147,6 @@ body #footer-widget-area div.widget-title {margin-left:0px !important}
 #access .sub-menu ul  {border:1px solid '. $lightColourtwo .' !important}
 #access .sub-menu li  {border-bottom:1px solid '. $lightColourtwo .' !important}
 #access ul li ul li:hover, .menu ul li ul li:hover{background:'. $lightColourtwo .' !important}';  
-
 
 
 

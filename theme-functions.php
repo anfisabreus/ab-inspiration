@@ -336,7 +336,7 @@ function pagenavi($before = '', $after = '') {
     $pagenavi_options['prev_text'] = __('&laquo; Предыдущая', 'inspiration');
     $pagenavi_options['dotright_text'] = '...';
     $pagenavi_options['dotleft_text'] = '...';
-    $pagenavi_options['num_pages'] = 5; //continuous block of page numbers
+    $pagenavi_options['num_pages'] = 3; //continuous block of page numbers
     $pagenavi_options['always_show'] = 0;
     $pagenavi_options['num_larger_page_numbers'] = 0;
     $pagenavi_options['larger_page_numbers_multiple'] = 5;
