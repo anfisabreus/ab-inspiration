@@ -22,16 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<p>
-	<?php
-	printf(
-		/* translators: 1: user display name 2: logout url */
-		__( 'Hello %1$s', 'woocommerce' ),
-		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
-		esc_url( wc_logout_url() )
-	);
-	?>
-</p>
+
 
 <p>
 	<?php

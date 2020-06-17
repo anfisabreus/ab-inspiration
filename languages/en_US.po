@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-04-10 20:27+0300\n"
+"POT-Creation-Date: 2020-04-10 20:56+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: 404.php:15
@@ -393,7 +393,7 @@ msgstr "All Rights Reserved"
 
 #: footer.php:28
 msgid "Создан на "
-msgstr ""
+msgstr "Powered by "
 
 #: footer.php:28
 msgid "AB-Inspiration "
@@ -424,10 +424,8 @@ msgid "Меню в мобильной версии"
 msgstr "Menu for mobile version "
 
 #: functions.php:166
-#, fuzzy
-#| msgid "Читать далее &#187;"
 msgid "Читать далее"
-msgstr "Read more &#187;"
+msgstr "Read more"
 
 #: functions.php:199
 #, php-format
@@ -2913,6 +2911,12 @@ msgstr "Page is not found"
 
 #: template-unit.php:76 template-unit.php:80
 #, fuzzy
+#| msgid "Синий"
+msgid "или"
+msgstr "Blue"
+
+#: template-unit.php:76 template-unit.php:80
+#, fuzzy
 #| msgid "Комментарии в Вконтакте"
 msgid "Войти в личный кабинет"
 msgstr "Vkontakte comments"
@@ -4535,6 +4539,52 @@ msgstr "Blog width"
 msgid "Страница Курса"
 msgstr "Page %s"
 
+#~ msgid "Согласие на обработку персональных данных"
+#~ msgstr "Text setting for guarantee form in a sidebar"
+
+#~ msgid ""
+#~ "Нажимая на кнопку \"Отправить комментарий\", я соглашаюсь с политикой "
+#~ "обработки персональных данных"
+#~ msgstr ""
+#~ "By clicking on the \"Send a comment\" button, I agree with the personal "
+#~ "data processing policy"
+
+#, fuzzy
+#~| msgid "Введите Ваш ключ обновления"
+#~ msgid "Введите ваш ключ."
+#~ msgstr "Enter your activation key"
+
+#, fuzzy
+#~| msgid "Активировать ключ"
+#~ msgid "Лицензионный ключ"
+#~ msgstr "Key Activation"
+
+#, fuzzy
+#~| msgid "Активировать ключ"
+#~ msgid "Деактивировать лицензию"
+#~ msgstr "Key Activation"
+
+#, fuzzy
+#~| msgid "Активировать ключ"
+#~ msgid "Активировать лицензию"
+#~ msgstr "Key Activation"
+
+#, fuzzy
+#~| msgid "Цвет границы блога"
+#~ msgid "неограничено"
+#~ msgstr "Color of blog border"
+
+#, fuzzy
+#~| msgid ""
+#~| "Если вы делали изменения в коде шаблона, при обновлении они будут "
+#~| "потеряны. 'Отмена' чтобы остановить обновление, 'OK' обновить."
+#~ msgid ""
+#~ "Обновление этого шаблона приведет к потере изменений, которые вы сделали "
+#~ "в коде. 'Отменить' чтобы остановить, 'OK' чтобы обновить."
+#~ msgstr ""
+#~ "If you were making changes to theme coding, they will be lost after "
+#~ "update. “Cancel” to stop update, “OK” to update. "
+
 #~ msgid "Шаблон:"
 #~ msgstr "Theme: "
 
@@ -4611,12 +4661,6 @@ msgstr "Page %s"
 
 #~ msgid "Купить "
 #~ msgstr "Buy"
-
-#~ msgid "Введите Ваш ключ обновления"
-#~ msgstr "Enter your activation key"
-
-#~ msgid "Активировать ключ"
-#~ msgstr "Key Activation"
 
 #~ msgid "ключ активирован"
 #~ msgstr "Activation key"

@@ -110,7 +110,7 @@
 </form>
 
 <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
-<div class="garantiya-bottom-commets"><a class="fancybox" href="#inline" title="Согласие на обработку персональных данных" ref="nofollow"><?php _e( 'Нажимая на кнопку "Отправить комментарий", я соглашаюсь с политикой обработки персональных данных', 'inspiration' ); ?></a></div>
+<div class="garantiya-bottom-commets"><a class="fancybox" href="#inline" title="<?php _e( 'Согласие на обработку персональных данных', 'inspiration' ); ?> " ref="nofollow"><?php _e( 'Нажимая на кнопку "Отправить комментарий", я соглашаюсь с политикой обработки персональных данных', 'inspiration' ); ?></a></div>
 <?php echo konf_personal(); ?>
 <?php }  ?>
 
