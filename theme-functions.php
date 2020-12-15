@@ -841,7 +841,6 @@ var PS_ErrPref = 'Поля не заполнены или заполнены н�
 	
 	<input name="doneurl2" type="hidden" value="<?php if ($just) { echo ($just['linktwo']); } ?>" /></form>
 <script type="text/javascript" src="//<?php if ($just) { echo ($just['login']); } ?>.justclick.ru/constructor/editor/scripts/common-forms.js"></script></div></div><div style="clear:both"></div></div><?php }  ?>
-
 <!-- Форма подписки Getresponse -->
 
 <?php if (of_get_option('form_choose') == 'getresponseform') { ?><div style="clear:both;"></div>

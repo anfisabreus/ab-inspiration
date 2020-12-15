@@ -286,11 +286,7 @@ if ( ! function_exists( 'inspiration_comment' ) ) :
 
 function inspiration_comment( $comment, $args, $depth ) {
 
-	$GLOBALS['comment'] = $comment;
-
-	switch ( $comment->comment_type ) :
-
-		case '' :
+	
 
 	?>
 
@@ -331,26 +327,9 @@ function inspiration_comment( $comment, $args, $depth ) {
 
 
 
-	<?php
 
-			break;
-
-		case 'pingback'  :
-
-		case 'trackback' :
-
-	?>
-
-	<li class="post pingback">
-
-		<p><?php _e( 'Пинбэк:', 'inspiration' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Изменить)', 'inspiration'), ' ' ); ?></p>
 
 	<?php
-
-			break;
-
-	endswitch;
-
 }
 
 endif;
@@ -445,7 +424,7 @@ function inspiration_posted_in() { ?>
 </span></div> 
  <div class="meta-comment"> &nbsp; <i class="fa fa-comments-o" style="color:#888;padding-right:5px; font-size:16px !important"></i><?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></div>
  
- <div class="meta-comment" style="margin-left:10px;"> &nbsp; <i class="fa fa-eye" style="color:#888;padding-right:2px; font-size:16px !important"></i> <span style="vertical-align: top;"> <?php $key_1_value = get_post_meta( get_the_ID(), 'wpb_post_views_count', true );
+ <div class="meta-comment view-counts" style="margin-left:10px;"> &nbsp; <i class="fa fa-eye" style="color:#888;padding-right:2px; font-size:16px !important"></i> <span style="vertical-align: top;"> <?php $key_1_value = get_post_meta( get_the_ID(), 'wpb_post_views_count', true );
 // Check if the custom field has a value.
 if ( ! empty( $key_1_value ) ) {
     echo $key_1_value;
@@ -1083,7 +1062,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.60',
+			'version' => '8.64',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',

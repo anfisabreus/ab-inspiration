@@ -82,12 +82,12 @@ $icon_color_hover_text = $instance['icon_color_hover_text'];
 </div></div></td>
 <td style="vertical-align:middle; border:none !important"><div style="text-align:right;"> <?php if (isset($header_gravatar)) { echo get_avatar( $header_gravatar, $header_gravatar_width );} ?></div></td></tr></table><?php ;} else {?><div id="ggg" style="display:table-cell;float:right; z-index:4; position:relative; top:<?php echo $header_padding;?>px; left:0; ">
 <div style="padding-right:0px; text-align:right;">
-<div style="color:<?php echo $header_color;?>; font-size:14px;">
+<div class="header-name" style="color:<?php echo $header_color;?>; font-size:14px;">
 <span style="font-weight:normal; font-size:14px; font-weight:bold;"><?php if (isset($header_name)) 
 {  echo $header_name; } ?></span><br>
-<div><?php if (isset($header_email))  { echo $header_email;} ?></div>
-<div><?php if (isset($header_tel))  { echo $header_tel;} ?></div>
-<div style="width:114x; float:right;">
+<div class="header-email"><?php if (isset($header_email))  { echo $header_email;} ?></div>
+<div class="header-tel"><?php if (isset($header_tel))  { echo $header_tel;} ?></div>
+<div style="width:114x; float:right;"class="header-skype">
 <?php if (($header_skype) ==!'')  {?>
 <i class="fa fa-skype" style=""></i>&nbsp; <a href="skype:<?php echo $header_skype; ?>?call" style="text-decoration:none">
 <span style="color: <?php echo $header_color; ?>"> <?php _e( 'Позвонить', 'inspiration' ); ?> </span></a><?php ;} else {} ?></div>
@@ -1192,6 +1192,7 @@ if ($chooseform == 'just')  { ?>
 
 
 
+
 if ($chooseform == 'mailchimp')  { ?> 
 <li><div id="form-background" class="roundedcorners">
 <div class="form-heading"><?php echo of_get_option('form_text', 'no entry'); ?> </div><div><?php if (of_get_option('form_uploader') !== ""){?>
@@ -2222,7 +2223,7 @@ $fbheight = $instance['fbheight']; if ( ! $fbheight ) { $fbheight = 'true'; }
 <?php if ($fbstream == 'true') $timeline = 'timeline'; else $timeline = 'timeline, events, messages'; ?>
 
 
-<div class="fb-page" data-href="<?php echo $fblink; ?>" data-width="" data-height="<?php echo $fbheight; ?>" data-tabs="<?php echo $timeline; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="<?php echo $fbheader; ?>" data-show-facepile="<?php echo $faces; ?>"></div>
+<div class="fb-page" data-href="<?php echo $fblink; ?>" data-width="690" data-height="<?php echo $fbheight; ?>" data-tabs="<?php echo $timeline; ?>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="<?php echo $fbheader; ?>" data-show-facepile="<?php echo $faces; ?>"></div>
 </div>
 <div style="clear:both;"></div>
 
@@ -2940,7 +2941,7 @@ ORDER BY
 comments_count DESC, comment_author");
  
 $results = array_slice($results,0,$tccount);
-$output = "<div class='textwidget'><div class='tccol".  $tccol ."'><table style='width:300px'><tr style='text-align:center'>";
+$output = "<div class='textwidget'><div class='tccol".  $tccol ."'><table style='width:100%'><tr style='text-align:center'>";
 $i = 0;
 foreach($results as $result){
 if ($i>=$tccol) {
@@ -3133,61 +3134,18 @@ class recent_com extends WP_Widget {
 	           
 				<ul class="recent_comment">
 					
-					
-					
-
-
-
-
-
 <?php
 
+		$args = array('status'=>'approve', 'number'=> $number, 'post_type'=> 'post');
+ 	$comments = get_comments($args); ?>
 
-/*-----------------------------------------------------------------------------------*/
-/* WooTabs - Latest Comments */
-/*-----------------------------------------------------------------------------------*/
-
-
-	function widget_recent_comments( $limit=10, $ex=55, $cat=0, $echo=1, $gravatar='' ) {
-		
-		
-		global $wpdb;
-if($cat) {
-$IN = (strpos($cat,'-') === false) ? "IN ($cat)" : "NOT IN (". str_replace('-','',$cat) .")";
-$join = "LEFT JOIN $wpdb->term_relationships rel ON (p.ID = rel.object_id)
-LEFT JOIN $wpdb->term_taxonomy tax ON (rel.term_taxonomy_id = tax.term_taxonomy_id)";
-$and = "AND tax.taxonomy = 'category'
-AND tax.term_id $IN";
-}
-$sql = "SELECT comment_ID, comment_post_ID, comment_content, post_title, guid, comment_author, comment_author_email
-FROM $wpdb->comments com
-LEFT JOIN $wpdb->posts p ON (com.comment_post_ID = p.ID) {$join}
-WHERE comment_approved = '1'
-AND comment_type = '' {$and}
-ORDER BY comment_date DESC
-LIMIT $limit"; 
-$results = $wpdb->get_results($sql);
-$out = '';
-foreach ($results as $comment){
-$comtext = strip_tags($comment->comment_content);
-$leight = (int) iconv_strlen( $comtext, 'utf-8' );
-if($leight > $ex) $comtext =  iconv_substr($comtext,0,$ex, 'UTF-8').' …';
-$out .= "\n<li>".get_avatar($comment->comment_author_email, 40, "//www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536")."".strip_tags($comment->comment_author). ": <a href='". get_comment_link($comment->comment_ID) ."' title='{$comment->post_title}'>{$comtext}</a></li>";
-}
-if ($echo) echo $out;
-else return $out;
-		
-		
-		
-			}
-
-
-
-?>
+	<?php foreach ($comments as $comment) { ?>
+		<li>
+			<?php echo get_avatar( $comment, '35' ); ?>
+			<a href="<?php echo get_permalink($comment->ID); ?>#comment-<?php echo $comment->comment_ID; ?>" title="on <?php echo $comment->post_title; ?>"> <?php echo strip_tags($comment->comment_author); ?>: <?php echo wp_html_excerpt( $comment->comment_content, 55 ); ?>... </a>
+		</li>
 					
-					
-					
-			  <?php if ( function_exists( 'widget_recent_comments') ) widget_recent_comments($number); ?>		
+	<?php  } ?>		
 					
                     
                 </ul>

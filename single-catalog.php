@@ -10,8 +10,19 @@ get_header();
 				
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="entry-content">
+	
+	<?php if ($ab_catalog['catalog_link'] == !'') { ?><div style="float:left; clear:both;"><a href="<?php echo $ab_catalog['catalog_link']; ?> " style="text-decoration:none"  rel="nofollow"><i class="fa fa-long-arrow-left"></i> <?php _e( $ab_catalog['linkbacktext'], 'inspiration' ); ?></a></div> <?php } ?>
+	
 
-<?php if ($ab_catalog['catalog_link'] == !'') { ?><div style="float:right; clear:both;"><a href="<?php echo $ab_catalog['catalog_link']; ?> " style="text-decoration:none"  rel="nofollow"><i class="fa fa-long-arrow-left"></i> <?php _e( $ab_catalog['linkbacktext'], 'inspiration' ); ?></a></div> <?php } ?>
+	  <?php $buyexclude = get_post_meta(get_the_ID(), 'dbt_buyexclude', true); 
+if ($buyexclude['1'] == 'two') {echo '';} else  { ?>    <div style="float:right"><a href="<?php echo get_post_meta(get_the_ID(), "dbt_salelink", true); ?>" style="margin-top:10px !important; padding: 3px 15px !important; font-size:20px;" class="cbp-l-caption-buttonRight" target="_blank" rel="nofollow"> <?php echo get_post_meta($post->ID, "dbt_buybutton", true); ?></a></div> <?php } ?>
+
+<div style="clear:both"> </div>
+	
+	
+	
+
+
 
 					    <?php $dbt_galerywidth = get_post_meta(get_the_ID(), 'dbt_galerywidth', true);?>
 						<?php $dbt_galeryheight = get_post_meta(get_the_ID(), 'dbt_galeryheight', true);?>
