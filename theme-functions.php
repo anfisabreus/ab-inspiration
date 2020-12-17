@@ -1578,3 +1578,24 @@ function wpcodex_add_excerpt_support_for_post() {
     add_post_type_support( 'wpcw_course', 'excerpt' );
 }
 add_action( 'init', 'wpcodex_add_excerpt_support_for_post' );
+
+
+
+
+include_once ABSPATH . 'wp-admin/includes/plugin.php';
+if ( is_plugin_active( 'wp-courseware/wp-courseware.php' ) ) {
+function wpdocs_my_login_redirect( $url, $request, $user ) {
+    if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+        if ( $user->has_cap( 'administrator' ) ) {
+            $url = admin_url();
+        } else {
+            $url = get_permalink( get_option('woocommerce_myaccount_page_id') ) .'/courses';
+        }
+    }
+    return $url;
+}
+ 
+add_filter( 'login_redirect', 'wpdocs_my_login_redirect', 100, 3 );
+}
+
+

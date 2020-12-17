@@ -36,17 +36,17 @@ get_header(); ?>
     left: 0;
     bottom: -8px;
 }
-.course-horisontal  .entry-box img {padding-top: 15px;}
-	.course-horisontal  .progress_under_course{float:right; width:13%;}
+.course-horisontal  .entry-box img {padding-top: 15px; }
+	.course-horisontal  .progress_under_course{float:none; width:100%; clear:both; padding-top:20px;}
 .course-horisontal, .course-horisontal.entry-box:first-child {width:100%; padding:15px !important; }
-	.entry-box.course-horisontal  {padding-top:0px}
+	.entry-box.course-horisontal  {padding-top:0px; }
 	.course-horisontal  .wpcw_progress_wrap  {line-height:0px}
 .course-horisontal  .add_to_cart_inline{border:none !important}
 .course-horisontal  .woocommerce-Price-amount.amount {margin-right: 10px; !important}
 .course-horisontal img {width:30%; float:left;padding-bottom: 0px;padding-top: 0px;margin-right: 30px;}
 .entry-box.course-horisontal { margin-right:0px;}
 
-.course-horisontal  .entry-content, .course-horisontal  .entry-summary {clear:none;  float:left; width:83% !important}
+.course-horisontal  .entry-content, .course-horisontal  .entry-summary {clear:both;  float:none; width:100% !important}
 #wrapper .entry-box.course-horisontal h2 {padding-top:0px !important}
 .course-horisontal .entry-content .post-font > *, .course-horisontal .entry-summary .post-font > * {margin: 0px 0;}
 
