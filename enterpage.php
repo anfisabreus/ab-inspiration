@@ -671,6 +671,8 @@ do_action( 'enter' ); ?>
 
 <?php } ?>
 
+<?php the_content(); ?>
+
 
 
 

@@ -7,8 +7,8 @@
  * @since Inspiration 1.0
  */
 
-
 get_header(); ?>
+
 <style>  .post-font {font-size:16px !important;}.entry-box{  margin: 0px 25px 25px 0; overflow:hidden; padding:0px !important;}.entry-box:nth-child(3n+3) {margin: 0px 0px 25px 0;} .entry-box:first-child, .entry-box {padding-top:0px !important;text-align: left;} .entry-box {text-align: left;}#wrapper .entry-box h2 { padding-top:20px !important;line-height: 20px !important;}
 
 	.desc-course,  .entry-title, .progress_under_course	 {padding-left:15px; padding-right:15px}
@@ -37,18 +37,21 @@ get_header(); ?>
     bottom: -8px;
 }
 .course-horisontal  .entry-box img {padding-top: 15px;}
-	.course-horisontal  .progress_under_course{float:right; width:13%;}
+.course-horisontal  .progress_under_course{float:right; width:100%;}
 .course-horisontal, .course-horisontal.entry-box:first-child {width:100%; padding:15px !important; }
-	.entry-box.course-horisontal  {padding-top:0px}
-	.course-horisontal  .wpcw_progress_wrap  {line-height:0px}
-.course-horisontal  .add_to_cart_inline{border:none !important}
+.entry-box.course-horisontal  {padding-top:0px}
+.course-horisontal  .wpcw_progress_wrap  {line-height:0px}
+.add_to_cart_inline{border:none !important}
 .course-horisontal  .woocommerce-Price-amount.amount {margin-right: 10px; !important}
 .course-horisontal img {width:30%; float:left;padding-bottom: 0px;padding-top: 0px;margin-right: 30px;}
 .entry-box.course-horisontal { margin-right:0px;}
-
-.course-horisontal  .entry-content, .course-horisontal  .entry-summary {clear:none;  float:left; width:83% !important}
+.product.woocommerce.add_to_cart_inline, .fe_btn.fe_btn_completion.btn_completion {float:right} 
+.course-horisontal  .entry-content, .course-horisontal  .entry-summary {clear:none;  float:left; width:100% !important}
 #wrapper .entry-box.course-horisontal h2 {padding-top:0px !important}
 .course-horisontal .entry-content .post-font > *, .course-horisontal .entry-summary .post-font > * {margin: 0px 0;}
+
+.course-horisontal .fe_btn.fe_btn_completion.btn_completion {margin-top:6px; float:right; }
+.course-horisontal .product.woocommerce.add_to_cart_inline  {margin-bottom:0px; margin-top:1px; float:right; padding:0px !important  } 
 
 
 .entry-box.course-horisontal h2, .course-horisontal .entry-content, .course-horisontal .progress_under_course {padding-left: 0px;}
@@ -143,7 +146,7 @@ $value = $array[$key];
 <h2 class="entry-title" itemprop="name headline"><a href="<?php the_permalink();  ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2> <?php } ?>
 	
 <?php if($ab_wpcourseware[checkbox_example] == true) {  } else { ?> <div style="clear:both;"></div> <?php } ?>
-<div class="desc-course" itemprop="description"><?php the_excerpt(); ?></div>
+<?php if($ab_wpcourseware[checkbox_example] == true) { ?> <div class="desc-course" itemprop="description"><?php the_excerpt(); ?></div><?php } else { ?> <div class="desc-course" itemprop="description"><?php the_excerpt(); ?></div><?php } ?>
 <?php if($ab_wpcourseware[checkbox_example] == true) {  } else { ?> <div style="clear:both;"></div> <?php } ?>
 
 </div> 
@@ -159,15 +162,17 @@ $value = $array[$key];
 	$fe = new WPCW_UnitFrontend( $post );
 
 	echo do_shortcode( ' [wpcourse_progress_bar course="' . $course->get_course_id() . '"]' ); ?>
-	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 20px;float: right; margin-bottom: 20px;padding: 5px 10px;"><?php _e( 'Открыть курс', 'inspiration' ); ?>
+	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 0px;float: right; margin-bottom: 20px;padding: 5px 10px;"><?php _e( 'Открыть курс', 'inspiration' ); ?>
 	</a>
 </div>
 	<?php } ?>
 	
 	
-	<br>
+
 	
-	<div style="float:right; font-size:20px; margin-right:20px; font-weight:normal">
+	<?php if($ab_wpcourseware[checkbox_example] == true) { ?> <div style="float:right; font-size:20px; margin-right:20px; font-weight:normal; width:100%;"> <?php } else { ?> <div style="font-size:20px; margin-right:20px; font-weight:normal;"> <?php } ?>
+	
+	
 <?php 
 															  
 															  
@@ -177,14 +182,13 @@ $value = $array[$key];
 															  
 															 
 $payments_type = $course->get_payments_type();	
-if ( ! $course->can_user_access( get_current_user_id() ) ) {
+if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark"  style="margin-top: 0px; margin-bottom: 0px;padding: 0px; float:right; margin-left:20px"><?php _e( 'Подробнее...', 'inspiration' ); ?>
+	</a><div style="clear:both"> </div>
+ <?php
 
 if ( $payments_type !== 'free') {
 
-	
-
-	
-if (function_exists('abwpwoo_price_wpcourseware_woocommerce') && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) 
+	if (function_exists('abwpwoo_price_wpcourseware_woocommerce') && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) 
 { 
 $array1 = $ab_wpcourseware['id_courses_courses'];
 $array2 = $ab_wpcourseware['id_courses_product'];

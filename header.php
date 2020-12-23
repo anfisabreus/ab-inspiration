@@ -30,8 +30,8 @@
 <meta property="og:image" content="<?php echo of_get_option('facebook_image'); ?>">
 <meta property="og:description" content="<?php bloginfo('description') ?>"> 
 <meta name="twitter:image" content="<?php echo of_get_option('facebook_image'); ?>">
-<meta name="twitter:site" content="@<?php echo of_get_option('facebook_id');?>">
-<meta name="twitter:creator" content="@<?php echo of_get_option('facebook_id');?>">
+<meta name="twitter:site" content="@<?php echo of_get_option('twitter');?>">
+<meta name="twitter:creator" content="@<?php echo of_get_option('twitter');?>">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?php the_title(); ?>">
 <meta name="twitter:description" content="<?php while(have_posts()):the_post(); $out_excerpt = str_replace(array("\r\n", "\r", "\n", "'" ,"\""), "", get_the_excerpt()); echo apply_filters('new_length', $out_excerpt); endwhile; ?>">

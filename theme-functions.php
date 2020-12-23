@@ -1597,5 +1597,3 @@ function wpdocs_my_login_redirect( $url, $request, $user ) {
  
 add_filter( 'login_redirect', 'wpdocs_my_login_redirect', 100, 3 );
 }
-
-

@@ -2098,13 +2098,6 @@ $options[] = array( "name" => __('ID Twitter', 'inspiration'),
 "class" => "mini",
 "type" => "text");
 
-$options[] = array( "name" => __('ID Профиля Facebook', 'inspiration'),
-"desc" => __('Регистрация в Facebook: <a href="https://facebook.com" target="_blank">https://facebook.com</a>', 'inspiration'),
-"id" => "facebook_id",
-"std" => "",
-"class" => "mini",
-"type" => "text");
-
 $options[] = array( "name" => __('APP ID (ID приложения Facebook).', 'inspiration'),
 "desc" => __('Получить ID приложения Facebook: <a href="https://developers.facebook.com" target="_blank">https://developers.facebook.com</a>', 'inspiration'),
 "id" => "facebook_app",
@@ -2142,7 +2135,7 @@ $options[] = array( "name" => __('ID Группы в Одноклассника�
 
 
 	$options[] = array( "name" => __('Вставка мета тегов и других скриптов в head', 'inspiration'),
-						"desc" => __('Webmaster Tools: <a href="https://www.google.com/webmasters" target="_blank">https://www.google.com/webmasters</a><br><br>
+						"desc" => __('Webmaster Tools: <a href="https://goo.gle/searchconsole" target="_blank">https://goo.gle/searchconsole</a><br><br>
 						Яндекс Вебмастер: <a href="https://webmaster.yandex.ru/" target="_blank">https://webmaster.yandex.ru/</a>', 'inspiration'),
 						"id" => "metatag",
 						"std" => "",
