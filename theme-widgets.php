@@ -2633,7 +2633,7 @@ class youtube_widget extends WP_Widget {
                         
  <div style="text-align:left; margin-bottom:0px !important; padding-bottom:0px !important; padding-top:5px;height: 80px;">                       
 <script src="https://apis.google.com/js/platform.js"></script>
-<div class="g-ytsubscribe" data-channel="<?php echo $youtubeid; ?>" data-layout="full" data-count="default"></div>                 
+<div class="g-ytsubscribe" data-channelid="<?php echo $youtubeid; ?>" data-layout="full" data-count="default"></div>                 
                         
 </div>
 
