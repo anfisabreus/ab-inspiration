@@ -575,7 +575,7 @@ $options[] = array( "name" => __('Размер фона (картинки) в ш
 "class" => "mini", //mini, tiny, small
 "options" => $background_size);
 
-$options[] = array( "name" => __('Фон внутри шапки (этот фон будет отображаться на 1060px до границ статей и виджетов)', 'inspiration'),
+$options[] = array( "name" => __('Фон внутри шапки (этот фон будет отображаться на 1200px до границ статей и виджетов)', 'inspiration'),
 
 "id" => "header_background",
 "std" => array('color' => '#ffffff', 'image' => '', 'repeat' => 'no-repeat','position' => 'top center','attachment'=>'scroll'),
@@ -2075,7 +2075,7 @@ $options[] = array( "name" => __('Фавикон', 'inspiration'),
 "std" => "",
 "type" => "upload");
 
-$options[] = array( "name" => __('Изображение в соц. сети по умолчанию', 'inspiration'),
+$options[] = array( "name" => __('Изображение в социальной сети по умолчанию (800px x 450px)', 'inspiration'),
 "desc" => __('Загрузите изображение, которое будет уходить в фейсбук и другие социальные сети, если не указана миниатюра записи', 'inspiration'),
 "id" => "facebook_image",
 "std" => "",
