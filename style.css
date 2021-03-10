@@ -2,7 +2,7 @@
 Theme Name: AB-Inspiration
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.68
+Version: 8.72
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -12,7 +12,8 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
 b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;border:0;vertical-align:baseline;background:transparent;}
 body{position:relative;}
-h1, h2, h3, h4, h5, h6{margin-bottom:2%;font-weight:bold;}
+h1, h2, h3, h4, h5, h6{margin-bottom:2%;font-weight:bold; line-height:1.1 }
+
 .entry-content a{text-decoration:underline;}
 ol, ul{list-style-position:inside !important;}
 ol{list-style:decimal outside;}
@@ -76,12 +77,12 @@ input[type="text"],textarea, input[type="email"], input[type="tel"], input[type=
 #content pre,#content kbd,#content tt,#content var{font-size:15px;line-height:21px;}
 #content code{font-size:13px;}
 #content dt,#content th{color:#000;}
-#content h1,#content h2,#content h3,#content h4,#content h5,#content h6{margin:10px 0 10px 0;line-height:1.1 !important;}
+#content h1,#content h2,#content h3,#content h4,#content h5,#content h6{margin:10px 0 10px 0;line-height:1.1 ;}
 #content tr th,#content thead th{color:#888;font-size:12px;font-weight:bold;line-height:18px;padding:9px 24px;}
 #content tr td{border-top:1px solid #e7e7e7;padding:6px 24px;}
 #content tr.odd td{background:#F2F7FC;}
 .hentry{margin:0 0 0px 0;}
-.single .hentry, .page .hentry{margin:0 0 36px 0 !important;}
+.single .hentry{margin:0 0 36px 0 !important;}
 .page-title{color:#000;font-size:12px!important;font-weight:normal;margin:0 0 10px 0;}
 .page-title span{color:#333;font-size:12px;font-style:italic;font-weight:normal;}
 .page-title a:link, .page-title a:visited{color:#888;text-decoration:none;}
@@ -3058,8 +3059,7 @@ a.cbp-l-caption-buttonLeft.more-link{margin-top:0px !important}
 #footer-widget-area ul li.widget a, #footer-widget-area ul li.widget li a{padding-top:0px !important}
 #footer-widget-area .widget-title, body #footer-widget-area div.widget-title{padding-bottom:20px !important;padding-top:20px !important;}
 #footer-widget-area ul li ul li:before{font-family:"FontAwesome";margin-right:0.5407911001em;display:block;float:left;opacity:0.7;margin-left:-1.618em;width:1em;}
-body #footer-widget-area ul li.widget, body #footer-widget-area div.widget-title, body
-body #footer-widget-area ul li.widget{margin-left:8px !important;}
+
 .read-more-link{text-align:right;margin-top:0px;padding-bottom:5px;}
 .pllexislider{margin:0;padding:0;}
 .pllexislider .slides > li{display:none;-webkit-backface-visibility:hidden;}
@@ -3317,14 +3317,20 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .mobile-image-link {width:70%}
 .mobile-image-logo { max-width:70%;z-index:4;}
 
-.page-template-elementor_header_footer #main {width: 100% !important;
-    max-width: 100% !important;
+.page-template-elementor_header_footer #main, .page-template-elementor_header_footer #content-main{width: 100% !important;
+    max-width: 100% !important; padding:0px !important
 }
 
-.page-template-elementor_header_footer
- .fa, .page-template-elementor_header_footer  .fas {
-	font-family: "FontAwesome" !important; font-weight:300 !important}
-	
+.page-template-elementor_header_footer #content-main {margin:0px !important}
+.page-template-elementor_header_footer .gallery-columns-2 .gallery-item{max-width:49%;max-width:-webkit-calc(49% - 4px);max-width:calc(49% - 4px);width:49%!important;}
+.page-template-elementor_header_footer .gallery-columns-3 .gallery-item{max-width:33.33%;max-width:-webkit-calc(33.33% - 4px);max-width:calc(33.33% - 4px);width:33.33% !important;}
+.page-template-elementor_header_footer .gallery-columns-4 .gallery-item{max-width:25%;max-width:-webkit-calc(25% - 4px);max-width:calc(25% - 4px); width:25%!important}
+.page-template-elementor_header_footer .gallery-columns-5 .gallery-item{max-width:19%;max-width:-webkit-calc(19% - 4px);max-width:calc(19% - 4px); width:19%!important;}
+.page-template-elementor_header_footer .gallery-columns-6 .gallery-item{max-width:15%;max-width:-webkit-calc(15.7% - 4px);max-width:calc(15.7% - 4px);width:15%!important;}
+.page-template-elementor_header_footer .gallery-columns-7 .gallery-item{max-width:13%;max-width:-webkit-calc(13.3% - 4px);max-width:calc(13.3% - 4px);width:13%!important;}
+.page-template-elementor_header_footer .gallery-columns-8 .gallery-item{max-width:11%;max-width:-webkit-calc(11.5% - 4px);max-width:calc(11.5% - 4px); width:11%!important;}
+
+
 .tml.tml-register,.tml.tml-login {font-size:16px}
 
 .tml-action-register .entry-box {padding:20px !important;}

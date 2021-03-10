@@ -602,7 +602,7 @@ function qips_replace_smiles_insert($text)	{
 	$stop = count($textarr);
 	for ($i = 0; $i < $stop; $i++) {
 		$content = $textarr[$i];
-		if ((strlen($content) > 0) && ('<' != $content{0})) 
+		if ((strlen($content) > 0) && ('<' != $content[0])) 
 		{ 
 			$content = preg_replace($smiles_S, $smiles_R, $content);
 		}
@@ -1597,3 +1597,30 @@ function wpdocs_my_login_redirect( $url, $request, $user ) {
  
 add_filter( 'login_redirect', 'wpdocs_my_login_redirect', 100, 3 );
 }
+
+// ==============================================================
+// Switch off Theme My Login notifications because WP Approve User manages it
+add_filter( 'tml_send_new_user_notification', '__return_false' );
+add_filter( 'tml_send_new_user_admin_notification', '__return_false' );
+// ============================================================== 
+// 
+add_action( 'register_new_user',      'wp_send_new_user_notifications' );
+add_action( 'edit_user_created_user', 'wp_send_new_user_notifications' );
+
+
+
+// Change WooCommerce "Related products" text
+
+add_filter('gettext', 'change_rp_text', 20, 3);
+add_filter('ngettext', 'change_rp_text', 20, 3);
+
+function change_rp_text($translated, $text, $domain)
+{
+	global $ab_woocommerce;
+     if ($text === 'Related products' && $domain === 'woocommerce') {
+         $translated = $ab_woocommerce['related_product_text'];
+     }
+     return $translated;
+}
+
+

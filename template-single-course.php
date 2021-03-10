@@ -81,7 +81,7 @@ if ( $payments_type !== 'free') {
 <div class="widget-for-course">
 	
 	<img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>" style="width:100%">
-	<?php echo the_excerpt(); ?>
+	<h3 style="text-align:center; padding-top:20px; padding-bottom:15px"><?php echo the_title(); ?></h3>
 <?php if (function_exists('abwpwoo_price_wpcourseware_woocommerce')  && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) { 
 $array1 = $ab_wpcourseware['id_courses_courses'];
 $array2 = $ab_wpcourseware['id_courses_product'];
@@ -90,7 +90,7 @@ $key =  get_the_ID();
 $value = $array[$key];														  
 echo do_shortcode('[add_to_cart id="'.$value.'"]'); }  else { echo $course->get_payments_price() .' '. wpcw_get_currency_symbol() .' '. $course->get_enrollment_button(); } 
 
-}  else {  ?> <div class="widget-for-course "><img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>" style="width:100%"> <?php echo the_excerpt(); ?> <?php echo $course->get_enrollment_button(); ?> </div> <?php } ?>
+}  else {  ?> <div class="widget-for-course "><img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>" style="width:100%">	<h3 style="text-align:center; padding-top:20px; padding-bottom:15px"><?php echo the_title(); ?></h3> <?php echo $course->get_enrollment_button(); ?> </div> <?php } ?>
 
 
 

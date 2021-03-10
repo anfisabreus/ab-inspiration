@@ -182,7 +182,7 @@ $value = $array[$key];
 															  
 															 
 $payments_type = $course->get_payments_type();	
-if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark"  style="margin-top: 0px; margin-bottom: 0px;padding: 0px; float:right; margin-left:20px"><?php _e( 'Подробнее...', 'inspiration' ); ?>
+if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php echo the_permalink(); ?>" rel="bookmark"  style="margin-top: 0px; margin-bottom: 0px;padding: 0px; float:right; margin-left:20px"><?php _e( 'Подробнее...', 'inspiration' ); ?>
 	</a><div style="clear:both"> </div>
  <?php
 
