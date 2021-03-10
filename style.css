@@ -3329,6 +3329,7 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .page-template-elementor_header_footer .gallery-columns-6 .gallery-item{max-width:15%;max-width:-webkit-calc(15.7% - 4px);max-width:calc(15.7% - 4px);width:15%!important;}
 .page-template-elementor_header_footer .gallery-columns-7 .gallery-item{max-width:13%;max-width:-webkit-calc(13.3% - 4px);max-width:calc(13.3% - 4px);width:13%!important;}
 .page-template-elementor_header_footer .gallery-columns-8 .gallery-item{max-width:11%;max-width:-webkit-calc(11.5% - 4px);max-width:calc(11.5% - 4px); width:11%!important;}
+.page-template-elementor_header_footer .gallery-columns-9 .gallery-item{max-width:10%;max-width:-webkit-calc(10.1% - 4px);max-width:calc(10.1% - 4px);width:10%!important;}
 
 
 .tml.tml-register,.tml.tml-login {font-size:16px}
