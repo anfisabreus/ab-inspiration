@@ -615,6 +615,9 @@ img.catalog-thumb{margin: 0 30px 0 0!important;clear: left !important;float: lef
 #testimonials-float {width:100%;}
 .widget-testimonial {float:left}
 .testimonial-container {width:690px;}
+
+
+
 .form-post-bottom {margin-top:20px; '; if (of_get_option('form_uploader_transparent') == '1' || of_get_option('form_uploader_transparent') == '0') { $css .= 'padding-left:0px !important;'; }  else { $css .= 'padding-left:10px !important;';} $css .= '}
 .subs-form {padding-bottom:10px;'; if (of_get_option('form_uploader_transparent') == '0') { $css .= 'float:none; width:49%;'; } elseif (of_get_option('form_uploader_transparent') == '2') { $css .= 'float:right; width:49%;'; } else { $css .= 'margin: 0 auto; width: 98%; display: table;';} $css .= '}
 .subs-image  {float:left; width:49%}

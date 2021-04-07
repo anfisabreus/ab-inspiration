@@ -1,7 +1,7 @@
 <?php
 get_header(); 
 ?>
-		<div id="container" class="testimonial-container">
+		<div id="container" class="single-no-sidebar testimonial-container">
 <div id="content" role="main" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -50,11 +50,6 @@ if($custom['post_button_top'][0] == 0): ?>
 			</div><!-- #content --> 
 		
 		</div><!-- #container -->
-		<div id="primary">
-		<div class="widget-testimonial widget-container">
-<div class="widget-title"><?php _e( 'Оставьте свой отзыв', 'inspiration' ); ?></div>
-	<div id="testimonials-float">  <?php echo do_shortcode('[testimonial-form]'); ?></div>
-</div>
-		</div>
+		
 
 <?php get_footer(); ?>

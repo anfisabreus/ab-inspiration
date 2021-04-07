@@ -1062,7 +1062,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.72',
+			'version' => '8.73',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -1656,8 +1656,7 @@ add_action( 'admin_notices', 'edd_sample_theme_admin_notices' );
 
 
 
-add_filter('aioseop_prev_link', '__return_empty_string' );
-add_filter('aioseop_next_link', '__return_empty_string' );
+
 
 function hex2rgba($color, $opacity = false) {
 
@@ -1697,8 +1696,7 @@ function hex2rgba($color, $opacity = false) {
         return $output;
 }
 
-add_filter('aioseop_prev_link', '__return_empty_string' );
-add_filter('aioseop_next_link', '__return_empty_string' );
+
 
 class CSS_Menu_Maker_Walker extends Walker {
 

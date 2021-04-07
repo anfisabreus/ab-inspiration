@@ -927,7 +927,7 @@ else {  ?> <input type="hidden" name="webform_id" value="<?php if ($getresponse)
 <div class="sp-message"> <div></div> </div> 
 <form novalidate="" class="sp-element-container ui-sortable ui-droppable ">
 
-<input type="text" sp-type="input" name="sform[<?php if ($sendpulse) { echo ($sendpulse['idscript']); } ?>]"   size="27" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>"  style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>">
+<input type="text" sp-type="input" name="sform[<?php if ($sendpulse) { echo ($sendpulse['idscript']); } ?>]" required="required" size="27" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>"  style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>">
 
 
 <input type="email" sp-type="email" name="sform[email]"  required="required" size="27" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('email_field_text_bottom', '') ; ?>">
@@ -1200,7 +1200,7 @@ function list_shortcode( $atts, $content = null ) {
       'class' => '',
       ), $atts ) );
  
-   return '<div class="' . esc_attr($class) . '">' . $content . '</div>';
+   return '<p class="' . esc_attr($class) . '">' . $content . '</p>';
 }
 
 
@@ -1623,4 +1623,20 @@ function change_rp_text($translated, $text, $domain)
      return $translated;
 }
 
+function ab_inspiration_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	if ( 740 <= $width ) {
+		$sizes = '(max-width: 706px) 89vw, (max-width: 767px) 82vw, 740px';
+	}
+
+	if ( is_active_sidebar( 'sidebar-1' ) || is_archive() || is_search() || is_home() || is_page() ) {
+		if ( ! ( is_page() && 'one-column' === get_theme_mod( 'page_options' ) ) && 767 <= $width ) {
+			 $sizes = '(min-width: 1600px) 1600px, (min-width: 1200px) 1200px, (min-width: 800) 800px';
+		}
+	}
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'ab_inspiration_content_image_sizes_attr', 10, 2 );
 
