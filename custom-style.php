@@ -259,10 +259,9 @@ h1#site-title {margin:0px;}
 font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].';';} $css .= 'text-transform: '. of_get_option('logo_transform').';}
 #site-title a {	text-decoration: none;'; $typography = of_get_option('logo_typography'); if ($typography) {  if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';font-size: '. $typography['size'] .' !important; font-family: '.  $typography['face'].'; font-weight: '. $typography['style'] .' !important; }';} $css .= '
 
-.elementor-template-full-width  #content-main, .elementor-template-full-width #main {width:100% !important}.elementor-template-full-width #main {padding:0px}.elementor-template-full-width  #content-main {margin-top:0px !important; margin-bottom:0px !important}
+.elementor-template-full-width  #content-main, .elementor-template-full-width #main {width:100% !important; max-width:100% !important}.elementor-template-full-width #main {padding:0px}.elementor-template-full-width  #content-main {margin-top:0px !important; margin-bottom:0px !important}
 
-
-
+.elementor-post.hentry {margin-bottom:0px !important}
 
 #site-title a:hover {
 text-decoration: none; ';if ( of_get_option('logo_hover') !== '') { $css .= 'color:'. of_get_option('logo_hover').';';} else { $css .= 'color:#000;';} $css .= '}

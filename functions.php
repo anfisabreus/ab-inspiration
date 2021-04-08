@@ -1062,7 +1062,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.74',
+			'version' => '8.75',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
