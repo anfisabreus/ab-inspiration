@@ -2,7 +2,7 @@
 Theme Name: AB-Inspiration
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.73
+Version: 8.74
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -201,7 +201,7 @@ div.comments-title{color:#000;font-weight:500;font-size:20px;margin-bottom:0;}
 .commentmetadata a:hover{color:#333333;}
 .thread-alt{background-color:#F7F6F5;border:1px solid #eee;}
 .thread-even, li.comment:last-child{border:1px solid #eee !important;}
-.widget-area ul{list-style:none;margin-left:0;padding-top:0px;}
+.widget-area ul, .widget-area li {list-style:none;margin-left:0;padding-top:0px;}
 .widget-area ul ul{list-style:square;margin-left:1.3em;}
 .widget_search #s, .header-widget-search #s{padding:0px 7px 0px 7px;width:215px;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;vertical-align:middle;height:30px;}
 .widget_search label{display:none;}
