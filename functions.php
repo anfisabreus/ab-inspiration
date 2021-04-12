@@ -439,13 +439,13 @@ if ( ! empty( $key_1_value ) ) {
 endif;
 
 $functions_path = TEMPLATEPATH;
+
 $styles_path = TEMPLATEPATH;
 
 
 //Additional function
-	require_once $functions_path . '/theme-functions.php';
+require_once $functions_path . '/theme-functions.php';
 	require_once $functions_path . '/theme-widgets.php';
-
 	require_once $styles_path . '/custom-style.php';
 
 
@@ -1062,7 +1062,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.75',
+			'version' => '8.76',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -2046,3 +2046,5 @@ $link = preg_replace( '|#more-[0-9]+|', '', $link );
 return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
+
+
