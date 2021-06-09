@@ -748,7 +748,10 @@ function of_recognized_font_faces() {
 		'Comfortaa'  => 'Comfortaa',
 		'Didact Gothic'  => 'Didact Gothic',
 		'Roboto'  => 'Roboto',
-		'Willamette SF'  => 'Willamette SF'		
+		'Willamette SF'  => 'Willamette SF',
+		'Montserrat'  => 'Montserrat',	
+		'Oswald'  => 'Oswald'
+		 
 	
 	);
 	return apply_filters( 'of_recognized_font_faces', $default );

@@ -79,7 +79,11 @@ $fonts_blog = array (	'arial'     => 'Arial',
 		'georgia'   => 'Georgia',
 		'times'     => 'Times New Roman',
 		'palatino'  => 'Palatino',
+		'Montserrat'    => 'Montserrat',
+		'Oswald'    => 'Oswald',
 		'Avenir Next Cyr'  => 'Avenir Next Cyr');
+		
+		
 		
 $fonts__text_headers = array ( 'arial' => 'Arial',
 		'verdana'   => 'Verdana, Geneva',
@@ -104,7 +108,8 @@ $fonts__text_headers = array ( 'arial' => 'Arial',
 		'Didact Gothic'  => 'Didact Gothic',
 		'Roboto'  => 'Roboto',
 		'Willamette SF'  => 'Willamette SF',
-		
+		'Montserrat'  => 'Montserrat',
+		'Oswald'  => 'Oswald',
 		'Avenir Next Cyr'  => 'Avenir Next Cyr'
 		
 		
@@ -213,7 +218,7 @@ $blog_layout = array('classic' => __('Классический блог'), 'grid
 	}
 		
 	// If using image radio buttons, define a directory path
-	$imagepath =  get_bloginfo('stylesheet_directory') . '/images/';
+	$imagepath =  get_template_directory_uri() . '/images/';
 	
 	$categories = get_categories('hide_empty=0&orderby=name');
 $wp_cats = array();

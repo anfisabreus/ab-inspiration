@@ -131,7 +131,7 @@ jQuery('.wp-block-gallery').each(function(i){
     });
 
 jQuery("a.group").fancybox({'nextEffect'	:	'fade','prevEffect'	:	'fade','overlayOpacity' :  0.8,'overlayColor' : '#000000','arrows' : true,'openEffect'	: 'elastic','closeEffect'	: 'elastic',});});</script>
-<script type="text/javascript"> jQuery(document).ready(function() { jQuery(".fancybox").fancybox({ helpers: { title: { type: 'over' } }, beforeShow: function () { this.title = $(this.element).find("img").attr("alt"); }, iframe: { preload: false }, margin: [20, 60, 20, 60]});});</script>
+<script type="text/javascript"> jQuery(document).ready(function() { jQuery(".fancybox").fancybox({ helpers: { title: { type: 'over' } }, beforeShow: function () { this.title = jQuery(this.element).find("img").attr("alt"); }, iframe: { preload: false }, margin: [20, 60, 20, 60]});});</script>
 <script type="text/javascript"> jQuery(document).ready(function() {
 jQuery('a[rel^="attachment"]').attr('class', 'fancybox');
 jQuery('a[rel^="fancybox"]').attr('class', 'fancybox');

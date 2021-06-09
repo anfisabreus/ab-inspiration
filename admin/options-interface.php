@@ -600,7 +600,9 @@ add_filter( 'tiny_mce_before_init', 'wpex_mce_text_sizes' );
 // Add custom Fonts to the Fonts list
 if ( ! function_exists( 'wpex_mce_google_fonts_array' ) ) {
 	function wpex_mce_google_fonts_array( $initArray ) {
-	    $initArray['font_formats'] = 'Arial=arial,helvetica,sans-serif;Verdana=verdana,geneva;Helvetica=helvetica;Tahoma=tahoma,arial,helvetica,sans-serif;Lucida Console=Lucida Console, Monaco, monospace;Open Sans=Open Sans;Open Sans Condensed=Open Sans Condensed;PT Sans Narrow=PT Sans Narrow;Trebuchet=Trebuchet;Georgia=georgia;Times New Roman=times;Palatino=palatino;Comic Sans MS=Comic Sans MS, cursive;Courier New=Courier New, monospace;Impact=Impact, Charcoal, sans-serif;Marck Script=Marck Script;Neucha=Neucha;Poiret One=Poiret One;Lobster=Lobster;Comfortaa=Comfortaa;Didact Gothic=Didact Gothic;Roboto=Roboto;Willamette SF=Willamette SF';
+	    $initArray['font_formats'] = 'Arial=arial,helvetica,sans-serif;Verdana=verdana,geneva;Helvetica=helvetica;Tahoma=tahoma,arial,helvetica,sans-serif;Lucida Console=Lucida Console, Monaco, monospace;Open Sans=Open Sans;Open Sans Condensed=Open Sans Condensed;PT Sans Narrow=PT Sans Narrow;Trebuchet=Trebuchet;Georgia=georgia;Times New Roman=times;Palatino=palatino;Comic Sans MS=Comic Sans MS, cursive;Courier New=Courier New, monospace;Impact=Impact, Charcoal, sans-serif;Marck Script=Marck Script;Neucha=Neucha;Poiret One=Poiret One;Lobster=Lobster;Comfortaa=Comfortaa;Didact Gothic=Didact Gothic;Roboto=Roboto;Willamette SF=Willamette SF;Montserrat=Montserrat;Oswald=Oswald';
+	    
+	     
             return $initArray;
 	}
 }

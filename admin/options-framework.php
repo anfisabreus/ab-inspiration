@@ -202,16 +202,19 @@ function optionsframework_load_styles() {
 	}
 	wp_enqueue_style( 'wp-color-picker' );
 
-	wp_enqueue_style('font-css1', '//fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic');
-	wp_enqueue_style('font-css2', '//fonts.googleapis.com/css?family=Neucha&subset=cyrillic');
-	wp_enqueue_style('font-css3', '//fonts.googleapis.com/css?family=Poiret+One&subset=cyrillic');
-	wp_enqueue_style('font-css4', '//fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic');
-	wp_enqueue_style('font-css5', '//fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&subset=cyrillic');
-	wp_enqueue_style('font-css6', '//fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
-	wp_enqueue_style('font-css7', '//fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=cyrillic');
-    wp_enqueue_style('font-css8', '//fonts.googleapis.com/css?family=Comfortaa&subset=cyrillic');
-    wp_enqueue_style('font-css9', '//fonts.googleapis.com/css?family=Didact+Gothic&subset=cyrillic');
-    wp_enqueue_style('font-css9', '//fonts.googleapis.com/css?family=Roboto:300&subset=cyrillic');
+	wp_enqueue_style('font-css1', '//fonts.googleapis.com/css2?family=Marck+Script&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css2', '//fonts.googleapis.com/css2?family=Neucha&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css3', '//fonts.googleapis.com/css2?family=Poiret+One&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css4', '//fonts.googleapis.com/css2?family=Open+Sans&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css5', '//fonts.googleapis.com/css2?family=Open+Sans|Open+Sans+Condensed:300&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css6', '//fonts.googleapis.com/css2?family=Lobster&subset=cyrillic&display=swap');
+	wp_enqueue_style('font-css7', '//fonts.googleapis.com/css2?family=PT+Sans+Narrow&subset=cyrillic&display=swap');
+    wp_enqueue_style('font-css8', '//fonts.googleapis.com/css2?family=Comfortaa&subset=cyrillic&display=swap');
+    wp_enqueue_style('font-css9', '//fonts.googleapis.com/css2?family=Didact+Gothic&subset=cyrillic&display=swap');
+    wp_enqueue_style('font-css9', '//fonts.googleapis.com/css2?family=Roboto:300&subset=cyrillic&display=swap');
+    wp_enqueue_style('font-css10', '//fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+    wp_enqueue_style('font-css11', ' //fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+   
     
 
 
@@ -348,6 +351,8 @@ echo $my_theme->Name . ", версия " . $my_theme->Version;
    <li style="font-family:Comfortaa; font-size:18px; padding-left:20px;">Comfortaa</li>
    <li style="font-family:Didact Gothic; font-size:18px; padding-left:20px;">Didact Gothic</li>
    <li style="font-family:Roboto; font-size:18px; padding-left:20px;">Roboto</li>
+<li style="font-family:Montserrat; font-size:18px; padding-left:20px;">Montserrat</li>
+<li style="font-family:Oswald; font-size:18px; padding-left:20px;">Oswald</li>
 
    
   

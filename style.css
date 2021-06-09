@@ -2,7 +2,7 @@
 Theme Name: AB-Inspiration
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.76
+Version: 8.79
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -82,7 +82,8 @@ input[type="text"],textarea, input[type="email"], input[type="tel"], input[type=
 #content tr td{border-top:1px solid #e7e7e7;padding:6px 24px;}
 #content tr.odd td{background:#F2F7FC;}
 .hentry{margin:0 0 0px 0;}
-.single .hentry{margin:0 0 36px 0 !important;}
+.single .hentry{margin:0 0 36px 0;}
+
 .page-title{color:#000;font-size:12px!important;font-weight:normal;margin:0 0 10px 0;}
 .page-title span{color:#333;font-size:12px;font-style:italic;font-weight:normal;}
 .page-title a:link, .page-title a:visited{color:#888;text-decoration:none;}
@@ -3164,7 +3165,7 @@ a.cbp-l-caption-buttonLeft.more-link{margin-top:0px !important}
 .wpcw_fe_progress_box_download, .wpcw_fe_progress_box_mark a { text-decoration:none}
 #container.single-no-sidebar {float:none !important; margin:0 auto;}
 #container.single-no-sidebar .wpcw_course .image-bg {display:none}
-#access ul li ul li {width: 100% !important;white-space: nowrap;}
+#access ul li ul li {max-width: 200px !important;}
 #access ul li ul li a{text-transform:none !important;}
 .account50{float:left; width:45%; margin-right:40px;}
 .buy50{float:left; width:50%;display:table; height:280px;     background: #F7F6F7; padding: 20px 30px;margin-bottom: 30px;}
@@ -3244,6 +3245,8 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .page-template-template-kurs-catalog .course-price, .post-type-archive-wpcw_course .course-price {font-size: 18px;font-weight:500; margin-bottom:10px}
 
 .single-course_unit span.woocommerce-Price-amount.amount, .page-template-template-kurs-catalog span.woocommerce-Price-amount.amount, .post-type-archive-wpcw_course span.woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course span.woocommerce-Price-amount.amount{font-weight:normal !important}
+
+.page-template-template-kurs-catalog span.woocommerce-Price-amount.amount, .post-type-archive-wpcw_course span.woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course span.woocommerce-Price-amount.amount {font-weight:bold !important; font-size:30px}
 
 .single-course_unit del, .page-template-template-kurs-catalog del, .post-type-archive-wpcw_course del, .wpcw_course-template-template-single-course del {color:#999}
 

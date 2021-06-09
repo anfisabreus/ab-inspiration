@@ -639,15 +639,6 @@ add_action('init', 'qips_insert');
 
 
 
-remove_action( 'wp_head', 'wp_no_robots' );
-
-function abinspiration_noindex_links() {
-	global $post;
-	if (is_paged() || is_search() || $post->post_type == 'testimonial') {
-	
-echo "<meta name='robots' content='noindex,follow' />\n"; }	
-}
-add_action( 'wp_head', 'abinspiration_noindex_links' ); 
 
 
 function abinspiration_replytocom_robots() {
@@ -922,17 +913,27 @@ else {  ?> <input type="hidden" name="webform_id" value="<?php if ($getresponse)
 
 <?php $sendpulse = of_get_option('sendpulse_form'); ?>
 
-<div id="sp-form-<?php if ($sendpulse) { echo ($sendpulse['idform']); } ?>" sp-id="<?php if ($sendpulse) { echo ($sendpulse['idform']); } ?>" sp-hash="<?php if ($sendpulse) { echo ($sendpulse['hashform']); } ?>" sp-lang="ru" class="sp-form sp-form-regular sp-form-embed" sp-show-options="" style="padding:0px !important;<?php if (of_get_option('form_uploader_transparent') == 1) { echo 'width:100%;'; } else { 'width:258px;'; } ?>  margin: 0 auto;"> 
+<div class="sp-form-outer sp-force-hide"><div id="sp-form-<?php if ($sendpulse) { echo ($sendpulse['idform']); } ?>" sp-id="<?php if ($sendpulse) { echo ($sendpulse['idform']); } ?>" sp-hash="<?php if ($sendpulse) { echo ($sendpulse['hashform']); } ?>" sp-lang="ru" class="sp-form sp-form-regular sp-form-embed" sp-show-options="%7B%22satellite%22%3Afalse%2C%22maDomain%22%3A%22login.sendpulse.com%22%2C%22formsDomain%22%3A%22forms.sendpulse.com%22%2C%22condition%22%3A%22onEnter%22%2C%22scrollTo%22%3A25%2C%22delay%22%3A10%2C%22repeat%22%3A3%2C%22background%22%3A%22rgba(0%2C%200%2C%200%2C%200.5)%22%2C%22position%22%3A%22bottom-right%22%2C%22animation%22%3A%22%22%2C%22hideOnMobile%22%3Afalse%2C%22urlFilter%22%3Afalse%2C%22urlFilterConditions%22%3A%5B%7B%22force%22%3A%22hide%22%2C%22clause%22%3A%22contains%22%2C%22token%22%3A%22%22%7D%5D%2C%22analytics%22%3A%7B%22ga%22%3A%7B%22eventLabel%22%3Anull%2C%22send%22%3Afalse%7D%2C%22ym%22%3A%7B%22counterId%22%3Anull%2C%22eventLabel%22%3Anull%2C%22targetId%22%3Anull%2C%22send%22%3Afalse%7D%7D%2C%22utmEnable%22%3Afalse%7D" style="<?php if (of_get_option('form_uploader_transparent') == 1) { echo 'width:100%;'; } else { 'width:258px;'; } ?> margin: 0 auto;"><div class="sp-form-fields-wrapper"><div class="sp-message"><div></div></div>
 
-<div class="sp-message"> <div></div> </div> 
-<form novalidate="" class="sp-element-container ui-sortable ui-droppable ">
+	
+	<form novalidate="" class="sp-element-container sp-lg sp-field-nolabel">
+	
 
-<input type="text" sp-type="input" name="sform[<?php if ($sendpulse) { echo ($sendpulse['idscript']); } ?>]" required="required" size="27" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>"  style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>">
-
-
-<input type="email" sp-type="email" name="sform[email]"  required="required" size="27" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('email_field_text_bottom', '') ; ?>">
- 
-<div><button class="sp-button buttonpostform"> <?php echo of_get_option('text_form_bottom'); ?> </button></div></form> </div> 
+<div class="sp-field " sp-id="sp-82f0ae98-aad7-4924-9140-7f589e56ca3f" style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>"><label class="sp-control-label" style="display:none"><span >Имя</span></label>
+<input type="text" sp-type="name" name="sform[<?php if ($sendpulse) { echo ($sendpulse['idscript']); } ?>]" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>"   sp-tips="%7B%7D"></div>
+	
+	
+<div class="sp-field " sp-id="sp-0c6367fa-a7a5-46b0-89e5-e73da17829b7"><label class="sp-control-label" style="display:none"><span >Email</span><strong >*</strong></label>
+<input type="email" sp-type="email" name="sform[email]" class="sp-form-control input1 inputformbutton" placeholder="<?php echo of_get_option('email_field_text_bottom', '') ; ?>" sp-tips="%7B%22required%22%3A%22%D0%9E%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%BE%D0%BB%D0%B5%22%2C%22wrong%22%3A%22%D0%9D%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9%20email-%D0%B0%D0%B4%D1%80%D0%B5%D1%81%22%7D" required="required"></div>
+	
+<div class="sp-field sp-button-container sp-lg" sp-id="sp-aa549a02-1f77-41ef-9f4f-11c9a76e2a4a">
+<button id="sp-aa549a02-1f77-41ef-9f4f-11c9a76e2a4a" class="sp-button buttonpostform"> <?php echo of_get_option('text_form_bottom'); ?> </button></div></form>
+	
+	
+	<div class="sp-link-wrapper sp-brandname__left"></div></div></div>
+	
+	
+	</div> 
  
 
 <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
@@ -940,7 +941,9 @@ else {  ?> <input type="hidden" name="webform_id" value="<?php if ($getresponse)
 <?php echo konf_personal(); ?>
 <?php } else { ?> <div class="garantiya"><?php echo of_get_option('form_garant', '') ; ?></div> <?php } ?>
 
-<script type="text/javascript" src="//static-login.sendpulse.com/apps/fc3/build/default-handler.js?<?php if ($sendpulse) { echo ($sendpulse['sendpulseidscript']); } ?>"></script>
+	
+<script type="text/javascript" async="async" src="//web.webformscr.com/apps/fc3/build/default-handler.js?<?php if ($sendpulse) { echo ($sendpulse['sendpulseidscript']); } ?>"></script> 
+
 
 
 
@@ -1200,7 +1203,7 @@ function list_shortcode( $atts, $content = null ) {
       'class' => '',
       ), $atts ) );
  
-   return '<p class="' . esc_attr($class) . '">' . $content . '</p>';
+   return '<div class="' . esc_attr($class) . '">' . $content . '</div>';
 }
 
 
