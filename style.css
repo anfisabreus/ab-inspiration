@@ -2,7 +2,7 @@
 Theme Name: AB-Inspiration
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.79
+Version: 8.80
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -2150,16 +2150,21 @@ li.widget-container.widget_recent_entries ul{list-style:none;}
 li.widget-container.widget_recent_entries ul li{padding-bottom:10px;}
 .podskazka_kurs{padding:20px;border:1px solid #eaeaea;margin:10px 0;}
 #wpcw_fe_course .wpcw_fe_unit_progress {width:auto}
-#wpcw_fe_course tr.wpcw_fe_module td+td {width:100%; display:block; background: #eaeaea;
+
+
+
+
+#wpcw_fe_course .wpcw_fe_module th {font-weight: 600; background:#eaeaea; padding:30px !important}
+
+
+#wpcw_fe_course tr.wpcw_fe_module td+td, #wpcw_fe_course .wpcw_fe_module_desc_header {width:100% !important; display:block; background: #eaeaea;
     color: #000 !important;
     padding-left: 20px !important;
-    font-weight: 400;
-
-    margin-bottom: 10px;}
+    font-size:16px}
     .wpcw_fe_progress_box_text {display:none}
-.wpcw_fe_module{display:block}#wpcw_fe_course .wpcw_fe_unit {width:100%; display: inline-flex; padding-left:0px !important; padding-right:0px !important; line-height:1.3; padding-bottom:0px}#wpcw_fe_course .wpcw_fe_unit_title, #wpcw_fe_course .wpcw_fe_unit,#wpcw_fe_course .wpcw_fe_unit_progress {padding-top:0px !important; padding-bottom:10px !important; align-self:center}#content #wpcw_fe_course tr.wpcw_fe_unit td.wpcw_fe_unit_title {font-size: 14px !important;
+.wpcw_fe_module{display:block}#wpcw_fe_course .wpcw_fe_unit {width:100%; display: inline-flex; padding-left:0px !important; padding-right:0px !important; line-height:1.3; padding-bottom:0px}#wpcw_fe_course .wpcw_fe_unit_title, #wpcw_fe_course .wpcw_fe_unit,#wpcw_fe_course .wpcw_fe_unit_progress {padding-top:10px !important; padding-bottom:10px !important; align-self:center; border-bottom: 1px solid #ccc; background:#ffffff}#content #wpcw_fe_course tr.wpcw_fe_unit td.wpcw_fe_unit_title {font-size: 14px !important;
     color: #666 !important;    padding-right:4px !important; text-decoration:none}.entry-content td.wpcw_fe_unit a:link {text-decoration:none}.entry-content td.wpcw_fe_unit a:hover {text-decoration:underline}
-#wpcw_fe_course  .wpcw_fe_module_title_header, #wpcw_fe_course  .wpcw_fe_unit_title, #wpcw_fe_course .wpcw_fe_module_desc_header {padding-left:0px !important;}#wpcw_fe_course .wpcw_fe_module_desc_header {padding-right:0px !important}
+#wpcw_fe_course .wpcw_fe_module_desc_header {padding-right:0px !important}
 .wpcw_widget_progress {padding:0 20px}
 #wpcw_fe_course tr.wpcw_fe_module td+td+td{display:none}
 .wpcw_fe_unit_progress_header,.wpcw_fe_module_title_header {display: none;}
@@ -2190,7 +2195,7 @@ tr.wpcw_fe_module.wpcw_fe_module_toggle_hide td+td:after {
 .wpcw_fe_quiz_q_title {font-size:18px; font-weight:bold}
 
 .wpcw_fe_progress_box,.wpcw_fe_quiz_box  {font-size:16px}
-.wpcw_widget_progress #wpcw_fe_course{font-size:11pt}
+
 a, a:active, a:focus{outline:none;}
 #content div.p_table_1_15 h1.col1, #content div.p_table_1_15 h2.col1, #content div.p_table_1_15 h3.col1, #content div.p_table_1_15 a.sign_up{color:#fff !important}
 .pllexislider{margin:0;padding:0;}
@@ -3206,10 +3211,12 @@ i.fa.fa-shopping-cart {display:none}
 
 #wpcw_fe_course{font-size:12pt;}
 .tml-action .social-buttons-no-widget {display:none}
-.wpcw_widget_progress #wpcw_fe_course{font-size:11pt}
+#wpcw_fe_course th:nth-child(2) {width:100% !important; display: block;}
+#wpcw_fe_course  .wpcw_fe_module_toggle_show .wpcw_fe_module_desc_header:before {content:'\f078'; font-family:fontAwesome; padding-right:20px}
+#wpcw_fe_course  .wpcw_fe_module_toggle_hide .wpcw_fe_module_desc_header:before {content:'\f077'; font-family:fontAwesome; padding-right:20px}
 td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit_complete, .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit_complete a {color:#333}
-#content .wpcw_fe_unit a:link, #content .wpcw_fe_unit a:visited {color:#333 !important} 	 #wpcw_fe_course .wpcw_fe_module td,#wpcw_fe_course_progress th {background:#fff; color:#000; font-weight: 600;} .wpcw_widget_progress #wpcw_fe_course td {padding:15px;}  .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_module td {padding-top:15px;}#wpcw_fe_course .wpcw_fe_unit a {font-weight:normal;} .wpcw_widget_progress #wpcw_fe_course {font-size:12pt} #wpcw_fe_course td, table.wpcw_fe_table  {border:0px !important; vertical-align:middle}.wpcw_fe_unit.active {background:transparent} .wpcw_fe_unit:hover, .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit.wpcw_fe_unit_complete:hover {background:transparent}  .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit_complete {background:#fff}
+#content .wpcw_fe_unit a:link, #content .wpcw_fe_unit a:visited {color:#333 !important} 	 #wpcw_fe_course .wpcw_fe_module td,#wpcw_fe_course_progress th {background:#fff; color:#000; font-weight: 600;} .wpcw_widget_progress #wpcw_fe_course td {padding:15px;}  .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_module td {padding-top:15px;}#wpcw_fe_course .wpcw_fe_unit a {font-weight:normal;} .wpcw_widget_progress #wpcw_fe_course {font-size:12pt; border:1px solid #ccc !important} #wpcw_fe_course td, table.wpcw_fe_table  {border:0px !important; vertical-align:middle}.wpcw_fe_unit.active {background:transparent} .wpcw_fe_unit:hover, .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit.wpcw_fe_unit_complete:hover {background:transparent}  .wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit_complete {background:#f9f9f9}
 .woocommerce-checkout .col-1, .woocommerce-checkout .col-2,  .woocommerce-account .col-1,  .woocommerce-account .col-2{max-width:100%}
 .woocommerce-checkout .entry-content label {width:100%}
 .form-row {display:block}
@@ -3265,7 +3272,7 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 
 .single-course_unit del, .page-template-template-kurs-catalog del .woocommerce-Price-amount.amount, .post-type-archive-wpcw_course del .woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course del .woocommerce-Price-amount.amount{font-size:18px}
 .wpcw_course-template-template-single-course  .product.woocommerce.add_to_cart_inline a.button {text-align: center;margin: 0 auto; display:table}
-#primary  #wpcw_fe_course td.wpcw_fe_unit_title, #primary #wpcw_fe_course td.wpcw_fe_unit, #wpcw_fe_course_progress, #content #wpcw_fe_course td.wpcw_fe_unit_title, #content  #wpcw_fe_course td.wpcw_fe_unit {font-size:16px !important; line-height:1.1}
+#primary  #wpcw_fe_course td.wpcw_fe_unit_title, #primary #wpcw_fe_course td.wpcw_fe_unit, #wpcw_fe_course_progress, #content #wpcw_fe_course td.wpcw_fe_unit_title, #content  #wpcw_fe_course td.wpcw_fe_unit {font-size:14px !important; line-height:1.3}
 #wpcw_fe_course_progress .wpcw_fe_course_progress_pc {font-size:11pt !important}
 .wpcw_progress {width:100%; height:8px}
 #content .woocommerce tr td {border:none !important}
@@ -3320,7 +3327,7 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .mobile-image-link {width:70%}
 .mobile-image-logo { max-width:70%;z-index:4;}
 
-.page-template-elementor_header_footer #main, .page-template-elementor_header_footer #content-main{width: 100% !important;
+.page-template-elementor_header_footer #main, .page-template-elementor_header_footer #content-main, .elementor-page #main, .elementor-page #content-main{width: 100% !important;
     max-width: 100% !important; padding:0px !important
 }
 

@@ -8,6 +8,7 @@
  */
  __( 'Страница с заданием', 'inspiration' );
 get_header(); ?>
+
 <style>
 	.tabbernav, #qips_smiles {display:none}
 	textarea#comment {height:100px}
