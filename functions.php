@@ -44,6 +44,7 @@ remove_action('template_redirect', 'rest_output_link_header', 11, 0);
 remove_action('wp_head', 'rest_output_link_wp_head', 10);
 remove_action('wp_head', 'wp_shortlink_wp_head', 10);
 remove_action( 'template_redirect', 'wp_shortlink_header', 11);
+add_theme_support( 'custom-logo' );
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', array( 'gallery', 'caption' ) );
@@ -1062,7 +1063,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.80',
+			'version' => '8.81',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
