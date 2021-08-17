@@ -2,6 +2,7 @@
 
   __( 'На всю ширину', 'inspiration' );
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 <style>.post-content, #content .entry-content, #content .tabberlive {width:430px; margin:0 auto;}#content .entry-box .image-bg {width: 100%; padding-top:50%;
     background-size: cover; margin-bottom:30px !important; background-repeat:no-repeat;}   .leavecomment {margin-top:20px}.post-content, #content .entry-content, #content .tabberlive {width:430px; margin:0 auto;}.cat-meta, .entry-title.entry-title-single {text-align:center}.date-comments{    margin: 0 auto; display:table}.entry-title.entry-title-single {font-size:38px !important; margin-bottom: 20px !important;} div.date-comments, #content .post div.meta-comment a:link, #content div.entry-box .post .entry-utility a, .entry-utility, .meta-comment {color:#999 !important; font-size:16px !important;} .post-font {font-size:20px !important; padding-top:20px;}.social-buttons-no-widget {display:table; margin:0 auto;} @media only screen and (max-width: 690px) { .author-info .author-description {width:100%; float:none !important; text-align:center;} .author-info .author-avatar {text-align:center; float:none !important; margin-right: 0px !important; } #container, #container.single-no-sidebar, #container.single-no-sidebar #content {width:100%}.post-content, #content .entry-content, #content .tabberlive {width:90%}.entry-box .image-bg {width:100%} .entry-title.entry-title-single {font-size:30px !important; margin-bottom: 20px !important;} div.date-comments, .social-buttons-no-widget {display:none} .cat-meta {margin-top: 20px;}}</style>
 <div id="container" class="one-column">
@@ -69,4 +70,6 @@ if($custom['post_button_top'][0] == 0): ?>
 </div>
 
 </div> <!-- entry-box --></div><!-- #content -->
-<?php endwhile; // end of the loop. ?></div><!-- #container -->	<?php get_footer(); ?>
+<?php endwhile; // end of the loop. ?></div><!-- #container -->	
+<?php echo ab_inspiration_footer(); ?>
+<?php get_footer(); ?>

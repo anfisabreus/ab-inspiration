@@ -8,6 +8,7 @@
   __( 'Входная страница', 'inspiration' );
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <?php function hp_level1() { ?><div class="uroven"> <?php
 global $homepage; 	
@@ -699,5 +700,5 @@ $func = 'hp_level'. $num; ?>
 
 </div><!-- #container --><?php   } }  ?> 
 
-
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

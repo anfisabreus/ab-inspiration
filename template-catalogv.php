@@ -8,7 +8,7 @@
   __( 'Каталог', 'inspiration' );
 get_header(); ?>
 
-
+<?php echo ab_inspiration_header(); ?>
 
 
 <div class="container">
@@ -167,4 +167,5 @@ if ($buyexclude['0'] == 'one') {echo '';} else  { ?>
 </div>
 </div><!-- #main -->
 </div>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

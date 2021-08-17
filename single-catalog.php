@@ -1,6 +1,7 @@
 <?php
 get_header(); 
 ?>
+<?php echo ab_inspiration_header(); ?>
 
 		<div id="container-full" class="one-column">
 <div id="content" role="main" >
@@ -345,5 +346,5 @@ wp_reset_postdata();
 		
 		</div><!-- #container -->
 	
-
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

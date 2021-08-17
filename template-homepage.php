@@ -15,6 +15,7 @@
  
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <div id="container-full" class="one-column woocommerce">
 
@@ -43,4 +44,5 @@ get_header(); ?>
 		</div><!-- #main -->
 	</div><!-- #primary -->
 </div>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

@@ -9,6 +9,7 @@
   __( 'Блог на всю ширину', 'inspiration' );
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <div id="container-full" class="one-full-common one-column container">
 <div id="content" role="main" class="row">
@@ -170,6 +171,6 @@ if ( $wp_query->have_posts() ) :
 </div>
 
 	<?php wp_reset_query(); ?>
-
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>
 

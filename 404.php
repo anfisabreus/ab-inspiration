@@ -9,6 +9,7 @@
  */
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 	<div id="container">
 		<div id="content" role="main">
 	<div class="entry-box">			<div id="post-0" class="post error404 not-found">
@@ -41,4 +42,5 @@ get_header(); ?>
 
 	</script>
 <?php get_sidebar(); ?>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

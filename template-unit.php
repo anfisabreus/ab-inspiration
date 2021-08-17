@@ -8,6 +8,7 @@
  */
  __( 'Страница с заданием', 'inspiration' );
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <style>
 	.tabbernav, #qips_smiles {display:none}
@@ -143,6 +144,6 @@ echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #
 
 
 
-
+<?php echo ab_inspiration_footer(); ?>
 
 <?php get_footer(); ?>

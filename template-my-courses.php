@@ -10,6 +10,7 @@
 
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 
 <style>  
@@ -142,4 +143,5 @@ if ( $course->can_user_access( get_current_user_id() ) ) { ?>
 
 			</div><!-- #content --> 
 		</div><!-- #container -->
+		<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

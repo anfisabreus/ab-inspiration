@@ -6,6 +6,7 @@
  * @since Inspiration 1.0
  */
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 		<div id="container">
 			<div id="content" role="main">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -66,4 +67,5 @@ if($custom['post_share_bottom'][0] == 0 ) : ?>
 			</div><!-- #content --> 
 		</div><!-- #container -->
 <?php get_sidebar(); ?>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

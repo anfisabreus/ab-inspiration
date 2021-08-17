@@ -8,6 +8,9 @@
  
   __( 'На всю ширину', 'inspiration' );
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
+
+
 		<div id="container-full" class="one-column">
 
 			<div id="content" role="main">
@@ -64,4 +67,5 @@ if (of_get_option('share_display_bottom') ['3'] == '1'  && !is_checkout()) { ech
 
 			</div><!-- #content --> </div>
 		</div><!-- #container -->
+		<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

@@ -1,5 +1,6 @@
 /*
 Theme Name: AB-Inspiration
+Theme URI: https://ab-inspiration.com/downloads/ab-inspiration/
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
 Version: 8.81
@@ -2162,7 +2163,7 @@ li.widget-container.widget_recent_entries ul li{padding-bottom:10px;}
     padding-left: 20px !important;
     font-size:16px}
     .wpcw_fe_progress_box_text {display:none}
-.wpcw_fe_module{display:block}#wpcw_fe_course .wpcw_fe_unit {width:100%; display: inline-flex; padding-left:0px !important; padding-right:0px !important; line-height:1.3; padding-bottom:0px}#wpcw_fe_course .wpcw_fe_unit_title, #wpcw_fe_course .wpcw_fe_unit,#wpcw_fe_course .wpcw_fe_unit_progress {padding-top:10px !important; padding-bottom:10px !important; align-self:center; border-bottom: 1px solid #ccc; background:#ffffff}#content #wpcw_fe_course tr.wpcw_fe_unit td.wpcw_fe_unit_title {font-size: 14px !important;
+.wpcw_fe_module{display:block}#wpcw_fe_course .wpcw_fe_unit {width:100%; display: inline-flex; padding-left:0px !important; padding-right:0px !important; line-height:1.3; padding-bottom:0px}#wpcw_fe_course .wpcw_fe_unit_title, #wpcw_fe_course .wpcw_fe_unit,#wpcw_fe_course .wpcw_fe_unit_progress {padding-top:10px !important; padding-bottom:10px !important; align-self:center; border-bottom: 1px solid #ccc; background:#ffffff !important}#content #wpcw_fe_course tr.wpcw_fe_unit td.wpcw_fe_unit_title {font-size: 14px !important;
     color: #666 !important;    padding-right:4px !important; text-decoration:none}.entry-content td.wpcw_fe_unit a:link {text-decoration:none}.entry-content td.wpcw_fe_unit a:hover {text-decoration:underline}
 #wpcw_fe_course .wpcw_fe_module_desc_header {padding-right:0px !important}
 .wpcw_widget_progress {padding:0 20px}

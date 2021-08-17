@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 		<div id="container">
 			<div id="content" role="main">
 <?php if ( have_posts() ) the_post(); ?>
@@ -19,4 +20,5 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #container -->
 <?php get_sidebar(); ?>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

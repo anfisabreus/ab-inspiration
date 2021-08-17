@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<?php echo ab_inspiration_header(); ?>
 
 <div id="container">
 <div id="content" role="main" >
@@ -109,4 +109,6 @@ if($custom['post_related'][0] == 0): ?>
 </div> <!-- entry-box --></div><!-- #content -->
 <?php endwhile; // end of the loop. ?></div><!-- #container -->			
 <?php get_sidebar(); ?>
+
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

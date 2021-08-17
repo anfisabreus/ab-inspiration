@@ -1,6 +1,7 @@
 <?php
 get_header(); 
 ?>
+<?php echo ab_inspiration_header(); ?>
 		<div id="container" class="single-no-sidebar testimonial-container">
 <div id="content" role="main" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -51,5 +52,5 @@ if($custom['post_button_top'][0] == 0): ?>
 		
 		</div><!-- #container -->
 		
-
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

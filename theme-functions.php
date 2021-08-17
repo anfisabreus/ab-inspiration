@@ -1643,3 +1643,13 @@ function ab_inspiration_content_image_sizes_attr( $sizes, $size ) {
 }
 add_filter( 'wp_calculate_image_sizes', 'ab_inspiration_content_image_sizes_attr', 10, 2 );
 
+// вставки начальных и завершающих тегов в файлы шаблона
+
+function ab_inspiration_header() { ?>
+	<div id="content-main"><div id="main">
+<?php }
+
+function ab_inspiration_footer() { ?>
+	</div></div>
+<?php }
+

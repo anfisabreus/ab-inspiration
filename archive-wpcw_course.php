@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <style>  .post-font {font-size:16px !important;}.entry-box{  margin: 0px 25px 25px 0; overflow:hidden; padding:0px !important;}.entry-box:nth-child(3n+3) {margin: 0px 0px 25px 0;} .entry-box:first-child, .entry-box {padding-top:0px !important;text-align: left;} .entry-box {text-align: left;}#wrapper .entry-box h2 { padding-top:20px !important;line-height: 20px !important;}
 
@@ -219,4 +220,5 @@ else { echo $course->get_payments_price() .' '. wpcw_get_currency_symbol() .' '.
 
 			</div><!-- #content --> 
 		</div><!-- #container -->
+		<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

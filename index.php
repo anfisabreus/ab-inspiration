@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <?php if (of_get_option('blog_layout') == "classic") { ?>
 <div id="container">
@@ -193,6 +194,6 @@ if ( $wp_query->have_posts() ) :
 } ?>
 
 
-
+<?php echo ab_inspiration_footer(); ?>
 
 <?php get_footer(); ?>

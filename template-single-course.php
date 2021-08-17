@@ -9,6 +9,7 @@
  
   __( 'Страница курса', 'inspiration' );
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 
 <style>tr.wpcw_fe_module.wpcw_fe_module_toggle_hide td+td:after, tr.wpcw_fe_module.wpcw_fe_module_toggle_show td+td:after {padding-right:20px}#wpcw_fe_course {margin-top:20px}.wpcw_widget_progress #wpcw_fe_course .wpcw_fe_unit_progress span {display:block} </style>
 <?php global $course;
@@ -101,6 +102,6 @@ echo do_shortcode('[add_to_cart id="'.$value.'"]'); }  else { echo $course->get_
 
 </div><!-- #container -->
 
-		
+	<?php echo ab_inspiration_footer(); ?>	
 
 <?php get_footer(); ?>

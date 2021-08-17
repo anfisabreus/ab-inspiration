@@ -6,6 +6,7 @@ Template Name: Карта сайта
 
 ?>
 <?php get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 <?php $imageurl =  get_bloginfo('url') .'/wp-content/themes/ab-inspiration/images/'; ?>
 		<div id="container">
 			<div id="content" role="main">
@@ -96,5 +97,5 @@ wp_list_pages(
 		</div><!-- #container -->
 		
 	<?php get_sidebar(); ?>	
-		
+		<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

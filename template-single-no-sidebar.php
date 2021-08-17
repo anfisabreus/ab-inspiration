@@ -9,7 +9,7 @@
  
   __( 'Запись без боковой колонки', 'inspiration' );
 get_header(); ?>
-
+<?php echo ab_inspiration_header(); ?>
 
 <div id="container" class="single-no-sidebar">
 <div id="content" role="main" >
@@ -121,5 +121,5 @@ else {  echo related_posts_thumbnails_tags(); }
 
 </div> <!-- entry-box --></div><!-- #content -->
 <?php endwhile; // end of the loop. ?></div><!-- #container -->			
-
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer(); ?>

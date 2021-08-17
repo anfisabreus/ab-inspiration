@@ -9,6 +9,8 @@
  
 get_header(); 
 
+echo ab_inspiration_header();
+
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 // check for plugin using plugin name
@@ -41,4 +43,5 @@ if (!is_singular('product')) {
 global $ab_woocommerce;
 
 if ( $ab_woocommerce['sidebar'] == '1') { get_sidebar('shop'); } else { echo ''; } } } else { echo 'Пожалуйста, загрузите и активируйте лицензию плагина AB-Inspiration Woocommerce'; } }  else { echo 'Пожалуйста, загрузите и активируйте плагин интеграции AB-Woocommerce'; } ?>
+<?php echo ab_inspiration_footer(); ?>
 <?php get_footer();  ?>

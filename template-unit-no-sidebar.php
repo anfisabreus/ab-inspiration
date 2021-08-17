@@ -8,6 +8,7 @@
  */
  __( 'Страница с заданием без боковой колонки', 'inspiration' );
 get_header(); ?>
+<?php echo ab_inspiration_header(); ?>
 <style>
 
 	.wpcw_fe_unit_progress.wpcw_fe_unit_progress_complete .wpcw_checkmark {display:block !important;font-family: "FontAwesome"; content: "\f058"; float:right; font-size:30px;  font-weight:normal; height:20px; width:20px}
@@ -112,6 +113,6 @@ get_header(); ?>
 <?php endwhile; // end of the loop. ?></div><!-- #container -->	
 
 	
-
+<?php echo ab_inspiration_footer(); ?>
 
 <?php get_footer(); ?>
