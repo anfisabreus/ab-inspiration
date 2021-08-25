@@ -180,5 +180,3 @@ else { ?>
 
 <?php if (of_get_option('menu_position') == '2' && of_get_option('menu_show') == '1') { ?>
 <div id="access" style="vertical-align:bottom"> <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?> </div> <?php ;} ?>
-
-<div id="content-main"><div id="main">

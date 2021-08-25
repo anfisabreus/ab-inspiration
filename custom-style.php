@@ -704,7 +704,7 @@ a.cbp-l-caption-buttonRight {text-decoration:none;}
 .catalog-single .gallery {display:none !important}
 .cbp-caption-one{margin-bottom: 20px;float: left;}
 .catalogborder { border-bottom:1px solid #eaeaea;}
-'; if ($ab_catalog['image_shape'] == 2) { $css .= ' .heightimage { height: 0px; padding-top:67% !important} '; } else { $css .= ' .heightimage { height: 0px; padding-top:120% !important} '; } $css .= '
+'; if ($ab_catalog['image_shape'] == 2) { $css .= ' .heightimage { height: 0px; padding-top:67% !important} '; } elseif ($ab_catalog['image_shape'] == 3) { $css .= ' .heightimage { height: 0px; padding-top:120% !important} '; } else { $css .= ' .heightimage { height: 0px; padding-top:95.8% !important} '; }  $css .= '
 .flexslider{border:none;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;-webkit-box-shadow: none;-moz-box-shadow: none;-o-box-shadow: none;box-shadow: none;margin-bottom:5px;}
 .flexslider ul{margin:0 auto !important;}
 div.flexslider ul li{padding:0 !important;}

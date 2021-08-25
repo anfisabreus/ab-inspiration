@@ -575,12 +575,8 @@ if( $countpost <= 1 ) { echo $trimmed_content_first; } else { echo $trimmed_cont
 
 
 <?php function hp_level6() { global $homepage, $ab_catalog; ?> 
-<style scoped><?php if ($ab_catalog['image_shape'] == 2) { ?>
-.heightimage{ height: 0px;padding-top:67% !important}
-<?php }
-else { ?>
-.heightimage{ height: 0px;padding-top:120% !important}
-<?php } ?></style>
+<style scoped><?php if ($ab_catalog['image_shape'] == 2) { ?> .heightimage{ height: 0px;padding-top:67%} <?php }
+elseif ($ab_catalog['image_shape'] == 3) { ?> .heightimage{ height: 0px;padding-top:120% } <?php } else { ?> .heightimage { height: 0px;padding-top:98.5% } <?php } ?></style>
 <div class="uroven"><div class="block_home6">
 <div id="grid-container2" class="cbp">
 <?php

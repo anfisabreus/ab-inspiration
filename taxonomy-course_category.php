@@ -106,6 +106,7 @@ $args = array(
  'orderby' => 'meta_value_num',
  'order'    => 'ASC',
  'post_status' => 'publish',
+ get_query_var( 'taxonomy' ) => get_query_var( 'term' ),
  'post__not_in' => $arr
 );
 $query = new WP_Query( $args );
