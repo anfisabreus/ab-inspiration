@@ -1652,9 +1652,11 @@ function ab_inspiration_footer() { ?>
 	</div></div>
 <?php }
 	
+
 // вставки скриптов в footer 
 
 function ab_inspiration_footer_scripts() { ?>
+
 	
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
 <?php $image_set = get_option( 'image_default_link_type' );
@@ -1763,6 +1765,8 @@ jQuery('.wp-block-image a').attr('class', 'fancybox');
 	
 	});</script>
 
+<script type="text/javascript"> jQuery(document).ready(function() { jQuery('.woocommerce ul.products li.product a').wrap('<div class="img-wrap"></div>');
+});</script>
 <script type="text/javascript">  jQuery('.woocommerce ul.products li.product a img').wrap('<div class="img-wrap-image"></div>');</script>
 
 <script>
@@ -1790,6 +1794,7 @@ else {
   alertify.confirm().set({'reverseButtons': true});
   alertify.prompt().set({'reverseButtons': true});
 } </script>
+
 
 
 <script>
@@ -2049,3 +2054,9 @@ jQuery( document ).on( 'updated_cart_totals', function() {
 
     
  }
+
+<?php
+		
+	}
+
+add_action('wp_footer','ab_inspiration_footer_scripts', 100);

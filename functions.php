@@ -1060,7 +1060,6 @@ class EDD_Theme_Updater_Admin {
 
 		$config = wp_parse_args( $config, array(
 			'remote_api_url' => 'https://ab-inspiration.com',
-
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
 			'version' => '8.85',
