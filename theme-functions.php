@@ -1551,15 +1551,7 @@ function kama_breadcrumbs() {
 
 
 
-function image_set() {
-$image_set = get_option( 'image_default_link_type' );
-?> <script> 
-  jQuery( 'a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]' ).addClass( 'fancybox' );
- </script><?php  
-	
-}
 
-  add_action('wp_footer', 'image_set');
   
   function cc_mime_types($mimes) {
  $mimes['svg'] = 'image/svg+xml';
@@ -1646,10 +1638,414 @@ add_filter( 'wp_calculate_image_sizes', 'ab_inspiration_content_image_sizes_attr
 // вставки начальных и завершающих тегов в файлы шаблона
 
 function ab_inspiration_header() { ?>
+<?php if (of_get_option('facebook_app') !== '') {?>
+<div id="fb-root"></div> 
+<script>
+if (screen && screen.width > 514) {
+  document.write('<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.async=true; js.src = "//connect.facebook.net/<?php if (get_locale() == 'ru_RU') {?>ru_RU<?php } else {?>en_US<?php }?>/sdk.js#xfbml=1&version=v2.12&appId=<?php echo of_get_option('facebook_app');?>&autoLogAppEvents=1";fjs.parentNode.insertBefore(js, fjs);}(document, \'script\', \'facebook-jssdk\'));<\/script>');
+}
+</script><?php } ?>
 	<div id="content-main"><div id="main">
 <?php }
 
 function ab_inspiration_footer() { ?>
 	</div></div>
 <?php }
+	
+// вставки скриптов в footer 
 
+function ab_inspiration_footer_scripts() { ?>
+	
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
+<?php $image_set = get_option( 'image_default_link_type' );
+?> <script> 
+  jQuery( 'a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]' ).addClass( 'fancybox' );
+ </script>
+	
+
+<?php global $ab_catalog;?>
+<?php if (function_exists('catalog_css_style')) { ?>
+<script type="text/javascript"> jQuery(document).ready( function() {
+jQuery('#grid-container').cubeportfolio({ filters: '#filters-container', defaultFilter: '*', animationType: '<?php echo $ab_catalog['anymation_type']; ?>', gapHorizontal: 20, gapVertical: 20, gridAdjustment: 'responsive', mediaQueries: [{ width: 800, cols: <?php echo $ab_catalog['porfolio_cols']; ?> }, { width: 320, cols: 1 }], caption: '<?php echo $ab_catalog['caption_type']; ?>', displayType: 'default', displayTypeSpeed: 400, }); jQuery(".showloadimg").show(); });</script>
+<?php } ?>
+<?php if (is_singular('catalog'))  { global $homepage; ?>
+<?php if ('1' == get_post_meta(get_the_ID(), 'dbt_slides', true))  { ?><script> (function($) { $(window).load(function(){ $('.flexslider').flexslider({ animation: "slide", controlNav: "thumbnails", pauseOnHover: true, start: function(slider){ $('body').removeClass('loading'); } }); }); })(jQuery);	</script><?php } 
+elseif ('2' == get_post_meta(get_the_ID(), 'dbt_slides', true))  { ?><script> $(window).load(function() { jQuery('#carousel').flexslider({ animation: "slide", controlNav: false, animationLoop: false, slideshow: false, itemWidth: 110, itemMargin: 5, asNavFor: '#slider' });
+jQuery('#slider').flexslider({ animation: "slide", controlNav: false, animationLoop: false, slideshow: false, sync: "#carousel" }); });</script>	
+<?php } elseif ('3' == get_post_meta(get_the_ID(), 'dbt_slides', true))  { ?><script> (function($) { $(window).load(function() { $('.flexslider').flexslider({ animation: "slide", smoothHeight: true, pauseOnHover: true, }); });  })(jQuery); </script>	<?php } else {'';} }?>
+<?php if (is_page_template('template-homepage.php'))  { ?><script>  jQuery('#otzyvy-magasin').cubeportfolio({ layoutMode: 'slider', drag: false, auto: true, autoTimeout: 3000, autoPauseOnHover: true, showNavigation: true, showPagination: false, rewindNav: true, scrollByPage: false, gridAdjustment: 'responsive', mediaQueries: [{ width: 1680, cols: 1}, { width: 1350, cols: 1 }, { width: 800, cols: 1 }, { width: 460, cols: 1 }, { width: 320, cols: 1 }], caption: '', displayType: 'default', }); </script> <?php } ?>
+<?php if (is_page_template('enterpage.php') || is_singular('catalog'))  { global $homepage; ?><script>  jQuery('#grid-container3').cubeportfolio({layoutMode: 'slider', drag: false, auto: true, autoTimeout: 5000, autoPauseOnHover: true, showNavigation: false, showPagination: true, rewindNav: true, scrollByPage: false, gridAdjustment: 'responsive', mediaQueries: [{ width: 1680, cols: 5 }, { width: 1350, cols: 4 }, { width: 800, cols: 3 }, { width: 460, cols: 2 }, { width: 320, cols: 1 }], gapHorizontal: 30, gapVertical: 30, caption: '', displayType: 'default', });
+(function($, window, document, undefined) { 'use strict'; $('#grid-container2').cubeportfolio({ layoutMode: 'slider', drag: false, auto: true, autoTimeout: 5000, autoPauseOnHover: true, showNavigation: true, showPagination: false, rewindNav: false, scrollByPage: false, gridAdjustment: 'responsive', mediaQueries: [{ width: 1680, cols: 6  }, { width: 1350, cols: 5 }, { width: 800, cols: 4 }, { width: 480, cols: 2 }, { width: 320, cols: 1 }], gapHorizontal: 0, gapVertical: 25,  caption: '<?php echo $ab_catalog['caption_type']; ?>', displayType: 'lazyLoading',  displayTypeSpeed: 100, }); })(jQuery, window, document); </script>
+<?php } ?>
+<?php if (of_get_option('google_analytics') == !''){?>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', '<?php echo of_get_option('google_analytics');?>', 'auto'); ga('send', 'pageview');</script>
+<?php }?>
+
+<?php if (of_get_option('yandex_analytics') == !''){?>
+<script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter<?php echo of_get_option('yandex_analytics');?> = new Ya.Metrika({id:<?php echo of_get_option('yandex_analytics');?>, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/<?php echo of_get_option('yandex_analytics');?>" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<?php }?>
+<?php if (of_get_option('ok_ip') !== '')
+{?> <script>
+!function (d, id, did, st) {
+  var js = d.createElement("script");
+  js.src = "https://connect.ok.ru/connect.js";
+  js.onload = js.onreadystatechange = function () {
+  if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+    if (!this.executed) {
+      this.executed = true;
+      setTimeout(function () {onOkConnectReady()}, 0);
+    }
+  }}
+  d.documentElement.appendChild(js);
+}(document);
+function onOkConnectReady() {
+   OK.CONNECT.insertShareWidget("ok_shareWidget1","<?php the_permalink()?>","{width:75,height:65,st:\'rounded\',sz:20,ck:1,vt:\'1\'}");
+   OK.CONNECT.insertShareWidget("ok_shareWidget2","<?php the_permalink()?>","{width:190,height:30,st:'rounded',sz:20,ck:2}");
+   OK.CONNECT.insertGroupWidget("ok_group_widget","<?php echo of_get_option('ok_ip');  ?>","{width:300,height:335}");
+}
+</script>
+<?php } ?>
+<?php if (is_singular()) {
+if (of_get_option('comments_tabber') !== '3' && of_get_option('vk_app') !== '')  { ?>
+<script type="text/javascript">VK.init({apiId: <?php echo of_get_option('vk_app');?>, onlyWidgets: true});</script>
+<script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 20, width: "auto", attach: "*"});</script>
+<?php } } ?>
+<?php if ($homepage['hp_text_animation'] == 1) { ?>
+<script>  jQuery('.katalog-buttons, .firstpost, .secondpost, .heading-title1,.heading-title2,.heading-title3,.heading-title4, .heading-title5, .heading-title6, .post-font1 ol li, .post-font2 ol li,.post-font3 ol li,.post-font1 ul li, .post-font2 ul li,.post-font3 ul li,.entry-title1, .entry-title2, .entry-title3, .entry-title4,.entry-title6, .homepage-image1,  .homepage-image2, .homepage-image3, .post-font1, .post-font2, .post-font3, .readmore1, .readmore2, .readmore3,.readmore4,.readmore5,.readmore6,  .testimonials-animation, .katalog-enterpage, .cbp-l-grid-projects-title, .cbp-l-grid-projects-desc, .homepage-icon1, .homepage-icon2, .homepage-icon3').waypoint(function(){ jQuery(this).addClass('fadeInUp animated'); }, { offset: '100%' });</script><?php } ?><?php 
+$license 	= get_option( 'edd_scroll_license_key' );
+$status 	= get_option( 'edd_scroll_license_status' );
+if ($status !== false && $status == 'valid' ) {  
+global $ab_scroll_to_top; ?>
+<script type="text/javascript"> 
+jQuery(document).ready(function(){ 
+jQuery('.scrollup').each(function(){ 
+jQuery(this).replaceWith( '<br><a href="#" class="scrollup" style="color:<?php echo $ab_scroll_to_top['ab_scroll_text_color'];?> !important; "><?php echo $ab_scroll_to_top['ab_scroll_custom_text'];?></a>' ); }); jQuery(window).scroll(function(){ if (jQuery(this).scrollTop() > 100) { jQuery('.scrollup').fadeIn(); } else { jQuery('.scrollup').fadeOut(); } }); jQuery('.scrollup').click(function(){ jQuery("html, body").animate({ scrollTop: 0 }, 600); return false; }); }); </script>
+<?php } ?>
+<script type="text/javascript"> 
+	jQuery(document).ready(function() { 
+		var starting_position = jQuery('#header').outerHeight( true ) 
+		jQuery(window).scroll(function() { 
+			var yPos = ( jQuery(window).scrollTop() ); 
+			if( yPos > starting_position && window.innerWidth > 500 ) { 
+				jQuery("#floatmenu").fadeIn(300); 
+				} 
+				else { 
+					jQuery("#floatmenu").fadeOut(300); 
+					} 
+					}); 
+					}); 
+					</script>
+<script> jQuery(function() { jQuery( "#tabs" ).tabs(); }); </script>
+<script type="text/javascript"> jQuery(document).ready(function(){ jQuery('.scrollupinsight').each(function(){ jQuery(this).replaceWith( '<br><a href="#" class="scrollupinsight" style=" "></a>' ); }); jQuery(window).scroll(function(){ if (jQuery(this).scrollTop() > 100) { jQuery('.scrollupinsight').fadeIn(); } else { jQuery('.scrollupinsight').fadeOut(); } }); jQuery('.scrollupinsight').click(function(){ jQuery("html, body").animate({ scrollTop: 0 }, 800); return false; }); }); </script>
+<script type="text/javascript">jQuery(document).ready(function() {
+	
+jQuery('.gallery').each(function(i){
+    var newID=$(this).attr('id');
+    jQuery(this).find( "a" ).attr("rel",newID);
+    jQuery(this).find( "a" ).attr('class', 'fancybox');
+    });
+    
+jQuery('.wp-block-gallery').each(function(i){  	
+	jQuery('.wp-block-gallery').attr('id', 'group') + i;	
+	var newID=$(this).attr('id') + i;
+	 jQuery(this).attr("id",newID);	 
+	  jQuery(this).find( "a" ).attr("rel",newID);
+      jQuery(this).find( "a" ).attr("class",'fancybox');
+    });
+
+jQuery("a.group").fancybox({'nextEffect'	:	'fade','prevEffect'	:	'fade','overlayOpacity' :  0.8,'overlayColor' : '#000000','arrows' : true,'openEffect'	: 'elastic','closeEffect'	: 'elastic',});});</script>
+<script type="text/javascript"> jQuery(document).ready(function() { jQuery(".fancybox").fancybox({ helpers: { title: { type: 'over' } }, beforeShow: function () { this.title = jQuery(this.element).find("img").attr("alt"); }, iframe: { preload: false }, margin: [20, 60, 20, 60]});});</script>
+<script type="text/javascript"> jQuery(document).ready(function() {
+jQuery('a[rel^="attachment"]').attr('class', 'fancybox');
+jQuery('a[rel^="fancybox"]').attr('class', 'fancybox');
+jQuery('.wp-block-image a').attr('class', 'fancybox');
+
+	
+	});</script>
+
+<script type="text/javascript">  jQuery('.woocommerce ul.products li.product a img').wrap('<div class="img-wrap-image"></div>');</script>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<script>
+jQuery('.dropdown-toggle').on('click', function (e) {
+  jQuery(this).next().toggle();
+});
+jQuery('.dropdown-menu.keep-open').on('click', function (e) {
+  e.stopPropagation();
+});
+
+if(1) {
+  jQuery('body').attr('tabindex', '0');
+}
+else {
+  alertify.confirm().set({'reverseButtons': true});
+  alertify.prompt().set({'reverseButtons': true});
+} </script>
+
+
+<script>
+jQuery(document).ready(function() {
+  // Get an array of all element heights
+  var elementHeights = jQuery('.woocommerce-LoopProduct-link').map(function() {
+    return jQuery(this).height();
+  }).get();
+
+  // Math.max takes a variable number of arguments
+  // `apply` is equivalent to passing each height as an argument
+  var maxHeight = Math.max.apply(null, elementHeights);
+
+  // Set each height to the max height
+  jQuery('.woocommerce-LoopProduct-link').height(maxHeight);
+});
+</script>
+
+
+
+<?php
+		
+	}
+
+add_action('wp_footer','ab_inspiration_footer_scripts', 100);
+
+
+// вставки скриптов в header 
+
+function ab_inspiration_header_scripts() { 
+
+echo of_get_option('metatag', '' ); ?>
+<?php if (is_home() ||  is_page_template('enterpage.php')) { ?>
+<meta property="og:title" content="<?php echo of_get_option('blog_title'); ?>">
+<meta property="og:type" content="website">	
+<meta property="og:url" content="<?php bloginfo('url') ?>">
+<meta property="og:image" content="<?php echo of_get_option('facebook_image'); ?>">
+<meta property="og:description" content="<?php bloginfo('description') ?>"> 
+<meta name="twitter:image" content="<?php echo of_get_option('facebook_image'); ?>">
+<meta name="twitter:site" content="@<?php echo of_get_option('twitter');?>">
+<meta name="twitter:creator" content="@<?php echo of_get_option('twitter');?>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?php the_title(); ?>">
+<meta name="twitter:description" content="<?php while(have_posts()):the_post(); $out_excerpt = str_replace(array("\r\n", "\r", "\n", "'" ,"\""), "", get_the_excerpt()); echo apply_filters('new_length', $out_excerpt); endwhile; ?>">
+<?php } else {?>
+<meta property="og:title" content="<?php the_title(); ?>">
+<meta property="og:type" content="article">
+<meta property="og:url" content="<?php the_permalink() ?>">
+<meta property="og:description" content="<?php while(have_posts()):the_post(); $out_excerpt = str_replace(array("\r\n", "\r", "\n", "'" ,"\""), "", get_the_excerpt()); echo apply_filters('new_length', $out_excerpt); endwhile; ?>" />
+<meta property="og:site_name" content="<?php bloginfo('name') ?>">
+<meta property="fb:app_id" content="<?php echo of_get_option('facebook_app');?>"/>
+<meta name="twitter:site" content="@<?php echo of_get_option('twitter');?>">
+<meta name="twitter:creator" content="@<?php echo of_get_option('twitter');?>">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?php the_title(); ?>">
+<meta name="twitter:description" content="<?php while (have_posts()):the_post(); $out_excerpt = str_replace(array("\r\n", "\r", "\n", "'" ,"\""), "", get_the_excerpt()); echo apply_filters('new_length', $out_excerpt); endwhile; ?>">
+<?php if(!has_post_thumbnail( $post->ID )) { $default_image=of_get_option('facebook_image'); echo '<meta name="thumbnail" content="' . $default_image . '" /><meta name="twitter:image:src" content="' . $default_image . '"><meta property="og:image" content="' . $default_image . '">'; } else { $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); echo '<meta name="thumbnail" content="' . esc_attr( $thumbnail_src[0] ) . '" /><meta name="twitter:image:src" content="' . esc_attr( $thumbnail_src[0] ) . '"><meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '">'; } echo "\n"; ?><?php } ?>
+<meta name="twitter:image:width" content="435">
+<meta name="twitter:image:height" content="375">
+
+<?php if (of_get_option('vk_app') !== '' && !is_page_template('enterpage.php')  ) { ?>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script><?php } ?>
+
+<?php if (is_page_template('testimonials-page.php'))  { ?>
+<script defer="defer" src='https://www.google.com/recaptcha/api.js'></script><?php } ?>
+
+<?php if (of_get_option('fbpixel') !== '') { ?>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '<?php echo of_get_option('fbpixel'); ?>'); 
+fbq('track', 'PageView');
+<?php $custom = get_post_custom($post->ID);
+if($custom['ViewContent'][0] == 1 ): ?> fbq('track', 'ViewContent'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['Search'][0] == 1 ): ?> fbq('track', 'Search');<?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['AddToCart'][0] == 1 ): ?> fbq('track', 'AddToCart'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['AddToWishlist'][0] == 1 ): ?> fbq('track', 'AddToWishlist'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['InitiateCheckout'][0] == 1 ): ?>  fbq('track', 'InitiateCheckout'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['AddPaymentInfo'][0] == 1 ): ?>  fbq('track', 'AddPaymentInfo'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['Purchase'][0] == 1 ): ?> fbq('track', 'Purchase'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['Lead'][0] == 1 ): ?>  fbq('track', 'Lead'); <?php endif; ?>
+<?php $custom = get_post_custom($post->ID);
+if($custom['CompleteRegistration'][0] == 1 ): ?> fbq('track', 'CompleteRegistration'); <?php endif; ?>
+
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=<?php echo of_get_option('fbpixel'); ?>&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<?php } }
+	add_action('wp_head','ab_inspiration_header_scripts', 100);
+	
+	
+	
+	add_action( 'after_setup_theme', 'my_remove_parent_theme_stuff', 0 );
+
+function my_remove_parent_theme_stuff() {
+ remove_action( 'woocommerce_after_shop_loop_item_title', 
+               'woocommerce_template_loop_price', 10 );
+
+
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_price', 5 );
+
+}
+
+
+
+// 1. Show plus minus buttons
+  
+add_action( 'woocommerce_after_quantity_input_field', 'bbloomer_display_quantity_plus' );
+  
+function bbloomer_display_quantity_plus() {
+   echo '<div class="quantity-button plus" style="width: 1.875rem;height: 1.875rem;    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;justify-content: center;"><i class="lni lni-plus lni-sm" style="border-radius:50%; background:#eceef4; padding:6px; cursor: pointer;"></i></div>';
+}
+  
+add_action( 'woocommerce_before_quantity_input_field', 'bbloomer_display_quantity_minus' );
+  
+function bbloomer_display_quantity_minus() {
+   echo '<div class="quantity-button minus" style="width: 1.875rem;height: 1.875rem;    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;justify-content: center;"><i class="lni lni-minus lni-sm" style="border-radius:50%; background:#eceef4; padding:6px; cursor: pointer;"></i></div>';
+}
+  
+// -------------
+// 2. Trigger update quantity script
+  
+add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
+  
+function bbloomer_add_cart_quantity_plus_minus() {
+ 
+   if ( ! is_product() && ! is_cart() ) return;
+   
+   
+   
+   
+ 
+
+
+   ?>
+		<script type="text/javascript">
+						
+			jQuery(document).ready(function($) {   
+					
+				var forms = jQuery('.woocommerce-cart-form, form.cart');
+						forms.find('.quantity.hidden').prev( '.quantity-button' ).hide();
+						forms.find('.quantity.hidden').next( '.quantity-button' ).hide();
+
+				$(document).on( 'click', 'form.cart .quantity-button, .woocommerce-cart-form .quantity-button', function() {
+
+					var $this = $(this);					
+
+					// Get current quantity values
+					var qty = $this.closest( '.quantity' ).find( '.qty' );
+					var val = ( qty.val() == '' ) ? 0 : parseFloat(qty.val());
+					var max = parseFloat(qty.attr( 'max' ));
+					var min = parseFloat(qty.attr( 'min' ));
+					var step = parseFloat(qty.attr( 'step' ));
+
+					// Change the value if plus or minus
+					if ( $this.is( '.plus' ) ) {
+						if ( max && ( max <= val ) ) {
+							qty.val( max ).change();
+						} 
+						else {
+							qty.val( val + step ).change();
+						}
+					} 
+					else {
+						if ( min && ( min >= val ) ) {
+							qty.val( min ).change();
+						} 
+						else if ( val >= 1 ) {
+							qty.val( val - step ).change();
+						}
+					}							
+				});          
+			});
+			
+			function quantity_step_btn() {
+    var timeoutPlus;
+    jQuery('.quantity .plus').one().on('click', function() {
+        var inputt = jQuery(this).prev('input.qty');
+        var val = parseInt(inputt.val());
+        var step = inputt.attr('step');
+        step = 'undefined' !== typeof(step) ? parseInt(step) : 1;
+        inputt.val( val + step ).change();
+
+        if( timeoutPlus != undefined ) {
+            clearTimeout(timeoutPlus)
+        }
+        timeoutPlus = setTimeout(function(){
+            jQuery('[name="update_cart"]').trigger('click');
+        }, 1000);
+    });
+
+    var timeoutMinus;
+    jQuery('.quantity .minus').one().on('click', function() {
+          var inputt = jQuery(this).next('input.qty');
+        var val = parseInt(inputt.val());
+        var step = inputt.attr('step');
+        step = 'undefined' !== typeof(step) ? parseInt(step) : 1;
+        if (val > 1) {
+            inputt.val( val - step ).change();
+        }
+
+        if( timeoutMinus != undefined ) {
+            clearTimeout(timeoutMinus)
+        }
+        timeoutMinus = setTimeout(function(){
+            jQuery('[name="update_cart"]').trigger('click');
+        }, 1000);
+    });
+
+    var timeoutInput;
+    jQuery('div.woocommerce').on('change', '.qty', function(){
+        if( timeoutInput != undefined ) {
+            clearTimeout(timeoutInput)
+        }
+        timeoutInput = setTimeout(function(){
+            jQuery('[name="update_cart"]').trigger('click');
+        }, 1000);
+    });
+}
+
+jQuery( document ).on( 'updated_cart_totals', function() {
+    
+    quantity_step_btn();
+});
+
+						
+		</script>
+   <?php
+
+    
+ }

@@ -188,21 +188,9 @@ if ($buyexclude['1'] == 'two') {echo '';} else  { ?>    <div style="float:right"
 
 <!-- begin custom related loop, isa -->
 
-<style>
+<style scoped><?php if ($ab_catalog['image_shape'] == 2) { ?> .heightimage{ height: 0px;padding-top:67%} <?php }
+elseif ($ab_catalog['image_shape'] == 3) { ?> .heightimage{ height: 0px;padding-top:120% } <?php } else { ?> .heightimage { height: 0px;padding-top:98.5% } <?php } ?></style>
 
-<?php if ($ab_catalog['image_shape'] == 2) { ?>
-.heightimage
-{ height: 0px;
-padding-top:67% !important}
-<?php }
-else { ?>
-.heightimage
-{ height: 0px;
-padding-top:120% !important}
-<?php } 
-
-?>
-</style>
 <?php
 
 // get the custom post type's taxonomy terms

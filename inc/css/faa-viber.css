@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'faa-viber';
+	src:url('../inc/fonts/faa-viber.eot?-3dwksg');
+	src:url('../inc/fonts/faa-viber.eot?#iefix-3dwksg') format('embedded-opentype'),
+		url('../inc/fonts/faa-viber.ttf?-3dwksg') format('truetype'),
+		url('../inc/fonts/faa-viber.woff?-3dwksg') format('woff'),
+		url('../inc/fonts/faa-viber.svg?-3dwksg#faa-viber') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.faa-viber:before {
+	font-family: 'faa-viber';
+	content: "\e666";
+}

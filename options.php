@@ -2072,13 +2072,7 @@ $options[] = array(
 
 $options[] = array( "name" => __('Вставки', 'inspiration'),
 "type" => "heading");
-						
-
-$options[] = array( "name" => __('Фавикон', 'inspiration'),
-"desc" => __(' <strong>Размер картинки фавикона 16х16 пикселей в формате ico или gif</strong>. Создать фавикон: <a href="http://pr-cy.ru/favicon/" target="_blank">http://pr-cy.ru/favicon/</a>', 'inspiration'),
-"id" => "favicon",
-"std" => "",
-"type" => "upload");
+					
 
 $options[] = array( "name" => __('Изображение в социальной сети по умолчанию (800px x 450px)', 'inspiration'),
 "desc" => __('Загрузите изображение, которое будет уходить в фейсбук и другие социальные сети, если не указана миниатюра записи', 'inspiration'),

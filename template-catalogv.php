@@ -92,7 +92,7 @@ endif; ?>
 <div class="cbp-caption">
 <div class="cbp-caption-defaultWrap" >
 <style scoped><?php if ($ab_catalog['image_shape'] == 2) { ?> .heightimage{ height: 0px;padding-top:67%} <?php }
-else { ?> .heightimage{ height: 0px;padding-top:120%} <?php } ?></style>
+elseif ($ab_catalog['image_shape'] == 3) { ?> .heightimage{ height: 0px;padding-top:120% } <?php } else { ?> .heightimage { height: 0px;padding-top:98.5% } <?php } ?></style>
 <div class="katalog-enterpage heightimage" style="width:auto; background: url(<?php 
 if ( has_post_thumbnail() ) { $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); echo  $large_image_url[0] ; } ?>) center center no-repeat; background-size:contain;">
 </div>

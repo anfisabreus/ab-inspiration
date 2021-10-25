@@ -1063,7 +1063,7 @@ class EDD_Theme_Updater_Admin {
 
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.83',
+			'version' => '8.85',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -1765,6 +1765,9 @@ global $homepage;
  if ( of_get_option('share_skin') == '1')   $skin = "classic"; elseif ( of_get_option('share_skin') == '2') $skin = "flat"; else $skin = "birman";
 wp_enqueue_style( 'ab-complete-styles', get_template_directory_uri() . '/inc/css/bootstrap.min.css', array(), null, 'all' );
 wp_enqueue_style( 'ab-complete-styles', get_template_directory_uri() . '/inc/css/fontawesome-all.css', array(), null, 'all' );
+wp_enqueue_style( 'style-icons', get_template_directory_uri() . '/inc/css/style-icons.css', array(), null, 'all' );
+
+
 
 wp_enqueue_style( 'ab-complete-style', get_stylesheet_uri() );
 
