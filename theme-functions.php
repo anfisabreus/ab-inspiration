@@ -1946,17 +1946,13 @@ function bbloomer_display_quantity_minus() {
 // 2. Trigger update quantity script
   
 add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
+if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+
   
 function bbloomer_add_cart_quantity_plus_minus() {
  
    if ( ! is_product() && ! is_cart() ) return;
    
-   
-   
-   
- 
-
-
    ?>
 		<script type="text/javascript">
 						
@@ -2054,9 +2050,8 @@ jQuery( document ).on( 'updated_cart_totals', function() {
 
     
  }
+ }
 
-<?php
-		
-	}
+
 
 add_action('wp_footer','ab_inspiration_footer_scripts', 100);
