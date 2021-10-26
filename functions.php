@@ -984,54 +984,6 @@ add_filter( 'video_embed_html', 'inspiration_embed_html' ); // Jetpack
 
 
 
-function add_dashboard_widget()
-{
-    wp_add_dashboard_widget("rss-feed", "Новости AB-Inspiration", "display_rss_dashboard_widget");
-}
-
-function display_rss_dashboard_widget()
-{
-
-	include_once( ABSPATH . WPINC . "/feed.php");
-
-	$rss = fetch_feed("https://anfisabreus.ru/category/shablon-ab-inspiration-dlya-wordpress/feed");
-    $maxitems = $rss->get_item_quantity(9); 
-    $rss_items = $rss->get_items(0, $maxitems);
-	
-	?>
-
-	<ul>
-		<?php
-			if($maxitems == 0)
-			{
-				echo "<li>No items</li>";
-			}
-			else
-			{
-				foreach($rss_items as $item)
-				{
-					?>
-						<li>
-			                <a href="<?php echo esc_url($item->get_permalink()); ?>" target="_blank" style="font-size:14px">
-			                    <?php echo esc_html($item->get_title()); ?>
-			                </a>
-			               <?php echo $item->get_date('j.m.Y'); ?>
-			            </li>
-					<?php
-				}
-			}
-		?>
-	</ul>
-
-	<?php
-}
-
-add_action("wp_dashboard_setup", "add_dashboard_widget");
-
-
-
-
-
 class EDD_Theme_Updater_Admin {
 	
 
@@ -1062,7 +1014,7 @@ class EDD_Theme_Updater_Admin {
 			'remote_api_url' => 'https://ab-inspiration.com',
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.85',
+			'version' => '8.85.2',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
