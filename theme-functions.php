@@ -1138,33 +1138,125 @@ name="subscribtion_form" target="_blank" style="<?php if (of_get_option('form_up
 <?php }
 }
 
+
+
+if ( ! function_exists( 'ab_inspiration_comment_form' ) ) :
+	/**
+	 * Documentation for function.
+	 */
+	function ab_inspiration_comment_form( $order ) {
+		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
+
+			comment_form(
+				array(
+					
+					'logged_in_as' => null,
+					'title_reply'  => "",
+				)
+			);
+		}
+	}
+endif;
+
+// Comment form: Remove URL, add placeholder to Name and Email fields
+function chaplin_child_filter_comment_form( $fields ) {
+
+	// Remove the URL field
+	unset( $fields['url'] );
+
+	// Get variables used in the field array
+	$req      	= get_option( 'require_name_email' );
+	$html_req 	= ( $req ? " required='required'" : '' );
+	$html5    	= current_theme_supports( 'html5', 'comment-form' );
+	$commenter	= wp_get_current_commenter();
+
+	// Modify the author field
+	$fields['author'] = '<p class="comment-form-author" style="margin-right:10px">' . '<label class="screen-reader-text" for="author">' . __( 'Имя' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" maxlength="245"' . $html_req . ' placeholder=" ' . __( 'Имя' ) . ( $req ? ' *' : '' ) . '" /></p>';
+
+	// Modify the email field
+	$fields['email'] = '<p class="comment-form-email" style="margin-right:10px"><label class="screen-reader-text" for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' . '<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" maxlength="100" aria-describedby="email-notes"' . $html_req . ' placeholder=" ' . __( 'Email' ) . ( $req ? ' *' : '' ) . '" /></p>';
+	
+	
+	// Modify the website field
+	$fields['url'] = '<p class="comment-form-url"><label class="screen-reader-text" for="url">' . __( 'Вебсайт' )  . '</label> ' . '<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" maxlength="100" placeholder=" ' . __( 'Вебсайт' ) . '" /></p>';
+	
+	
+
+    
+    return $fields;
+}
+add_filter( 'comment_form_default_fields', 'chaplin_child_filter_comment_form' );
+
+// Comment form: Add placeholder to comment field 
+function chaplin_child_filter_comment_form_defaults( $defaults ) {
+
+	$defaults['comment_field'] = '<p class="comment-form-comment"><label class="screen-reader-text" for="comment">' . _x( 'Comment', 'noun' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="4" maxlength="65525" required="required" placeholder="' . _x( 'Comment', 'noun' ) . '"></textarea></p>';
+    
+    return $defaults;
+}
+add_filter( 'comment_form_defaults', 'chaplin_child_filter_comment_form_defaults' );
+
+
+add_filter( 'comment_form_default_fields', 'wc_comment_form_hide_cookies' );
+function wc_comment_form_hide_cookies( $fields ) {
+	unset( $fields['cookies'] );
+	return $fields;
+}
+
 function comments_post() {
  if (of_get_option('comments_tabber') == '1' && comments_open()) { ?>
-<div class="leavecomment"><?php _e( 'Оставьте свой комментарий:', 'inspiration' ); ?></div>
-<div class="tabber" style="margin-top:20px;">
-<div class="tabbertab">
-<?php if (of_get_option('comments_blog') == '1') { echo ' <span>'. __('на Блоге', 'inspiration') .'</span>'. comments_template('', true); }
-	if (of_get_option('comments_blog') == '2') { echo ' <span>'. __('в Вконтакте', 'inspiration') .'</span><div id="vk_comments"></div>'; }
-	if (of_get_option('comments_blog') == '3') { echo ' <span>'. __('в Фейсбук', 'inspiration') .'</span><div class="fb-comments" data-href="'. get_the_permalink() .'" data-num-posts="20" data-width="100%"></div> '; } ?>
+<div class="leavecomment" style="margin-top:4px"><?php _e( 'Оставьте свой комментарий:', 'inspiration' ); ?></div>
+
+
+  
+<ul class="nav nav-pills mb-3 commentstabs" id="pills-comments" role="tablist">
+  <li class="nav-item commentab" role="presentation">
+  
+ <?php if (of_get_option('comments_blog') == '1') { ?>   <a class="nav-link active commentlink" id="pills-blog-tab" data-bs-toggle="pill" data-bs-target="#pills-blog" type="button" role="tab" aria-controls="pills-blog" aria-selected="true"><?php echo __('на Блоге', 'inspiration'); ?></a> <?php } ?> 
+   <?php if (of_get_option('comments_blog') == '2') { ?>   <a class="nav-link commentlink" id="pills-kontakt-tab" data-bs-toggle="pill" data-bs-target="#pills-kontakt" type="button" role="tab" aria-controls="pills-kontakt" aria-selected="false"><?php echo __('в Вконтакте', 'inspiration'); ?></a><?php } ?> 
+    <?php if (of_get_option('comments_blog') == '3') { ?>  <a class="nav-link commentlink" id="pills-facebook-tab" data-bs-toggle="pill" data-bs-target="#pills-facebook" type="button" role="tab" aria-controls="pills-facebook" aria-selected="false"><?php echo __('в Фейсбук', 'inspiration'); ?></a><?php } ?> 
+    
+    
+    
+  </li>
+  <li class="nav-item commentab" role="presentation">
+   <?php if (of_get_option('comments_vk') == '1') { ?>   <a class="nav-link active commentlink" id="pills-blog-tab" data-bs-toggle="pill" data-bs-target="#pills-blog" type="button" role="tab" aria-controls="pills-blog" aria-selected="true"><?php echo __('на Блоге', 'inspiration'); ?></a> <?php } ?> 
+   <?php if (of_get_option('comments_vk') == '2') { ?>   <a class="nav-link commentlink" id="pills-kontakt-tab" data-bs-toggle="pill" data-bs-target="#pills-kontakt" type="button" role="tab" aria-controls="pills-kontakt" aria-selected="false"><?php echo __('в Вконтакте', 'inspiration'); ?></a><?php } ?> 
+    <?php if (of_get_option('comments_vk') == '3') { ?>  <a class="nav-link commentlink" id="pills-facebook-tab" data-bs-toggle="pill" data-bs-target="#pills-facebook" type="button" role="tab" aria-controls="pills-facebook" aria-selected="false"><?php echo __('в Фейсбук', 'inspiration'); ?></a><?php } ?> 
+  </li>
+  <li class="nav-item commentab" role="presentation">
+   <?php if (of_get_option('comments_fb') == '1') { ?>   <a class="nav-link active commentlink" id="pills-blog-tab" data-bs-toggle="pill" data-bs-target="#pills-blog" type="button" role="tab" aria-controls="pills-blog" aria-selected="true"><?php echo __('на Блоге', 'inspiration'); ?></a> <?php } ?> 
+   <?php if (of_get_option('comments_fb') == '2') { ?>   <a class="nav-link commentlink" id="pills-kontakt-tab" data-bs-toggle="pill" data-bs-target="#pills-kontakt" type="button" role="tab" aria-controls="pills-kontakt" aria-selected="false"><?php echo __('в Вконтакте', 'inspiration'); ?></a><?php } ?> 
+    <?php if (of_get_option('comments_fb') == '3') { ?>  <a class="nav-link commentlink" id="pills-facebook-tab" data-bs-toggle="pill" data-bs-target="#pills-facebook" type="button" role="tab" aria-controls="pills-facebook" aria-selected="false"><?php echo __('в Фейсбук', 'inspiration'); ?></a><?php } ?> 
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  
+  <div class="tab-pane fade show active" id="pills-blog" role="tabpanel" aria-labelledby="pills-blog-tab"><?php if (of_get_option('smiles') == '1') { echo  qipsmiles_insert('ru');}  else {  } ?>
+  <?php echo comments_template('', true); ?> 
+  <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
+<div class="garantiya-bottom-commets"><a class="fancybox" href="#inline" title="<?php _e( 'Согласие на обработку персональных данных', 'inspiration' ); ?> " ref="nofollow"><?php _e( 'Нажимая на кнопку "Отправить комментарий", я соглашаюсь с политикой обработки персональных данных', 'inspiration' ); ?></a></div>
+<?php echo konf_personal(); ?>
+<?php }  ?></div>
+
+  <div class="tab-pane fade" id="pills-kontakt" role="tabpanel" aria-labelledby="pills-kontakt-tab"><div id="vk_comments"></div></div>
+  
+  <div class="tab-pane fade" id="pills-facebook" role="tabpanel" aria-labelledby="pills-facebook-tab"><div class="fb-comments" data-href="<?php echo get_the_permalink(); ?>'" data-num-posts="20" data-width="100%"></div></div>
+  
 </div>
-<div class="tabbertab">
-	<?php if (of_get_option('comments_vk') == '1') { echo ' <span>'. __('на Блоге', 'inspiration') .'</span>'. comments_template('', true); }
-	if (of_get_option('comments_vk') == '2') { echo ' <span>'. __('в Вконтакте', 'inspiration') .'</span><div id="vk_comments"></div> '; }
-	if (of_get_option('comments_vk') == '3') { echo ' <span>'. __('в Фейсбук', 'inspiration') .'</span><div class="fb-comments" data-href="'. get_the_permalink() .'" data-num-posts="20" data-width="100%"></div> '; } ?>
-</div>
-<div class="tabbertab">
-	<?php if (of_get_option('comments_fb') == '1') { echo ' <span>'. __('на Блоге', 'inspiration') .'</span>'. comments_template('', true); }
-	if (of_get_option('comments_fb') == '2') { echo ' <span>'. __('в Вконтакте', 'inspiration') .'</span><div id="vk_comments"></div> '; }
-	if (of_get_option('comments_fb') == '3') { echo ' <span>'. __('в Фейсбук', 'inspiration') .'</span><div class="fb-comments" data-href="'. get_the_permalink() .'" data-num-posts="20" data-width="100%"></div> '; } ?>
-</div>
-</div>
+
+
+
 
 <?php } ?>
 
 <?php if (of_get_option('comments_tabber') == '2' && comments_open()) { ?>
  	
 	<div class="">
-<?php if (of_get_option('comments_blog') == '1') { echo ''. comments_template('', true); }
+<?php if (of_get_option('comments_blog') == '1') { ?>  <div class="leavecomment" style="margin-top:4px"><?php _e( 'Оставьте свой комментарий:', 'inspiration' ); ?></div><br> <?php if (of_get_option('smiles') == '1') { echo  qipsmiles_insert('ru');}  else {  } ?><?php echo comments_template('', true); ?> <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
+<div class="garantiya-bottom-commets"><a class="fancybox" href="#inline" title="<?php _e( 'Согласие на обработку персональных данных', 'inspiration' ); ?> " ref="nofollow"><?php _e( 'Нажимая на кнопку "Отправить комментарий", я соглашаюсь с политикой обработки персональных данных', 'inspiration' ); ?></a></div>
+<?php echo konf_personal(); ?>
+<?php }  ?><?php }
 	if (of_get_option('comments_blog') == '2') { echo ' <div  style="clear:both; font-size:18px;margin:20px 0">'. __('Комментарии в Вконтакте', 'inspiration') .'</div><div id="vk_comments"></div>'; }
 	if (of_get_option('comments_blog') == '3') { echo ' <div  style="clear:both; font-size:18px;margin:20px 0">'.__('Комментарии в Фейсбук', 'inspiration').'</div><div class="fb-comments" data-href="'. get_the_permalink() .'" data-num-posts="20" data-width="100%"></div> '; } ?>
 </div>
@@ -1185,10 +1277,21 @@ function comments_post() {
 <div style="clear:both;"></div>
 
 
-<?php  if (of_get_option('comments_tabber') == '3') { 
+<?php  if (of_get_option('comments_tabber') == '3' && comments_open()) {  ?>
+<div class="leavecomment"><?php _e( 'Оставьте свой комментарий:', 'inspiration' ); ?></div><br> <div  style="clear:both"><?php if (of_get_option('smiles') == '1') { echo  qipsmiles_insert('ru');}  else {  } ?></div><?php
+
+comments_template('', true); 
+
+ if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
+<div class="garantiya-bottom-commets"><a class="fancybox" href="#inline" title="<?php _e( 'Согласие на обработку персональных данных', 'inspiration' ); ?> " ref="nofollow"><?php _e( 'Нажимая на кнопку "Отправить комментарий", я соглашаюсь с политикой обработки персональных данных', 'inspiration' ); ?></a></div>
+<?php echo konf_personal(); ?>
+<?php } 
 
 
-comments_template('', true); } }
+
+} 
+
+}
 
 
 
@@ -1236,7 +1339,7 @@ function list_shortcodes_mce_css() {
 	wp_enqueue_script('list_js', get_template_directory_uri() . '/inc/js/list-mce-button.js');
 
 }
-add_action( 'admin_enqueue_scripts', 'list_shortcodes_mce_css', 20 );
+add_action( 'admin_enqueue_scripts', 'list_shortcodes_mce_css' );
 
 function ab_title() { ?>
 <h2 class="entry-title" itemprop="name headline"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -1607,7 +1710,7 @@ add_action( 'edit_user_created_user', 'wp_send_new_user_notifications' );
 // Change WooCommerce "Related products" text
 
 add_filter('gettext', 'change_rp_text', 20, 3);
-add_filter('ngettext', 'change_rp_text', 20, 3);
+add_filter('gettext', 'change_rp_text', 20, 3);
 
 function change_rp_text($translated, $text, $domain)
 {
@@ -1695,7 +1798,7 @@ jQuery('#slider').flexslider({ animation: "slide", controlNav: false, animationL
   if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
     if (!this.executed) {
       this.executed = true;
-      setTimeout(function () {onOkConnectReady()}, 0);
+      setTimeout(function () { onOkConnectReady()}, 0);
     }
   }}
   d.documentElement.appendChild(js);
@@ -1944,9 +2047,9 @@ function bbloomer_display_quantity_minus() {
   
 // -------------
 // 2. Trigger update quantity script
-  
-add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
 if( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
+
 
   
 function bbloomer_add_cart_quantity_plus_minus() {
@@ -2055,3 +2158,25 @@ jQuery( document ).on( 'updated_cart_totals', function() {
 
 
 add_action('wp_footer','ab_inspiration_footer_scripts', 100);
+
+
+function short_code_woo_comm_desc( $atts ) {
+$atts = shortcode_atts( array(
+    'id' => null
+), $atts, 'tag_for_short_code_price' );
+
+if ( empty( $atts[ 'id' ] ) ) {
+    return '';
+}
+
+$product = wc_get_product( $atts['id'] );
+
+if ( ! $product ) {
+    return '';
+}
+
+       return $product->get_price_html();
+    }
+
+    add_shortcode( 'tag_for_short_code_price', 'short_code_woo_comm_desc' );
+    

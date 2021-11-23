@@ -2034,7 +2034,7 @@ $options[] = array("name" => __('Комментарии соц сетей (3 в 
 
 $options[] = array( "name" => __('Выберите, как будут отображаться комментарии 3 в одном', 'inspiration'),
 "id" => "comments_tabber",
-"std" => "1",
+"std" => "3",
 "type" => "select",
 "class" => "mini", //mini, tiny, small
 "options" => $comments_tabber);                        
@@ -2067,7 +2067,7 @@ $options[] = array("name" => __('Смайлы в комментариях', 'ins
 $options[] = array(
 "desc" => __('Поставьте галочку, если хотите, чтобы в комментариях отображалась смайлики.', 'inspiration'),
 "id" => "smiles",
-"std" => "true",
+"std" => "false",
 "type" => "checkbox");
 
 $options[] = array( "name" => __('Вставки', 'inspiration'),

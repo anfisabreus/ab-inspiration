@@ -14,7 +14,7 @@
 <html <?php language_attributes(); ?> prefix="fb: http://www.facebook.com/2008/fbml">
 <!--<![endif]-->
 <head>
-<meta name=viewport content="user-scalable=0, initial-scale=1.0">
+<meta name=viewport content="width=device-width, user-scalable=0">
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <title><?php bloginfo('name'); ?> | <?php is_home() ? bloginfo('description') : wp_title('&laquo;', true, 'right'); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" >

@@ -115,8 +115,9 @@ echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #
 <?php the_content(); ?>
 
 </div>
-  
-   <div style="clear:both; padding-top:40px;"><?php comments_post(); ?></div>
+  <?php if ( !is_user_logged_in() ) { ?>
+   <div style="clear:both; padding-top:40px;"><?php comments_template('', true); ?></div> 
+   <?php } ?>
 
 </div><!-- .entry-content -->
 	
