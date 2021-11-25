@@ -204,11 +204,11 @@ $array1 = $ab_wpcourseware['id_courses_courses'];
 $array2 = $ab_wpcourseware['id_courses_product'];
 $array = array_combine($array1, $array2);
 $key =  get_the_ID();
-$value = $array[$key];	
+$value1 = $array[$key];	
 
 ?>
  
-<div style="margin-left:15px"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value.'"]'); ?> </div>
+<div style="margin-left:15px"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
 
 <?php }    }  } else { echo ''; } ?>
 
@@ -227,7 +227,7 @@ $value = $array[$key];
 															  
 															  
 															  
-															 
+														 
 $payments_type = $course->get_payments_type();	
 if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php echo the_permalink(); ?>" rel="bookmark"  style="margin-top: 0px; margin-bottom: 0px;padding: 0px; float:right; margin-left: 15px;
     background: #ffcb03 !important;
@@ -242,18 +242,24 @@ if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php i
 
 if ( $payments_type !== 'free') {
 
-	if (function_exists('abwpwoo_price_wpcourseware_woocommerce') && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) 
+if (function_exists('abwpwoo_price_wpcourseware_woocommerce') && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) 
 { 
 $array1 = $ab_wpcourseware['id_courses_courses'];
 $array2 = $ab_wpcourseware['id_courses_product'];
 $array = array_combine($array1, $array2);
 $key =  get_the_ID();
 $value = $array[$key];	
-echo do_shortcode('[add_to_cart id="'.$value.'"]');  }
+
+
+
+
+?> <div class="price-for-course"> <?php
+echo do_shortcode('[add_to_cart id="'.$value.'"]'); ?> </div> <?php }
 else { echo $course->get_payments_price() .' '. wpcw_get_currency_symbol() .' '. $course->get_enrollment_button(); } 
 
 }  else { echo $course->get_enrollment_button(); } }  ?></div>	
 </div>
+
 
 	
 

@@ -209,11 +209,11 @@ $array1 = $ab_wpcourseware['id_courses_courses'];
 $array2 = $ab_wpcourseware['id_courses_product'];
 $array = array_combine($array1, $array2);
 $key =  get_the_ID();
-$value = $array[$key];	
+$value1 = $array[$key];	
 
 ?>
  
-<div style="margin-left:15px"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value.'"]'); ?> </div>
+<div style="margin-left:15px"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
 
 <?php } } } else { echo ''; } ?>
 
