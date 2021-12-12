@@ -2206,7 +2206,7 @@ $options[] = array( "name" => __('Политика обработки персо
 						
 						
 					
-$options[] = array( "name" => __('Форма в виджете', 'inspiration'),
+$options[] = array( "name" => __('Форма в боковой колонке', 'inspiration'),
 "type" => "heading");
 
 $options[] = array("name" => __('Настройка полей формы', 'inspiration'),

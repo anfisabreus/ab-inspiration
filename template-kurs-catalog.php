@@ -76,7 +76,8 @@ height: 34px;font-size: 16px !important;}
 .woocommerce-Price-currencySymbol {font-size:18px}
 
 
-  #wrapper .entry-box h2 a:link{font-size:20px !important; line-height:1.3 }
+#content .entry-box h2{line-height:0!important; margin-top:20px !important }
+  #content .entry-box h2 a:link{font-size:20px !important; font-weight: 600 !important;}
  @media (min-width: 992px) {
 .col-lg-4 {
     max-width: 31.8%;
@@ -127,14 +128,14 @@ $args = array(
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) { while ( $query->have_posts() ) { $query->the_post(); ?>
 
-<div style="padding-bottom:20px !important; display:grid" class="entry-box <?php if($ab_wpcourseware['checkbox_example'] == true) { ?>course-horisontal<?php } else { ?>col-lg-4<?php } ?>">
+<div style="padding-bottom:20px !important; display:grid; grid-row-gap: 0px;" class="entry-box <?php if($ab_wpcourseware['checkbox_example'] == true) { ?>course-horisontal<?php } else { ?>col-lg-4<?php } ?>">
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
 
 
-<div class="post-font" style="height: 100%;display: grid;">
+<div class="post-font" style="height: 100%;display: grid;grid-row-gap: 0px;">
 
 <?php if (function_exists('abwpwoo_headline_link') && isset($ab_wpcourseware['id_courses_courses_pages']) && isset($ab_wpcourseware['id_courses_pages'])) {
 $array1 = $ab_wpcourseware['id_courses_courses_pages'];
@@ -183,8 +184,7 @@ $value = $array[$key];
 
 	echo do_shortcode( ' [wpcourse_progress_bar course="' . $course->get_course_id() . '"]' ); ?>
 	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 0px;float: right; margin-bottom:15px; margin-left: 15px;
-    background: #ffcb03 !important;
-    color: #ffffff !important;
+
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     font-size: 16px !important;
@@ -213,7 +213,7 @@ $value1 = $array[$key];
 
 ?>
  
-<div style="margin-left:15px"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
+<div style="margin-left:15px; align-self: end;"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
 
 <?php } } } else { echo ''; } ?>
 
@@ -252,7 +252,7 @@ $value = $array[$key];
 
 
 ?> <div class="price-for-course"> <?php
-echo do_shortcode('[add_to_cart id="'.$value.'"]'); ?> </div> <?php }
+echo do_shortcode('[add_to_cart id="'.$value.'" show_price = "false"]'); ?> </div> <?php }
 else { echo $course->get_payments_price() .' '. wpcw_get_currency_symbol() .' '. $course->get_enrollment_button(); } 
 
 }  else { echo $course->get_enrollment_button(); } }  ?></div>	

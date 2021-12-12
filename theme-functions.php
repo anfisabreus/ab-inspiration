@@ -1757,11 +1757,11 @@ function ab_inspiration_footer() { ?>
 	
 
 // вставки скриптов в footer 
+add_action('wp_footer','ab_inspiration_footer_scripts', 100);
 
 function ab_inspiration_footer_scripts() { ?>
 
-	
-<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
+	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
 <?php $image_set = get_option( 'image_default_link_type' );
 ?> <script> 
   jQuery( 'a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]' ).addClass( 'fancybox' );
@@ -1918,11 +1918,12 @@ jQuery(document).ready(function() {
 
 
 
+
 <?php
 		
 	}
 
-add_action('wp_footer','ab_inspiration_footer_scripts', 100);
+
 
 
 // вставки скриптов в header 
@@ -2157,7 +2158,7 @@ jQuery( document ).on( 'updated_cart_totals', function() {
 
 
 
-add_action('wp_footer','ab_inspiration_footer_scripts', 100);
+
 
 
 function short_code_woo_comm_desc( $atts ) {
@@ -2179,4 +2180,5 @@ if ( ! $product ) {
     }
 
     add_shortcode( 'tag_for_short_code_price', 'short_code_woo_comm_desc' );
+    
     

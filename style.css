@@ -3,7 +3,7 @@ Theme Name: AB-Inspiration
 Theme URI: https://ab-inspiration.com/downloads/ab-inspiration/
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.89
+Version: 8.90
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -1370,16 +1370,18 @@ p.info{background:#E9F9E5;border:1px solid #B4E8AA;color:#1C8400;padding:5px;cle
     top: 4px;
     margin-right: 20px;}
     .wc_payment_method input  {  zoom: 1;transform: scale(1.8); -ms-transform: scale(1.8);-webkit-transform: scale(1.8); -o-transform: scale(1.8); -moz-transform: scale(1.8); transform-origin: 0 0; -ms-transform-origin: 0 0; -webkit-transform-origin: 0 0; -o-transform-origin: 0 0; -moz-transform-origin: 0 0;     position: relative;
-    top: 0px;
+    bottom: 5px;
     margin-right: 20px;}
-    .woocommerce form .form-row label.checkbox, .woocommerce-page form .form-row label.checkbox {display:inline-flex}
+    .woocommerce form .form-row label.checkbox, .woocommerce-page form .form-row label.checkbox {display:inline-flex; align-items: flex-start;}
     .woocommerce-terms-and-conditions-wrapper {margin-bottom:30px}
 
 .woocommerce-checkout-review-order { border-radius:3px;background:#F7F6F7}
 .woocommerce table.shop_table.woocommerce-checkout-review-order-table {border:none; background:transparent; padding:20px}
 .woocommerce-checkout #payment {background:transparent}
 .woocommerce-info {border-top-color:#f7f6f7}
-#add_payment_method #payment ul.payment_methods li, .woocommerce-cart #payment ul.payment_methods li, .woocommerce-checkout #payment ul.payment_methods li {line-height:1.3em}
+#add_payment_method #payment .payment_method_paypal .about_paypal, .woocommerce-cart #payment .payment_method_paypal .about_paypal, .woocommerce-checkout #payment .payment_method_paypal .about_paypal {line-height: 32px;margin-left: 10px;}
+#add_payment_method #payment .payment_method_paypal img, .woocommerce-cart #payment .payment_method_paypal img, .woocommerce-checkout #payment .payment_method_paypal img {max-height: 32px; }
+
 #customer_details {width:58%}
 #order_review_heading, #order_review {width:38%}
 #content .woocommerce table.shop_table td.actions {border-bottom:none!important; padding-top:30px}
@@ -2581,7 +2583,7 @@ td.wpcw_fe_unit_title, td.wpcw_fe_module_title_header {white-space: nowrap;}
 .mobile-image-link {width:70%}
 .mobile-image-logo { max-width:70%;z-index:4;}
 
-.page-template-elementor_header_footer #main, .page-template-elementor_header_footer #content-main, .elementor-page #main, .elementor-page #content-main{width: 100% !important;
+.page-template-elementor_header_footer #main, .page-template-elementor_header_footer #content-main, .elementor-page #main{width: 100% !important;
     max-width: 100% !important; padding:0px !important
 }
 

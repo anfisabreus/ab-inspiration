@@ -75,7 +75,8 @@ height: 34px;font-size: 16px !important;}
 
 .woocommerce-Price-currencySymbol {font-size:18px}
 
-  #wrapper .entry-box h2 a:link{font-size:20px !important; line-height:1.3; font-weight:600}
+#content .entry-box h2{line-height:0!important;  margin-top:20px !important  }
+  #content .entry-box h2 a:link{font-size:20px !important;font-weight: 600 !important; }
  @media (min-width: 992px) {
 .col-lg-4 {
     max-width: 31.8%;
@@ -181,8 +182,7 @@ $value = $array[$key];
 
 	echo do_shortcode( ' [wpcourse_progress_bar course="' . $course->get_course_id() . '"]' ); ?>
 	<a href="<?php echo the_permalink(); ?> " title="<?php echo the_permalink(); ?>" rel="bookmark" class="more-link" style="margin-top: 0px;float: right; margin-bottom:15px; margin-left: 15px;
-    background: #ffcb03 !important;
-    color: #ffffff !important;
+
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     font-size: 16px !important;
