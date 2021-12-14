@@ -2182,3 +2182,16 @@ if ( ! $product ) {
     add_shortcode( 'tag_for_short_code_price', 'short_code_woo_comm_desc' );
     
     
+    
+/**
+ * Change number of related products output
+ */ 
+
+if ( class_exists( 'woocommerce' ) ) {
+add_filter( 'woocommerce_output_related_products_args', 'ab_related_products_args', 20, 1 );
+  function ab_related_products_args( $args ) {
+	$args['posts_per_page'] = 4; // 4 related products
+	$args['columns'] = 4; // arranged in 2 columns
+	return $args;
+} }
+    
