@@ -90,7 +90,10 @@ get_header(); ?>
 
 </div>
   
-   <div style="clear:both; padding-top:40px;"><?php comments_post(); ?></div>
+    <?php if ( is_user_logged_in() ) { ?>
+   <div style="clear:both; padding-top:40px;"><?php comments_template('', true); ?></div> 
+   <?php } ?>
+
 
 </div><!-- .entry-content -->
 	
