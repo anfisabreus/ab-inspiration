@@ -86,7 +86,9 @@ echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #
 <div id="container">
 <div id="content" role="main" >
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	
 	<div class="mobile-second-menu">
+	
 	<nav class="navbar navbar-6 navbar-light">
  
   <button class="navbar-toggler single-unit" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,45 +101,33 @@ echo '<div style="padding: 20px 20px 30px; margin-bottom:30px;border:1px solid #
   </div>
 </nav>
 	</div>
+	
 <div class="entry-box" itemscope itemtype="http://schema.org/BlogPosting">
-<div class="content-unit" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	      
+   <div class="content-unit" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+     <h1 class="entry-title entry-title-single" itemprop="headline"><?php the_title(); ?></h1>
 
+     <div class="entry-content">
 
+       <div class="post-font" itemprop="articleBody">
+       <?php  the_content(); ?>
+       <?php if ( !is_user_logged_in() ) { ?></div>  </div>   </div> <?php } ?>
+      </div>
+      <?php if ( is_user_logged_in() ) { ?>
+      <div style="clear:both; padding-top:40px;"><?php comments_template('', true); ?></div> 
+      <?php } ?>
 
-
-<h1 class="entry-title entry-title-single" itemprop="headline"><?php the_title(); ?></h1>
-
-<div class="entry-content">
-
-<div class="post-font" itemprop="articleBody">
-
-<?php the_content(); ?>
-
-</div>
-  <?php if ( is_user_logged_in() ) { ?>
-   <div style="clear:both; padding-top:40px;"><?php comments_template('', true); ?></div> 
-   <?php } ?>
-
-</div><!-- .entry-content -->
-	
-	
+	   </div><!-- .entry-content -->
+     
+   </div><!-- .content-unit -->	
  
-	
-	</div><!-- #post-## -->	
-	
-	
-	
-<div style="clear:both;">
-	
-	
-	
-	</div>
-	
+   <div style="clear:both;"></div> 
+</div>	<!-- .entry-box -->
+  
 
 
-</div> <!-- entry-box --></div><!-- #content -->
-<?php endwhile; // end of the loop. ?></div><!-- #container -->	
+<?php endwhile; // end of the loop. ?></div> <!-- #content --></div><!-- #container -->
 
 <?php get_sidebar('kurs'); ?>
 

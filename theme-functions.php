@@ -1757,11 +1757,11 @@ function ab_inspiration_footer() { ?>
 	
 
 // вставки скриптов в footer 
-add_action('wp_footer','ab_inspiration_footer_scripts', 100);
 
 function ab_inspiration_footer_scripts() { ?>
 
-	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
+	
+<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
 <?php $image_set = get_option( 'image_default_link_type' );
 ?> <script> 
   jQuery( 'a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]' ).addClass( 'fancybox' );
@@ -1918,12 +1918,11 @@ jQuery(document).ready(function() {
 
 
 
-
 <?php
 		
 	}
 
-
+add_action('wp_footer','ab_inspiration_footer_scripts', 100);
 
 
 // вставки скриптов в header 
@@ -2055,7 +2054,7 @@ add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
   
 function bbloomer_add_cart_quantity_plus_minus() {
  
-   if ( ! is_product() && ! is_cart() ) return;
+   if ( ! is_product() && ! is_cart() && ! is_page() ) return;
    
    ?>
 		<script type="text/javascript">
@@ -2066,7 +2065,7 @@ function bbloomer_add_cart_quantity_plus_minus() {
 						forms.find('.quantity.hidden').prev( '.quantity-button' ).hide();
 						forms.find('.quantity.hidden').next( '.quantity-button' ).hide();
 
-				$(document).on( 'click', 'form.cart .quantity-button, .woocommerce-cart-form .quantity-button', function() {
+				$(document).on( 'click', 'form.cart .quantity-button, .quantity-button.minus, .woocommerce-cart-form .quantity-button, .quantity-button.minus', function() {
 
 					var $this = $(this);					
 
@@ -2158,7 +2157,7 @@ jQuery( document ).on( 'updated_cart_totals', function() {
 
 
 
-
+add_action('wp_footer','ab_inspiration_footer_scripts', 100);
 
 
 function short_code_woo_comm_desc( $atts ) {
@@ -2180,18 +2179,15 @@ if ( ! $product ) {
     }
 
     add_shortcode( 'tag_for_short_code_price', 'short_code_woo_comm_desc' );
-    
-    
-    
-/**
- * Change number of related products output
- */ 
 
-if ( class_exists( 'woocommerce' ) ) {
-add_filter( 'woocommerce_output_related_products_args', 'ab_related_products_args', 20, 1 );
-  function ab_related_products_args( $args ) {
-	$args['posts_per_page'] = 4; // 4 related products
-	$args['columns'] = 4; // arranged in 2 columns
-	return $args;
-} }
+
+add_filter( 'woocommerce_add_to_cart_sold_individually_found_in_cart', 'handsome_bearded_guy_maybe_redirect_to_cart' );
+
+function handsome_bearded_guy_maybe_redirect_to_cart( $found_in_cart ) {
+ if ( $found_in_cart ) {
+  wp_safe_redirect( wc_get_page_permalink( 'cart' ) );
+  exit;
+ }
+ return $found_in_cart;
+}
     
