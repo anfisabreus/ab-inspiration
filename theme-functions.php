@@ -1683,18 +1683,32 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_post' );
 include_once ABSPATH . 'wp-admin/includes/plugin.php';
 if ( is_plugin_active( 'wp-courseware/wp-courseware.php' ) ) {
 function wpdocs_my_login_redirect( $url, $request, $user ) {
+	
+if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {	
+	
+	
     if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
         if ( $user->has_cap( 'administrator' ) ) {
             $url = admin_url();
-        } else {
+        } else  {
             $url = get_permalink( get_option('woocommerce_myaccount_page_id') ) .'/courses';
         }
     }
+	else { if ( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+        if ( $user->has_cap( 'administrator' ) ) {
+            $url = admin_url();
+        } else  {
+            $url = '';
+        }
+    }}
+	
+}
     return $url;
 }
  
 add_filter( 'login_redirect', 'wpdocs_my_login_redirect', 100, 3 );
 }
+
 
 // ==============================================================
 // Switch off Theme My Login notifications because WP Approve User manages it
@@ -2190,4 +2204,30 @@ function handsome_bearded_guy_maybe_redirect_to_cart( $found_in_cart ) {
  }
  return $found_in_cart;
 }
-    
+   
+   
+add_filter( 'woocommerce_sale_flash', 'add_percentage_to_sale_badge', 20, 3 );
+function add_percentage_to_sale_badge( $html, $post, $product ) {
+    if( $product->is_type('variable')){
+        $percentages = array();
+
+        // Get all variation prices
+        $prices = $product->get_variation_prices();
+
+        // Loop through variation prices
+        foreach( $prices['price'] as $key => $price ){
+            // Only on sale variations
+            if( $prices['regular_price'][$key] !== $price ){
+                // Calculate and set in the array the percentage for each variation on sale
+                $percentages[] = round(100 - ($prices['sale_price'][$key] / $prices['regular_price'][$key] * 100));
+            }
+        }
+        $percentage = max($percentages) . '%';
+    } else {
+        $regular_price = (float) $product->get_regular_price();
+        $sale_price    = (float) $product->get_sale_price();
+
+        $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+    }
+    return '<span class="onsale">' . '-' . $percentage . '</span>';
+}   
