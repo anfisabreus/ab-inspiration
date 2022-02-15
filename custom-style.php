@@ -2158,7 +2158,7 @@ div.entry-title5, .entry-title5 a:link, .entry-title5 a:visited, h3.entry-title2
 #footer {border-top: 2px solid  rgba(0,0,0,.05) !important;}
 .cbp-item-wrapper, .katalog-enterpage {border:none !important}
 ul.product_list_widget .product-title {color:#333 !important}
-#content .woocommerce-MyAccount-navigation ul li a {color:#333 !important}
+#content .woocommerce-MyAccount-navigation ul li a {color:#333}
 
 #site-title a,.entry-title, h1.entry-title,#content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited,
 #footer-widget-area div.widget-title,.post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6,h1.katalog-title,.widget-title,.woocommerce ul.products li.product h3, .cart_totals.calculated_shipping h2,  h3#order_review_heading,  #slides .caption1, .home-level2 .cat-title-homepage, .shop-otzyv-home, .entry-box.ab-inspiration-woocommerce-entry .woocommerce ul.products li.product-category.product h3,  .woocommerce #reviews h3,#wrapper h3, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .buttonsinvite div.heading, .headerformpost, .form-heading, #content h3 a, #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, label.ship-to-different-address-checkbox, .entry-title3 a:link, .entry-title3 a:visited, h3.entry-title1, .heading-title2 p, .heading-title2 span, .heading-title5 p, .heading-title5 span, .heading-title1 p, .heading-title1 span, .heading-title3 p, .heading-title3 span,.heading-title4 p, .heading-title4 span,.heading-title6 p, .heading-title6 span, h3.wpcw-course-title {font-weight:normal}
@@ -2226,7 +2226,7 @@ div.readmore1 {'; if (of_get_option('color_one_text') == '1') { $css .= ' backgr
 
 
 
-div.readmore3, div.readmore2:hover, div.readmore5, div.readmore4:hover, div.readmore6:hover, #content .cbp-l-caption-buttonLeft.buy, #content  .cbp-s-caption-buttonLeft.buy, #content a.cbp-s-caption-buttonLeft:hover,  #content  .cbp-m-caption-buttonLeft.buy, #content a.cbp-l-caption-buttonRight,#content .pagenavi a:hover,.pagenavi span.current, .cbp-s-caption-buttonLeft.buy, div.post-font  a.cbp-s-caption-buttonLeft:hover, div.post-font  a.cbp-s-caption-buttonLeft.buy:link, div.post-font  a.cbp-s-caption-buttonLeft.buy:visited,  div.post-font  a.cbp-m-caption-buttonLeft:hover, div.post-font  a.cbp-m-caption-buttonLeft.buy:link, div.post-font  a.cbp-m-caption-buttonLeft.buy:visited,  div.post-font  a.cbp-l-caption-buttonLeft:hover, div.post-font  a.cbp-l-caption-buttonLeft.buy:link, div.post-font  a.cbp-l-caption-buttonLeft.buy:visited, .buton-unit:hover, .wp-block-button__link:hover, #content a.fe_btn_completion, #content a.wpcw-button.wpcw-button-primary, a.fe_btn.fe_btn_completion.btn_completion,#content button.wpcw-input-button, #content button.wpcw-checkout-payment-button, #content button.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,#submit:hover,  #searchsubmit,  #content .wpcw_fe_quiz_submit_data input.fe_btn_completion:hover, #content div.post-font a.more-link,#wrapper #content a.more-link, .tml-button, #content .woocommerce-MyAccount-navigation ul a:hover {
+div.readmore3, div.readmore2:hover, div.readmore5, div.readmore4:hover, div.readmore6:hover, #content .cbp-l-caption-buttonLeft.buy, #content  .cbp-s-caption-buttonLeft.buy, #content a.cbp-s-caption-buttonLeft:hover,  #content  .cbp-m-caption-buttonLeft.buy, #content a.cbp-l-caption-buttonRight,#content .pagenavi a:hover,.pagenavi span.current, .cbp-s-caption-buttonLeft.buy, div.post-font  a.cbp-s-caption-buttonLeft:hover, div.post-font  a.cbp-s-caption-buttonLeft.buy:link, div.post-font  a.cbp-s-caption-buttonLeft.buy:visited,  div.post-font  a.cbp-m-caption-buttonLeft:hover, div.post-font  a.cbp-m-caption-buttonLeft.buy:link, div.post-font  a.cbp-m-caption-buttonLeft.buy:visited,  div.post-font  a.cbp-l-caption-buttonLeft:hover, div.post-font  a.cbp-l-caption-buttonLeft.buy:link, div.post-font  a.cbp-l-caption-buttonLeft.buy:visited, .buton-unit:hover, .wp-block-button__link:hover, #content a.fe_btn_completion, #content a.wpcw-button.wpcw-button-primary, a.fe_btn.fe_btn_completion.btn_completion,#content button.wpcw-input-button, #content button.wpcw-checkout-payment-button, #content button.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,#submit:hover,  #searchsubmit,  #content .wpcw_fe_quiz_submit_data input.fe_btn_completion:hover, #content div.post-font a.more-link,#wrapper #content a.more-link, .tml-login .tml-button, #content .woocommerce-MyAccount-navigation ul a:hover {
 
 '; if ( of_get_option('color_two') !== '') { if (of_get_option('color_two_text') == '1') { $css .= 'background: '.of_get_option('color_two').'; ';} else {$css .= 'background: '.of_get_option('color_two') .';  ';} } else {$css .= 'background:transparent;';}  $css .= '}
 
@@ -2326,17 +2326,17 @@ return $css;
 //
 // Reseting cache for regenerate
 // -----------------------
-function prefix_reset_cache_ell() {
-    update_option( 'prefix-has-cached-new', false );
-}
+// function prefix_reset_cache_ell() {
+ //    update_option( 'prefix-has-cached-new', false );
+// }
 // update your classes/framework.class.php because this filter i added now.
-add_action( 'optionsframework_option_name', 'prefix_reset_cache_ell' );
-add_action( 'catalog_option_name', 'prefix_reset_cache_ell' );
-add_action( 'enterpage_option_name', 'prefix_reset_cache_ell' );
-add_action( 'wpform_option_name', 'prefix_reset_cache_ell' );
-add_action( 'wpform_footer_option_name', 'prefix_reset_cache_ell' );
-add_action( 'wpform_slider', 'prefix_reset_cache_ell' );
-add_action( 'woocommerce_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'optionsframework_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'catalog_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'enterpage_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'wpform_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'wpform_footer_option_name', 'prefix_reset_cache_ell' );
+// add_action( 'wpform_slider', 'prefix_reset_cache_ell' );
+// add_action( 'woocommerce_option_name', 'prefix_reset_cache_ell' );
 
 // add_action( 'customize_save_after', 'prefix_reset_cache_new' ); // for customizer
 // add_action( 'save_post', 'prefix_reset_cache_new' ); // for metabox pages/posts
