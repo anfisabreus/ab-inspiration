@@ -41,7 +41,14 @@ get_header(); ?>
 .entry-title.entry-title-single {padding-top:20px}
 	
 }
-	.mobile-second-menu {display;none}
+	.navbar-toggler:focus {box-shadow: 0 0 0 0;}
+	.wpcw_course_progress {max-height: 300px;overflow: scroll; scroll-behavior: smooth;border: 1px solid #eaeaea;}
+	.bg-light {
+    background-color: transparent!important;
+}
+	.wpcw_widget_progress {
+    padding: 0px;
+}
 @media only screen and (max-width: 690px) {
 	.wpcw_course_progress {max-height: 300px;overflow: scroll; scroll-behavior: smooth;border: 1px solid #eaeaea;}
 	.collapse.show {margin:20px}
@@ -50,7 +57,7 @@ get_header(); ?>
 	.wpcw_fe_toggle {display:none}
 	 }
 
-
+	.navbar {display: block;}
 </style>
 
 
@@ -60,21 +67,24 @@ get_header(); ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 
-
-
-	<div class="mobile-second-menu">
-	<nav class="navbar navbar-6 navbar-light">
- 
-  <button class="navbar-toggler single-unit" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <?php the_widget('\\WPCW\\Widgets\\Widget_Course_Progress'); ?>
-    
+<div class="mobile-second-menu">
+		
+		
+		
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> &nbsp; <span style="color: #000 !important;
+    font-size: 20px;">Содержание курса </span>
+    </button>
   </div>
 </nav>
-	</div>
+		
+<div class="collapse" id="navbarToggleExternalContent">
+<?php the_widget('\\WPCW\\Widgets\\Widget_Course_Progress'); ?>
+</div>
+
+
 <div class="entry-box" itemscope itemtype="http://schema.org/BlogPosting">
 <div class="content-unit" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
