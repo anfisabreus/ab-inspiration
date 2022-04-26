@@ -3,7 +3,7 @@ Theme Name: AB-Inspiration
 Theme URI: https://ab-inspiration.com/downloads/ab-inspiration/
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.98
+Version: 8.99
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -73,7 +73,7 @@ input[type="text"],textarea, input[type="email"], input[type="tel"], input[type=
 #access .menu-header,#access .menu{padding:0px!important;margin:0px;}
 #main{overflow:hidden;margin-top:0px;}
 #content{margin-left:0px;margin-bottom:36px;}
-#content,#content input,#content textarea{color:#000;font-size:14px;line-height:28px;}
+
 #content ul ul,#content ol ol,#content ul ol,#content ol ul{margin-bottom:0;}
 #content pre,#content kbd,#content tt,#content var{font-size:15px;line-height:21px;}
 #content code{font-size:13px;}
@@ -135,7 +135,7 @@ figure.wp-block-pullquote {border-top:2px solid #999; border-bottom:2px solid #9
 .attachment .entry-content .entry-caption{font-size:140%;margin-top:24px;}
 .attachment .entry-content .nav-previous a:before{content:'\2190\00a0';}
 .attachment .entry-content .nav-next a:after{content:'\00a0\2192';}
-#content .alignleft, #content img.alignleft, #content .alignright, #content img.alignright, #content .alignnone, #content img.alignnone{margin-top:5px;}
+#content .alignleft, #content img.alignleft, #content .alignright, #content img.alignright, #content .alignnone, #content img.alignnone{margin-top:15px;}
 #content .alignleft, #content img.alignleft{float:left;margin-right:15px;}
 #content .alignright, #content img.alignright{float:right;margin-left:15px;}
 #content .aligncenter, #content img.aligncenter{clear:both;margin-left:auto;margin-right:auto;display:block}
@@ -188,7 +188,7 @@ div.comments-title{color:#000;font-weight:500;font-size:20px;margin-bottom:0;}
 #commentform{margin:5px 10px 0 0;}
 #commentform textarea{width:100%;padding:20px;}
 #respond:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-#commentform #submit{margin:10px 10px 10px 0px;width:100%;float:left;font-size:12px;padding:10px;}
+#commentform #submit{margin:10px 10px 10px 0px;width:100%;float:left;padding:10px;}
 .alt{margin:0;padding:10px;}
 .commentlist{padding:0px;text-align:justify;margin-left:0px !important;}
 .commentlist li{margin:15px 0 0px 0px;padding:15px 15px 15px 15px;list-style:none;}
@@ -457,7 +457,7 @@ div.qips_smiles img{padding:0px !important;border:none !important;-webkit-border
 ul.commentstabs{margin:0px;font-size:18px !important;font-weight:normal;margin-bottom:30px !important; text-transform:lowercase;}
 ul.commentstabs li{list-style:none;margin:0;display:inline;}
 ul.commentstabs li a {padding:7px 15px 7px 15px;margin-left:5px;margin-right:5px;border-bottom:none;text-decoration:none;font-size:18px !important;}#content ul.commentstabs li a:hover {font-size:18px !important;}
-#content ul.commentstabs li.commentab a.commentlink, #content ul.commentstabs li.commentab a.commentlink:visited{color:#333 !important;}
+#content ul.commentstabs li.commentab a.commentlink, #content ul.commentstabs li.commentab a.commentlink:visited{color:#333;}
 
 .sprite-bg-for-button,
 .sprite-author, .sprite-categories, .sprite-comments, .sprite-date{display:inline-block;background:url('images/sprite-ab-inspiration.png') no-repeat;overflow:hidden;text-indent:-9999px;text-align:left;}
