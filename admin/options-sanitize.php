@@ -236,7 +236,6 @@ add_filter( 'of_font_face', 'of_sanitize_font_face' );
 function of_sanitize_smart( $input ) {
 
 	$output = wp_parse_args( $input, array(
-		'formname'  => '',
 		'sendsayformkod'  => '',
 		'sendsayformid' => '',
 		'idname' => ''
@@ -244,7 +243,6 @@ function of_sanitize_smart( $input ) {
 		
 	) );
 	
-	$output['formname']  = apply_filters( 'of_sanitize_formname', $output['formname'] );
 	$output['sendsayformkod'] = apply_filters( 'of_sanitize_sendsayformkod', $output['sendsayformkod'] );
 	$output['sendsayformid'] = apply_filters( 'of_sanitize_sendsayformid', $output['sendsayformid'] );
 	$output['idname'] = apply_filters( 'of_sanitize_idname', $output['idname'] );
@@ -255,10 +253,6 @@ function of_sanitize_smart( $input ) {
 	
 	}
 	add_filter( 'of_sanitize_smart', 'of_sanitize_smart', 10, 2 );
-
-function of_sanitize_formname( $value ) {
-	add_filter( 'of_sanitize_formname', 'sanitize_formname_field' );
-	}
 	
 	function of_sanitize_sendsayformid( $value ) {
 	add_filter( 'of_sanitize_sendsayformid', 'sanitize_sendsayformid_field' );

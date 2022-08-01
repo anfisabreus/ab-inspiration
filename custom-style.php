@@ -17,7 +17,7 @@ defined( 'PREFIX_CACHE_URL' ) or define( 'PREFIX_CACHE_URL', $cache_url );
 // Enqueue custom styles
 // ---------------------
 function prefix_wp_enqueue_styles() {
-
+	
     // Check and create cachedir
     if( ! is_dir( PREFIX_CACHE_DIR ) ) {
 
@@ -50,7 +50,7 @@ function prefix_wp_enqueue_styles() {
     wp_enqueue_style( 'prefix-cs-custom', PREFIX_CACHE_URL .'/custom-style'. $is_multisite .'.css', array(), null );
 
   } else {
-
+	$css  = '';
     // echo generated css directly if cache folder is not writable and in customizer
     add_action( 'wp_head', function(){  $css .= '<style>'. prefix_generate_css() .'</style>'; }, 99 );
 
@@ -70,7 +70,7 @@ function prefix_cache_css_file() {
   } else {
     $css_file = PREFIX_CACHE_DIR . '/custom-style.css';
   }
-
+  
   $css  = "/**\n";
   $css .= " * Do not touch this file! This file created by PHP\n";
   $css .= " * Last modifiyed time: ". date( 'M d Y, H:i' ) ."\n";
@@ -266,8 +266,8 @@ if (of_get_option('header_width') == '1') { $css .= 'width: 100%;';} else { $css
 #masthead {padding-top:'. of_get_option('padding_top_header').'px !important; }
 #branding {width: 1200px;';
 $background = of_get_option('header_background'); if ($background) { if ($background['image']) { $css .= 'background:url('.$background['image']. ') '.$background['repeat']. ' '.$background['position']. ' '.$background['attachment']. ' '.$background['color']. ';'; } elseif ($background['color'] == !'') { $css .= 'background:'.$background['color']. '!important;'; } else {$css .= '';}} else { $css .= 'no entry'; }; $css .= 'height:'. of_get_option('header_height').'px !important; -webkit-border-radius: '. of_get_option('header_curve').'px; -moz-border-radius: '. of_get_option('header_curve').'px; border-radius: '. of_get_option('header_curve').'px; background-size:'. of_get_option('background_size').' }
-img.post_thumbnail {'; 
-if (of_get_option('thumb_size') == 'large') { $css .= 'margin-bottom:15px; clear:left;';  } $css .= '}
+'; 
+if (of_get_option('thumb_size') == 'large') { $css .= 'img.post_thumbnail { margin-bottom:15px; clear:left;}';  } $css .= '
 div.head-height, div.head-style {height:'. of_get_option('header_height').'px !important;}
 #site-title, #site-description {line-height:20px !important;}
 h1#site-title {margin:0px;}
@@ -332,10 +332,11 @@ font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face
  #content .wpcw-course-enrollment-button a.fe_btn_completion:link {border:none}
 #content div.post-font a.more-link {margin-bottom:0px !important}
 .wpcw-button.wpcw-button-primary, .fe_btn.fe_btn_completion.btn_completion {border:none}
-.button-form, #submit, .submit, a.comment-reply-link, #content div.post-font a.more-link,   .pagenavi span.current, .archiv-title, #searchsubmit, .fusion-portfolio #filters-container .cbp-filter-item-active, .katalog-link, #content ul.commentstabs li.commentab a.active, .related-katalog .cbp-nav-next, .related-katalog .cbp-nav-prev, input.button, .buton-unit, #content .wpcw_fe_quiz_submit_data input.fe_btn_completion, #content .wpcw-course-enrollment-button a.fe_btn_completion:link, .wpcw-button.wpcw-button-primary, .tml-button, .fe_btn.fe_btn_completion.btn_completion { '; if ( of_get_option('button_color') !== '') { $css .= 'background:'. of_get_option('button_color').';';} else { $css .= 'background:transparent;';} 
+.open-course {margin-top: 0px;float: right; margin-bottom:15px; margin-left: 15px;-webkit-transition: all 0.5s;transition: all 0.5s;font-size: 16px !important;padding: 5px 10px;text-decoration: none;}
+.button-form, #submit, .submit, a.comment-reply-link, #content div.post-font a.more-link, .pagenavi span.current, .archiv-title, #searchsubmit, .fusion-portfolio #filters-container .cbp-filter-item-active, .katalog-link, #content ul.commentstabs li.commentab a.active, .related-katalog .cbp-nav-next, .related-katalog .cbp-nav-prev, input.button, .buton-unit, #content .wpcw_fe_quiz_submit_data input.fe_btn_completion, #content .wpcw-course-enrollment-button a.fe_btn_completion:link, .wpcw-button.wpcw-button-primary, .tml-button, .fe_btn.fe_btn_completion.btn_completion { '; if ( of_get_option('button_color') !== '') { $css .= 'background:'. of_get_option('button_color').';';} else { $css .= 'background:transparent;';} 
 if ( of_get_option('button_color_text') !== '') { $css .= 'color:'. of_get_option('button_color_text').' ;';} else { $css .= 'color:#000 ;';} $css .= '-webkit-transition: all 0.5s;transition: all 0.5s;}
 
-.woocommerce a.button, .woocommerce #respond input#submit,  .woocommerce button.button, .woocommerce input.button, { '; if ( of_get_option('button_color') !== '') { $css .= 'background:'. of_get_option('button_color').' ;';} else { $css .= 'background:transparent ;';} 
+.woocommerce a.button, .woocommerce #respond input#submit,  .woocommerce button.button, .woocommerce input.button { '; if ( of_get_option('button_color') !== '') { $css .= 'background:'. of_get_option('button_color').' ;';} else { $css .= 'background:transparent ;';} 
 if ( of_get_option('button_color_text') !== '') { $css .= 'color:'. of_get_option('button_color_text').' ;';} else { $css .= 'color:#000 ;';} $css .= '-webkit-transition: all 0.5s;transition: all 0.5s;}
 
 
@@ -532,8 +533,8 @@ a:focus {outline:none;}
 if ($typography) { if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ' !important;font-style: '. $typography['style'] .' !important; font-weight: '; if ($homepage['heading_text_strong6'] ==  1)  {$css .=   '500 !important';} else {$css .=   'normal !important';} $css .=  ';font-size: '. $homepage['hp_header_size6'] .'px !important;'; } $css .= '}
 .entry-title, h1.entry-title, .wpcw-course-title {'; $typography = of_get_option('post_typography'); if ($typography) { if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].'; margin-top:0px !important;}';}
 $css .= '
-#content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited, h3.wpcw-course-title a:link, h3.wpcw-course-title a:visited, .col-lg-4 h2.entry-title a:visited, .col-lg-4 h2.entry-title a:link  {text-decoration: none;'; $typography = of_get_option('post_typography'); if ($typography) {if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ' !important;
-font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].';}';} $css .= '#content div.post h2.entry-title a:active, #content div.post h2.entry-title a:hover, h3.wpcw-course-title a:active, h3.wpcw-course-title a:hover, .col-lg-4 h2.entry-title a:hover{'; if ( of_get_option('title_hover') !== '') { $css .= 'color:'. of_get_option('title_hover').'!important;';} else { $css .= 'color:#000!important;';} $css .= '}
+#content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited, h3.wpcw-course-title a:link, h3.wpcw-course-title a:visited, .col-lg-4 h2.entry-title a:visited, .col-lg-4 h2.entry-title a:link  {text-decoration: none;'; $typography = of_get_option('post_typography'); if ($typography) {if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';
+font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].';}';} $css .= '#content div.post h2.entry-title a:active, #content div.post h2.entry-title a:hover, h3.wpcw-course-title a:active, h3.wpcw-course-title a:hover, .col-lg-4 h2.entry-title a:hover{'; if ( of_get_option('title_hover') !== '') { $css .= 'color:'. of_get_option('title_hover').';';} else { $css .= 'color:#000;';} $css .= '}
 h1.entry-title-single { '; if ( of_get_option('title_single') !== '') { $css .= 'color:'. of_get_option('title_single').';';} else { $css .= 'color:#000;';} $css .= '}
 .entry-title6 {margin-bottom:0px !important}
 
@@ -1227,8 +1228,6 @@ background-size:'. $ab_woocommerce['background_size5'].'}
 .woocommerce ul.products {margin-bottom:0px !important}
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce ul.products li.last, .woocommerce-page ul.products li.last {padding:0px; text-align:center; background:#fff; border:none }
 .woocommerce ul.products li.product:hover, .woocommerce-page ul.products li.product:hover,.post-homepage-shop:hover {padding:0px; }
-
- .woocommerce ul.products li.product,  .woocommerce ul.products li.product:hover {padding-bottom:20px;}
 .woocommerce ul.products li.product .img-wrap .add_to_cart_button, .woocommerce ul.products li.product .img-wrap .product_type_grouped, .woocommerce ul.products li.product .img-wrap .ajax_add_to_cart   {margin-bottom:20px;}
 .woocommerce ul.products li.product .img-wrap h3 {font-size:'. $ab_woocommerce['font_size_items'].'px !important;margin:0px !important;}
 .woocommerce ul.products li.product .woocommerce-loop-product__title {font-size:'. $ab_woocommerce['font_size_items'].'px;}
@@ -1456,7 +1455,7 @@ $css .= '
 #headermenu {display: none !important;}
 #site-title, #site-description, #site-title a {margin-bottom: 0px !important;}
 .navbar-expand-md .navbar-toggler {display:block;}
-.navbar {min-height:0; background:transparent !imporant}
+.navbar {min-height:0; background:transparent !important}
 .navbar-dark {background:transparent}
 .navbar-header, .navbar-dark {border:none;}
 .navbar-toggler {'; $typography = of_get_option('logo_typography_mobile'); $colortoggle = $typography['color']; $colorone = hex2rgba($colortoggle, 1); if ($typography) { $css .= 'opacity: 0.5;'; } if ( $typography['color'] !== '') { $css .= 'border-color: '.$typography['color'].'; '; } else { $css .= 'border-color:transparent!important; color:#000;'; } $css .= '}
@@ -1615,7 +1614,7 @@ $css .= 'background:url('.$background['image']. ') '.$background['repeat']. ' '.
 .sub-form-top {height:100%}
 .sub-form-top input.ab-form-button-top, .sub-form-top .sp-button.ab-form-button-top {padding:15px;}
 #container {width: 100%; float: left;}
-#wrapper #content .entry-box, #content article.entry-box {padding:25px; border:none !important; }
+#wrapper #content .entry-box, #content article.entry-box {padding:25px !important; border:none !important; }
 .author-avatar {float:none !important ; text-align:center  !important; margin:0px !important}
 .author-description {text-align:center; float:none; width:100%}
 li.widget-container, div.widget-container, .single-course_unit #primary.widget-area ul li {border:none !important; padding:25px}
@@ -2131,7 +2130,7 @@ if ($ab_woocommerce['show_border_product'] == '1') { $css .= ' .woocommerce ul.p
 
 
 
-$css .= ' }
+$css .= ' 
  .social-likes .shop:hover {border:none}
 
 .social-likes .shop.social-likes__widget_facebook, .social-likes .shop.social-likes__widget_twitter,.social-likes .shop.social-likes__widget_plusone,  .social-likes .shop.social-likes__widget_vkontakte, .social-likes .shop.social-likes__widget_odnoklassniki, .social-likes .shop.social-likes__widget_telegram, .social-likes .shop.social-likes__widget_pinterest {background:#fff !important; color: #babbbc}
@@ -2188,7 +2187,7 @@ ul.product_list_widget .product-title {color:#333 !important}
 
 
 
- #content .woocommerce a.button:hover, #content .woocommerce button.button:hover,#primary .woocommerce button.button:hover, #content .woocommerce input.button:hover,  {
+ #content .woocommerce a.button:hover, #content .woocommerce button.button:hover,#primary .woocommerce button.button:hover, #content .woocommerce input.button:hover  {
 '; if ( of_get_option('color_one') !== '') { $css .= 'background-color:'. of_get_option('color_one').';';} else { $css .= 'background-color:transparent;';} $css .= '}
 
 .woocommerce .woocommerce-info:before {'; if ( of_get_option('color_one') !== '') { $css .= 'color:'. of_get_option('color_one').'!important;';} else { $css .= 'color:#000!important;';} $css .= '}
@@ -2295,21 +2294,53 @@ span.onsale:after, .woocommerce span.onsale, span.onsale {'; if ( of_get_option(
 
  .woocommerce a.button, .button, .button:visited, .woocommerce #respond input#submit,  .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {'; if ( of_get_option('headings_fonts_text') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr ;font-weight: 400 ;';} else { $css .= 'font-family:'. of_get_option('headings_fonts_text').' ;font-weight: 400 ;';} $css .= '}
  
-#headercssmenu > ul > li > a,#headercssmenu a  {'; if ( of_get_option('headings_fonts_text') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr !important;font-weight: 500 !important; letter-spacing:2px';} else { $css .= 'font-family:'. of_get_option('headings_fonts_text').' !important;font-weight: 400 !important;';} $css .= '}
+#headercssmenu > ul > li > a,
+#headercssmenu a {
+	'; if ( of_get_option('headings_fonts_text') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr !important;font-weight: 500 !important; letter-spacing:2px';} else { $css .= 'font-family:'. of_get_option('headings_fonts_text').' !important;font-weight: 400 !important;';} $css .= '}
 
-body #footer-widget-area div.widget-title {margin-left:0px !important}
-#access .sub-menu ul  {border:1px solid '. $lightColourtwo .' !important}
-#access .sub-menu li  {border-bottom:1px solid '. $lightColourtwo .' !important}
-#access ul li ul li:hover, .menu ul li ul li:hover{background:'. $lightColourtwo .' !important}';  
+body #footer-widget-area div.widget-title {
+	margin-left:0px !important
+}
+#access .sub-menu ul {
+	border:1px solid '. $lightColourtwo .' !important
+}
+#access .sub-menu li {
+	border-bottom:1px solid '. $lightColourtwo .' !important;
+}
+#access ul li ul li:hover,
+.menu ul li ul li:hover{
+	background:'. $lightColourtwo .' !important
+}';  
 
-
-
-
-
-if (of_get_option('layout') == '1') { $css .= '#wrapper {width: 100% !important; margin:0 auto;}  #branding, #footer-widget-box {width: 1200px !important;} ';
+if (of_get_option('layout') == '1') { $css .= '
+	#wrapper {
+		width: 100% !important; 
+		margin:0 auto;
+	}  
+	#branding, 
+	#footer-widget-box {
+		width: 1200px !important;
+	} 
+';
 	
-if (of_get_option('menu_position_horizontal') == '1') { $css .= '#access .menu-header, div.menu  {width: auto !important;}' ;} else { $css .= '#access .menu-header, div.menu  {width: 1200px !important;}'; } $css .= '#content-main {'; 
-if ( of_get_option('main_width') == '1'){ $css .= 'width:100% !important;';}  else { $css .= 'width:1200px  !important;';}
+if (of_get_option('menu_position_horizontal') == '1') { $css .= '
+	#access .menu-header,
+	div.menu {
+		width: auto !important;
+	}
+' ;} else { $css .= '
+	#access .menu-header,
+	div.menu {
+		width: 1200px !important;
+	}
+'; } $css .= '
+	#content-main {
+'; 
+if ( of_get_option('main_width') == '1'){ $css .= '
+	width:100% !important;
+';}  else { $css .= '
+	width:1200px  !important;
+';}
 $css .= '}'; } else { $css .= '#header {position:relative} #wrapper { width: 1200px !important;} #content-main, .sub-form-top, .sub-form-top .bg, #branding, #headermenu, .footer-widget-box, #footer  {width: 100% !important;} #floatmenu { width:1200px !important} #content-main {border:none !important;} #access li:first-child a {border-left:none !important}
 	
 @media only screen and (max-width: 690px) {

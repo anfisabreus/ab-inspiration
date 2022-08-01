@@ -315,7 +315,7 @@ function optionsframework_fields() {
 	case 'smart':
 	$smart = $val;
 
-$output .= '<div style="width:700px;" class="smartpost"> <div style="float:left; width:140px; margin-right:10px;"><strong>Имя формы</strong>  <br><input id="' . esc_attr( $value['id'] .'_formname' ) . '" class="of-input" name="' . esc_attr( $option_name . '[' . $value['id'] . '][formname]' ) . '" type="text" value="' . esc_attr( $smart['formname']) . '" style="width:140px;"/></div>';
+$output .= '<div style="width:700px;" class="smartpost">';
 			
  $output .= ' <div style="float:left; width:140px;margin-right:10px;"><strong>Код формы</strong><br><input id="' . esc_attr( $value['id'].'_sendsayformkod') . '" class="of-input"  name="' . esc_attr( $option_name . '[' . $value['id'] . '][sendsayformkod]' ) . '" type="text" value="' . esc_attr( $smart['sendsayformkod']) . '"  style="width:140px;" /></div>';
 			

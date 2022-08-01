@@ -25,8 +25,9 @@
 <meta itemprop="datePublished" content="<?php the_date('Y-m-d')?>" />
 	<meta itemprop="dateModified" content="<?php the_modified_date('Y-m-d'); ?>" />
     <meta itemprop="url" content="<?php the_permalink(); ?>" />
-    <meta itemprop="name" content="<?php the_title(); ?>" />
+    <meta itemprop="name" content="<?php the_title(); ?>" /> 
 	<meta itemprop="mainEntityOfPage" content="<?php the_permalink(); ?>" />
+ 
  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
 	 <meta itemprop="name" content="<?php the_author(); ?>" /></span>
 

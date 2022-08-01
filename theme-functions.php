@@ -783,15 +783,14 @@ function form_post_bottom()
 <div class="headerformpost"><?php echo of_get_option('form_post_header', ''); ?></div>
 <div class="form-post-bottom">
 <?php $smart = of_get_option('smart_form'); ?>
-<script type="text/javascript">
-var PS_ErrPref = 'Поля не заполнены или заполнены неверно: \n'; 
-</script>
-<script type="text/javascript" src="https://sendsay.ru/account/js/formCheck.js"></script>
-<form id="sendsay_form" name="form_<?php if ($smart) { echo ($smart['formname']); } ?>" target="_blank" action="https://sendsay.ru/form/<?php if ($smart) { echo ($smart['sendsayformkod']); } ?>/<?php if ($smart) { echo ($smart['sendsayformid']); } ?>" method="post" style="<?php if (of_get_option('form_uploader_transparent') == 1) { echo 'width:100%;'; } else { 'width:258px;'; } ?> margin: 0 auto;" onsubmit="javascript:if(typeof sendsay_check_form === 'function'){ return sendsay_check_form(this); }" accept-charset="utf-8">
 
-<div id="<?php if ($smart) { echo ($smart['idname']); } ?>" class="subpro_clear sendsayFieldItem" style="display: inline;"><input type="text" name="<?php if ($smart) { echo ($smart['idname']); } ?>"  class="input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>" style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>"></div>
-<div id="_member_email"  class="subpro_clear sendsayFieldItem"  style="display: inline;"><input type="text" data-type="email" name="_member_email"  class="input1 inputformbutton" placeholder="<?php echo of_get_option('email_field_text_bottom', '') ; ?>"></div>
-<div id="sendsayFormSubmitBox"  style="display: inline;"><input name="bt_save" type="submit" value="<?php echo of_get_option('text_form_bottom'); ?>" class="buttonpostform" /></div>
+<form action="https://sendsay.ru/form/<?php if ($smart) { echo ($smart['sendsayformkod']); } ?>/<?php if ($smart) { echo ($smart['sendsayformid']); } ?>/" method="post">
+
+<input type="text" name="<?php if ($smart) { echo ($smart['idname']); } ?>" value="" class="input1 inputformbutton" placeholder="<?php echo of_get_option('name_field_text_bottom', '') ; ?>" style="<?php if (of_get_option('name_field_bottom') == '0') { echo 'display:none'; } else { ''; } ?>"/>
+
+<input name="_member_email" class="input1 inputformbutton" placeholder="<?php echo of_get_option('email_field_text_bottom', '') ; ?>">
+
+<input type="submit" value="<?php echo of_get_option('text_form_bottom'); ?>" class="buttonpostform" />
 
 <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
 <div class="garantiya-bottom"><a class="fancybox" href="#inline" title="Согласие на обработку персональных данных"><?php echo of_get_option('form_garant_bottom', '') ; ?></a></div>
@@ -1777,9 +1776,12 @@ function ab_inspiration_footer_scripts() { ?>
 	
 <script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/themes/ab-inspiration/inc/js/jquery-all.js"> </script>	
 <?php $image_set = get_option( 'image_default_link_type' );
-?> <script> 
+?> 
+<?php if ( !is_page()) { ?>
+<script> 
   jQuery( 'a[href$=".gif"], a[href$=".jpg"], a[href$=".png"]' ).addClass( 'fancybox' );
  </script>
+ <?php } ?>
 	
 
 <?php global $ab_catalog;?>

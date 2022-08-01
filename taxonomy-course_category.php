@@ -11,92 +11,10 @@
 get_header(); ?>
 <?php echo ab_inspiration_header(); ?>
 
-<style>  .post-font {font-size:16px !important;}.entry-box{  margin: 0px 25px 25px 0; overflow:hidden; padding:0px !important;}.entry-box:nth-child(3n+3) {margin: 0px 0px 25px 0;} .entry-box:first-child, .entry-box {padding-top:0px !important;text-align: left;} .entry-box {text-align: left;}#wrapper .entry-box h2 { padding-top:20px !important;line-height: 20px !important;}
-
-	.desc-course,  .entry-title, .progress_under_course	 {padding-left:15px; padding-right:15px}
-	.ld_course_grid_price
-{background:#5cb85c;
-    box-shadow: 0 1px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 1px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0 1px rgba(0,0,0,0.2);
-    color: #fff;
-    text-shadow: 0 1px rgba(0,0,0,0.3);
-    position: absolute;
-    font-size: 14px;
-    left: -8px;
-    top: 10px;
-    padding: 3px 10px;
-    z-index: 2;
-    font-weight: bold;}
-    
-    .ld_course_grid_price:before {
-    border: 4px solid transparent;
-    border-top: 4px solid #348c34;
-    border-right: 4px solid #348c34;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-}
-.one-column .entry-box {padding-left:0px!important; padding-right:0px !important}
-.course-horisontal  .entry-box img {padding-top: 15px;}
-.course-horisontal  .progress_under_course{float:right; width:100%;}
-.course-horisontal, .course-horisontal.entry-box:first-child {width:100%; padding:15px !important; }
-.entry-box.course-horisontal  {padding-top:0px}
-.course-horisontal  .wpcw_progress_wrap  {line-height:0px}
-.add_to_cart_inline{border:none !important}
-.course-horisontal  .woocommerce-Price-amount.amount {margin-right: 10px; !important}
-.course-horisontal img {width:30%; float:left;padding-bottom: 0px;padding-top: 0px;margin-right: 30px;}
-.entry-box.course-horisontal { margin-right:0px;}
-.fe_btn.fe_btn_completion.btn_completion {float:left} 
-.wpcw-button.wpcw-button-primary, .fe_btn.fe_btn_completion.btn_completion {
-    padding: 8px 10px; margin-left:15px
-}
-#content a.wpcw-button.wpcw-button-primary, a.fe_btn.fe_btn_completion.btn_completion {font-size:16px !important}
-.course-horisontal  .entry-content, .course-horisontal  .entry-summary {clear:none;  float:left; width:100% !important}
-#wrapper .entry-box.course-horisontal h2 {padding-top:0px !important}
-.course-horisontal .entry-content .post-font > *, .course-horisontal .entry-summary .post-font > * {margin: 0px 0;}
-
-.course-horisontal .fe_btn.fe_btn_completion.btn_completion {margin-top:6px; float:right; }
-.course-horisontal .product.woocommerce.add_to_cart_inline  {margin-bottom:0px; margin-top:1px; float:right; padding:0px !important  } 
 
 
-.page-template-template-kurs-catalog span.woocommerce-Price-amount.amount, .post-type-archive-wpcw_course span.woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course span.woocommerce-Price-amount.amount {font-size:18px; font-weight:normal;}
-.single-course_unit del, .page-template-template-kurs-catalog del .woocommerce-Price-amount.amount, .post-type-archive-wpcw_course del .woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course del .woocommerce-Price-amount.amount {font-size: 18px; color:rgba(0,0,0,0.3); font-weight:normal;}
-.single-course_unit ins, .page-template-template-kurs-catalog ins, .post-type-archive-wpcw_course ins, .wpcw_course-template-template-single-course ins, .wpcw_course-template-template-single-course ins .woocommerce-Price-amount.amount {font-size: 20px !important;}
-.page-template-template-kurs-catalog .product.woocommerce.add_to_cart_inline, .post-type-archive-wpcw_course .product.woocommerce.add_to_cart_inline, .wpcw_course-template-template-single-course .product.woocommerce.add_to_cart_inline {text-align:left; margin-left:15px}
-.single-course_unit #content .product.woocommerce.add_to_cart_inline a.button, .page-template-template-kurs-catalog #content .product.woocommerce.add_to_cart_inline a.button, .post-type-archive-wpcw_course #content .product.woocommerce.add_to_cart_inline a.button, .wpcw_course-template-template-single-course #content .product.woocommerce.add_to_cart_inline a.button {padding: 9px 10px;
-height: 34px;font-size: 16px !important;}
 
-.page-template-template-kurs-catalog .price-for-course span.woocommerce-Price-amount.amount, .post-type-archive-wpcw_course .price-for-course span.woocommerce-Price-amount.amount, .wpcw_course-template-template-single-course .price-for-course span.woocommerce-Price-amount.amount {display:none}
-
-
-.entry-box.course-horisontal h2, .course-horisontal .entry-content, .course-horisontal .progress_under_course {padding-left: 0px;}
-
-.woocommerce-Price-currencySymbol {font-size:18px}
-
-#content .entry-box h2{line-height:0!important;  margin-top:20px !important  }
-  #content .entry-box h2 a:link{font-size:20px !important;font-weight: 600 !important; }
- @media (min-width: 992px) {
-.col-lg-4 {
-    max-width: 31.8%;
-  }}
-  @media (max-width: 640px) {
-
-     .course-horisontal, .course-horisontal.entry-box:first-child{      margin: 15px !important; }.entry-box:last-child {margin: 15px;}
-	  #wrapper #content .course-horisontal.entry-box {border-bottom:1px solid #ccc !important}
-	  .course-horisontal  .progress_under_course {width:100%}
-	  .course-horisontal  .course-horisontal img {padding-bottom: 15px;}
-  }
-	
-	
-  
-
-
-</style>
-
-
-		<div id="container-full" class="one-full-common one-column  container">
+		<div id="container-full" class="one-full-common one-column  container wp-courseware-calogue">
 
 			<div id="content" role="main" class="row">
 

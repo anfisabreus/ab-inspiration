@@ -1022,7 +1022,6 @@ class subform_widget extends WP_Widget {
 
     public function widget($args, $instance) {
         extract( $args );
-        $formname 	= $instance['formname'];
 $sendsayformkod = $instance['sendsayformkod'];
 $sendsayformid = $instance['sendsayformid'];
 $idname = $instance['idname'];
@@ -1074,16 +1073,13 @@ if ($chooseform == 'smart')  { ?>
 <div><?php if (of_get_option('form_uploader') !== ""){?><img src="<?php echo of_get_option('form_uploader', 'no entry' ); ?>" style="text-align: center; width:275px; padding-bottom:15px;" width="275" alt=""><?php ;}?></div>
 <div style="width:auto;text-align: center; padding-top: 0px; padding-left:0px;">
 
-<script type="text/javascript">
-var PS_ErrPref = 'Поля не заполнены или заполнены неверно: \n'; 
-</script>
-<script type="text/javascript" src="https://sendsay.ru/account/js/formCheck.js"></script>
+<form action="https://sendsay.ru/form/<?php echo $sendsayformkod;?>/<?php echo $sendsayformid;?>" method="post" id="sendsay_form" style="margin: 0pt; padding: 0pt;" target="_blank" method="post" onsubmit="javascript:if(typeof sendsay_check_form === 'function'){ return sendsay_check_form(this); }" accept-charset="utf-8">
 
-<form id="sendsay_form" style="margin: 0pt; padding: 0pt;" name="form_<?php echo $formname;?>" target="_blank" action="https://sendsay.ru/form/<?php echo $sendsayformkod;?>/<?php echo $sendsayformid;?>" method="post" onsubmit="javascript:if(typeof sendsay_check_form === 'function'){ return sendsay_check_form(this); }" accept-charset="utf-8">
 
-<div style="padding-bottom: 5px;" id="<?php echo $idname;?>" class="subpro_clear sendsayFieldItem"><input size="27" class="input1" style="width: 275px; font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px; <?php if (of_get_option('name_field') == '0') {echo 'display:none';} else {'';} ?>" data-type="free" name="<?php echo $idname;?>"   placeholder="<?php echo of_get_option('name_field_text', '') ; ?>" type="text"></div>
-<div style="padding-bottom: 5px;" id="_member_email"  class="subpro_clear sendsayFieldItem"><input size="27" class="input1" style="width: 275px;  font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px;" data-type="email" name="_member_email" placeholder="<?php echo of_get_option('email_field_text', '') ; ?>" type="text"></div>
-<div id="sendsayFormSubmitBox"><input name="bt_save" value="<?php echo of_get_option('button_text', ''); ?>" class="form-button"  <?php if (of_get_option('custom_button') == '0') { ?> style="background-color:transparent; text-shadow: 1px 1px 0px #000;width:280px; height:45px;border:none;"<?php } else {}?> onmouseover="this.className='form-button btnhov'" onmouseout="this.className='form-button'" type="submit" ></div>
+<div style="padding-bottom: 5px;"><input size="27" class="input1" style="width: 275px; font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px; <?php if (of_get_option('name_field') == '0') {echo 'display:none';} else {'';} ?>" data-type="free" name="<?php echo $idname;?>"   placeholder="<?php echo of_get_option('name_field_text', '') ; ?>" type="text" /></div>
+
+<div style="padding-bottom: 5px;"><input size="27" class="input1" style="width: 275px;  font-family: arial; font-size: 14px; color: #424242; height: 40px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow:none; <?php if (of_get_option('border_button_round') == 0 ) { ?>border-radius: 0px;  <?php } else  { ?> border-radius: 3px;<?php }  ?> padding-left: 10px; margin-left: 0px;" name="_member_email" placeholder="<?php echo of_get_option('email_field_text', '') ; ?>" type="text"></div>
+<div><input value="<?php echo of_get_option('button_text', ''); ?>" class="form-button"  <?php if (of_get_option('custom_button') == '0') { ?> style="background-color:transparent; text-shadow: 1px 1px 0px #000;width:280px; height:45px;border:none;"<?php } else {}?> onmouseover="this.className='form-button btnhov'" onmouseout="this.className='form-button'" type="submit" ></div>
 
 <?php if (of_get_option('obrabotka_dannyh_text', '') != '') { ?>
 <div class="garantiya"><a class="fancybox" href="#inline" title="Согласие на обработку персональных данных"><?php echo of_get_option('form_garant', '') ; ?></a></div>
@@ -1399,7 +1395,6 @@ if ($chooseform == 'onebutton')  { ?>
 
     public function update($new_instance, $old_instance) {
 		$instance = $old_instance;
-$instance['formname'] = strip_tags($new_instance['formname']);
 $instance['sendsayformkod'] = strip_tags($new_instance['sendsayformkod']);
 $instance['sendsayformid'] = strip_tags($new_instance['sendsayformid']);
 $instance['idname'] = strip_tags($new_instance['idname']);
@@ -1456,8 +1451,6 @@ $instance['scriptid'] = strip_tags($new_instance['scriptid']);
 						  'chooseform' => 'smart'
 						 );
 						  $instance = wp_parse_args( (array) $instance, $defaults );
- 
- $formname	= isset( $instance['formname'] ) ? esc_attr($instance['formname']) :'';
  $sendsayformkod	= isset( $instance['sendsayformkod'] ) ? esc_attr($instance['sendsayformkod']) :'';
  $sendsayformid	= isset( $instance['sendsayformid'] ) ? esc_attr($instance['sendsayformid']) :'';
  $idname	= isset( $instance['idname'] ) ? esc_attr($instance['idname']) :'';
@@ -1612,14 +1605,6 @@ $scriptid = isset( $instance['scriptid'] ) ? esc_attr($instance['scriptid']) :''
   
 
       <div class="smartwidget hideresponder"  style="display: none;">    
-         
-         		
-         		
-         		<p>
-          <label for="<?php echo $this->get_field_id('formname'); ?>"><?php _e('<strong>Имя формы</strong> (найдите в коде формы тег form и в аттрибуте name скопируйте цифорвое значение. В примере ниже выделено красным: <span><</span>form id="sendsay_form" name="form_<span style="color:#ff0000">887</span>"', 'inspiration'); ?></label>
-          <input class="widefat" id="<?php echo $this->get_field_id('formname'); ?>" name="<?php echo $this->get_field_name('formname'); ?>" type="text" value="<?php echo $formname; ?>" />
-        </p>
-
 
 <p>
           <label for="<?php echo $this->get_field_id('sendsayformkod'); ?>"><?php _e('<strong>Код формы</strong> В ссылке аттрибута <strong>action</strong> скопировать код. Выделен красным ниже: action=" https://sendsay.ru/form/<span style="color:#ff0000">x_1477846400414456</span>/3', 'inspiration'); ?></label>
