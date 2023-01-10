@@ -175,7 +175,7 @@ else { ?>
 <div style="clear:both"></div>
 
 
-<?php if (of_get_option('floatmenu') == '1') {  ?><div id="floatmenu" style="display:none"><div class="floatmenu-ul"><div class="floatmenu-bgg"><div class="floatmenu-inside"><div class="floatmenu-inside-two"><?php if (of_get_option('floatlogo') !== '') { ?> <div style="display:table-cell; vertical-align: middle;"><a href="<?php echo of_get_option('floatlogo_link'); к?>" class="link-bunner"><img src="<?php echo of_get_option('floatlogo');?>" style="padding:0px;"></a></div><?php } ?><?php if ( has_nav_menu( 'floatmenu' ) ) { wp_nav_menu(array('container_id' => 'cssmenu', 'theme_location' => 'floatmenu', 'walker' => new CSS_Menu_Maker_Walker()) ); } ?></div></div></div></div></div><?php } ?>
+<?php if (of_get_option('floatmenu') == '1') {  ?><div id="floatmenu" style="display:none"><div class="floatmenu-ul"><div class="floatmenu-bgg"><div class="floatmenu-inside"><div class="floatmenu-inside-two"><?php if (of_get_option('floatlogo') !== '') { ?> <div style="display:table-cell; vertical-align: middle;"><a href="<?php echo of_get_option('floatlogo_link'); ?>" class="link-bunner"><img src="<?php echo of_get_option('floatlogo');?>" style="padding:0px;"></a></div><?php } ?><?php if ( has_nav_menu( 'floatmenu' ) ) { wp_nav_menu(array('container_id' => 'cssmenu', 'theme_location' => 'floatmenu', 'walker' => new CSS_Menu_Maker_Walker()) ); } ?></div></div></div></div></div><?php } ?>
 
 <?php global $sub_slides; if ($sub_slides['slide_first'] == '1') { if (function_exists('ab_sub_form'))  ab_sub_form();  if (function_exists('ab_sub_slides'))  ab_sub_slides(); } else  { if (function_exists('ab_sub_slides'))  ab_sub_slides();  if (function_exists('ab_sub_form'))  ab_sub_form();  } ?>
 

@@ -1014,7 +1014,7 @@ class EDD_Theme_Updater_Admin {
 			'remote_api_url' => 'https://ab-inspiration.com',
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.101',
+			'version' => '8.103',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -2001,5 +2001,3 @@ $link = preg_replace( '|#more-[0-9]+|', '', $link );
 return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-
-
