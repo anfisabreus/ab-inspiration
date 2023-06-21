@@ -2182,13 +2182,22 @@ $options[] = array(
 "std" => "0",
 "type" => "checkbox");	
                         
-                        $options[] = array( "name" => __('Ключ для капчи', 'inspiration'),
+                        $options[] = array( "name" => __('Ключ сайта', 'inspiration'),
 						"desc" => __('Использовать капчу боковой колонке в форме отзывов? Требуется <a href="https://ab-inspiration.com/downloads/testimonials/">плагин
 "Отзывы"</a>. Получить ключ: <a href="https://www.google.com/recaptcha" target="_blank">https://www.google.com/recaptcha</a>', 'inspiration'),
 						"id" => "recaptcha",
 						"std" => "",
 						"class" => "",
 						"type" => "text"); 
+						
+						$options[] = array( "name" => __('Секретный ключ', 'inspiration'),
+						"desc" => __('Использовать капчу боковой колонке в форме отзывов? Требуется <a href="https://ab-inspiration.com/downloads/testimonials/">плагин
+"Отзывы"</a>. Получить ключ: <a href="https://www.google.com/recaptcha" target="_blank">https://www.google.com/recaptcha</a>', 'inspiration'),
+						"id" => "recaptcha_secret_key",
+						"std" => "",
+						"class" => "",
+						"type" => "text"); 
+
 						
  $options[] = array("name" => __('Политика обработки персональных данных', 'inspiration'),
 "class" => "sub-heading",

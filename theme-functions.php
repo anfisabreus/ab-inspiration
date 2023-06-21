@@ -276,7 +276,8 @@ function related_posts_thumbnails_tags_one( $post = '' )
 
 $orig_post = $post;
 
-global $post;
+global $post, $post_id;
+
 
 $categories = get_the_category( $post->ID );
 if ( $categories ) {
@@ -1827,12 +1828,17 @@ function onOkConnectReady() {
 </script>
 <?php } ?>
 <?php if (is_singular()) {
+global $homepage;
 if (of_get_option('comments_tabber') !== '3' && of_get_option('vk_app') !== '')  { ?>
 <script type="text/javascript">VK.init({apiId: <?php echo of_get_option('vk_app');?>, onlyWidgets: true});</script>
 <script type="text/javascript">VK.Widgets.Comments("vk_comments", {limit: 20, width: "auto", attach: "*"});</script>
 <?php } } ?>
-<?php if ($homepage['hp_text_animation'] == 1) { ?>
-<script>  jQuery('.katalog-buttons, .firstpost, .secondpost, .heading-title1,.heading-title2,.heading-title3,.heading-title4, .heading-title5, .heading-title6, .post-font1 ol li, .post-font2 ol li,.post-font3 ol li,.post-font1 ul li, .post-font2 ul li,.post-font3 ul li,.entry-title1, .entry-title2, .entry-title3, .entry-title4,.entry-title6, .homepage-image1,  .homepage-image2, .homepage-image3, .post-font1, .post-font2, .post-font3, .readmore1, .readmore2, .readmore3,.readmore4,.readmore5,.readmore6,  .testimonials-animation, .katalog-enterpage, .cbp-l-grid-projects-title, .cbp-l-grid-projects-desc, .homepage-icon1, .homepage-icon2, .homepage-icon3').waypoint(function(){ jQuery(this).addClass('fadeInUp animated'); }, { offset: '100%' });</script><?php } ?><?php 
+<?php global $homepage; 
+	
+	if(isset($homepage['hp_text_animation'])){
+	
+	if ($homepage['hp_text_animation'] == 1) {  ?>
+<script>  jQuery('.katalog-buttons, .firstpost, .secondpost, .heading-title1,.heading-title2,.heading-title3,.heading-title4, .heading-title5, .heading-title6, .post-font1 ol li, .post-font2 ol li,.post-font3 ol li,.post-font1 ul li, .post-font2 ul li,.post-font3 ul li,.entry-title1, .entry-title2, .entry-title3, .entry-title4,.entry-title6, .homepage-image1,  .homepage-image2, .homepage-image3, .post-font1, .post-font2, .post-font3, .readmore1, .readmore2, .readmore3,.readmore4,.readmore5,.readmore6,  .testimonials-animation, .katalog-enterpage, .cbp-l-grid-projects-title, .cbp-l-grid-projects-desc, .homepage-icon1, .homepage-icon2, .homepage-icon3').waypoint(function(){ jQuery(this).addClass('fadeInUp animated'); }, { offset: '100%' });</script><?php } } ?><?php 
 $license 	= get_option( 'edd_scroll_license_key' );
 $status 	= get_option( 'edd_scroll_license_status' );
 if ($status !== false && $status == 'valid' ) {  
@@ -1933,6 +1939,22 @@ jQuery(document).ready(function() {
 </script>
 
 
+<script>
+jQuery(document).ready(function() {
+  // Get an array of all element heights
+  var elementHeights = jQuery('.woocommerce-loop-product__title').map(function() {
+    return jQuery(this).height();
+  }).get();
+
+  // Math.max takes a variable number of arguments
+  // `apply` is equivalent to passing each height as an argument
+  var maxHeight = Math.max.apply(null, elementHeights);
+
+  // Set each height to the max height
+  jQuery('.woocommerce-loop-product__title').height(maxHeight);
+});
+</script>
+
 
 <?php
 		
@@ -1944,7 +1966,7 @@ add_action('wp_footer','ab_inspiration_footer_scripts', 100);
 // вставки скриптов в header 
 
 function ab_inspiration_header_scripts() { 
-
+global $post;
 echo of_get_option('metatag', '' ); ?>
 <?php if (is_home() ||  is_page_template('enterpage.php')) { ?>
 <meta property="og:title" content="<?php echo of_get_option('blog_title'); ?>">
@@ -1975,7 +1997,7 @@ echo of_get_option('metatag', '' ); ?>
 <meta name="twitter:image:height" content="375">
 
 <?php if (of_get_option('vk_app') !== '' && !is_page_template('enterpage.php')  ) { ?>
-<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script><?php } ?>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?169"></script><?php } ?>
 
 <?php if (is_page_template('testimonials-page.php'))  { ?>
 <script defer="defer" src='https://www.google.com/recaptcha/api.js'></script><?php } ?>

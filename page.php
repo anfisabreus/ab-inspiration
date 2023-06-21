@@ -29,9 +29,10 @@ get_header(); ?>
 </span></div>
 
 <?php $custom = get_post_custom($post->ID);
+
 if($custom['post_button_top'][0] == 0): ?>  
 <?php if (of_get_option('share_display') ['3'] == '1' ) { echo social_likes(); }  ?>
-<?php endif; ?>
+<?php endif;  ?>
 					<div class="entry-content">
 					
 

@@ -68,6 +68,7 @@ if(get_the_tag_list() && of_get_option('tags') == 1) { ?>
 
 
 <?php $custom = get_post_custom(get_the_ID(),'post_share_bottom', true);
+
 if($custom['post_share_bottom'][0] == 0 && is_single() && !is_singular('catalog') ) : ?>
 <div style="clear:both"></div>
 <?php if (of_get_option('share_display_bottom') ['2'] == '1' ) { echo social_likes_bottom(); } ?>
@@ -80,6 +81,7 @@ if($custom['post_share_bottom'][0] == 0 && is_single() && !is_singular('catalog'
 
 
 <?php $custom = get_post_custom($post->ID);
+
 if($custom['post_form'][0] == 0 && of_get_option('form_bottom_embed') == true): ?> 
 <?php form_post_bottom();  ?>
 <?php endif; ?>
@@ -91,12 +93,13 @@ if($custom['post_form'][0] == 0 && of_get_option('form_bottom_embed') == true): 
 	
 
 $custom = get_post_custom($post->ID);
+
 if($custom['post_related'][0] == 0): ?> 
 <?php if (of_get_option('related_posts') == 'categories') {  echo related_posts_thumbnails_tags_one(); } ?>
 <?php if (of_get_option('related_posts') == 'tags') {  echo related_posts_thumbnails_tags(); } ?>
 
 
-<?php endif; ?>
+<?php endif;   ?>
 
 
 </div><!-- .entry-content --></div><!-- #post-## -->		

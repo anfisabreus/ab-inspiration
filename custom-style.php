@@ -521,7 +521,7 @@ li.widget_ab_categories ul li ul li a:before, #primary li.widget_product_categor
 li.bypostauthor { 
 '; if ( of_get_option('author_comment_color') !== '') { $css .= 'background-color:'. of_get_option('author_comment_color').'!important;';} else { $css .= 'background-color:transparent !important;';} $css .= '}
 .post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6, h1.katalog-title {font-family:'. of_get_option('fonts_headers').'; 
-'; if ( of_get_option('post_headings') !== '') { $css .= 'color:'. of_get_option('post_headings').'!important;';} else { $css .= 'color:#000 !important;';} $css .= '}
+'; if ( of_get_option('post_headings') !== '') { $css .= 'color:'. of_get_option('post_headings').';';} else { $css .= 'color:#000;';} $css .= '}
 .tccol4 span{'; if ( of_get_option('button_color_text') !== '') { $css .= 'color:'. of_get_option('button_color_text').'!important;';} else { $css .= 'color:#000!important;';} if ( of_get_option('button_color') !== '') { $css .= 'background-color:'. of_get_option('button_color').';';} else { $css .= 'background-color:transparent;';} $css .= '}
 .widget-title {line-height:1.1 !important; padding:5px 5px 5px 10px; text-transform: '. of_get_option('transform_widget', 'no entry' ).'; ';
 if ( of_get_option('widget_header_bg' ) !== '') { $css .= 'background:'. of_get_option('widget_header_bg' ).';';} else { $css .= 'background:transparent;';} 
@@ -531,6 +531,7 @@ a:focus {outline:none;}
 #grid-container2 .cbp-l-grid-projects-title div.entry-title a:visited { '; $typography = of_get_option('post_typography'); if ($typography) { if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].';';} $css .= '}
 #grid-container2 .cbp-l-grid-projects-title div.entry-title a:link {'; $typography = of_get_option('post_typography'); 
 if ($typography) { if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ' !important;font-style: '. $typography['style'] .' !important; font-weight: '; if ($homepage['heading_text_strong6'] ==  1)  {$css .=   '500 !important';} else {$css .=   'normal !important';} $css .=  ';font-size: '. $homepage['hp_header_size6'] .'px !important;'; } $css .= '}
+
 .entry-title, h1.entry-title, .wpcw-course-title {'; $typography = of_get_option('post_typography'); if ($typography) { if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';font: '. $typography['style'] .' '. $typography['size'] .' '.  $typography['face'].'; margin-top:0px !important;}';}
 $css .= '
 #content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited, h3.wpcw-course-title a:link, h3.wpcw-course-title a:visited, .col-lg-4 h2.entry-title a:visited, .col-lg-4 h2.entry-title a:link  {text-decoration: none;'; $typography = of_get_option('post_typography'); if ($typography) {if ( $typography['color'] !== '') { $css .= 'color:'. $typography['color'];} else { $css .= 'color:#000';}  $css .= ';
@@ -590,7 +591,7 @@ $css .= '
 
 .headermenu-inside {width:1200px;display:table !important;margin:0 auto !important;}';
  
-$menuheightplus = of_get_option('headermenu_height') + of_get_option('headermenu_margin_top', 'no entry' ) + of_get_option('headermenu_margin_bottom', 'no entry' );
+$menuheightplus = ((int)of_get_option('headermenu_height') + (int)of_get_option('headermenu_margin_top', 'no entry' ) + (int)of_get_option('headermenu_margin_bottom', 'no entry' ));
 
 $css .= ' .headermenu-ul{display: table-cell; vertical-align:'.of_get_option('headermenupos').'; height:'. of_get_option('headermenu_height').'px !important}
 .headermenu-bgg {height: '. $menuheightplus .'px; position:absolute;width:100%;'; if ( of_get_option('headermenu_bg_line') !== '') { $css .= 'background:'. $rgbaul .';';} else { $css .= 'background:transparent;';} $css .= 'border-top: '. of_get_option('headermenu_border_top').'px '.of_get_option('headermenu_border_top_style').'  
@@ -711,7 +712,7 @@ if ( of_get_option('post_border') == 'none'){ $css .= '.testimonials-between-bor
 
 if (function_exists('edd_catalog_plugin_updater')) {
   
- $css .= ' .cbp-l-caption-buttonLeft.buy,  .cbp-s-caption-buttonLeft.buy,  .cbp-m-caption-buttonLeft.buy, .cbp-l-caption-buttonRight {'; if ( $ab_catalog['katalog_button_color'] !== '') { $css .= 'background-color:'. $ab_catalog['katalog_button_color'] .';';} else { $css .= 'background-color:transparent;';} if ( $ab_catalog['katalog_button_text_color'] !== '') { $css .= 'color:'. $ab_catalog['katalog_button_text_color'] .';';} else { $css .= 'color:#000;';} $css .= '}
+ $css .= '.entry-content a.cbp-l-caption-buttonLeft.buy, .entry-content a.cbp-s-caption-buttonLeft.buy, .entry-content a.cbp-m-caption-buttonLeft.buy, .entry-content a.cbp-l-caption-buttonRight {'; if ( $ab_catalog['katalog_button_color'] !== '') { $css .= 'background-color:'. $ab_catalog['katalog_button_color'] .';';} else { $css .= 'background-color:transparent;';} if ( $ab_catalog['katalog_button_text_color'] !== '') { $css .= 'color:'. $ab_catalog['katalog_button_text_color'] .';';} else { $css .= 'color:#000;';} $css .= '}
 a.cbp-l-caption-buttonRight {text-decoration:none;}
 .cbp-l-caption-buttonLeft:hover.buy,.cbp-s-caption-buttonLeft:hover.buy,.cbp-m-caption-buttonLeft:hover.buy,  .cbp-l-caption-buttonRight:hover
 {'; if ( $ab_catalog['katalog_button_color_hover'] !== '') { $css .= 'background-color:'. $ab_catalog['katalog_button_color_hover'] .';';} else { $css .= 'background-color:transparent;';} $css .= '}
@@ -1340,9 +1341,9 @@ div.widget_shopping_cart_content p.buttons a.button {width:100%}
 .woocommerce ul.cart_list li img, .woocommerce ul.product_list_widget li img {width:50px;}
 .woocommerce ul.cart_list li a:link, .woocommerce ul.product_list_widget li a:link, .woocommerce ul.cart_list li a:visited, .woocommerce ul.product_list_widget li a:visited, .woocommerce ul.cart_list li span {color:#333 !important; font-size:16px}
 .woocommerce ul.cart_list li a:link {font-size:12px}
-.woocommerce table.shop_table tr th {color: rgba(0,0,0,0.6) !important;font-size: .75rem !important;font-weight: normal;line-height: 18px;padding: 9px 24px;text-align:left !important}
+.woocommerce table.shop_table tr th {color: rgba(0,0,0,0.6);font-size: .75rem;font-weight: normal;line-height: 18px;padding: 9px 24px;text-align:left !important}
 
-.woocommerce ul#shipping_method label {font-size: 16px !important; font-weight:normal}
+.woocommerce ul#shipping_method label {font-size: 16px; font-weight:normal}
 .woocommerce-Price-currencySymbol .fa {display:inline}
  #wrapper .woocommerce div.product .woocommerce-tabs ul.tabs li a, span.color-link.color_and_text_link a {color:#333 !important;}   
 #wrapper .woocommerce a.woocommerce-LoopProduct-link, #wrapper .woocommerce .woocommerce-breadcrumb a, #wrapper .woocommerce .woocommerce-breadcrumb {color:#777  !important; font-size:15px} 
@@ -1368,13 +1369,13 @@ mark {background:#fff}
 .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {border-radius:3px}
 
 .woocommerce-cart table.cart img {width:82px;}
-.entry-content label {font-size:14px !important}
+.entry-content label {font-size:16px !important}
 form.woocommerce-cart-form span.woocommerce-Price-amount.amount {font-weight:500 !important; font-size:14px}
-.product-price span.woocommerce-Price-amount.amount bdi {color: rgba(0,0,0,0.6)!important; font-size:14px}
+.product-price span.woocommerce-Price-amount.amount bdi {font-size:14px}
 .woocommerce ul.products li.product .img-wrap .yith-wcqv-button {margin-top:10px; margin-bottom:0px}
 #wrapper .woocommerce .single .hentry, .page .hentry {margin-bottom:0px !important}
 .woocommerce .woocommerce-cart-form table.shop_table {border: none }
-
+.elementor-widget-woocommerce-cart .woocommerce .input-text.qty {text-align: center}
 .woocommerce div.product form.cart div.quantity, .woocommerce table.shop_table tr.cart_item td.product-quantity  div.quantity {margin-right:0px;}
 .woocommerce .product  div.quantity .tm-qty-plus:before,  .woocommerce table.shop_table tr.cart_item td.product-quantity  div.quantity .tm-qty-plus:before{position: absolute;top: 15px;font-family: "FontAwesome";font-size: 11px;transition: .3s all ease;}
 .woocommerce .product  div.quantity .tm-qty-plus:before,  .woocommerce table.shop_table tr.cart_item td.product-quantity  div.quantity .tm-qty-plus:before {content: "\f067";right: 10px;}
@@ -1389,7 +1390,7 @@ form.woocommerce-cart-form span.woocommerce-Price-amount.amount {font-weight:500
 .woocommerce .quantity {display:inline-flex;     align-items: center;}
 .woocommerce .product .quantity, .woocommerce .product  button.button {height:40px;}
 .woocommerce .product  button.button {padding: 3px 20px; margin-left:20px}
-.entry-content label[for=payment_method_kassa], .wc_payment_method input {width:80%; vertical-align:top}
+.entry-content label[for=payment_method_kassa], .wc_payment_method input { width: 50px; vertical-align: middle;}
 .woocommerce form .form-row textarea {height: 5em;}
 .woocommerce-variation-price  {margin-bottom:20px}
 .woocommerce-variation-price span {font-size:30px; margin-bottom:20px}
@@ -1798,7 +1799,7 @@ $css .= ' .video-catalog {width:100% !important}
 	 .pagenavi a, .pagenavi a:link, .pagenavi a:visited, .pagenavi .current, .pagenavi .on, .pagenavi span.pages, .insta-button, .pagenavi span.current
 {font-size: 14px;}
 	
-	
+	.fusion-portfolio.wrapper-portfolio.cbp-1-col .cbp-l-grid-blog .cbp-caption-one, .fusion-portfolio.wrapper-portfolio.cbp-1-col .cbp-l-grid-blog .cbp-item-wrapper .post-font {width: 100% !important; padding: 0px}
 	
 }
 
@@ -2162,7 +2163,7 @@ ul.product_list_widget .product-title {color:#333 !important}
 #site-title a,.entry-title, h1.entry-title,#content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited,
 #footer-widget-area div.widget-title,.post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6,h1.katalog-title,.widget-title,.woocommerce ul.products li.product h3, .cart_totals.calculated_shipping h2,  h3#order_review_heading,  #slides .caption1, .home-level2 .cat-title-homepage, .shop-otzyv-home, .entry-box.ab-inspiration-woocommerce-entry .woocommerce ul.products li.product-category.product h3,  .woocommerce #reviews h3,#wrapper h3, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .buttonsinvite div.heading, .headerformpost, .form-heading, #content h3 a, #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, label.ship-to-different-address-checkbox, .entry-title3 a:link, .entry-title3 a:visited, h3.entry-title1, .heading-title2 p, .heading-title2 span, .heading-title5 p, .heading-title5 span, .heading-title1 p, .heading-title1 span, .heading-title3 p, .heading-title3 span,.heading-title4 p, .heading-title4 span,.heading-title6 p, .heading-title6 span, h3.wpcw-course-title {font-weight:normal}
 .woocommerce h2 {font-weight:normal}
-.woocommerce-shipping-fields h3, .woocommerce .woocommerce-billing-fields h3, .woocommerce h3#order_review_heading, .woocommerce-additional-fields h3 {font-weight:600 !important ; font-size:16px !important}
+
 
 #access .sub-menu li a {border:none !important}
 
@@ -2262,7 +2263,7 @@ button.btnhov, input.btnhov, div.btnhov,  div.buttonpostform:hover, .sp-form .sp
 
 #site-title a:hover {'; if ( of_get_option('color_two') !== '') { $css .= 'color:'. of_get_option('color_two')  .'!important;';} else { $css .= 'color:#000!important;';} $css .= '}
 
-#site-title a, #site-title,  .entry-title, h1.entry-title, #content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited, .post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6, h1.katalog-title, .widget-title, .woocommerce ul.products li.product h3, .cart_totals.calculated_shipping h2, .woocommerce-billing-fields h3, h3#order_review_heading, .woocommerce-shipping-fields h3, .entry-title, h1.entry-title, div.related_posts div, div.buttonsinvite div.heading, .woocommerce .woocommerce-Tabs-panel,#content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .buttonsinvite div.heading, .headerformpost, .form-heading, #content h3 a:link, #content h1 a:link, #content h2.entry-title a:link, #content h2.entry-title a:visited, #content h3 a:link, #content h4 a:link, #content h5 a:link, #content .woocommerce div.product form.cart table tr td.label a:link, #content .woocommerce div.product form.cart table tr td.label a:visited, .stock.available-on-backorder, .stock.out-of-stock,  .entry-content div.woocommerce-shipping-fields h3  label, p.stock.in-stock, #content .woocommerce div.product form.cart table.variations  tr td.label label, .widget-area .recentpost-title a:link, .widget-area .recentpost-title a:visited, .entry-title3 a:link, .entry-title3 a:visited,  .heading-title2 p, .heading-title2 span, .heading-title5 p, .heading-title5 span, .heading-title1 p, .heading-title1 span, .heading-title3 p, .heading-title3 span,.heading-title4 p, .heading-title4 span,.heading-title6 p, .heading-title6 span, .entry-title2 a:link, .entry-title2 a:visited, div.entry-title5, .entry-title5 a:link, .entry-title5 a:visited, #grid-container2 h2.entry-title a:link, #grid-container2 h2.entry-title a:visited, #grid-container .post-font .cbp-l-grid-projects-title div.entry-title a:link, #grid-container .post-font .cbp-l-grid-projects-title h2.entry-title a:visited, h3.wpcw-course-title, .wpcw_fe_course_title {'; if ( of_get_option('color_two') !== '') { $css .= 'color:'. shadesubs(tonesubs(''. of_get_option('color_two')) .'') .';';} else { $css .= 'color:#000;';} $css .= '}
+#site-title a, #site-title,  .entry-title, h1.entry-title, #content div.post h2.entry-title a:link, #content div.post h2.entry-title a:visited, .post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6, h1.katalog-title, .widget-title, .woocommerce ul.products li.product h3, .cart_totals.calculated_shipping h2, .woocommerce-billing-fields h3, .woocommerce-checkout h3, .woocommerce-shipping-fields h3, .entry-title, h1.entry-title, div.related_posts div, div.buttonsinvite div.heading, .woocommerce .woocommerce-Tabs-panel,#content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .buttonsinvite div.heading, .headerformpost, .form-heading, #content h3 a:link, #content h1 a:link, #content h2.entry-title a:link, #content h2.entry-title a:visited, #content h3 a:link, #content h4 a:link, #content h5 a:link, #content .woocommerce div.product form.cart table tr td.label a:link, #content .woocommerce div.product form.cart table tr td.label a:visited, .stock.available-on-backorder, .stock.out-of-stock,  .entry-content div.woocommerce-shipping-fields h3  label, p.stock.in-stock, #content .woocommerce div.product form.cart table.variations  tr td.label label, .widget-area .recentpost-title a:link, .widget-area .recentpost-title a:visited, .entry-title3 a:link, .entry-title3 a:visited,  .heading-title2 p, .heading-title2 span, .heading-title5 p, .heading-title5 span, .heading-title1 p, .heading-title1 span, .heading-title3 p, .heading-title3 span,.heading-title4 p, .heading-title4 span,.heading-title6 p, .heading-title6 span, .entry-title2 a:link, .entry-title2 a:visited, div.entry-title5, .entry-title5 a:link, .entry-title5 a:visited, #grid-container2 h2.entry-title a:link, #grid-container2 h2.entry-title a:visited, #grid-container .post-font .cbp-l-grid-projects-title div.entry-title a:link, #grid-container .post-font .cbp-l-grid-projects-title h2.entry-title a:visited, h3.wpcw-course-title, .wpcw_fe_course_title {'; if ( of_get_option('color_two') !== '') { $css .= 'color:'. shadesubs(tonesubs(''. of_get_option('color_two')) .'') .';';} else { $css .= 'color:#000;';} $css .= '}
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce h2 {'; if ( of_get_option('color_two') !== '') { $css .= 'color:'. shadesubs(tonesubs(''. of_get_option('color_two')) .'') .';';} else { $css .= 'color:#000;';} $css .= '}
 
@@ -2285,6 +2286,8 @@ span.onsale:after, .woocommerce span.onsale, span.onsale {'; if ( of_get_option(
 #footer-widget-area div.widget-title,.post-font h1, .post-font h2, .post-font h3, .post-font h4, .post-font h5, .post-font h6,h1.katalog-title,.widget-title,.woocommerce ul.products li.product h3, .cart_totals.calculated_shipping h2, .woocommerce-billing-fields h3, h3#order_review_heading, .woocommerce-shipping-fields h3, #slides .caption1, .home-level2 .cat-title-homepage, .shop-otzyv-home, .entry-box.ab-inspiration-woocommerce-entry .woocommerce ul.products li.product-category.product h3,  .woocommerce #reviews h3,#content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .buttonsinvite div.heading, .headerformpost, .form-heading, #content h3 a, #content h1 a, #content h2 a, #content h3 a, #content h4 a, #content h5 a, label.ship-to-different-address-checkbox, .entry-title3 a:link, .entry-title3 a:visited, h3.entry-title1, .heading-title2 p, .heading-title2 span, .heading-title5 p, .heading-title5 span, .heading-title1 p, .heading-title1 span, .heading-title3 p, .heading-title3 span,.heading-title4 p, .heading-title4 span,.heading-title6 p, .heading-title6 span, #grid-container .post-font .cbp-l-grid-projects-title div.entry-title a:link, #grid-container .post-font .cbp-l-grid-projects-title h2.entry-title a:visited, h3.wpcw-course-title a:link, h3.wpcw-course-title a:visited, .sub-form-top div.ab-header, .sub-form-top div.ab-header p, .wpcw_fe_course_title {'; if ( of_get_option('headings_fonts_headers') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr !important;font-weight: 500 !important;';} else { $css .= 'font-family:'. of_get_option('headings_fonts_headers').';font-weight: 400;';} $css .= '} 
 
 .woocommerce h2 {'; if ( of_get_option('headings_fonts_headers') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr;font-weight: 500;';} else { $css .= 'font-family:'. of_get_option('headings_fonts_headers').' ;font-weight: 400;';} $css .= '} 
+
+#content .woocommerce-shipping-fields h3, #content .woocommerce-billing-fields h3, .woocommerce h3#order_review_heading, #content .woocommerce-additional-fields h3 {font-weight:600; font-size:16px}
 
 #cssmenu > ul > li > a,#cssmenu > ul > li > a,#cssmenu a,#access li a,.cbp-l-filters-alignLeft .cbp-filter-item,body, input, textarea, .page-title span, .pingback a.url, .cbp-l-grid-projects-desc, .cbp-l-grid-blog-desc p,a.more-link,ul.commentstabs li a:hover,  #content  ul.commentstabs li.commentab a.active,  #content  ul.commentstabs li.commentab a.active:hover, #submit, #submit:visited, .submit, .submit:visited, a.comment-reply-link, .pagenavi a, .pagenavi a:link, .pagenavi a:visited, .pagenavi .current, .pagenavi .on, .pagenavi span.pages, .insta-button, .pagenavi span.current, .archiv-title,  #site-description,   .woocommerce ul.cart_list li a:link, .woocommerce ul.product_list_widget li a:link, .woocommerce ul.cart_list li a:visited, .woocommerce ul.product_list_widget li a:visited, .woocommerce ul.cart_list li span, #slides .caption2, #slides .caption3, #sub-form-top-admin .ab-form-button-top-admin div, .sub-form-top input.ab-form-button-top, .sub-form-top .sp-button.ab-form-button-top, .sub-form-footer .sp-button.ab-form-button-top, .home-level2 .shop_cat_desc, #content .home-level3 .abinspiration-product-ads a.ads-homepage, .otzyv-tovar-magazin, .reviewer, div.entry-content.post-font .home-level-posts, #content .woocommerce div.product form.cart table tr td.label a:link, #content .woocommerce div.product form.cart table tr td.label a:visited, .post-font3, h3.entry-title2, div.entry-title5, .entry-title5 a:link, .entry-title5 a:visited, .otzyvy-text, .otzyvy-name, #grid-container2 h2.entry-title a:link, input.button,  #content .wpcw_fe_quiz_submit_data input.fe_btn_completion, a.more-link1,a.more-link2,a.more-link3,a.more-link4,a.more-link5,a.more-link6 , .sub-form-top div.list ul li, .sub-form-top div.description, .sub-form-top div.description p, .sub-form-top div.header-form, .sub-form-top div.header-form p, .sub-form-top .input-form, .sub-form-top .garantia a, .sub-form-top div.header-form p, .wpcw-button.wpcw-button-primary, .fe_btn.fe_btn_completion.btn_completion, .woocommerce div.product .woocommerce-tabs ul.tabs li, a.more-link,ul.commentstabs li a:hover,  #content  ul.commentstabs li.commentab a.active,  #content  ul.commentstabs li.commentab a.active:hover, #submit, #submit:visited, .submit, .submit:visited,  a.comment-reply-link, .pagenavi a, .pagenavi a:link, .pagenavi a:visited, .pagenavi .current, .pagenavi .on, .pagenavi span.pages, .insta-button, .pagenavi span.current, .archiv-title,  .woocommerce div.product .woocommerce-tabs ul.tabs li, input.button, .wpcw_fe_quiz_submit_data input.fe_btn, a.fe_btn, ul.commentstabs li a, .sp-form .sp-button.buttonpostform, button.buttonpostform, .sp-form .sp-button.form-button, .buttonpostform, #content div.post-font a.more-link,a.more-link, #content a.wpcw-button.wpcw-button-primary, a.fe_btn.fe_btn_completion.btn_completion {'; if ( of_get_option('headings_fonts_text') == 'Avenir Next Cyr') { $css .= 'font-family:Avenir Next Cyr !important;font-weight: 400;';} else { $css .= 'font-family:'. of_get_option('headings_fonts_text').';font-weight: 400;';} $css .= '}
 

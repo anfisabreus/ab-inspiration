@@ -146,7 +146,7 @@ $icon_color_hover_text = $instance['icon_color_hover_text'];
 <div style="text-align:center; padding-top:5px;">
 <?php if ($facebook_page) {?> <a itemprop="url" rel="nofollow" href="<?php echo $facebook_page?>" target="_blank" class="linkicon"><div class="socialiconstyletop fb"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-facebook <?php  if($flwidth == "30") { ?> fa-lg <?php } elseif ( $flwidth == "36") { ?> fa-lg <?php }  elseif ( $flwidth == "42") { ?> fa-2x <?php } elseif ( $flwidth == "52") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?> "></i><span style="display:none"><?php _e( 'Следить на Facebook', 'inspiration' ); ?></span></div></a><?php }?> 
 
-<?php if ($telegram) {?> <a itemprop="url" rel="nofollow" href="https://telegram.im/@<?php echo $telegram?>" target="_blank"><div class="socialiconstyletop telegram"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-telegram <?php  if($flwidth == "30") { ?> fa-lg <?php } elseif ( $flwidth == "36") { ?> fa-lg <?php }  elseif ( $flwidth == "42") { ?> fa-2x <?php } elseif ( $flwidth == "52") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Присоединяйтесь в Телеграм', 'inspiration' ); ?></span></div></a><?php }?> 
+<?php if ($telegram) {?> <a itemprop="url" rel="nofollow" href="https://t.me/<?php echo $telegram?>" target="_blank"><div class="socialiconstyletop telegram"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-telegram <?php  if($flwidth == "30") { ?> fa-lg <?php } elseif ( $flwidth == "36") { ?> fa-lg <?php }  elseif ( $flwidth == "42") { ?> fa-2x <?php } elseif ( $flwidth == "52") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Присоединяйтесь в Телеграм', 'inspiration' ); ?></span></div></a><?php }?> 
 
 <?php if ($twitter_id) { ?><a itemprop="url" rel="nofollow" href="<?php echo $twitter_id?>" target="_blank"><div class="socialiconstyletop tw"><i style="line-height:<?php echo $flwidth;?>px; " class="fa fa-twitter <?php  if($flwidth == "30") { ?> fa-lg <?php } elseif ( $flwidth == "36") { ?> fa-lg <?php }  elseif ( $flwidth == "42") { ?> fa-2x <?php } elseif ( $flwidth == "52") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?> "></i><span style="display:none"><?php _e( 'Следить на Twitter', 'inspiration' ); ?></span></div></a><?php }?>
 
@@ -415,13 +415,13 @@ $icon_color_hover_text = $instance['icon_color_hover_text'];
        
         
         <p>
-          <label for="<?php echo $this->get_field_id('whatsapp'); ?>"><?php _e('WhatsApp:', 'inspiration'); ?></label>
+          <label for="<?php echo $this->get_field_id('whatsapp'); ?>"><?php _e('WhatsApp: (пример: 79211234567)', 'inspiration'); ?></label>
           <input class="widefat" id="<?php echo $this->get_field_id('whatsapp'); ?>" name="<?php echo $this->get_field_name('whatsapp'); ?>" type="text" value="<?php echo $whatsapp; ?>" />
         </p>
         
         
            <p>
-          <label for="<?php echo $this->get_field_id('viber'); ?>"><?php _e('Viber:', 'inspiration'); ?></label>
+          <label for="<?php echo $this->get_field_id('viber'); ?>"><?php _e('Viber: (пример: 79211234567)', 'inspiration'); ?></label>
           <input class="widefat" id="<?php echo $this->get_field_id('viber'); ?>" name="<?php echo $this->get_field_name('viber'); ?>" type="text" value="<?php echo $viber; ?>" />
         </p>
         
@@ -1930,7 +1930,7 @@ if($bordercolor == 1) { ?>.socialiconstyle {border: 1px solid <?php echo $icon_c
 
 <?php if ($facebook_page) {?> <a itemprop="url" rel="nofollow" href="<?php echo $facebook_page?>" target="_blank" class="linkicon"><div class="socialiconstyle fb"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-facebook <?php   if ( $flwidth == "35") { ?> fa-lg <?php }  elseif ( $flwidth == "40") { ?> fa-2x <?php } elseif ( $flwidth == "50") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Следить на Facebook', 'inspiration' ); ?></span></div></a><?php }?> 
 
-<?php if ($telegram) {?> <a itemprop="url" rel="nofollow" href="https://telegram.im/@<?php echo $telegram?>" target="_blank"><div class="socialiconstyle telegram"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-telegram <?php   if ( $flwidth == "35") { ?> fa-lg <?php }  elseif ( $flwidth == "40") { ?> fa-2x <?php } elseif ( $flwidth == "50") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Присоединяйтесь в Телеграм', 'inspiration' ); ?></span></div></a><?php }?> 
+<?php if ($telegram) {?> <a itemprop="url" rel="nofollow" href="https://t.me/<?php echo $telegram?>" target="_blank"><div class="socialiconstyle telegram"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-telegram <?php   if ( $flwidth == "35") { ?> fa-lg <?php }  elseif ( $flwidth == "40") { ?> fa-2x <?php } elseif ( $flwidth == "50") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Присоединяйтесь в Телеграм', 'inspiration' ); ?></span></div></a><?php }?> 
 
 
 
@@ -1949,7 +1949,6 @@ if($bordercolor == 1) { ?>.socialiconstyle {border: 1px solid <?php echo $icon_c
 <?php if ($instagram) {?><a itemprop="url" rel="nofollow" href="<?php echo $instagram ?>" target="_blank"><div class="socialiconstyle inst"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-instagram <?php   if ( $flwidth == "35") { ?> fa-lg <?php }  elseif ( $flwidth == "40") { ?> fa-2x <?php } elseif ( $flwidth == "50") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Следить в Instagram', 'inspiration' ); ?>  </span></div></a><?php }?> 
 
 <?php if ($whatsapp) {?><a itemprop="url" rel="nofollow" href="https://api.whatsapp.com/send?phone=<?php echo $whatsapp ?>" target="_blank"><div class="socialiconstyle whatsapp"><i style="line-height:<?php echo $flwidth;?>px;" class="fa fa-whatsapp <?php   if ( $flwidth == "35") { ?> fa-lg <?php }  elseif ( $flwidth == "40") { ?> fa-2x <?php } elseif ( $flwidth == "50") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Войти в контакт по WhatsApp', 'inspiration' ); ?></span></div></a><?php }?> 
-
 
 
 <?php if ($viber) {?><a itemprop="url" rel="nofollow" href="viber://add?number=<?php echo $viber ?>" target="_blank"><div class="socialiconstyle viber" style="    vertical-align: bottom;"><i style=" font-size: <?php  if ( $flwidth == "35" ) { ?> 14px  !important; <?php }   elseif ( $flwidth == "40") { ?> 16px !important; <?php }  elseif ( $flwidth == "50") { ?> 20px !important; <?php } else { ?> 26px !important; <?php } ?> line-height:<?php echo $flwidth;?>px;" class="fa faa-viber <?php  if($flwidth == "30") { ?> fa-lg <?php } elseif ( $flwidth == "36") { ?> fa-lg <?php }  elseif ( $flwidth == "42") { ?> fa-2x <?php } elseif ( $flwidth == "52") { ?> fa-3x <?php } else { ?> fa-4x <?php } ?>"></i><span style="display:none"><?php _e( 'Войти в контакт по Viber', 'inspiration' ); ?></span></div></a><?php }?> 
@@ -2074,13 +2073,13 @@ if($bordercolor == 1) { ?>.socialiconstyle {border: 1px solid <?php echo $icon_c
         
         
               <p>
-          <label for="<?php echo $this->get_field_id('whatsapp'); ?>"><?php _e('WhatsApp:', 'inspiration'); ?></label>
+          <label for="<?php echo $this->get_field_id('whatsapp'); ?>"><?php _e('WhatsApp: (пример: 79211234567)', 'inspiration'); ?></label>
           <input class="widefat" id="<?php echo $this->get_field_id('whatsapp'); ?>" name="<?php echo $this->get_field_name('whatsapp'); ?>" type="text" value="<?php echo $whatsapp; ?>" />
         </p>
         
         
            <p>
-          <label for="<?php echo $this->get_field_id('viber'); ?>"><?php _e('Viber:', 'inspiration'); ?></label>
+          <label for="<?php echo $this->get_field_id('viber'); ?>"><?php _e('Viber: (пример: 79211234567)', 'inspiration'); ?></label>
           <input class="widefat" id="<?php echo $this->get_field_id('viber'); ?>" name="<?php echo $this->get_field_name('viber'); ?>" type="text" value="<?php echo $viber; ?>" />
         </p>
         

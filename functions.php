@@ -565,21 +565,16 @@ foreach( $post_types as $post_type) {
 function post_extra() {		
 	global $post;
   	$custom = get_post_custom($post->ID);
-  	
-	$post_button_top = $custom["post_button_top"][0];
-	$post_share_bottom = $custom["post_share_bottom"][0];
-	$post_form = $custom["post_form"][0];
-	$post_related = $custom["post_related"][0];
 	
 	
   	?>
-  	<input type="checkbox" name="post_button_top" id="post_button_top" value="1" <?php if( $post_button_top == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в начале статьи', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_button_top" id="post_button_top" value="1" <?php if(isset($custom["post_button_top"][0]) &&  $custom["post_button_top"][0] == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в начале статьи', 'inspiration' ); ?><br>
   	
-  	<input type="checkbox" name="post_share_bottom" id="post_share_bottom" value="1" <?php if( $post_share_bottom == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в конце статьи', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_share_bottom" id="post_share_bottom" value="1" <?php if(isset($custom["post_share_bottom"][0]) && $custom["post_share_bottom"][0] == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в конце статьи', 'inspiration' ); ?><br>
   	
-  	<input type="checkbox" name="post_form" id="post_form" value="1" <?php if( $post_form == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Форма подписки в конце статьи', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_form" id="post_form" value="1" <?php if(isset($custom["post_form"][0]) && $custom["post_form"][0] == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Форма подписки в конце статьи', 'inspiration' ); ?><br>
   	
-  	<input type="checkbox" name="post_related" id="post_related" value="1" <?php if( $post_related == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Блок "Похожие записи по рубрикам"', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_related" id="post_related" value="1" <?php if(isset($custom["post_related"][0]) && $custom["post_related"][0] == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Блок "Похожие записи по рубрикам"', 'inspiration' ); ?><br>
   	
 
   	<?php
@@ -830,13 +825,11 @@ function page_extra() {
 	if( !is_object($post) ) 
         return;	
   	$custom = get_post_custom($post->ID);
-  	$post_button_top = $custom["post_button_top"][0];
-	$post_share_bottom = $custom["post_share_bottom"][0];
 	
   	?>
-  	<input type="checkbox" name="post_button_top" id="post_button_top" value="1" <?php if( $post_button_top == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в начале страницы', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_button_top" id="post_button_top" value="1" <?php if( isset($custom["post_button_top"][0]) &&  $custom["post_button_top"][0] == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в начале страницы', 'inspiration' ); ?><br>
   	
-  	<input type="checkbox" name="post_share_bottom" id="post_share_bottom" value="1" <?php if( $post_share_bottom == 1 ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в конце страницы', 'inspiration' ); ?><br>
+  	<input type="checkbox" name="post_share_bottom" id="post_share_bottom" value="1" <?php if( isset($custom["post_button_top"][0]) &&  $custom["post_share_bottom"][0] == 1  ) { ?>checked="checked"<?php } ?> /> <?php _e( 'Кнопки "Поделиться" в конце страницы', 'inspiration' ); ?><br>
 
   	
   	
@@ -1014,7 +1007,7 @@ class EDD_Theme_Updater_Admin {
 			'remote_api_url' => 'https://ab-inspiration.com',
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.101',
+			'version' => '8.104',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -2001,5 +1994,3 @@ $link = preg_replace( '|#more-[0-9]+|', '', $link );
 return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-
-

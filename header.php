@@ -53,7 +53,7 @@
 
 <?php wp_head(); ?>
 <?php if (of_get_option('vk_app') !== '' && !is_page_template('enterpage.php')  ) { ?>
-<script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script><?php } ?>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?169"></script><?php } ?>
 
 <?php if (is_page_template('testimonials-page.php'))  { ?>
 <script defer="defer" src='https://www.google.com/recaptcha/api.js'></script><?php } ?>
@@ -175,9 +175,16 @@ else { ?>
 <div style="clear:both"></div>
 
 
-<?php if (of_get_option('floatmenu') == '1') {  ?><div id="floatmenu" style="display:none"><div class="floatmenu-ul"><div class="floatmenu-bgg"><div class="floatmenu-inside"><div class="floatmenu-inside-two"><?php if (of_get_option('floatlogo') !== '') { ?> <div style="display:table-cell; vertical-align: middle;"><a href="<?php echo of_get_option('floatlogo_link'); к?>" class="link-bunner"><img src="<?php echo of_get_option('floatlogo');?>" style="padding:0px;"></a></div><?php } ?><?php if ( has_nav_menu( 'floatmenu' ) ) { wp_nav_menu(array('container_id' => 'cssmenu', 'theme_location' => 'floatmenu', 'walker' => new CSS_Menu_Maker_Walker()) ); } ?></div></div></div></div></div><?php } ?>
+<?php if (of_get_option('floatmenu') == '1') {  ?><div id="floatmenu" style="display:none"><div class="floatmenu-ul"><div class="floatmenu-bgg"><div class="floatmenu-inside"><div class="floatmenu-inside-two"><?php if (of_get_option('floatlogo') !== '') { ?> <div style="display:table-cell; vertical-align: middle;"><a href="<?php echo of_get_option('floatlogo_link'); ?>" class="link-bunner"><img src="<?php echo of_get_option('floatlogo');?>" style="padding:0px;"></a></div><?php } ?><?php if ( has_nav_menu( 'floatmenu' ) ) { wp_nav_menu(array('container_id' => 'cssmenu', 'theme_location' => 'floatmenu', 'walker' => new CSS_Menu_Maker_Walker()) ); } ?></div></div></div></div></div><?php } ?>
 
-<?php global $sub_slides; if ($sub_slides['slide_first'] == '1') { if (function_exists('ab_sub_form'))  ab_sub_form();  if (function_exists('ab_sub_slides'))  ab_sub_slides(); } else  { if (function_exists('ab_sub_slides'))  ab_sub_slides();  if (function_exists('ab_sub_form'))  ab_sub_form();  } ?>
+<?php global $sub_slides; 
+	
+$license 	= get_option( 'edd_form_license_key' );
+$status 	= get_option( 'edd_form_license_status' );
+if ($status !== false && $status == 'valid' ) { 
+	
+
+	if ($sub_slides['slide_first'] == '1') { if (function_exists('ab_sub_form'))  ab_sub_form();  if (function_exists('ab_sub_slides'))  ab_sub_slides(); } else  { if (function_exists('ab_sub_slides'))  ab_sub_slides();  if (function_exists('ab_sub_form'))  ab_sub_form();  } } ?>
 
 <?php if (of_get_option('menu_position') == '2' && of_get_option('menu_show') == '1') { ?>
 <div id="access" style="vertical-align:bottom"> <?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?> </div> <?php ;} ?>

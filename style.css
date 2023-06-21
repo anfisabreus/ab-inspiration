@@ -3,7 +3,7 @@ Theme Name: AB-Inspiration
 Theme URI: https://ab-inspiration.com/downloads/ab-inspiration/
 Author: Anfisa Breus
 Description: Unique template for Business-Blog. For successful business in the Internet. Template developer <a href="http://anfisabreus.ru">Anfisa Breus</a>.
-Version: 8.101
+Version: 8.104
 Author URI: http://anfisabreus.ru
 Tags: blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translated
 Text Domain: inspiration
@@ -519,9 +519,17 @@ input[type="password"] {
     background: #fff;
     color: #000;
     font-weight: bold;
-    padding: 0 24px;
+    padding: 0 24px 10px;
+    font-size: 18px;
 }
 
+ul.wpcw_fe_quiz_q_answers {
+    list-style: none;
+}
+.wpcw_fe_quiz_messages_wrapper {padding-bottom: 20px}
+.wpcw_fe_progress_download a {font-size: 16px !important; }
+.wpcw_fe_progress_download {padding-top: 10px;}
+.wpcw_fe_quiz_title {display:none}
 .entry-content input {
     margin: 0 0 0px 0;
 }
@@ -7713,6 +7721,10 @@ input::-ms-input-placeholder {
     vertical-align: -15%
 }
 
+.elementor-location-header {position:relative;
+z-index:2
+}
+
 .page-template-elementor_header_footer .fa-2x,
 .fa-2x {
     font-size: 1.3em !important
@@ -11656,11 +11668,19 @@ p.inspirationst-widget-readmore {
     background: #F7F6F7
 }
 
+.e-checkout__order_review .woocommerce-checkout-review-order {background: transparent
+}
+
 .woocommerce table.shop_table.woocommerce-checkout-review-order-table {
     border: none;
-    background: transparent;
     padding: 20px
 }
+
+.woocommerce .e-checkout__order_review table.shop_table.woocommerce-checkout-review-order-table {
+	padding: 0px
+}
+
+.e-checkout__column-inner .wc_payment_method input {bottom: 5px !important}
 
 .woocommerce-checkout #payment {
     background: transparent
@@ -11696,6 +11716,9 @@ p.inspirationst-widget-readmore {
 #order_review {
     width: 38%
 }
+
+.e-checkout__container #customer_details, .e-checkout__container #order_review_heading,
+.e-checkout__container #order_review {width: 100%}
 
 #content .woocommerce table.shop_table td.actions {
     border-bottom: none!important;
@@ -11832,6 +11855,12 @@ li.widget-container.widget_recent_entries ul li {
     text-decoration: none
 }
 
+.wpcw_fe_quiz_q_single {padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,.1)}
+
+.wpcw_fe_quiz_q_result.wpcw_fe_quiz_q_result_correct {color: #336600}
+
+.wpcw_fe_quiz_q_result.wpcw_fe_quiz_q_result_incorrect {color: #ff0000}
+
 .entry-content td.wpcw_fe_unit a:link {
     text-decoration: none
 }
@@ -11901,7 +11930,8 @@ tr.wpcw_fe_module.wpcw_fe_module_toggle_hide td+td:after {
 
 .wpcw_fe_quiz_q_title {
     font-size: 18px;
-    font-weight: bold
+    font-weight: bold;
+	padding-bottom: 10px;
 }
 
 .wpcw_fe_progress_box,
@@ -18058,7 +18088,7 @@ p.button-on-unit {
 #wpcw_fe_course_progress,
 #content #wpcw_fe_course td.wpcw_fe_unit_title,
 #content #wpcw_fe_course td.wpcw_fe_unit {
-    font-size: 14px !important;
+    font-size: 16px !important;
     line-height: 1.3
 }
 

@@ -46,7 +46,7 @@ wp_head(); ?>
 <?php if (of_get_option('vk_app') !== '') {?>
 <script>
 if (screen && screen.width > 514) {
-  document.write('<script type="text/javascript" src="//vk.com/js/api/openapi.js?123"><\/script>');
+  document.write('<script type="text/javascript" src="//vk.com/js/api/openapi.js?169"><\/script>');
 }
 </script><?php } ?>
 

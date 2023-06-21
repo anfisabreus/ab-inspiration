@@ -1,18 +1,24 @@
 <?php 
 global $sub_form_footer;
+$license 	= get_option( 'edd_form_footer_license_key' );
+$status 	= get_option( 'edd_form_footer_license_status' );
+if ($status !== false && $status == 'valid' ) { 
 if ($sub_form_footer['ab_show_widget'] == '0' ) { ?> 
 <div class="footer-form">
 <?php if (function_exists('ab_sub_form_footer'))  ab_sub_form_footer();  ?>
 </div>
-<?php } ?>
+<?php } } ?>
 <div class="footer-widget-box">
 <?php get_sidebar('footer'); ?>
 </div>
-<?php if ($sub_form_footer['ab_show_widget'] == '1' ) { ?> 
+<?php 
+	if(isset($sub_form_footer['ab_show_widget'])){
+	
+	if ($sub_form_footer['ab_show_widget'] == '1' ) { ?> 
 <div class="footer-form">
 <?php if (function_exists('ab_sub_form_footer'))  ab_sub_form_footer();  ?>
 </div>
-<?php } ?>
+<?php } } ?>
 <div id="footer" role="contentinfo">
 <div class="footer">
 <div class="footer-mid">
