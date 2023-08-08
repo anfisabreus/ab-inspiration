@@ -2166,7 +2166,7 @@ $options[] = array( "name" => __('ID Группы в Одноклассника�
 	$options[] = array( "name" => __('Партнерская ссылка AB-Inspiration', 'inspiration'),
 						"desc" => __(' <a href="https://wpab.ru/newpartner">Регистрация в партнерской программе</a> ', 'inspiration'),
 						"id" => "promotion",
-						"std" => "http://anfisabreus.ru",
+						"std" => "https://anfisabreus.ru",
 						"class" => "mini",
                         "type" => "text");
                         
