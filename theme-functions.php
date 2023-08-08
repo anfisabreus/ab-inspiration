@@ -1839,6 +1839,7 @@ if (of_get_option('comments_tabber') !== '3' && of_get_option('vk_app') !== '') 
 	
 	if ($homepage['hp_text_animation'] == 1) {  ?>
 <script>  jQuery('.katalog-buttons, .firstpost, .secondpost, .heading-title1,.heading-title2,.heading-title3,.heading-title4, .heading-title5, .heading-title6, .post-font1 ol li, .post-font2 ol li,.post-font3 ol li,.post-font1 ul li, .post-font2 ul li,.post-font3 ul li,.entry-title1, .entry-title2, .entry-title3, .entry-title4,.entry-title6, .homepage-image1,  .homepage-image2, .homepage-image3, .post-font1, .post-font2, .post-font3, .readmore1, .readmore2, .readmore3,.readmore4,.readmore5,.readmore6,  .testimonials-animation, .katalog-enterpage, .cbp-l-grid-projects-title, .cbp-l-grid-projects-desc, .homepage-icon1, .homepage-icon2, .homepage-icon3').waypoint(function(){ jQuery(this).addClass('fadeInUp animated'); }, { offset: '100%' });</script><?php } } ?><?php 
+
 $license 	= get_option( 'edd_scroll_license_key' );
 $status 	= get_option( 'edd_scroll_license_status' );
 if ($status !== false && $status == 'valid' ) {  
