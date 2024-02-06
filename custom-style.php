@@ -698,7 +698,20 @@ body, .entry-box  {line-height:1.4}
 .sub-form-footer div.description, .sub-form-footer div.description p, .sub-form-footer div.ab-header, .sub-form-footer div.ab-header p, .sub-form-footer div.header-form, .sub-form-footer div.header-form p, .sub-form-footer .garantia, .sub-form-footer div.list ul, .sub-form-footer div.list ul li, .recentpost-title {line-height:1.1 !important} 
 .entry-content div.woocommerce-shipping-fields h3  label {font-size:24px !important; font-weight:normal !important}
 #footer a.scrollupinsight {'; if ( of_get_option('button_color_text') !== '') { $css .= 'color:'. of_get_option('button_color_text').'!important;';} else { $css .= 'color:#000!important;';} $css .= '}
-.scrollupinsight {width:50px; height:50px; border-radius:0%; position:fixed; bottom:50px;left:40px; display:none;z-index:9999!important;}
+
+.scrollupinsight {width:50px; height:50px; border-radius:0%; position:fixed;  display:none;z-index:9999!important;}
+'; if ( of_get_option('scrolltotop') == "0" ) { $css .= '
+.scrollupinsight {
+bottom:50px;
+left:40px;
+}
+
+'; } else { $css .= '
+.scrollupinsight {
+bottom:50px;
+right:40px;
+}'; } $css .= '
+
 .wpcw_fe_navigation_box a.fe_btn_navigation_prev:before, .wpcw_fe_navigation_box a.fe_btn_navigation_next:before {white-space: nowrap;}
 
 .scrollupinsight:before {font-family: FontAwesome;font-size: 34px; font-weight:bold; content: "\f106";position: absolute;top: 45%;left: 50%;line-height: 1;-webkit-transform: translate(-50%,-50%); -ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);transition: 0.4s ease all;}
@@ -2117,11 +2130,11 @@ div.buttonsinvite {background:#fff !important;}
 
 '; if ( of_get_option('post_border') == '1px'){ $css .= '
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li, #content .entry-box, #content article.entry-box, .entry-box.ab-inspiration-woocommerce-entry, .entry-box.ab-inspiration-woocommerce-entry-home,   ul.commentstabs li a, .entry-content div.woocommerce-shipping-fields h3  label,  #form-background,#subs, .author-info {border:1px solid  rgba(0,0,0,0.06)  !important}.single-course_unit .entry-box {padding:30px !important; }';} else { $css .= '#content .entry-box, #content article.entry-box{padding-top:0px}';} 
+.woocommerce div.product .woocommerce-tabs ul.tabs li, #content .entry-box, #content article.entry-box, .entry-box.ab-inspiration-woocommerce-entry, .entry-box.ab-inspiration-woocommerce-entry-home,   ul.commentstabs li a, .entry-content div.woocommerce-shipping-fields h3  label,  #form-background,#subs, .author-info {border:1px solid #EAEAEA !important}.single-course_unit .entry-box {padding:30px !important; }';} else { $css .= '#content .entry-box, #content article.entry-box{padding-top:0px}';} 
 
 
 
-if ( of_get_option('widget_border') == '1px'){ $css .= 'li.widget-container,div.widget-container, .single-course_unit #primary.widget-area ul li{border:1px solid  rgba(0,0,0,0.06)  !important} ';} else { $css .= 'li.widget-container,div.widget-container, .single-course_unit #primary.widget-area ul li{padding:0px !important} .single-course_unit .entry-box {padding-left:30px !important; padding-right: 0px; }';} 
+if ( of_get_option('widget_border') == '1px'){ $css .= 'li.widget-container,div.widget-container, .single-course_unit #primary.widget-area ul li{border:1px solid #EAEAEA !important} ';} else { $css .= 'li.widget-container,div.widget-container, .single-course_unit #primary.widget-area ul li{padding:0px !important} .single-course_unit .entry-box {padding-left:30px !important; padding-right: 0px; }';} 
 
 
 if ($ab_woocommerce['show_border_product'] == '1') { $css .= ' .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce ul.products li.last, .woocommerce-page ul.products li.last, .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {border:1px solid  rgba(0,0,0,0.06)  } ';} else { $css .= ' .woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce ul.products li.last, .woocommerce-page ul.products li.last, .woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, .woocommerce-page div.product div.images img {border:none } ';}

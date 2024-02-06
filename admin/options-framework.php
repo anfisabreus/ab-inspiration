@@ -290,10 +290,10 @@ if ($status !== false && $status == 'valid' ) {
 <div id="optionsframework-wrap" class="wrap" style="display:table; position:relative">
 
 <form action="options.php" method="post">
-<div style="margin-top:20px;"><a href="https://ab-inspiration.com/"><div class="shablon-admin"></div></a> <span style="font-size:14px;"><strong> <?php
+<div style="margin-top:20px;margin-bottom: 20px"><span style="font-size:18px;"><strong> <?php
 $my_theme = wp_get_theme();
 echo $my_theme->Name . ", версия " . $my_theme->Version;
-?></strong></span><br> <span style="font-size:14px;"><a href="https://wptraining.ru/course/ab-inspiration/" target="_blank"><?php _e( 'Пошаговые инструкции по настройке', 'inspiration' ); ?> </a></span></div>
+?></strong></span><br> <span style="font-size:18px; "><a href="https://club.anfisabreus.ru/" target="_blank"><?php _e( 'Пошаговые инструкции по настройке шаблона AB-Inspiration', 'inspiration' ); ?> </a></span></div>
 	<div style="clear:both;"></div>
 
    <div style="float:left; width:19%; border-left:1px solid #ccc; background:#F7F7F7; margin-top:10px; height:100%; position:relative">
@@ -572,7 +572,7 @@ function &_optionsframework_options() {
 	static $options = null;
 
 	if ( !$options ) {
-		// Load options from options.php file (if it exists)
+		
 		$location = apply_filters( 'options_framework_location', array('options.php') );
 		if ( $optionsfile = locate_template( $location ) ) {
 			$maybe_options = require_once $optionsfile;

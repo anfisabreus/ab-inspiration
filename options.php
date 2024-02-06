@@ -64,6 +64,7 @@ $valign_array = array ('padding-top:0px' => __('Наверху', 'inspiration'),
 $widget_form_shadow = array('1' => __('Да', 'inspiration'), '0' => __('Нет', 'inspiration'));
 $menu_position = array('1' => __('Над шапкой блога', 'inspiration'), '0' => __('Под шапкой блога', 'inspiration'), '2' => __('Под формой подписки/слайдами (WPForm)', 'inspiration'));
 $wrapper_width = array('1' => __('На всю ширину экрана - 100%', 'inspiration'), '0' => __('Ширина - 1200px', 'inspiration'));
+$scrolltotop = array('0' => __('Слева', 'inspiration'), '1' => __('Справа', 'inspiration'));
 $formpost_position = array('0' => __('Слева', 'inspiration'), '1' => __('По-центру', 'inspiration'), '2' => __('Справа', 'inspiration'));
 $videobg_opaque = array( '0' => __('Без затемнения', 'inspiration'), '0.6' => __('Очень сильное затемнение', 'inspiration'), '0.5' => __('Сильное затемнение', 'inspiration'), '0.4' => __('Среднее затемнение', 'inspiration'), '0.3' => __('Легкое затемнение', 'inspiration'), '0.2' => __('Очень легкое затемнение', 'inspiration') );
 $menu_width = array('2' => __('Ширина до границы контента - 1200px', 'inspiration'), '1' => __('Ширина до границ блога - 100%', 'inspiration'));
@@ -527,6 +528,19 @@ $options[] = array( "name" => __('Тень вокруг блога', 'inspiratio
 '0px 0px 0px #888' => $imagepath . 'no-shadow.png'
 )
 );	
+
+
+$options[] = array("name" => __('Кнопка "Вверх"', 'inspiration'),
+"class" => "sub-heading",
+"type" => "devider");
+
+$options[] = array("name" => __('Отображать кнопку Вверх слева/справа?', 'inspiration'),
+"id" => "scrolltotop",
+"std" => "0",
+"type" => "radio",
+"class" => "radio",
+"options" => $scrolltotop);
+
 	
 $options[] = array( "name" => __('Стиль шапки', 'inspiration'),
 						"type" => "heading");
@@ -2166,7 +2180,7 @@ $options[] = array( "name" => __('ID Группы в Одноклассника�
 	$options[] = array( "name" => __('Партнерская ссылка AB-Inspiration', 'inspiration'),
 						"desc" => __(' <a href="https://wpab.ru/newpartner">Регистрация в партнерской программе</a> ', 'inspiration'),
 						"id" => "promotion",
-						"std" => "http://anfisabreus.ru",
+						"std" => "https://anfisabreus.ru",
 						"class" => "mini",
                         "type" => "text");
                         
@@ -2957,6 +2971,36 @@ $options[] = array( "name" => __('Партнерская ссылка для Б�
 "id" => "ad_url_4",
 "std" => "",
 "type" => "text");
+
+
+$options[] = array( "name" => __('Реклама в статьях', 'inspiration'),
+"type" => "heading");
+
+$options[] = array( "name" => __('Первая реклама', 'inspiration'),
+"desc" => __('Реклама перед текстом статьи', 'inspiration'),
+"id" => "first_ad",
+"std" => "",
+"type" => "textarea"); 
+	
+	$options[] = array( "name" => __('Вторая реклама', 'inspiration'),
+"desc" => __('Реклама перед текстом статьи', 'inspiration'),
+"id" => "second_ad",
+"std" => "",
+"type" => "textarea"); 
+	
+		$options[] = array( "name" => __('Третья реклама', 'inspiration'),
+"desc" => __('Реклама перед блоком Об авторе', 'inspiration'),
+"id" => "third_ad",
+"std" => "",
+"type" => "textarea"); 
+
+$options[] = array( "name" => __('Четверная', 'inspiration'),
+"desc" => __('Реклама после Похожих записей', 'inspiration'),
+"id" => "fourth_ad",
+"std" => "",
+"type" => "textarea"); 
+
+
 
 if ( is_plugin_active( 'ab-expop/ab-expop.php' ) ) {
 
