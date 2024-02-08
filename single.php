@@ -120,8 +120,7 @@ if($custom['post_related'][0] == 0): ?>
 	
 
 <?php comments_post(); ?>
-
-
+<?php if (of_get_option('fifth_ad') !== '' ) { echo html_entity_decode(of_get_option('fifth_ad')); } ?>	
 
 </div> <!-- entry-box --></div><!-- #content -->
 <?php endwhile; // end of the loop. ?></div><!-- #container -->			

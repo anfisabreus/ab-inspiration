@@ -2976,27 +2976,28 @@ $options[] = array( "name" => __('Партнерская ссылка для Б�
 $options[] = array( "name" => __('Реклама в статьях', 'inspiration'),
 "type" => "heading");
 
-$options[] = array( "name" => __('Первая реклама', 'inspiration'),
-"desc" => __('Реклама перед текстом статьи', 'inspiration'),
+$options[] = array( "name" => __('Реклама в начале статьи', 'inspiration'),
 "id" => "first_ad",
 "std" => "",
 "type" => "textarea"); 
 	
-	$options[] = array( "name" => __('Вторая реклама', 'inspiration'),
-"desc" => __('Реклама перед текстом статьи', 'inspiration'),
+	$options[] = array( "name" => __('Реклама в конце статьи', 'inspiration'),
 "id" => "second_ad",
 "std" => "",
 "type" => "textarea"); 
 	
-		$options[] = array( "name" => __('Третья реклама', 'inspiration'),
-"desc" => __('Реклама перед блоком Об авторе', 'inspiration'),
+$options[] = array( "name" => __('Реклама перед блоком "Об авторе"', 'inspiration'),
 "id" => "third_ad",
 "std" => "",
 "type" => "textarea"); 
 
-$options[] = array( "name" => __('Четверная', 'inspiration'),
-"desc" => __('Реклама после Похожих записей', 'inspiration'),
+$options[] = array( "name" => __('Реклама после "Похожие записи"', 'inspiration'),
 "id" => "fourth_ad",
+"std" => "",
+"type" => "textarea"); 
+
+$options[] = array( "name" => __('Реклама после комментариев', 'inspiration'),
+"id" => "fifth_ad",
 "std" => "",
 "type" => "textarea"); 
 
