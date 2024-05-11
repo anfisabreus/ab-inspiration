@@ -490,28 +490,6 @@ jQuery(document).ready(function() {
 
 
 
-/**
- * get a short/tiny url
- * @author: René Ade
- * @link: //www.rene-ade.de/inhalte/
-php-code-zum-erstellen-einer-tinyurl-ueber-tinyurl-com-api.html
- */
-if ( !function_exists('fb_gettinyurl') ) {
-	function fb_gettinyurl( $url ) {
-
-$fp = fopen( '//tinyurl.com/api-create.php?url=' . $url, 'r' );
-		if ( $fp ) {
-			$tinyurl = fgets( $fp );
-			if( $tinyurl && !empty($tinyurl) )
-				$url = $tinyurl;
-			fclose( $fp );
-		}
-
-		return $url;
-	}
-}
-
-
 //последние комментарии
 function kama_recent_comments($limit=10, $ex=55, $cat=0, $echo=1, $gravatar=''){
 global $wpdb;
@@ -1007,7 +985,7 @@ class EDD_Theme_Updater_Admin {
 			'remote_api_url' => 'https://ab-inspiration.com',
 			'item_name' => 'AB Inspiration',
 			'license' => $license,
-			'version' => '8.107',
+			'version' => '8.109',
 			'author' => 'Anfisa Breus',
 			'download_id' => '',
 			'renew_url' => '',
@@ -1735,6 +1713,8 @@ if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comm
 wp_enqueue_script( 'jquery-ui-core' );
 wp_enqueue_script( 'jquery-ui-tabs' );
 wp_enqueue_script( 'custom', get_template_directory_uri() . '/inc/js/custom.js', array('jquery'), null, true );
+wp_enqueue_script( 'elem', get_template_directory_uri() . '/inc/js/elementor.js', array('jquery'), null, true );
+
 wp_enqueue_script( 'ab-complete-js', get_template_directory_uri() . '/inc/js/bootstrap.bundle.min.js', array('jquery'), null, true );
 wp_enqueue_script('cycle', get_template_directory_uri() . '/inc/wpform/js/jquery.cycle2.js', array('jquery'), null, true);
 wp_enqueue_script('cycle-easing', get_template_directory_uri() . '/inc/wpform/js/jquery.easing.1.3.js', array('jquery'), null, true);	
@@ -1878,7 +1858,7 @@ z-index:-100;" class="videoform-mobile">
 	height: 0;">
 	
 	
- <!-- 1. The <div> tag will contain the <iframe> (and video player) -->
+ <!-- 1. The <div> tag will contain the iframe (and video player) -->
     <div id="videobgyoutube"></div>
 <script>      // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -1886,7 +1866,7 @@ z-index:-100;" class="videoform-mobile">
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
+      // 3. This function creates an iframe (and YouTube player)
       //    after the API code downloads.
       var player;
       function onYouTubePlayerAPIReady() {

@@ -81,7 +81,7 @@ get_header(); ?>
 </nav>
 		
 <div class="collapse" id="navbarToggleExternalContent">
-<?php the_widget('\\WPCW\\Widgets\\Widget_Course_Progress'); ?>
+<?php the_widget('\WPCW\Widgets\Widget_Course_Progress'); ?>
 </div>
 
 

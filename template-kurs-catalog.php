@@ -17,7 +17,7 @@ get_header(); ?>
 
     <?php 
     global $ab_wpcourseware;
-    $values =  $ab_wpcourseware['id_courses'] ;
+    $values =  $ab_wpcourseware['id_courses'] ?? '';
 
     $abc = '';
         foreach((array) $values as $k=>$value) {
@@ -42,7 +42,7 @@ get_header(); ?>
         
         <div style="padding-bottom:20px !important; display:grid; grid-row-gap: 0px;" class="entry-box <?php if(isset($ab_wpcourseware['checkbox_example'])) { ?>course-horisontal<?php } else { ?>col-lg-4<?php } ?>">
             <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <div class="post-font" style="height: 100%;display: grid;grid-row-gap: 0px;">
+                <div class="post-font course-catalogue">
                     <div class="entry-content">
                     <?php 
                     if (function_exists('abwpwoo_headline_link') && isset($ab_wpcourseware['id_courses_courses_pages']) && isset($ab_wpcourseware['id_courses_pages'])) 
@@ -51,11 +51,12 @@ get_header(); ?>
                     $array2 = $ab_wpcourseware['id_courses_pages'];
                     $array = array_combine($array1, $array2);
                     $key =  get_the_ID();
-                    $value = $array[$key];
+                    $value = $array[$key] ?? '';
                             
                     if ( !$course->can_user_access( get_current_user_id() ) ) { ?>
                         <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-                            <img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>">
+                            <div style="background:url('<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>') no-repeat center center; padding-top: 67%;
+    background-size: cover;"> </div>
                         </a>
                         <h2 class="entry-title" itemprop="name headline">
                             <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
@@ -66,7 +67,8 @@ get_header(); ?>
 
                     else { ?> 
                         <a href="<?php the_permalink();  ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-                            <img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>">
+                        <div style="background:url('<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>') no-repeat center center; padding-top: 67%;
+    background-size: cover;"> </div>
                         </a>
                         <h2 class="entry-title" itemprop="name headline">
                             <a href="<?php the_permalink();  ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
@@ -78,7 +80,8 @@ get_header(); ?>
                     } 
                     else { ?> 
                         <a href="<?php the_permalink();  ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
-                            <img src="<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>">
+                        <div style="background:url('<?php if ( has_post_thumbnail() ) : ?><?php the_post_thumbnail_url(); ?><?php endif; ?>') no-repeat center center; padding-top: 67%;
+    background-size: cover;"> </div>
                         </a>
                         <h2 class="entry-title" itemprop="name headline">
                             <a href="<?php the_permalink();  ?>" title="<?php printf( esc_attr__( ' %s', 'inspiration' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
@@ -119,27 +122,23 @@ get_header(); ?>
 
                     ?>
 
-                    <div style="margin-left:15px; align-self: end;"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
+                    <div style="margin-left:15px;"><?php echo do_shortcode(' [tag_for_short_code_price id="'.$value1.'"]'); ?> </div>
 
                     <?php } } } else { echo ''; } ?>
 
-                    <?php if(isset($ab_wpcourseware['checkbox_example'])) { ?> <div style="float:right; font-size:20px; margin-right:20px; font-weight:normal; width:100%;"> <?php } else { ?> <div style="margin-right:15px; height: 34px;align-self: end;"> <?php } ?>
+                    <?php if(isset($ab_wpcourseware['checkbox_example'])) { ?> <div style="float:right; font-size:20px; margin-right:20px; font-weight:normal; width:100%;"> <?php } else { ?> <div style="margin-right:15px; display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: end;"> <?php } ?>
 
                     <?php                                                                                                                                     
                                                                     
                     $payments_type = $course->get_payments_type();	
-                    if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php echo the_permalink(); ?>" rel="bookmark"  style="margin-top: 0px; margin-bottom: 0px;padding: 0px; float:right; margin-left: 15px;
-                    background: #ffffff !important;
-                    color: #000000 !important;
-                    -webkit-transition: all 0.5s;
-                    transition: all 0.5s;
-                    font-size: 16px !important;
-                    padding: 4px 10px;
-                    text-decoration: none; border:1px solid #000"><?php _e( 'Подробнее', 'inspiration' ); ?>
+                    if ( ! $course->can_user_access( get_current_user_id() ) ) { ?> <a href="<?php if ($value !== '') { echo get_site_url().'/?p='. $value; } else { the_permalink()  ; } ?>" title="<?php echo the_permalink(); ?>" rel="bookmark"  class="open-course"><?php _e( 'Подробнее', 'inspiration' ); ?>
                     </a>
                     <?php
 
-                    if ( $payments_type !== 'free') {
+                    if ( $payments_type !== 'free') { 
 
                     if (function_exists('abwpwoo_price_wpcourseware_woocommerce') && isset($ab_wpcourseware['id_courses_courses']) && isset($ab_wpcourseware['id_courses_product']) ) 
                     { 

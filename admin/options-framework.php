@@ -572,7 +572,7 @@ function &_optionsframework_options() {
 	static $options = null;
 
 	if ( !$options ) {
-		// Load options from options.php file (if it exists)
+		
 		$location = apply_filters( 'options_framework_location', array('options.php') );
 		if ( $optionsfile = locate_template( $location ) ) {
 			$maybe_options = require_once $optionsfile;

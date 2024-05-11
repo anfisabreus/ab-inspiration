@@ -64,6 +64,7 @@ $valign_array = array ('padding-top:0px' => __('Наверху', 'inspiration'),
 $widget_form_shadow = array('1' => __('Да', 'inspiration'), '0' => __('Нет', 'inspiration'));
 $menu_position = array('1' => __('Над шапкой блога', 'inspiration'), '0' => __('Под шапкой блога', 'inspiration'), '2' => __('Под формой подписки/слайдами (WPForm)', 'inspiration'));
 $wrapper_width = array('1' => __('На всю ширину экрана - 100%', 'inspiration'), '0' => __('Ширина - 1200px', 'inspiration'));
+$scrolltotop = array('0' => __('Слева', 'inspiration'), '1' => __('Справа', 'inspiration'));
 $formpost_position = array('0' => __('Слева', 'inspiration'), '1' => __('По-центру', 'inspiration'), '2' => __('Справа', 'inspiration'));
 $videobg_opaque = array( '0' => __('Без затемнения', 'inspiration'), '0.6' => __('Очень сильное затемнение', 'inspiration'), '0.5' => __('Сильное затемнение', 'inspiration'), '0.4' => __('Среднее затемнение', 'inspiration'), '0.3' => __('Легкое затемнение', 'inspiration'), '0.2' => __('Очень легкое затемнение', 'inspiration') );
 $menu_width = array('2' => __('Ширина до границы контента - 1200px', 'inspiration'), '1' => __('Ширина до границ блога - 100%', 'inspiration'));
@@ -481,7 +482,7 @@ $options[] = array("name" => __('Фон внутри блога', 'inspiration')
 $options[] = array( "name" => __('Фон внутри блога', 'inspiration'),
 "desc" => __('Здесь можно изменить фон внутри статей.', 'inspiration'),
 "id" => "blog_background",
-"std" => array('color' => '#ffffff', 'image' => '', 'repeat' => 'repeat-x','position' => 'top center','attachment'=>'scroll'),
+"std" => array('color' => '#f7f9f9', 'image' => '', 'repeat' => 'repeat-x','position' => 'top center','attachment'=>'scroll'),
 "type" => "background");
 
 $options[] = array( "name" => __('Размер фона внутри блога', 'inspiration'),
@@ -527,6 +528,19 @@ $options[] = array( "name" => __('Тень вокруг блога', 'inspiratio
 '0px 0px 0px #888' => $imagepath . 'no-shadow.png'
 )
 );	
+
+
+$options[] = array("name" => __('Кнопка "Вверх"', 'inspiration'),
+"class" => "sub-heading",
+"type" => "devider");
+
+$options[] = array("name" => __('Отображать кнопку Вверх слева/справа?', 'inspiration'),
+"id" => "scrolltotop",
+"std" => "1",
+"type" => "radio",
+"class" => "radio",
+"options" => $scrolltotop);
+
 	
 $options[] = array( "name" => __('Стиль шапки', 'inspiration'),
 						"type" => "heading");
@@ -539,7 +553,7 @@ $options[] = array("name" => __('Размер', 'inspiration'),
 $options[] = array( "name" => __('Высота шапки (header)', 'inspiration'),
 "desc" => __('Высота шапки. Здесь Вы можете указать высоту шапки в пикселях. По умолчанию высота 120px', 'inspiration'),
 "id" => "header_height",
-"std" => "120",
+"std" => "100",
 "class" => "mini",
 "type" => "text");	
 
@@ -570,7 +584,7 @@ $options[] = array("name" => __('Фон', 'inspiration'),
 $options[] = array( "name" => __('Фон снаружи (фон будет отображаться до границ блога/или на всю ширина (если вы выбрали блог на всю ширину))', 'inspiration'),
 
 "id" => "header_background_around",
-"std" => array('color' => '#ffffff', 'image' => '', 'repeat' => 'no-repeat','position' => 'top center','attachment'=>'scroll'),
+"std" => array('color' => '', 'image' => '', 'repeat' => 'no-repeat','position' => 'top center','attachment'=>'scroll'),
 "type" => "background");
 
 $options[] = array( "name" => __('Размер фона (картинки) в шапке', 'inspiration'),
@@ -583,7 +597,7 @@ $options[] = array( "name" => __('Размер фона (картинки) в ш
 $options[] = array( "name" => __('Фон внутри шапки (этот фон будет отображаться на 1200px до границ статей и виджетов)', 'inspiration'),
 
 "id" => "header_background",
-"std" => array('color' => '#ffffff', 'image' => '', 'repeat' => 'no-repeat','position' => 'top center','attachment'=>'scroll'),
+"std" => array('color' => '', 'image' => '', 'repeat' => 'no-repeat','position' => 'top center','attachment'=>'scroll'),
 "type" => "background");
 
 $options[] = array( "name" => __('Размер фона (картинки) в шапке', 'inspiration'),
@@ -672,12 +686,12 @@ $options[] = array("name" => __('Настройка заголовка блог�
 $options[] = array( "name" => __('Стиль шрифта заголовка блога', 'inspiration'),
 "id" => "logo_typography",
 "class" => "typestyle colorlinks",
-"std" => array('size' => '37px','face' => 'arial','style' => 'normal', 'color' => '#000000'),
+"std" => array('size' => '34px','face' => 'arial','style' => 'bold', 'color' => '#1f2d47'),
 "type" => "typography");
 
 $options[] = array( "name" => __('При наведении мышки', 'inspiration'),
 "id" => "logo_hover",
-"std" => "#333333",
+"std" => "#1f2d47",
 "class" => "colorlinks", 
 "type" => "color");
 
@@ -714,7 +728,7 @@ $options[] = array(
 $options[] = array( "name" => __('Стиль шрифта описания блога', 'inspiration'),
 "id" => "desc_typography",
 "class" => "typestyle colorlinks",
-"std" => array('size' => '12px','face' => 'arial','style' => 'normal', 'color' => '#000000'),
+"std" => array('size' => '12px','face' => 'arial','style' => 'normal', 'color' => '#1f2d47'),
 "type" => "typography");
 
 $options[] = array( "name" => __('Трансформация букв', 'inspiration'),
@@ -915,20 +929,20 @@ $options[] = array("name" => __('Фон', 'inspiration'),
 
 $options[] = array( "name" => __('Основной фон', 'inspiration'),
 "id" => "headermenu_bg_line",
-"std" => "#ffffff",
+"std" => "",
 "class" => "clearform",
 "type" => "color");
 
 
 $options[] = array( "name" => __('При наведении мышки', 'inspiration'),
 "id" => "headermenu_background",
-"std" => "#0399cd",
+"std" => "#e73439",
 "class" => "clearform",
 "type" => "color");
 
 $options[] = array( "name" => __('Выпадающее', 'inspiration'),
 "id" => "headermenu_bg",
-"std" => "#0399cd",
+"std" => "#e73439",
 "type" => "color");
 
 $options[] = array( "name" => __('Закругления углов меню при наведении мышкой и активное меню', 'inspiration'),
@@ -970,7 +984,7 @@ $options[] = array( "name" => __('Граница сверху', 'inspiration'),
 
 $options[] = array( "name" => __('Цвет границы сверху', 'inspiration'),
 "id" => "headermenu_border_top_color",
-"std" => "#0399cd",
+"std" => "#333",
 "class" => "clearform2",
 "type" => "color");
 
@@ -997,7 +1011,7 @@ $options[] = array( "name" => __('Граница снизу', 'inspiration'),
 
 $options[] = array( "name" => __('Цвет границы сверху', 'inspiration'),
 "id" => "headermenu_border_bottom_color",
-"std" => "#0399cd",
+"std" => "#333",
 "class" => "clearform2",
 "type" => "color");
 
@@ -1018,14 +1032,14 @@ $options[] = array("name" => __('Текст', 'inspiration'),
 $options[] = array( "name" => __('Стиль', 'inspiration'),
 "id" => "headermenu_typography",
 "class" => "typestyle clearform",
-"std" => array('size' => '16px','face' => 'arial','style' => 'normal', 'color' => '#000000'),
+"std" => array('size' => '16px','face' => 'arial','style' => 'normal', 'color' => '#1f2d47'),
 "type" => "typography");
 
 
 
 $options[] = array( "name" => __('При наведении мышки', 'inspiration'),
 "id" => "headermenu_text_hover",
-"std" => "#000000",
+"std" => "#1f2d47",
 "class" => "clearform",
 "type" => "color");
 
@@ -1126,14 +1140,14 @@ $options[] = array("name" => __('Фон', 'inspiration'),
 						
 $options[] = array( "name" => __('Фон меню', 'inspiration'),
 "id" => "menu_color",
-"std" => "#0399cd",
+"std" => "#1f2d47",
 "class" => "clearform",
 "type" => "color");
 
 
 $options[] = array( "name" => __('Фон выпадающего меню', 'inspiration'),
 "id" => "menu_dropdown_color",
-"std" => "#0399cd",
+"std" => "#1f2d47",
 "class" => "clearform",
 "type" => "color");
 
@@ -1141,7 +1155,7 @@ $options[] = array( "name" => __('Фон выпадающего меню', 'insp
 $options[] = array( "name" => __('Фон при наведении мышки', 'inspiration'),
 "desc" => __('Укажите желаемый фоновый цвет меню и цвет при наведении мышки на меню', 'inspiration'),
 "id" => "menu_hover",
-"std" => "#ffcb03",
+"std" => "#1f2d47",
 "class" => "clearform2",
 "type" => "color");
 
@@ -1357,14 +1371,14 @@ $options[] = array("name" => __('Отступы внешние', 'inspiration'),
 $options[] = array( "name" => __('Отступ сверху', 'inspiration'),
 "desc" => __('Отступ основной области сверху. По умолчанию 0px', 'inspiration'),
 "id" => "margin_top_main",
-"std" => "40",
+"std" => "20",
 "class" => "mini",
 "type" => "text");
 
 $options[] = array( "name" => __('Отступ снизу', 'inspiration'),
 "desc" => __('Отступ основной области снизу. По умолчанию 0px', 'inspiration'),
 "id" => "margin_bottom_main",
-"std" => "40",
+"std" => "20",
 "class" => "mini",
 "type" => "text");
 
@@ -1394,7 +1408,7 @@ $options[] = array("name" => __('Фон', 'inspiration'),
 
 $options[] = array( "name" => __('Фон вокруг статей и виджетов', 'inspiration'),
 "id" => "main_bg",
-"std" => array('color' => '#ffffff', 'image' => '', 'repeat' => 'repeat-x','position' => 'top center','attachment'=>'scroll'),
+"std" => array('color' => '', 'image' => '', 'repeat' => 'repeat-x','position' => 'top center','attachment'=>'scroll'),
 "type" => "background");
 
 $options[] = array("name" => __('Граница вокруг статей и виджетов', 'inspiration'),
@@ -1445,7 +1459,7 @@ $options[] = array("name" => __('Ширина', 'inspiration'),
 
 $options[] = array("name" => __('Ширина контентной части (статьи и виджеты)', 'inspiration'),
 "id" => "post_width",
-"std" => "1",
+"std" => "2",
 "type" => "radio",
 "class" => "radio",
 "options" => $post_width);
@@ -1479,13 +1493,13 @@ $options[] = array( "name" => __('Отображать границу вокру
 
 $options[] = array( "name" => __('Цвет границы статей', 'inspiration'),
 "id" => "post_border_color",
-"std" => "#f7f9f9",
+"std" => "#eaeaea",
 "type" => "color");
 
 
 $options[] = array( "name" => __('Закругления углов статей', 'inspiration'),
 "id" => "post_curve",
-"std" => "0",
+"std" => "5",
 "type" => "select",
 "class" => "mini", //mini, tiny, small
 "options" => $curve_array);
@@ -1546,19 +1560,19 @@ $options[] = array("name" => __('Заголовки статей и страни
 $options[] = array( "name" => __('Стиль заголовков статей', 'inspiration'),
 "id" => "post_typography",
 "class" => "typestyle colorlinks",
-"std" => array('size' => '28px','face' => 'arial','style' => 'normal', 'color' => '#000000'),
+"std" => array('size' => '28px','face' => 'arial','style' => 'bold', 'color' => '#1f2d47'),
 "type" => "typography");
 
 
 $options[] = array( "name" => __('При наведении мышки', 'inspiration'),
 "id" => "title_hover",
-"std" => "#0399cd",
+"std" => "#1f2d47",
  
 "type" => "color");
 
 $options[] = array( "name" => __('Цвет заголовка на внутренней странице', 'inspiration'),
 "id" => "title_single",
-"std" => "#000000",
+"std" => "#1f2d47",
 "type" => "color");
 
 $options[] = array("name" => __('Шрифт и размер заголовков в тексте статей', 'inspiration'),
@@ -1583,13 +1597,13 @@ $options[] = array("name" => __('Размер заголовков в текст
 
 $options[] = array( "name" => "H1",
 "id" => "heading1",
-"std" => "36px",
+"std" => "28px",
 "type" => "select",
 "class" => "colorlinks", //mini, tiny, small
 "options" => $fonts_text_size);	
 $options[] = array( "name" => "H2",
 "id" => "heading2",
-"std" => "30px",
+"std" => "26px",
 "type" => "select",
 "class" => "colorlinks", //mini, tiny, small
 "options" => $fonts_text_size);	
@@ -1620,7 +1634,7 @@ $options[] = array( "name" => "H6",
 
 $options[] = array( "name" => __('Цвет заголовков в статьях', 'inspiration'),
 "id" => "post_headings",
-"std" => "#000000",
+"std" => "#1f2d47",
 "type" => "color");
 
 
@@ -1631,18 +1645,18 @@ $options[] = array("name" => __('Ссылки', 'inspiration'),
 $options[] = array( "name" => __('Цвет ссылок', 'inspiration'),
 "id" => "linkslink_colorpicker",
 "class" => "colorlinks",
-"std" => "#0399cd",
+"std" => "#e73439",
 "type" => "color");
 
 $options[] = array( "name" => __('При наведении мышки', 'inspiration'),
 "id" => "linkshover_colorpicker",
 "class" => "colorlinks",
-"std" => "#ffcb03",
+"std" => "#cf2d34",
 "type" => "color");
 
 $options[] = array( "name" => __('Посещенная ссылка', 'inspiration'),
 "id" => "linksvisited_colorpicker",
-"std" => "#0399cd",
+"std" => "#e73439",
 "type" => "color");
 
 $options[] = array("name" => __('Кнопки', 'inspiration'),
@@ -1652,13 +1666,13 @@ $options[] = array("name" => __('Кнопки', 'inspiration'),
 
 $options[] = array( "name" => __('Цвет кнопок', 'inspiration'),
 "id" => "button_color",
-"std" => "#ffcb03",
+"std" => "#e73439",
 "class" => "colorlinks",
 "type" => "color");
 
 $options[] = array( "name" => __('Цвет при наведении мышки', 'inspiration'),
 "id" => "button_color_hover",
-"std" => "#0399cd",
+"std" => "#cf2d34",
 "type" => "color");
 
 $options[] = array( "name" => __('Цвет текста на кнопках', 'inspiration'),
@@ -1673,7 +1687,7 @@ $options[] = array( "name" => __('Цвет текста на кнопках пр
 
 $options[] = array( "name" => __('Форма кнопок', 'inspiration'),
 "id" => "buttons_shape",
-"std" => "0px",
+"std" => "3px",
 "type" => "select",
 "class" => "mini", //mini, tiny, small
 "options" => $buttons_shape);	
@@ -1776,12 +1790,12 @@ $options[] = array( "name" => __('Отображать границу вокру
 
 $options[] = array( "name" => __('Цвет границы виджетов', 'inspiration'),
 "id" => "widget_border_color",
-"std" => "#f7f9f9",
+"std" => "#eaeaea",
 "type" => "color");
 
 $options[] = array( "name" => __('Закругления углов виджетов', 'inspiration'),
 "id" => "widget_curve",
-"std" => "0",
+"std" => "5",
 "type" => "select",
 "class" => "mini", //mini, tiny, small
 "options" => $curve_array);
@@ -1793,7 +1807,7 @@ $options[] = array("name" => __('Заголовки', 'inspiration'),
 $options[] = array( "name" => __('Стиль заголовков виджетов', 'inspiration'),
 "id" => "widget_typography",
 "class" => "typestyle colorlinks",
-"std" => array('size' => '22px','face' => 'arial','style' => 'normal', 'color' => '#000000'),
+"std" => array('size' => '22px','face' => 'arial','style' => 'bold', 'color' => '#1f2d47'),
 "type" => "typography");
 
 $options[] = array( "name" => __('Трансформация букв', 'inspiration'),
@@ -1918,7 +1932,7 @@ $options[] = array("name" => __('Фон', 'inspiration'),
 $options[] = array(
 "name" => __('Фон нижней части блога footer', 'inspiration'),
 "id" => "footer_background",
-"std" => array('color' => '#0399cd', 'image' => '', 'repeat' => 'repeat','position' => 'top center','attachment'=>'scroll'),
+"std" => array('color' => '#1f2d47', 'image' => '', 'repeat' => 'repeat','position' => 'top center','attachment'=>'scroll'),
 "type" => "background");
 						
 $options[] = array("name" => __('Текст', 'inspiration'),
@@ -2957,6 +2971,37 @@ $options[] = array( "name" => __('Партнерская ссылка для Б�
 "id" => "ad_url_4",
 "std" => "",
 "type" => "text");
+
+
+$options[] = array( "name" => __('Реклама в статьях', 'inspiration'),
+"type" => "heading");
+
+$options[] = array( "name" => __('Реклама в начале статьи', 'inspiration'),
+"id" => "first_ad",
+"std" => "",
+"type" => "textarea"); 
+	
+	$options[] = array( "name" => __('Реклама в конце статьи', 'inspiration'),
+"id" => "second_ad",
+"std" => "",
+"type" => "textarea"); 
+	
+$options[] = array( "name" => __('Реклама перед блоком "Об авторе"', 'inspiration'),
+"id" => "third_ad",
+"std" => "",
+"type" => "textarea"); 
+
+$options[] = array( "name" => __('Реклама после "Похожие записи"', 'inspiration'),
+"id" => "fourth_ad",
+"std" => "",
+"type" => "textarea"); 
+
+$options[] = array( "name" => __('Реклама после комментариев', 'inspiration'),
+"id" => "fifth_ad",
+"std" => "",
+"type" => "textarea"); 
+
+
 
 if ( is_plugin_active( 'ab-expop/ab-expop.php' ) ) {
 

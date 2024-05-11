@@ -39,14 +39,20 @@ if($custom['post_button_top'][0] == 0): ?>
 <?php if (of_get_option('share_display') ['2'] == '1' ) { echo social_likes(); } ?>
 <div style="clear:both"></div>
 <?php endif; ?>
+	
+<?php if (of_get_option('first_ad') !== '' ) { echo html_entity_decode(of_get_option('first_ad')); } ?>
+
+
+	
 <?php if (of_get_option('thumbnail') == '1') { echo the_post_thumbnail(of_get_option('thumb_size'), array("class" => "thumb-size alignleft post_thumbnail", "itemprop" => "image")); } ?>
 <div class="post-font" itemprop="articleBody">
 
 
 
 
-
 <?php the_content(); ?>
+	
+<?php if (of_get_option('second_ad') !== '' ) { echo html_entity_decode(of_get_option('second_ad')); } ?>
 
 <?php echo get_post_meta($post->ID, 'banner', true); ?>
 </div>
@@ -76,8 +82,12 @@ if($custom['post_share_bottom'][0] == 0 && is_single() && !is_singular('catalog'
 <?php endif; ?>
 
 
+<?php if (of_get_option('third_ad') !== '' ) { echo html_entity_decode(of_get_option('third_ad')); } ?>
+
 
 <?php if (of_get_option('author')  == 1 ) { echo autor_bio(); }?>
+	
+
 
 
 <?php $custom = get_post_custom($post->ID);
@@ -106,9 +116,11 @@ if($custom['post_related'][0] == 0): ?>
  <!-- Comment #4: Plugin Code -->
   <div class="fb-quote"></div>
 
+	<?php if (of_get_option('fourth_ad') !== '' ) { echo html_entity_decode(of_get_option('fourth_ad')); } ?>	
+	
+
 <?php comments_post(); ?>
-
-
+<?php if (of_get_option('fifth_ad') !== '' ) { echo html_entity_decode(of_get_option('fifth_ad')); } ?>	
 
 </div> <!-- entry-box --></div><!-- #content -->
 <?php endwhile; // end of the loop. ?></div><!-- #container -->			
